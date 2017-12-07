@@ -25,8 +25,6 @@ import sys
 RDMO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(RDMO_DIR)
 
-from rdmo import __version__
-
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
