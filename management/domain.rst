@@ -1,16 +1,16 @@
-Domain
+Domäne
 ------
 
-The domain model can be managed under *Domain* in the management menu in the navigation bar.
+Das Domänenmodel kann unter *Domäne* im Managementmenü in der Navigationsleiste konfiguriert werden.
 
-.. figure:: ../_static/img/screens/domain.png
-   :target: ../_static/img/screens/domain.png
+.. figure:: ../_static/img/screens/Domain.PNG
+   :target: ../_static/img/screens/Domain.PNG
 
-   Screenshot of the domain management interface.
+   Screenshot vom Domain-Management Interface.
 
-On the left-hand side is the main display of all the entities and attributes available in this installation of RDMO. The attributes and entities show their path and if they are configured to be a collection. On the left side of each elements panel, icons indicate ways to interact the element. The following options are available:
+Auf der Seite können alle Entitäten und Attribute der RDMO-Installation gesehen werden. Die Attribute und Entitäten zeigen ihren Pfad und ob sie als Kollketion angelegt worden sind. Auf der rechten Seite eines jeden Elementfeldes gibt es Icons mit folgender Bedeutung:
 
-* **Add** (|add|) a new attribute or entity to an entity.
+* **Hinzufügen** (|add|) eines neuen Attributs oder einer Entität zu dieser Entität.
 * **Update** (|update|) an entity or attribute to change its properties.
 * **Update range** (|range|) of an attribute. The range is only needed if the attribute is connected to a question using the slider widget.
 * **Update option sets** (|optionsets|) of an attribute. Option sets determine the choices when the attribute is connected to a question using a select, radio button oder check boxes widget. The option sets themselves are configured in the :doc:`the options management <options>`.
