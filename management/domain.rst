@@ -10,13 +10,13 @@ Das Domänenmodel kann unter *Domäne* im Managementmenü in der Navigationsleis
 
 Auf der Seite können alle Entitäten und Attribute der RDMO-Installation gesehen werden. Die Attribute und Entitäten zeigen ihren Pfad und ob sie als Kollketion angelegt worden sind. Auf der rechten Seite eines jeden Elementfeldes gibt es Icons mit folgender Bedeutung:
 
-* **Hinzufügen** (|add|) eines neuen Attributs oder einer Entität zu dieser Entität.
-* **Update** (|update|) an entity or attribute to change its properties.
-* **Update range** (|range|) of an attribute. The range is only needed if the attribute is connected to a question using the slider widget.
-* **Update option sets** (|optionsets|) of an attribute. Option sets determine the choices when the attribute is connected to a question using a select, radio button oder check boxes widget. The option sets themselves are configured in the :doc:`the options management <options>`.
-* **Update verbose name** (|verbosename|) of an entity or attribute. For an entity, the verbose name is displayed to the user when adding sets to a question (instead of "Add set", e.g. "Add dataset"), while for an attribute the verbose name is displayed when adding items to a question with multiple answers instead (instead of "Add item", e.g. "Add keyword").
-* **Update conditions** (|conditions|) of an entity or attribute. A question connected to an attribute with one or more conditions will be skipped automatically in the questionaire, when the condition is evaluated to be false. The same holds for question sets connected to an entity with a condition. The conditions themselves are configured in :doc:`the conditions management <conditions>`.
-* **Delete** (|delete|) an entity or attribute and all of it's decendents (e.g. an entity and all the entities and attibutes below in the domain model tree). **This action cannot be undone!**
+* **Hinzufügen** (|add|) eines neuen Attributes oder einer Entität zu dieser Entität.
+* **Update** (|update|) eines Attributes oder einer ENtität, um ihre Eigenschaften zu ändern.an entity or attribute to change its properties.
+* **Bereich bearbeiten** (|range|) eines Attributes. Der Wertebereich wird nur benötigt, wenn das Attribut mit einer Frage verknüpft ist, die eine Auswahl, Radio Button oder Check box widget verwendet. 
+* **Optionenset bearbeiten** (|optionsets|) eines Attributes. Optionensets bestimmen die Auswahl, wenn das Attribut mit einer Frage verknüpft ist, die eine Auswahl, Radio Button oder Check box widget verwendet. Die Optionensets selbst können unter :doc:`the options management <options>` konfiguriert werden.
+* **Anzeigename bearbeiten** (|verbosename|) eines Attributes oder einer Entität. Für eine Entität wird der Anzeigenahme für den Benutzer sichtbar, wenn Sets einer Frage hinzugefügt werden (anstatt "Set hinzufügen", z.B. "Datensatz hinzufügen"), während für Attribute der Anzeigenahme für den Benutzer sichtbar wird, wenn ein Item der Frage mit mehreren Antworten hinzugefügt wird (anstatt "Item hinzufügen", z.B. "Stichwort hinzufügen").
+* **Bedingung hinzufügen** (|conditions|) eines Attributes oder einer Entität. Eine Frage, die mit einem Attribut mit einer oder mehreren BEdingungen verknüpft ist, wird automatisch im Fragenkatalog übersprungen, wenn die Bedingung als falsch ausgewertet wurde. Das Gleiche gilt für Fragesets, die mit Entitäten mit einer Bedingung verknüpft sind. Die Bedingungen selbst werden unter :doc:`the conditions management <conditions>` konfiguriert.
+* **Entfernen** (|delete|) eines Attributes oder einer Entität und all ihrer Abkömmlinge (z.B. eine Entität und all ihre Entitäten und Attribute unterhalb im Domänen-Modelbauman). **Diese Handlung kann nicht rückgängig gemacht werden!**
 
 .. |add| image:: ../_static/img/icons/add.png
 .. |update| image:: ../_static/img/icons/update.png
@@ -26,34 +26,34 @@ Auf der Seite können alle Entitäten und Attribute der RDMO-Installation gesehe
 .. |optionsets| image:: ../_static/img/icons/optionsets.png
 .. |delete| image:: ../_static/img/icons/delete.png
 
-The sidebar on the left-hand side shows additional interface items:
+Die Sidebar auf der rechten Seite zeigt weitere Interface-Objekte:
 
-* **Filter** filters the view according to a user given string. Only elements containing this string in their path will be shown.
-* **Options** offers additional operations:
+* **Filter** filtert die Ansicht anhand des Strings vorgegeben vom Benutzer. Nur Elemente, die diesen String in ihrem Pfad enhtalten, werden gezeigt. 
+* **Optionen** bietet weitere Operationen: 
 
-  * Create a new (empty) entity
-  * Create a new (empty) attribute
+  * Neue (leere) Entität erstellen
+  * Neues (leeres) Attribute erstellen
 
-* **Export** exports the current catalog to one of the displayed formats. While the textual formats are mainly for presentation purposes, the XML export can be used to transfer the domain model to a different installation of RDMO.
+* **Export** exportiert den aktuelen Katalog zu einem der angezeigten Formate. Während Textformate vor allem für Darstellung gedacht sind, kann der XML Export genutzt werden, um das Domainmodel zu einer anderen RDMO-Installtion zu transferieren. 
 
-The different elements of the domain model have different properties to control their behavior. As descibed in :doc:`the introduction <index>`, all elements have an URI Prefix, a key, and an internal comment only to be seen by other managers of the RDMO installation. In addition, you can edit the parameters below:
+Die verschiedenen Elemente eines Domainmodels haben unterschiedliche Eigenschaften, um ihr Verhalten zu bestimmen. Wie in :doc:`the introduction <index>` beschrieben haben alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, welche nur bei dem Manager der RDMO-Installtion gesehen werden kann. Außerdem können folgende Parameter verändert werden: 
 
-Entity
+Entität
 """"""
 
-Parent entity
-  Parent entity in the domain model. Changing the parent entity will move the entity and all of it's decendents to a different branch of the domain model tree.
+Eltern-Entität
+  Eltern-Entität in dem Domänenmodel. Das Ändern der Eltern-Entität versetzt die Entität und seine Abkömmlinge zu einem anderen Branch des Domänen-Baummodels.
 
-is collection
-  Designates whether this entity can have several sets of values. A question set connected to this entity will show interface elements to create new sets of answers. All entities in the tree below a collection entity adopt this behavior, so that questions about the same set can be spread over several question sets on separate pages of the interview.
+ist Kollektion
+  Bestimmt, ob diese Entität mehrere Wertesets haben kann. Eine Frage verknüpft mit dieser Entität wird Interface-Elemente zeigen, um einen neune Fragensatz zu erstellen. Alle Entitäten in dem Baum unterhalb einer Entitätenkollektion übernehmen dessen Verhalten, so dass Fragen über das gleiche Set über mehrere Fragen auf separaten Seiten des Interviews verteilt werden kann.
 
-  If an attribute ``id`` with a value type `Text` is added to the entity, users will be able to give a title to individual sets (like "Dataset A" or "Funder X"), otherwise the sets will be named #1, #2, etc.
+  Falls eine Attribut ``ID`` mit einem Wertetyp `Text`der Entität hinzugefügt wird, ermöglicht dies dem Benutzer einen Titel zu einzelnen Sets (wie "Datensatz A" oder "Finanzgeber X") zu verleihen, anderenfalls werden die Sets #1, #2, usw. benannt.
 
 Attribute
 """""""""
 
-Value type
-  Type of value for this attribute. The following types can be selected:
+Wertetyp
+  Der Typ des Wertes für dieses Attributes. Die folgende Typen können gewählt werden:
 
   * **Text**
   * **URL**
@@ -63,44 +63,45 @@ Value type
   * **Datetime**
   * **Options**
 
-  As of now only datetime and options offer a different behavior. This will change when validation in the interview will be implemented into RDMO.
+  Bisher zeigen nur datetime und options ein anderes Verhalten. Dies wird sich ändern sobald die Validierung des Interviews in RDMo implementiert ist.
 
-Unit
-  Unit for this attribute. The unit will be displayed in the different output features.
+Einheit
+  einheit eines Attributes. Die Einheit wird in den unterschiedlichen Ouput-Features angezeigt werden. 
+  
+Eltern-Entität
+  Eltern-Entität in dem Domänenmodel. Das Ändern der Eltern-Entität versetzt die Entität und seine Abkömmlinge zu einem anderen Branch des Domänen-Baummodels.
 
-Parent entity
-  Parent entity in the domain model. Changing the parent entity will move the attribute to a different branch of the domain model tree.
-
+ist Kollektion
+  Bestimmt, ob diese Entität mehrere Wertesets haben kann. Eine Frage verknüpft mit diesem Attribut erlaubt dem Benutzer mehrere Antworten für die verknüpfte Frage zu geben. Die Frage wird einen Button zeigen, um ein neues Objekt in einer neuen Zeile hinzufügen zu können. Ein Beispiel wären mehrere Stichwörter für ein Projekt. Fragen mit Check box widgets benötigen ebenfalls Kollektions-Attributte.
 is collection
-  Designates whether this attribute can have several sets of values. A question connected to this attribute will allow the user to give several answers for a question connected to it. The question will show a button to add a new item in a new line. An example would be several keywords for a project. Questions with check box widgets also need collection attributes.
 
-Range
+Bereich
 """""
 
-The range is used if an attribute is connected to a question using the slider widget.
+Der (Werte-)Bereich wird verwendet, wenn ein Attribut mit eine rFrage verknüpft ist, die einen Slider Widget verwendet.
 
 Minimum
-  Minimal value for this attribute.
+  Minimlwert für das Attribut.
 
 Maximum
-  Maximum value for this attribute.
+  Maximalwert für das Attribut.
 
-Step
-  Step in which this attribute can be incremented/decremented.
+Schritt
+   Schrittweite für das Attribut kann erhöht/verringert werden.
 
-Verbose name
+Anzeigename
 """"""""""""
 
-The verbose name is configured in singular and plural in German and English and is shown on buttons and in the automatically generated help text.
+Der Anzeigename ist im Singular und Plural in Deutsch und Englisch konfiguriert und ist als Button gezeigt und ist im automatisch erstellten Hilfetext enthalten.
 
 Name (en)
-  The English name displayed for this attribute/entity (e.g. project).
+  Der englische Name für das Attribut/Entität (z.B. project), der angezeigt wird.
 
 Plural name (en)
-  The English plural name displayed for this attribute/entity (e.g. projects).
+  Der englische Plural-Name für das Attribut/Entität (z.B. projects), der angezeigt wird.
 
 Name (de)
-  The German name displayed for this attribute/entity (e.g. Projekt).
+  Der deutsche Name für das Attribut/Entität (z.B. Projekt), der angezeigt wird.
 
 Plural name (de)
-  The German plural name displayed for this attribute/entity (e.g. Projekte).
+  Der deutsche Plural-Name für das Attribut/Entität (z.B. Projekte), der angezeigt wird.
