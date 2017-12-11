@@ -5,7 +5,7 @@ Ansichten können unter *Ansichten* im Mangementmenü in der Navigationsleiste k
 .. figure:: ../_static/img/screens/Ansichten.PNG
    :target: ../_static/img/screens/Ansichten.PNG
 
-   Screenshot des ANsichtenmangement-Interfaces.
+   Screenshot des Ansichtenmangement-Interfaces.
    
    Auf der linken Seite werden alle Ansichten der RDMO-Installation angezeigt. Ansichten zeigen ihren Schlüssel, ihren Tiel und eine Beschreibung. Auf der rechten Seite von jedem Ansichtenfeld zeigen Symbole di eInteraktionsmöglichkeiten an. Folgende Otptionen stehen zur Verfügung:
 
@@ -29,7 +29,7 @@ Die Sidebar auf der rechten Seite enthält weitere Interface-Objekte:
 Ansichten haben unterschiedlicher Eigenschaften, um ihr Verhalten zu bestimmen. Wie in :doc:`der Einleitung <index>` beschrieben haben alles Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur bei den Managern der RDMO-Installation gesehen werden können.. Ferner können folgende Parameter geändert werden:
 
 Ansicht
-""""
+"""""""
 
 Title (en)
   Der englische Titel der Ansicht. Der Titel wird in der Projektübersicht angezeigt.
@@ -45,7 +45,7 @@ Help (de)
 
 
 Vorlage
-""""""""
+"""""""
 
 .. figure:: ../_static/img/screens/Template.PNG
    :target: ../_static/img/screens/template.PNG
