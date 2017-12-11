@@ -1,78 +1,77 @@
-Views
+Ansichten
 -----
+Ansichten können unter *Ansichten* im Mangementmenü in der Navigationsleiste konfiguriert werden.
 
-Views can be configured under *Views* in the management menu in the navigation bar.
+.. figure:: ../_static/img/screens/Ansichten.PNG
+   :target: ../_static/img/screens/Ansichten.PNG
 
-.. figure:: ../_static/img/screens/views.png
-   :target: ../_static/img/screens/views.png
+   Screenshot des ANsichtenmangement-Interfaces.
+   
+   Auf der linken Seite werden alle Ansichten der RDMO-Installation angezeigt. Ansichten zeigen ihren Schlüssel, ihren Tiel und eine Beschreibung. Auf der rechten Seite von jedem Ansichtenfeld zeigen Symbole di eInteraktionsmöglichkeiten an. Folgende Otptionen stehen zur Verfügung:
 
-   Screenshot of the views management interface.
-
-On the left-hand side is the main display of all the views available in this installation of RDMO. Views show their key, title and description. On the left side of each views panel, icons indicate ways to interact the element. The following options are available:
-
-* **Update** (|update|) a view to change its properties.
-* **Edit the template** (|template|) of a view.
-* **Delete** (|delete|) a view. **This action cannot be undone!**
+* **Bearbeiten** (|update|) einer Ansciht, um dessen Eigenschaften zu ändern.
+* **Template bearbeiten** (|template|) eines Ansicht.
+* **Entfernen** (|delete|) einer Ansicht. **Diese Handlung kann nicht rückgängig gemacht werden!**
 
 .. |update| image:: ../_static/img/icons/update.png
 .. |template| image:: ../_static/img/icons/template.png
 .. |delete| image:: ../_static/img/icons/delete.png
 
-The sidebar on the right shows additional interface items:
+Die Sidebar auf der rechten Seite enthält weitere Interface-Objekte:
 
-* **Filter** filters the view according to a user given string. Only views containing this string in their path will be shown.
-* **Options** offers additional operations:
+* **Filter** filtert die Ansicht anhand eines vom Benutzer gegeben Stirngs. Nur ANsichten, die diesen string in ihrem Pfad haben, weren angezeigt.
+* **Optioen** ermöglichen weitere Operationen: 
 
-  * Create a new view
+  * Neue Ansicht erstellen
 
-* **Export** exports the conditions to one of the displayed formats. While the textual formats are mainly for presentation purposes, the XML export can be used to transfer the views to a different installation of RDMO.
+* **Export** exportiert die Ansichten zu eine der angegeben Formate. Während TextFormate hauptsächlich für die Präsentation sind, können XML-Ausgaben für den Transfer der Ansichten zu einer anderen RDMO-Installation verwendet werden.
 
-Views have different properties to control their behavior. As descibed in :doc:`the introduction <index>`, all elements have an URI Prefix, a key, and an internal comment only to be seen by other managers of the RDMO installation. In addition, you can edit the parameters below:
+Ansichten haben unterschiedlicher Eigenschaften, um ihr Verhalten zu bestimmen. Wie in :doc:`der Einleitung <index>` beschrieben haben alles Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur bei den Managern der RDMO-Installation gesehen werden können.. Ferner können folgende Parameter geändert werden:
 
-View
+Ansicht
 """"
 
 Title (en)
-  The English title for the view. The title will be shown in the projects overview.
+  Der englische Titel der Ansicht. Der Titel wird in der Projektübersicht angezeigt.
 
 Title (de)
-  The German title for the view.  The title will be shown in the projects overview.
+  Der deutsche Titel der Ansicht. Der Titel wird in der Projektübersicht angezeigt.
 
-Help (en)
-  The English help text for the view. The help text will be shown in the projects overview.
+Hilfe (en)
+  Der englische Hilfetext der Ansicht. Der Hilfetext wird in der Projektübersicht angezeigt.
 
 Help (de)
-  The German help text for the view. The help text will be shown in the projects overview.
+  Der deutsche Hilfetext der Ansicht. Der Hilfetext wird in der Projektübersicht angezeigt.
 
 
-Template
+Vorlage
 """"""""
 
-.. figure:: ../_static/img/screens/template.png
-   :target: ../_static/img/screens/template.png
+.. figure:: ../_static/img/screens/Template.PNG
+   :target: ../_static/img/screens/template.PNG
 
-   Screenshot of the template modal.
+   Screenshot des Vorlagen-Fensters.
+   
+Jede Ansicht hat eine Vorlage, die bestimmt wie die vom Benutzer gegeben ANtworten auf ein Textdokument gemappt wird. Die Vorlage benutzt aus `Django template <https://docs.djangoproject.com/en/1.11/ref/templates/language/>`_ syntax, welche in Kombination mit fegulärem HTML, Variabeln, dessen Werte  bei der TVorlageauswertung ersetzt werden (``{{ a_variable }}``), und Tags, welche die Logik der Vorlage kontrolliert (``{% a_tag %}``).
 
-Each view has a template, which determines how the answers given by the user are mapped to a textual document. The template is composed using the `Django template <https://docs.djangoproject.com/en/1.11/ref/templates/language/>`_ syntax, which is a combination of regular HTML, variables, which get replaced with values when the template is evaluated (``{{ a_variable }}``), and tags, which control the logic of the template (``{% a_tag %}``).
+Zwei Variabeln können in RDMo VOrlagen verwendet werden:
 
-Two variables can be used when used in RDMO templates:
+* ``values``, welche ein verschachteltes Wörterbuch von den Antworten des Benutzers auf deren Attribute mappt. 
+* ``conditions``, welche ein Wörterbuch auf die Schlüssel von den Bedingungen mappt, um die Bedingungen anhand des aktuellen Projekts auszuwerten (z.B. ``wahr`` or ``falsch``).
 
-* ``values``, which contains nested dictionary mapping the users answers to their attributes.
-* ``conditions``, which is a dictionary mapping the keys of the conditions to the evaluated conditions according to the current project (i.e. ``True`` or ``False``).
-
-Consider an attribute ``project/research_question/title`` (more specific an attribute ``title`` in the entity ``research_question`` in the entity ``project``) and a user, who answered the question connected to this attribute with "To boldly go where no man has gone before.". The attribute would be available in the template as ``values.project.research_question.title`` (note the ``.`` instead of ``/``). Used in the template using the sytax for a variable:
-
-.. code-block:: django
-
-    The main research question of the project is: {{ values.project.research_question.title }}
-
-would, when evaluated in the context by a user in his/her project, render:
+Ein Attribut wie  ``project/research_question/title`` (spezifischer eine Attribut ``titel`` in der Entität ``fragestellung`` in der Entität ``project``) und eine Benutzer, der die Frage zu dem Attribut mit "Wo noch kein Mensch gewesen ist" beantwortet. Das Attribut wäre dann in der Vorlage als ``values.project.fragestellung.title`` (beachte den ``.`` anstatt des ``/``). In der Vorlage wird die Syntax für eine Variable verwendet: 
 
 .. code-block:: django
 
-    The main research question of the project is: To boldly go where no man has gone before.
+    Die Fragestellung des Projekts ist: {{ values.project.research_question.title }}
 
-Collections can be rendered using the ``for`` tag of the Django template syntax.
+würde dann, wenn ausgewertet im Kontext beim Benutzer seines Projekts, ausgeben:
+
+.. code-block:: django
+
+    Die Fragestellung des Projekts ist: Wo noch kein Mensch gewesen ist.
+    
+Kollektionen können mit dem ``for`` tag von Django template syntax realisiert werden.
 
 .. code-block:: django
 
@@ -82,7 +81,7 @@ Collections can be rendered using the ``for`` tag of the Django template syntax.
     {% endfor %}
     </ul>
 
-The usual filters of the Django syntax can also be used, e.g.
+Die üblichen Filter für die Django-Syntax können auch verwendet werden, z.B.:
 
 .. code-block:: django
 
@@ -90,7 +89,7 @@ The usual filters of the Django syntax can also be used, e.g.
         {{ values.project.research_question.keywords | join:', ' }}
     </p>
 
-For collection entities, you can use:
+Für Kollektionsentitäten:
 
 .. code-block:: django
 
@@ -100,12 +99,12 @@ For collection entities, you can use:
     </p>
     {% endfor %}
 
-Conditions can be used using the ``if`` tag:
+Bedingungen können mit Hilfe des ``if`` tag verwendet werden.
 
 .. code-block:: django
 
     {% if conditions.personal_data %}
-    This will be only rendered if personal_data resolves to be true.
+    Dies wird nur ausgeführt, wenn personal_data als wahr ausgewertet wird.
     {% endif %}
 
-Please consult the documentation of the Django template syntax for all the available tags and filters: https://docs.djangoproject.com/en/1.11/ref/templates/language.
+Bitte lesen sie die Dokumentation von Django template syntax für alle verfügbaren Tags und Filter: https://docs.djangoproject.com/en/1.11/ref/templates/language.
