@@ -32,6 +32,11 @@ Die Sidebar auf der rechten Seite zeigt weitere Interface-Objekte:
 
 Optionensets und das Optionenmodel haben unterschiedliche Eigenschaften, um ihr Verhalten zu verändern. Wie in :doc:`der Einleitung <index>` erklärt, besitzen alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von den anderen Managers der RDMO-Installation gesehen werden können. Ferner können folgende Parameter verändert werden:
 
+.. figure:: ../_static/img/screens/Bearbeiten.PNG
+   :target: ../_static/img/screens/Bearbeiten.PNG
+   
+   Screenshot des Interfaces für die Parameter.
+
 Optionensets
 """"""""""
 
