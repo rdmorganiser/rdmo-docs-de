@@ -1,57 +1,57 @@
-Options
+Optionen
 -------
 
-Options and option sets can be managed under *Options* in the management menu in the navigation bar.
+Optionen und Optionensets können unter *Optionen* im Managementmenü inder Navigationsleiste bearbeitet werden.
 
-.. figure:: ../_static/img/screens/options.png
-   :target: ../_static/img/screens/options.png
+.. figure:: ../_static/img/screens/Optionen.PNG
+   :target: ../_static/img/screens/Optionem.PNG
+   
+   Screenshot des Optionenmanagement-Interfaces.
 
-   Screenshot of the options management interface.
+Auf der linken Seite sind alle Optionen und Optionsets der RDMO-Installation dargestellt. Optionensets zeigen ihren Schlüssel, während Optionen ihren Pfad und ihen Text zeigen. Auf der rechten Seite von jedem Optionenfeld befinden sich Symbole zum Interagieren mit den Elementen. Folgende OPtionen sind verfügbar:
 
-On the left-hand side is the main display of all the option sets and options available in this installation of RDMO. Option sets show their key, while options show their path and their text. On the left side of each elements panel, icons indicate ways to interact the element. The following options are available:
-
-* **Add** (|add|) a new option to an option set.
-* **Update** (|update|) an option set or option to change its properties.
-* **Update conditions** (|conditions|) of an option set. A question connected to an attribute, which is itself connected to an option set with one or more conditions, will not show the options of the set in the questionaire, if the condition is evaluated to be false. The conditions themselves are configured in :doc:`the conditions management <conditions>`.
-* **Delete** (|delete|) an option set or option and, in the case of an option set, all of it's options. **This action cannot be undone!**
+* **Hinzufügen** (|add|) einer neuen Option oder eines Optionensets.
+* **Bearbeiten** (|update|) der Eigenschaften einer Option oder eines Optionensets.
+* **Bedingungen bearbeiten** (|conditions|) eines Optionsets. Eine Frage, di emit einem Attribut verknüpft ist, die wiederum selbst mit einem Optionenset verknüpft ist, wird die Optionen des Sets im Fragekatalog nicht anzeigen, wenn die Bedingung als falsch ausgerwertet wird. Die Bedingungen selbst sind im :doc:`Bedingungsmangement <conditions>` konfiguriert.
+* **Löschen** (|delete|) einer Option oder eines Optionensets und im Falle ines Optionensets all seiner Optionen. **Diese Handlung kann nicht rückgägnig gemacht werden!** 
 
 .. |add| image:: ../_static/img/icons/add.png
 .. |update| image:: ../_static/img/icons/update.png
 .. |conditions| image:: ../_static/img/icons/conditions.png
 .. |delete| image:: ../_static/img/icons/delete.png
 
-The sidebar on the left shows additional interface items:
+Die Sidebar auf der rechten Seite zeigt weitere Interface-Objekte:
 
-* **Filter** filters the view according to a user given string. Only elements containing this string in their path will be shown.
-* **Options** offers additional operations:
+* **Filter** erlaubt eine Ansicht abhängig von einem vom Benutzer gegeben Strings. Nur Elemente, die diesen String in ihrem Pfad enthalten, werden angezeigt.
+* **Options** hält weitere Operationen bereit:
 
-  * Create a new (empty) option set
-  * Create a new (empty) option
+   * Neues (leeres) Optionenset erstellen
+   * Neue (leere) Option erstellen
 
-* **Export** exports the options sets to one of the displayed formats. While the textual formats are mainly for presentation purposes, the XML export can be used to transfer the options sets to a different installation of RDMO.
+* **Exports** exportiert die Optionensets in eins der angezeigten Formate. Während die Textformate hautpsächlich für die Darstellung sind, können XML-Exporte für den Transfer der Optionen zu einer anderen RDMO-Installtion verwendet werden.
 
-Option sets and options model have different properties to control their behavior. As descibed in :doc:`the introduction <index>`, all elements have an URI Prefix, a key, and an internal comment only to be seen by other managers of the RDMO installation. In addition, you can edit the parameters below:
+Optionensets und das Optionenmodel haben unterschiedliche Eigenschaften, um ihr Verhalten zu verändern. Wie in :doc:`der Einleitung <index>` erklärt, besitzen alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von den anderen Managers der RDMO-Installation gesehen werden können. Ferner können folgende Parameter verändert werden:
 
-Option set
+Optionensets
 """"""""""
 
-Order
-  Controls the position of the option set in lists or in the interview (if an attribute has more than one option set).
+Reihenfolge
+  Bestimmt die Postion des Optionensets in der Liste im Fragenkatalog (falls ein Attribut mehr als ein Optionenset besitzt).
 
 Option
 """"""
 
-Option set
-  The option set this option belongs to. Changing the option set will move the option to a different option set.
+Optionenset
+  Das Optionenset zu dem die Option gehört. Das Ändern des Optionensets wird die Option zu einem anderen Optionenset transferieren.
 
-Order
-  Controls the position of the option in lists or in the interview.
+Reihenfolge
+  Bestimmt die Position der Option in der Liste oder in dem Fragenkatalog.
 
 Text (en)
-  The English text for the option to be displayed to the user.
+  Der englische Text für die Option, der dem Benutzer angezeigt wird.
 
 Text (de)
-  The German text for the option to be displayed to the user.
-
-Additional input
-  Designates whether an additional input is possible for this option. In this case a text box is displayed to the radio button or check box. Usually this is used for an option "Other".
+  Der deutsche Text, der dem Benutzer angezigt wird.
+  
+Zusätzliche Eingabe
+  Legt fest, on eine weitere Eingabe für diese Option möglich ist. Im Falle einer Textbox wird ein Dario button oder eine Checkbox angezeigt. Für gewöhnlich wird es für die Option "Sonstige" genutzt.
