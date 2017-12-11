@@ -1,45 +1,47 @@
-Conditions
+BEdingungen
 ----------
 
-Conditions can be created and managed under *Conditions* in the management menu in the navigation bar. They are later connected to Entities, Attributes, Option sets, or Tasks.
+Bedingungen können erstellt und bearbeitet werden unter *Bedinungen* im Mangamentmenü der Navigationsleiste. Später werden sie mit Entitäten, Attributen, Optionensets oder Aufgaben verbunden.
 
-.. figure:: ../_static/img/screens/conditions.png
-   :target: ../_static/img/screens/conditions.png
 
-   Screenshot of the conditions management interface.
+.. figure:: ../_static/img/screens/Bedingungen.PNG
+   :target: ../_static/img/screens/Bedingungen.PNG
 
-On the left-hand side is the main display of all the conditions available in this installation of RDMO. Conditions show their key and a textual representation of what they evaluate. On the left side of each conditions panel, icons indicate ways to interact the element. The following options are available:
+   Screenshot des Bedinungen-Managment Interfaces.
+   
+  Auf der linken Seite sind alle Bedingungen der RDMO-Instalaltion verfügbar. Bedinungen zeigen ihren Schlüssel und eine textuelle Darstellung was sie auswerten. Auf der rechten Seite von jedem Bedinungsfeld zeigen Symbole an wie mit dem jewieligen Element interagiert werden kann. Die folgenden Optionen stehen zur Auswahl:
 
-* **Update** (|update|) a condition to change its properties.
-* **Delete** (|delete|) a condition. **This action cannot be undone!**
+
+* **Bearbeiten** (|update|) der Eigenschaften einer Bedingung.
+* **Löschen** (|delete|) einer BEdingung. **Diese Handlung kann nicht rückgängig gemacht werden!**
 
 .. |update| image:: ../_static/img/icons/update.png
 .. |delete| image:: ../_static/img/icons/delete.png
 
-The sidebar on the left shows additional interface items:
+In der rechten Sidebar gibt es weitere Interface-Optionen:
 
-* **Filter** filters the view according to a user given string. Only conditions containing this string in their path will be shown.
-* **Options** offers additional operations:
+**Filter** erlaubt eine Ansicht entsprechend eines vom Benutzer gegeben Strings. Nur Bedingungen, die diesen String enthalten, werden angezeigt.
+**Optionen** bietet weitere Optionen:
 
-  * Create a new condition
+  * Neue Bedingung erstellen
+  
+  * **Export** exportiert die Bedigungen in eins der angezeigten Formate. Während die Textformate hauptschächlich für die Darstellung sind, können XML Ausgaben für den Transfer von Bedingungen zu anderen RDMO Installationen genutzt werden.
 
-* **Export** exports the conditions to one of the displayed formats. While the textual formats are mainly for presentation purposes, the XML export can be used to transfer the conditions to a different installation of RDMO.
+Bedingungen haben unterschiedliche Eigenschaften, um ihr Verhalten zu kontrollieren. Wie in :doc:`in der Einleitung <index>` beschrieben,  haben alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von den anderen Managern der RDMo Installation gesehen werden können. Ferner können folgende Parameter verändert werden: 
 
-Conditions have different properties to control their behavior. As descibed in :doc:`the introduction <index>`, all elements have an URI Prefix, a key, and an internal comment only to be seen by other managers of the RDMO installation. In addition, you can edit the parameters below:
-
-Condition
+Bedingung
 """""""""
 
-Conditions are configured with a source attribute, which will be evaluated, a relation like "equal" or "greater than" and a target. The target is a text string or an option. As an example, if the source is the attribute ``project/legal_aspects/ipr/yesno``, the relation is "equal to", and the target text is "1", the condition will be true for a project where the answer to the question connected to the attribute ``project/legal_aspects/ipr/yesno`` is "1" (or "yes" for a yesno widget).
+Bedingungen sind mit einem Quellen-Attribut, der ausgewertet wird, einer Beziehung wie "gleich" oder "größer als" und einem Ziel ausgestattet. Beispielsweise, wenn eine Quelle das Attribut ``project\legal_aspects/ipr/yesno`` ist, die Beziehung "gleich" und das Ziel "1" ist, dann wird die Bedingung für ein Projekt als wahr ausgewertet werden, wenn die Antwort zu der Frage verbunden mit dem Attribut ``project/legal_aspects/ipr/yesno`` "1" ist (oder "ja" für einen Ja-Nein Widget).
 
-Source
-  The Attribute this condition is evaluating.
+Quelle
+  Das Attribut der Bedingung wird ausgewertet.
 
-Relation
-  The Relation this condition is using.
+Beziehung
+  Die Beziehung dieser Kondition, die verwendet wird.
 
-Target (Text)
-  If using a regular attribute, the text value this condition is checking against.
+Ziel (Text)
+  Fals eine reguläres Attribut verwendet wird, wird der Textwert dieses Attributs gegengeprüft.
 
-Target (Option)
-  If using an options attribute, the option this condition is checking against.
+Ziel (Option)
+  Falls ein Optionsattribut verwendet wird, wird die Option der Bedingung gegengeprüft.
