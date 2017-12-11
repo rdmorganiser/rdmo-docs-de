@@ -9,7 +9,7 @@ Bedingungen können erstellt und bearbeitet werden unter *Bedinungen* im Mangame
 
    Screenshot des Bedinungen-Managment Interfaces.
    
-  Auf der linken Seite sind alle Bedingungen der RDMO-Instalaltion verfügbar. Bedinungen zeigen ihren Schlüssel und eine textuelle Darstellung was sie auswerten. Auf der rechten Seite von jedem Bedinungsfeld zeigen Symbole an wie mit dem jewieligen Element interagiert werden kann. Die folgenden Optionen stehen zur Auswahl:
+Auf der linken Seite sind alle Bedingungen der RDMO-Instalaltion verfügbar. Bedinungen zeigen ihren Schlüssel und eine textuelle Darstellung was sie auswerten. Auf der rechten Seite von jedem Bedinungsfeld zeigen Symbole an wie mit dem jewieligen Element interagiert werden kann. Die folgenden Optionen stehen zur Auswahl:
 
 
 * **Bearbeiten** (|update|) der Eigenschaften einer Bedingung.
