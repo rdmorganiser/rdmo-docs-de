@@ -2,6 +2,12 @@ Aufgaben
 -----
 
 Aufgaben sind unter *Aufgaben* im Managementmenü in der Navigatorleiste konfiguriert.
+
+.. figure:: ../_static/img/screens/Aufgaben.PNG
+   :target: ../_static/img/screens/Aufgaben.PNG
+   
+   Screenshot des Aufgabenmangement-Interfaces.
+   
    
 .. figure:: ../_static/img/screens/Aufgaben.PNG
    :target: ../_static/img/screens/Aufgaben.PNG
