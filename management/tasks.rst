@@ -61,4 +61,3 @@ Tage vorher
 
 Tage danach
   Anschließende Tage nach dem Enddatum.
-  Additional days after the end date.
