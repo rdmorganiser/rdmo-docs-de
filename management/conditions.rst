@@ -1,4 +1,4 @@
-BEdingungen
+Bedingungen
 ----------
 
 Bedingungen können erstellt und bearbeitet werden unter *Bedinungen* im Mangamentmenü der Navigationsleiste. Später werden sie mit Entitäten, Attributen, Optionensets oder Aufgaben verbunden.
