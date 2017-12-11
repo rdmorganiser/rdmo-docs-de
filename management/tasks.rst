@@ -1,63 +1,64 @@
-Tasks
+Aufgaben
 -----
 
-Tasks can be configured under *Tasks* in the management menu in the navigation bar.
+Aufgaben sind unter *Aufgaben* im Managementmenü in der Navigatorleiste konfiguriert.
 
-.. figure:: ../_static/img/screens/tasks.png
-   :target: ../_static/img/screens/tasks.png
+.. figure:: ../_static/img/screens/Aufgaben.PNG
+   :target: ../_static/img/screens/Aufgaben.PNG
+   
+   Screenshot des Aufgabenmangement-Interfaces.
 
-   Screenshot of the tasks management interface.
+ Auf der linekn Seite werden alle aufgaben der RDMO-Installation angezeigt. Aufgaben ezeigen ihren Schlüssel, Titel und Aufgabenbeschreibung an. Auf der rechten Seite des Aufgabenfeldes zeigen Symbole Interaktionsmöglichkeiten an. Folgende Optionen sind verfügbar:
 
-On the left-hand side is the main display of all the tasks available in this installation of RDMO. Tasks show their key, title and the text describing the task. On the left side of each tasks panel, icons indicate ways to interact the element. The following options are available:
 
-* **Update** (|update|) a task to change its properties.
-* **Update conditions** (|conditions|) of a task. A task will only be shown to the user, if all of its conditions are evaluated ``True``. The conditions themselved are configured in :doc:`the conditions management <conditions>`.
-* **Update the time frame** (|timeframe|) of a task. The time frame is constructed from one or two dates from the user's answers. This allows for tasks about a specific deadline or special period.
-* **Delete** (|delete|) a task. **This action cannot be undone!**
+* **Bearbeiten** (|update|) einer Aufgabe, um dessen Eigenschaften zu ändern. 
+* **Bedingung bearbeiten** (|conditions|) einer Aufgabe. eine Aufgabe wird dem Benutzer nur angezeigt, wenn al ihre Bedingungen als ``wahr`´ ausgewertet werden. Die BEdingungen selbst sind unter  :doc:`dem Konditionsmangement <conditions>` konfiguriert.
+* **Zeitrahmen bearbeiten** (|timeframe|) einer Aufgabe. Der Zeitrahmen wird erstellt aus einem oder zwei Daten von den Antworten des Benutzers. Dies erlaubt Aufgaben mit einer bestimmten Deadline oder einer bestimmten Dauer festzulegen. 
+* **Entfernen** (|delete|) einer Aufgabe. **Diese Handlung kann nicht rückgängig gemacht werden!** 
 
 .. |update| image:: ../_static/img/icons/update.png
 .. |conditions| image:: ../_static/img/icons/conditions.png
 .. |timeframe| image:: ../_static/img/icons/timeframe.png
 .. |delete| image:: ../_static/img/icons/delete.png
 
-The sidebar on the left shows additional interface items:
+Die Sidebar auf der rechten Seite enthält weitere Interface-Objekte:
 
-* **Filter** filters the view according to a user given string. Only tasks containing this string in their path will be shown.
-* **Options** offers additional operations:
+* **Filter**  filtert eine Ansicht anhand eines vom Benutzer eingegeben Strings. Nur Aufgaben, die diesen String in ihrem Pfad enthalten, werden angezeigt. 
+* **Optionen** bietet weitere Optionen: 
+ 
+   * Neue Aufgabe erstellen
 
-  * Create a new task
 
-* **Export** exports the conditions to one of the displayed formats. While the textual formats are mainly for presentation purposes, the XML export can be used to transfer the tasks to a different installation of RDMO.
+* **Export** exportiert in eine der angebenen Formate. Während Textformate hauptsächlich für die Präsentation sind, können XML-Formate für den Transfer der Aufgaeb zu einer anderen RDMO-Installation verwendet werden.
 
-Tasks have different properties to control their behavior. As descibed in :doc:`the introduction <index>`, all elements have an URI Prefix, a key, and an internal comment only to be seen by other managers of the RDMO installation. In addition, you can edit the parameters below:
+Aufgaben haben unterschiedliche Eigenschafte, um ihr Verhalten zu konfigurieren. Wie in :doc:`der Einleitung <index>` beschrieben besitzen alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur bei den Managern der RDMO-Instalaltion gesehen werden können. Ferner können folgende Parameter verändert werden: 
 
-Task
+Aufgabe
 """"
 
 Title (en)
-  The English title for the view. The title will be shown in the projects overview.
+  Der englische Titel für die Ansicht. Der Titel wird in der Projektübersicht angezeigt.
 
 Title (de)
-  The German title for the view.  The title will be shown in the projects overview.
+  Der deutsche Titel für die Ansicht. Der Titel wird in der Projektübersicht angezeigt.
 
 Text (en)
-  The English text for the view. The text will be shown in the projects overview.
+  Der englische Text für die Ansicht. Der Text wird in der Projektübersicht angezeigt.
 
 Text (de)
-  The German text for the view. The text will be shown in the projects overview.
+  Der deutsche Text für die Ansicht. Der Text wird in der Projektübersicht angezeigt.
 
-Time frame
+Zeitrahmen
 """"""""""
+Startdatum-Attribut
+  Das Startdatum-Attribut legt das Startdatum für die Aufgabe fest. Das Attribut benötigt einen Wertetyp *datetime*.
 
-Start date attribute
-  The attribute that sets the start date for this task. The attribute needs to be of value type *datetime*.
+Enddatum-Attribut
+  Das Enddatum-Attribut legt das Enddatum der Aufgabe fest (optional, falls kein Enddatum gegeben ist, setzt das startdatum-Attribut auch das Enddatum-Attribut). Das Attribut braucht den Wertetyp *datetime*.
 
+Tage vorher
+  Vorrangehende Tage bis zum Starttemrin.
 
-End date attribute
-  The Attribute that sets the end date for this task (optional, if no end date attribute is given, the start date attribute sets also the end date). The attribute needs to be of value type *datetime*.
-
-Days before
-  Additional days before the start date.
-
-Days after
+Tage danach
+  Anschließende Tage nach dem Enddatum.
   Additional days after the end date.
