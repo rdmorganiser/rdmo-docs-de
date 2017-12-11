@@ -2,17 +2,11 @@ Aufgaben
 -----
 
 Aufgaben sind unter *Aufgaben* im Managementmenü in der Navigatorleiste konfiguriert.
-
-.. figure:: ../_static/img/screens/Aufgaben.PNG
-   :target: ../_static/img/screens/Aufgaben.PNG
-   
-   Screenshot des Aufgabenmangement-Interfaces.
-   
    
 .. figure:: ../_static/img/screens/Aufgaben.PNG
    :target: ../_static/img/screens/Aufgaben.PNG
    
-   Screenshot des Fragenmangements-Interfaces.
+   Screenshot des Aufgabenmanagement-Interfaces.
 
  Auf der linekn Seite werden alle aufgaben der RDMO-Installation angezeigt. Aufgaben ezeigen ihren Schlüssel, Titel und Aufgabenbeschreibung an. Auf der rechten Seite des Aufgabenfeldes zeigen Symbole Interaktionsmöglichkeiten an. Folgende Optionen sind verfügbar:
 
