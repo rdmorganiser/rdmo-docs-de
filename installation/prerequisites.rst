@@ -1,12 +1,12 @@
-Install prerequisites
----------------------
+Voraussetzungen installieren
+----------------------------
 
-Installing the prerequisites for RDMO differs on the different operating systems and is therefore covered in different sections.
+Das Installieren der Voraussetzungen für RDMO unterscheidet sich auf den verschiedenen Betriebssystemen und ist daher in einzelnen Abschnitten enthalten.
 
 Linux
 ~~~~~
 
-We recommend to install the prerequisites using the packaging system of your distribution. On Debian/Ubuntu use:
+Wir empfehlen für die Installtion der Voraussetzungen das Paket-System der Distribution zu verwenden. Bei Debian/Ubunutu verwende:
 
 .. code:: bash
 
@@ -17,7 +17,7 @@ We recommend to install the prerequisites using the packaging system of your dis
     # optional, for pdf output
     sudo apt install texlive texlive-xetex
 
-on RHEL/CentOS use:
+Bei RHEL/CentOS verwende:
 
 .. code:: bash
 
@@ -29,11 +29,11 @@ on RHEL/CentOS use:
     sudo yum install texlive texlive-xetex texlive-mathspec texlive-euenc \
         texlive-xetex-def texlive-xltxtra
 
-On Ubuntu 14.04, `python3-venv` is not available. Please use `python3.5-venv` instead.
+Bei Ubuntu 14.04, ist `python3-venv` nicht verfügbar. Bitte verwende stattdessen `python3.5-venv`.
 
-On RHEL/CentOS ``selinux`` is enabled by default. This can result in unexpected errors, depending on where you store the RDMO source code on the system. While the prefereble way is to configure it correctly (which is beyond the scope of this documentation), you can also set ``selinux`` to ``permissive`` or ``disabled`` in ``/etc/selinux/config`` (and reboot afterwards).
+Bei RHEL/CentOS ``selinux`` ist standardmäßig aktiviert. Dies führt zu unerwarteten Fehlern abhängig davon wo der RDMO-Sourcecode auf dem System isntalliert ist. Auch wenn die bevorzugte Lösung die richtige Konfiguration ist (was im Rahmen dieser Dokumentation zu weit führen würde), kann ``selinux`` auf ``permissive`` oder ``disabled`` unter ``/etc/selinux/config`` gesetzt werden (erfordert einen Neustart).
 
-If you want to use Python 2.7 instead of Python 3, please use the corresponding packages:
+Wenn du Python 2.7 anstatt Python 3 benutzen möchtest, verwende folgende entsprechende Pakete:
 
 .. code:: bash
 
@@ -44,7 +44,7 @@ If you want to use Python 2.7 instead of Python 3, please use the corresponding 
 macOS
 ~~~~~
 
-We recommend to install the prerequisites using `brew <http://brew.sh>`_:
+Wir empfehlen die Voraussetzungen mit  `brew <http://brew.sh>`_ zu installieren:
 
 .. code:: bash
 
@@ -60,24 +60,24 @@ We recommend to install the prerequisites using `brew <http://brew.sh>`_:
 Windows
 ~~~~~~~
 
-On Windows, the software prerequisites need to be downloaded and installed from their particular web sites.
+Bei WIndows müsen die Software-Voraussetzungen von den einzelnen Internetseiten heruntergeladen und isntalliert werden.
 
-For python:
+Für Python:
 
-* download from https://www.python.org/downloads/windows/
-* we recommend a version >= 3.4
-* don't forget to check 'Add Python to environment variables' during setup
+* herunterladen von https://www.python.org/downloads/windows/
+* wir empfehlen eine Version >= 3.4
+* vergiss nicht zu überprüfen, dass `Python zu den Umgenungsvariabeln hinzufügen` gesetzt ist während des Setups
 
-For git:
+Für git:
 
-* download from https://git-for-windows.github.io/
+* herunterladen von https://git-for-windows.github.io/
 
-For the Microsoft C++ Build Tools:
+Für die Microsoft C++ Build Tools:
 
-* download from http://landinghub.visualstudio.com/visual-cpp-build-tools
+* herunterladen von http://landinghub.visualstudio.com/visual-cpp-build-tools
 
-For pdflatex (optional, for pdf export):
+Für pdflatex (optional, für pdf-Export):
 
-* download from http://miktex.org/
+* herunterladen http://miktex.org/
 
-All further steps need to be performed using the windows shell ``cmd.exe``. You can open it from the Start-Menu.
+Alle weiteren Schritte müssen in der Windowsshell ``cmd.exe`` ausgeführt werden. Du kannst diese vom Start-Menü aus öffnen.
