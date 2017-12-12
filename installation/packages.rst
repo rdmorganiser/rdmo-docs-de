@@ -1,9 +1,9 @@
-Install python packages
------------------------
+Python Pakete installieren
+--------------------------
 
-After you have obtained the ``rdmo-app``, you need to install the ``rdmo`` package and the other python dependencies.
+Nach dem du dir den ``rdmo-app``-Ordner angesehen hast, musst du die ``rdmo``-Pakete installieren und andere Python-Abhängigkeiten.
 
-Change to the ``rdmo-app`` directory and create a `virtualenv <https://virtualenv.readthedocs.org>`_ (this is done as your user or the created ``rdmo`` user, not as ``root``):
+Wechsle in den ``rdmo-app``-Ordner und erstelle eine  `virtualenv <https://virtualenv.readthedocs.org>`_ (mit deinem Benutzer oder deinem erstellen ``rdmo``-Benutzer, nicht als ``root``):
 
 .. code:: bash
 
@@ -17,19 +17,19 @@ Change to the ``rdmo-app`` directory and create a `virtualenv <https://virtualen
 
     pip install --upgrade pip setuptools                       # update pip and setuptools
 
-After the virtual environment is activated, the ``rdmo`` package can be installed using ``pip``:
+Nachdem die virtuelle Umgebung aktiviert wurde, kann da ``rdmo``-Paket mit Hilfe von ``pip`` installiert werden:
 
 .. code:: bash
 
     pip install rdmo
 
-On windows, pandoc needs to be installed in an additional step:
+Auf Windows wird für die Installation pandoc benötigt:
 
 .. code:: bash
 
     # only on Windows
     python -c "import pypandoc; pypandoc.download_pandoc()"
 
-The virtual environment encapsulates your RDMO installation from the rest of the system. This makes it possible to run several applications with different python dependencies on one machine and to install the dependencies without root permissions.
+Die virtuelle Umgebung schottet die RDMO-Installation vom Rest des Systems ab. Dies ermöglicht es mehrere Anwendungen mit verschiedenen Python-Abhängigkeiten auf einer Machine laufen zu lassen und die Abhängigkeiten ohne Root-Rechte zu installieren.
 
-**Important:** The virtual enviroment needs to be activated, using ``source env/bin/activate`` or ``call env\Scripts\activate.bat``, everytime a new terminal is used.
+**Wichtig:** Die virtuelle Umgebung muss jedes Mal mit Hilfe von``source env/bin/activate`` oder ``call env\Scripts\activate.bat`` aktiviert werden , wenn ein neues Terminal benutzt wird mit Hilfe.
