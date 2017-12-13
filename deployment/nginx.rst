@@ -1,24 +1,23 @@
-nginx and gunicorn
+nginx und gunicorn
 ------------------
 
-As mentioned several times, you should create a dedicated user for RDMO. All steps for the installation, which do not need root access, should be done using this user. Here we assume this user is called ``rdmo`` and it's home is ``/srv/rdmo`` and therefore your ``rdmo-app`` is located in ``/srv/rdmo/rdmo-app``.
+Wie bereits mehrfach erwähnt sollte eine dezidierter Benutzer für RDMo verwendet werden. Alle Schritte in der Anleitung, welche keine Root-Rechte benötigen, sollten mit diesem dezidierten Benutzer ausgeführt werden. Hier gehen wir davon aus, dass der Benutzer ``rdmo`´ genannt wurde und sein Home-Verzeichnis ``/srv/rdmo`` ist und demnach deine ``rdmo-app`` unter ``/srv/rdmo/rdmo-app`` zu finden ist.
 
-First install gunicorn inside your virtual environment:
+Als erstes installiere gunicorn in deiner virtuellen Umgebung:
 
 .. code:: bash
 
     pip install -r requirements/gunicorn.txt
 
-Then, test ``gunicorn`` using:
+Dann, teste ``gunicorn``:
 
 .. code:: bash
 
     gunicorn --bind 0.0.0.0:8000 config.wsgi:application
 
-This should serve the application like ``runserver``, but without the static assets, like CSS files and images. After the test kill the ``gunicorn`` process again.
+dies sollte die Anwendung laufen lassen genauso wie ``runserver``, abe rohne statische Inhalte wie CSS-Dateien oder Bilder. Nach dem Test beendet den ``gunicorn``-Prozess wieder.
 
-Now, create a systemd service file for RDMO. Systemd will launch the gunicorn process on startup and keep running. Create a new file in `/etc/systemd/system/rdmo.service` and enter (you will need root/sudo permissions for that):
-
+Jetzt erstelle eine systemd service Datei für RDMO. Systemd wird den gunicorn-Prozess launchen bei der Intriebnahme und es am Laufen halten. Erstelle eine neue Datei unter `/etc/systemd/system/rdmo.service`  und gib ein (you benötigst Root/sudo-Rechte dafür): 
 ::
 
     [Unit]
@@ -34,21 +33,21 @@ Now, create a systemd service file for RDMO. Systemd will launch the gunicorn pr
     [Install]
     WantedBy=multi-user.target
 
-This service needs to be started and enables like any other service:
+Dieser Service muss gestartet und aktiviert werden wie jeder andere Service auch:
 
 .. code:: bash
 
     sudo systemctl start rdmo
     sudo systemctl enable rdmo
 
-Next, install nginx
+Danach installiere nginx:
 
 .. code:: bash
 
     sudo apt install nginx  # on Debian/Ubuntu
     sudo yum install nginx  # on RHEL/CentOS
 
-Edit the nginx configuration as follows (again with root/sudo permissions):
+Verändere die nginx-Konfiguration wie folgt (mit root/sudo-Rechten):
 
 .. code:: bash
 
@@ -66,17 +65,17 @@ Edit the nginx configuration as follows (again with root/sudo permissions):
         }
     }
 
-Restart nginx. RDMO should now be available on ``YOURDOMAIN``. Note that the unix socket ``/srv/rdmo/rdmo.sock`` needs to be accessible by nginx.
+Starte nginx neu. RDMO sollte nun unter ``YOURDOMAIN`` verfügbar sein. Beachte, dass der Unix-Socket ``/srv/rdmo/rdmo.sock`` für nginx zugänglich sein muss.
 
-As you can see from the virtual host configurations, the static assets, like CSS and JavaScript files are served independent from the reverse proxy to the gunicorn process. In order to do so they need to be gathered in the ``static_root`` directory. This can be archived by running:
+Wie du der virtuellen Host-Konfirguration entnehmen kannst, werden statische Inhalte wie CSS und JavaScript-Dateien unabhängig von dem entgegengesetzten Proxy zu dem gunicorn-Prozess bedient. Um dies zu erreichen müssen sie in dem ``static_root``-Ordner erfasst werden. Dies kann durch folgendes:
 
 .. code:: bash
 
     python manage.py collectstatic
 
-in your virtual environment.
+in deiner virtuellen Umgebung erreicht werden.
 
-In order to apply changes to the RDMO code (e.g. after an :doc:`upgrade </upgrade/index>`) the gunicorn process need to be restarted:
+Um Veränderungen im RDMO-Code (z.B. nach einem :doc:`Upgrade </upgrade/index>`) umzusetzen, muss der gunicorn-Prozess neu gestartet werden: 
 
 .. code:: bash
 
