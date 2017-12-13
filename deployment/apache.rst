@@ -1,9 +1,9 @@
-Apache and mod_wsgi
+Apache und mod_wsgi
 -------------------
 
-In production, you should create a dedicated user for RDMO. All steps for the installation, which do not need root access, should be done using this user. As before, we assume this user is called ``rdmo`` and it's home is ``/srv/rdmo`` and therefore your ``rdmo-app`` is located in ``/srv/rdmo/rdmo-app``.
+Im Betrieb kannst du einen dedizierten Benutzer für RDMO erstellen. Alle Schritte für die Installation für die du ekine Root-Rechte benötigst, sollten mit diesem Benuter ausgeführt werden. Wie vorher auch gehen wir davon aus, dass der Benutzer ``rdmo`` genannt wurde und sein Home-Verzeichnis ``/srv/rdmo`` ist. Demnach ist dein ``rdmo-app`` unter ``/srv/rdmo/rdmo-app`` zu finden.
 
-Install the Apache server and ``mod_wsgi`` using:
+Installiere den Apache Server und ``mod_wsgi``:
 
 .. code:: bash
 
@@ -14,9 +14,9 @@ Install the Apache server and ``mod_wsgi`` using:
     # CentOS
     sudo yum install httpd mod_wsgi                   # only for python2.7
 
-Next create a virtual host configuration. Sadly, the different distributions use different versions of Apache and mod_wsgi and therefore require a slightly different setup:
+Als nächstes erstelle eine virtuelle Host-Konfiguration. Leider werden verschiedene Versionen von apache und mod-wsgi bei den verschiedenen Distributionen verwenden und daher ist jeweils ein leicht unterschiedliches Setup notwendig:
 
-For Debian/Ubuntu use:
+Für Debian/Ubuntu:
 
 .. code::
 
@@ -45,7 +45,7 @@ For Debian/Ubuntu use:
             </Directory>
     </VirtualHost>
 
-for CentOS 7:
+Für CentOS 7:
 
 .. code::
 
@@ -72,27 +72,25 @@ for CentOS 7:
             </Directory>
     </VirtualHost>
 
-Restart the Apache server. RDMO should now be available on ``YOURDOMAIN``. Note that the Apache user needs to have access to ``/srv/rdmo/rdmo-app/static_root/``.
+Starte den Apache-Server neu. RDMO sollte nun unter ``YOURDOMAIN`` verfügbar sein. Beachte, dass der Apache-Benutzer Zugang zu ``/srv/rdmo/rdmo-app/static_root/`` haben muss.
 
-As you can see from the virtual host configurations, the static assets, like CSS and JavaScript files are served independent from the WSGI-python script. In order to do so they need to be gathered in the ``static_root`` directory. This can be archived by running:
+Wie du der virtuellen Host-Konfigurationen entnehmen kannst werden die statischen Inhalte wie CSS und JavaScript unabhängig vom WSGI-Python-Skript bedient. Um dies zu erreichen, müssen sie in dem ``static_root``-Ordner erfasst werden:
 
 .. code:: bash
 
     python manage.py collectstatic
 
-in your virtual environment.
+in der virtuelle Umgebung:
 
-In order to apply changes to the RDMO code (e.g. after an :doc:`upgrade </upgrade/index>`) the webserver
-needs to be reloaded or the ``config/wsgi.py`` file needs to apear modified. This can be done using the ``touch`` command:
-
+Um Veränderungen am RDMo code vorzunehmen (z.B: nach dem :doc:`Upgrade </upgrade/index>`) muss der Webserver neu geladen werden oder die Datei``config/wsgi.py`` muss (scheinbar) verändert worden sein indem der ``touch``-Befehl verwendet wird: 
 .. code:: bash
 
     touch config/wsgi.py
 
-Also, the ``collectstatic`` command has to be executed again. Both can be achived using:
+Außerdem muss das ``collectstatic``-Kommando neu ausgeführt werden:
 
 .. code:: bash
 
     python manage.py deploy
 
-in your virtual environment.
+in deiner virtuellen Umgebung.
