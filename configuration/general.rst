@@ -1,35 +1,34 @@
-General settings
-----------------
+Allgemeine Einstellungen
+------------------------
 
-A few general setting should be included in your ``config/settings/local.py``. The first, and probably most important one is if you run RDMO in `debug mode <https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-DEBUG>`_ or not:
+Einige genrelle Einstellungen sollten in deiner ``config/settings/local.py`` enthalten sein. Die erste und wahrscheinlich wichtigste, wenn du RDMO im `Debug-Modus<https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-DEBUG>`_ ausführst:
 
 .. code:: python
 
     DEBUG = True
 
-In debug mode, verbose error pages are shown in the case something goes wrong and static assets like CSS and JavaScript files are found by the development server automatically. The debug mode *must not* be enabled when running RDMO in production connected to the internet.
+Im Debug-Modus werden ausführliche Fehlerseiten angezeigt, falls etwas schief läuft und statische Inhalte wie CSS und JavaScript-Dateien werden vom Entwicklungsserver automatisch gefunden. Der Debug-Modus *darf nicht* aktiviert sein, wenn RDMO im normalen Betrieb mit dem Internet verbunden ist.
 
-Django needs a `secret key <https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-SECRET_KEY>`_, which "should be set to a unique, unpredictable value":
+Django braucht einen `Geheimschlüssel <https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-SECRET_KEY>`_, der auf einen `` einzigartigen, unvorsagbaren Wert gesetzt wird ``:
 
 .. code:: python
 
     SECRET_KEY = 'this is not a very secret key'
 
-This key must be kept secret since otherwise many of Django’s security protections fail.
+Dieser Schlüssel muss geheim gelaten werden, da ansosnten viele von Djangos Sicherheitsmaßnahmen versagen.
 
-In production, Django only `allows requests to certain urls <https://docs.djangoproject.com/en/1.10/ref/settings/#allowed-hosts>`_, which you need to specify:
+Im Betrieb, erlaubt Django nur `Anfragen zu bestimmten URLs <https://docs.djangoproject.com/en/1.10/ref/settings/#allowed-hosts>`_, welche festgelegt werden müssen:
 
 .. code:: python
 
     ALLOWED_HOSTS = ['localhost', 'rdmo.example.com']
 
-If you want to run RDMO under an alias like http://example.com/rdmo you need to set the base URL:
-
+Wenn du RDMO unter einem Alias wie http://example.com/rdmo laufen lassen möchtest, musst du die Basis-URL festlegen: 
 .. code:: python
 
     BASE_URL = '/rdmo'
 
-Furthermore, you might want to choose the main language for RDMO and the timezone:
+Ferner, möchtest du vielleicht eine Hauptsprache für dein RDMO und die Zeitzone festlegen:
 
 .. code:: python
 
