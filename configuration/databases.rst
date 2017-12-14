@@ -1,12 +1,12 @@
-Databases
----------
+Datenbanken
+-----------
 
-RDMO can be used with all database supported by the Django framework. The particular database connection is defined using the setting ``DATABASE``. An overview about the Django database settings is given `here <https://docs.djangoproject.com/en/1.10/ref/settings/#databases>`_. In the following, we show the settings for PostgreSQL, MySQL, and SQLite.
+RDMO kann mit allen Datenbanken, die vom Django-Framework unterstützt werden, verwendet werden. Die jeweilige Datenbankverbindung wird mit der Einstllung ``DATABASE`` definiert. Eine Übersicht über die Django Datenbaneinstlelungen findest du `hier <https://docs.djangoproject.com/en/1.10/ref/settings/#databases>`_. Im folgenden zeigen wir die Einstellungen für PostgreSQL, MySQL und SQLite.
 
 PostgreSQL
 ``````````
 
-PostgreSQL can be installed using:
+PostgreSQL kannw ie folgt installiert werden:
 
 .. code:: bash
 
@@ -19,15 +19,13 @@ PostgreSQL can be installed using:
     sudo systemctl start postgresql
     sudo systemctl enable postgresql
 
-
-To use PostgreSQL as your database backend install ``psycopg2`` in your virtual environment:
+Um PostgreSQL als deine Datenbank-Backend nutzen zu können, installiere ``psycopg2`` in deiner virtuellen Umgebung:
 
 .. code:: bash
 
     pip install -r requirements/postgres.txt
 
-
-Then, add the following to your ``config/settings/local.py``:
+Dann füge folgende Zeilen zu ``config/settings/local.py`` hinzu:
 
 .. code:: python
 
@@ -42,7 +40,7 @@ Then, add the following to your ``config/settings/local.py``:
         }
     }
 
-where ``Name`` is the name of the database, ``USER`` the PostgreSQL user, ``PASSWORD`` her password, ``HOST`` the database host, and ``PORT`` the port PostgreSQL is listening on. Note that, depending on your setup, not all settings are needed. If you are using the peer authentication methods you only need the ``NAME`` and ``ENGINE`` settings. The user and the database can be created using:
+wobei ``Name`` der Name der Datenbank ist, ``USER`` der PostgreSQL Benutzer, ``PASSWORD`` dessen Passwort, ``HOST`` der Datenbankhost und ``PORT`` der Port von PostgreSQL. Beachte, dass abhängig von deinem Setup nicht alle Einstlelungen benötigt werden. Falls du Peer-Authenfizierungsmethoden verwendest, brauchst du nur ``NAME`` und ``ENGINE``-Einstellungen. Der Benutzer und die Datenbank werden wie folgt gesetzt:
 
 .. code-block:: bash
 
@@ -50,21 +48,21 @@ where ``Name`` is the name of the database, ``USER`` the PostgreSQL user, ``PASS
     createuser rdmo
     createdb rdmo -O rdmo
 
-This assumes peer authentication for the rdmo user.
+Dies setzt Peer-Authentifizierung für den RDMO-Benutzer voraus.
 
-The command
+Das Kommando
 
 .. code:: bash
 
     python manage.py migrate
 
-should now create the RDMO database tables on PostgreSQL.
+sollte nun die RDMO Datenbank-Tabellen in PostegreSQL erstellen.
 
 
 MySQL
 `````
 
-MySQL (or community-developed fork MariaDB) can be installed using:
+MySQL (oder den Community-entwickleten Abzweig MariaDB) kannw ie folgt installiert werden: 
 
 .. code:: bash
 
@@ -79,13 +77,13 @@ MySQL (or community-developed fork MariaDB) can be installed using:
     sudo systemctl start mariadb
     sudo mysql_secure_installation
 
-To use MySQL as your database backend install ``mysqlclient`` in your virtual environment:
+Um MYSQL als deinen Datenbank-Backend zu nutzen, installiere ``mysqlclient´´ in deiner virtuellen Umgebung:
 
 .. code:: bash
 
     pip install -r requirements/mysql.txt
 
-Then, add the following to your ``config/settings/local.py``:
+Danach, füge folgendes deiner ``config/settings/local.py`` hinzu:
 
 .. code:: python
 
@@ -103,7 +101,7 @@ Then, add the following to your ``config/settings/local.py``:
         }
     }
 
-to your ``config/settings/local.py``. Here, ``Name`` is the name of the database, ``USER`` the MySQL user, ``PASSWORD`` her password, ``HOST`` the database host, and ``PORT`` the port MySQL is listening on. If you don't use ``/tmp/mysql.sock``, you can use ``unix_socket`` to specify its path. The user and the database can be created using:
+Hier ist ``Name`` der Name der Datenbank, ``USER`` der MySQL-Benutzer, ``PASSWORD`` das selbstgwählte Passwort, ``HOST`` der Datenbank-Host und ``PORT`` der zugehörige Port. Falls du ``/tmp/mysql.sock`` nicht benutzt, kannst du ``unix-socket`` verwenden, um seinen Pfad zu setzen. Der Benutzer und die Datenbank werden wie folgt erstellt:
 
 .. code-block:: mysql
 
@@ -111,21 +109,21 @@ to your ``config/settings/local.py``. Here, ``Name`` is the name of the database
     GRANT ALL ON `rdmo`.* to 'rdmo'@'localhost';
     CREATE DATABASE `rdmo`;
 
-on the MySQL-shell.
+auf der MySQL-shell.
 
-The command
+Das Kommando
 
 .. code:: bash
 
     python manage.py migrate
 
-should now create the RDMO database tables on MySQL.
+sollte jetzt die RDMO Datenbank-Tabellen in MySQL angelegen.
 
 
 SQLite
 ``````
 
-SQLite ist the default option in RDMO and configured in ``config/settings/base.py``. We recommend it only for a development/testing setup. It can be configured in ``config/settings/local.py`` by adding:
+SQLite ist die Standardoption in RDMO und unter ``config/settings/base.py`` konfiguriert. Wir empfehlen dies nur für das Entwicklungs-/Test-Setup zu verwenden. Es kann unter ``config/settings/local.py`` konfiguriert werden, indem folgendes hinzugefügt wird:
 
 .. code:: python
 
@@ -136,12 +134,12 @@ SQLite ist the default option in RDMO and configured in ``config/settings/base.p
         }
     }
 
-where ``Name`` is the name of database file.
+wobei ``Name`` der Name der Datenbankdatei ist.
 
-The command
+Das Kommando
 
 .. code:: bash
 
     python manage.py migrate
 
-should now create RDMO database tables in the specified database file.
+sollte nun die RDMo Datenbank-Tabellen in der angegeben Datenbankdatei erstellen.
