@@ -1,25 +1,25 @@
 LDAP
 ~~~~
 
-In order to use a LDAP backend with RDMO you need to install some prerequistes. On Debian/Ubuntu you can install them using:
+Um ein LDAP-Backend mit RDMO nutzen zu können, müssen zuänachst einige Voraussetzungen installiert wwerden. Bei Debian/Ubuntu können diese wie folgt installiert werden:
 
 .. code:: bash
 
     sudo apt-get install libsasl2-dev python-dev libldap2-dev libssl-dev
 
-On the python side, we use `django-auth-ldap <http://pythonhosted.org/django-auth-ldap>`_ to connect to the LDAP server. As before, it should be installed inside the virtual environment created for RDMO using:
+Auf Python aus verwenden wir `django-auth-ldap <http://pythonhosted.org/django-auth-ldap>`_ , um uns mit dem LDAP-Server zu verbinden. Wie schon zuvor sollte dies in einer für RDMO erstellten virtuellen Umgebung installiert werden: 
 
 .. code:: bash
 
     pip install -r requirements/ldap.txt
 
-LDAP installations can be very different and we only discuss one particular example. We assume that the LDAP service is running on ``ldap.example.com``. RDMO needs a *System Account*. In order to create it, run:
+LDAP-Installationen können sehr verschiedenartig sein und wir beschreiben nur ein bestimmten Fall. Wir nehmen an, dass der LDAP-Service auf  ``ldap.example.com`` läuft. RDMO benötigt einen *System Account*. Starte:
 
 .. code:: bash
 
     ldapmodify -x -D 'cn=Directory Manager' -W
 
-on the machine running the LDAP servere and type in:
+auf der Machine mit dem LDAP-Service und gib ein:
 
 ::
 
@@ -32,9 +32,9 @@ on the machine running the LDAP servere and type in:
     passwordExpirationTime: 20380119031407Z
     nsIdleTimeout: 0
 
-and end with a blank line followed by ``ctrl-d``.
+und end emit einer Leerzeile gefolgt von  ``ctrl-d``.
 
-Then, in your ``config/settings/local.py`` add or uncomment:
+Danach füge folgende Zeilen hinzu oder entferne die Kommtarzeichen in ``config/settings/local.py``:
 
 .. code:: python
 
@@ -60,4 +60,4 @@ Then, in your ``config/settings/local.py`` add or uncomment:
         'django_auth_ldap.backend.LDAPBackend'
     )
 
-The setting ``PROFILE_UPDATE = False`` tells RDMO to disable the update form for the user profile so that users cannot update their credentials anymore. The other settings are needed by ``django-auth-ldap`` and are described in the `django-auth-ldap documentation <http://pythonhosted.org/django-auth-ldap>`_.
+Die Einstellung ``PROFILE_UPDATE = False`` sagt RDMO das Updateformular des Benutzerprofils zu deaktivieren, so dass der Benutzer seine Zugangsdaten nicht mehr verändern kann. Die anderen Einstellungen werden von ``Django-auth-ldap`` benötigt und sind in der `django-auth-ldap Dokumentation <http://pythonhosted.org/django-auth-ldap>`_ beschrieben.
