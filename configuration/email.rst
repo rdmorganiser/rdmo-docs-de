@@ -1,7 +1,7 @@
 E-Mail
 ------
 
-RDMO needs to send E-Mails to its users. The connection to the SMPT server is configured several settings in your ``config/settings/local.py``:
+RDMO muss E-Mails an seine Benutzer schicken können. Die Vebrindung zu dem SMPT-Server wird über mehrere Einstellungen in deiner ``config/settings/local.py`` konfiguriert:
 
 .. code:: python
 
@@ -15,17 +15,17 @@ RDMO needs to send E-Mails to its users. The connection to the SMPT server is co
 
     DEFAULT_FROM_EMAIL = ''
 
-Here, ``EMAIL_HOST`` is the URL or IP of the SMTP server, ``EMAIL_PORT`` is the port it is listening on (usually 25, 465, or 587), and  ``EMAIL_HOST_USER`` and ``EMAIL_HOST_PASSWORD`` are credentials if the SMTP server needs authentication.
+Hier ist ``EMAIL_HOST`` die URL oder IP des SMTP-Servers, ``EMAIL_PORT`` ist der zugehörige Port (meistenss 25, 465, oder 587) und  ``EMAIL_HOST_USER`` und ``EMAIL_HOST_PASSWORD`` sind die Zugangsdaten, falls der SMTP-Server eine Authenfizierung verlangt.
 
-For a ``STARTTLS`` connection (usually on port 587) ``EMAIL_USE_TLS`` needs to be set to ``True``, while ``EMAIL_USE_SSL`` needs to be set to ``True`` for an implicit TLS/SSL connection (usually on port 465).
+Für eine``STARTTLS``-Verbindung (meistens auf Port 587) muss ``EMAIL_USE_TLS`` auf ``True`` gesetzt werden, während ``EMAIL_USE_SSL`` auf ``True`` gesetzt sein für ein implizite TLS/SSL Verbindung (meistens auf dem Port 465).
 
-``DEFAULT_FROM_EMAIL`` sets the FROM field for the emails send to the users.
+``DEFAULT_FROM_EMAIL`` setzt das FROM-Feld für die E-Mails, die dem BEnutzer geschickt werden. 
 
-For a development/testing setup a simple e-mail backend, which only displays the mail on the terminal can be used:
+Für ein Entwicklungs-/Test-Setupkann ein einfaches E-Mail-Backend verwendet werden, dass nur die E-Mail auf dem Temrinal anzeigt:
 
 .. code:: python
 
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     EMAIL_FROM = 'info@example.com'
 
-This is also the default backend, if no email settings are added to ``config/settings/local.py``.
+Dies ist auch das standard-Backend, falls keine E-Mail-Einstellungen in``config/settings/local.py`` hinzugefügt wurden.
