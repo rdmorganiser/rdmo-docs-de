@@ -1,16 +1,16 @@
-Configuration
+Konfiguration
 =============
 
-The RDMO application uses the `Django settings <https://docs.djangoproject.com/en/1.10/topics/settings>`_ module for it's configuration. To seperate the base configuration and your local adjustments and secret information (e.g. database connections), RDMO splits the settings into two files:
+Die RDMO-Anwendung benutzt das `Django Einstellungsmodule <https://docs.djangoproject.com/en/1.10/topics/settings>`_ für seine Konfiguration. Um die Basiskonfiguration und deine lokalen Anpassungen und geheime Informationen (z.B: Datenbankverbindungen) zu von einander zu trennen, sind die RDMO-Einstlelungen in zwei Dateien aufgeteilt:
 
-* ``config/settings/base.py``, which is part of the git repository and maintained by the RDMO development team.
-* ``config/settings/local.py``, which is ignored by git and should be edited by you.
+* ``config/settings/base.py``, als Teil des Git-Repositoriums und vom RDMO Entwicklungsteam verwaltet wird.
+* ``config/settings/local.py``, welches von Git ignoriert wird und von dir verändert werden sollte.
 
-As part of the installation ``config/settings/local.py`` should be created from the template ``config/settings/sample.local.py``.
+Als Teil der Installtion sollte ``config/settings/local.py`` erstellt werden ausgehend von der Vorlage ``config/settings/sample.local.py``.
 
-While technically the local settings file ``config/settings/local.py`` can be used to override all of the settings in ``config/settings/sample.local.py``, it should be used to customize the settings already available in ``config/settings/sample.local.py``.
+Während technisch die lokalen Einstellungsdatei ``config/settings/local.py`` genutzt werrden kann, um alle Einstellungen in ``config/settings/sample.local.py`` zu überschreiben, sollte es verwendet werden, um die Einstellungen, die bereits in ``config/settings/sample.local.py`` vorhanden sind anzupassen. 
 
-This comprises :doc:`general settings <general>`, :doc:`database connections <databases>`, how to send :doc:`emails <email>`, the different :doc:`authentication methods <authentication/index>`, the usage of :doc:`themes <themes>`, and :doc:`caches <cache>`.
+Dies beinhaltet :doc:`allgemeine Einstellungen <general>`, :doc:`Datenbankverbindungen <databases>`, hwie :doc:`E-mails <email>` versendet werden, die verschiedenen :doc:`Authentifizierungsmethoen <authentication/index>`, die Verwendung von  :doc:`Themen <themes>`, und :doc:`Caches <cache>`.
 
 .. toctree::
    :caption: Index
