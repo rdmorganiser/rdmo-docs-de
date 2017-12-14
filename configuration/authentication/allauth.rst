@@ -1,12 +1,12 @@
-django-allauth
+Django-allauth
 ~~~~~~~~~~~~~~
 
-RDMO uses the excellent `django-allauth <http://www.intenct.nl/projects/django-allauth>`_ as its main authorization library. It enables workflows for user registration and password retrieval, as well as authentication from 3rd party sites using OAUTH2.
+RDMO verwendet das großartige `django-allauth <http://www.intenct.nl/projects/django-allauth>`_ als seine Hauptauthorizierungsbibliothek. Es ermöglicht Workflows für Benutzerregistration und Passwortabfrage, genauso wie Athentifizierung von Webseiten dritter Anbieter mit Hilfe von OAUTH2.
 
 Accounts
 ````````
 
-To enable regular accounts in RDMO add:
+Um reguläre Accounts in RDMO anzulegen, füge hinzu:
 
 .. code:: python
 
@@ -22,15 +22,14 @@ To enable regular accounts in RDMO add:
 
     AUTHENTICATION_BACKENDS.append('allauth.account.auth_backends.AuthenticationBackend')
 
-to your ``config/settings/local.py``. The setting ``ACCOUNT = True`` enables the general django-allauth features in RDMO, while ``ACCOUNT_SIGNUP = True`` enables new users to register with your RDMO instance. The last lines enable django-allauth to be used by RDMO.
+zu deinem ``config/settings/local.py``. Die Einstellung``ACCOUNT = True`` aktiviert die allgemeinen Django-allauth Eigenschaften in RDMO, ``ACCOUNT_SIGNUP = True`` erlaubt es neue Benutzer in deiner RDMO-Isntanz zu registrieren. 
+Das Verhalten von ``Django-allauth`` kann kann durch weitere Eisntlleungen konfiguriert werden, die unter `django-allauth documentation <http://django-allauth.readthedocs.io/en/latest/configuration.html>`_ dokumentiert sind. RDMO etzt einige Standardwerte, die in ``config/settings/base.py`` gefunden werden können.
 
-The behavior of ``django-allauth`` can be further configured by the settings documented in the `django-allauth documentation <http://django-allauth.readthedocs.io/en/latest/configuration.html>`_. RDMO sets a few default which can be found in ``config/settings/base.py``.
+Soziale Accounts
+`````````````````
 
+Um Accounts von Webseiten dritter Anbieter (Facebook, Github, etc.) mit RDMO zu verwenden, füge hinzu:
 
-Social accounts
-```````````````
-
-In order to use 3rd party accounts (facebook, github, etc.) with RDMO add:
 
 .. code:: python
 
@@ -54,6 +53,6 @@ In order to use 3rd party accounts (facebook, github, etc.) with RDMO add:
 
     AUTHENTICATION_BACKENDS.append('allauth.account.auth_backends.AuthenticationBackend')
 
-to your ``config/settings/local.py``. The setting ``SOCIALACCOUNT = True`` is used by RDMO to show certain parts of the user interface connected to 3rd party accounts, while as before, the lines after ``INSTALLED_APPS`` enable the feature to be used by RDMO. Each provider has a seperate app you need to add to ``INSTALLED_APPS``. A list of all providers supported by django-allauth can be found `here <http://django-allauth.readthedocs.io/en/latest/providers.html>`_.
+in deine ``config/settings/local.py``. Die Einstellung ``SOCIALACCOUNT = True`` wird von RDMO verwendet, um bestimmte Teile der Benutzeroberfläche mit den Accounts dritter Anbieter anzuzeigenm, während wie zuvor die Zeilen nach ``INSTALLED_APPS`` es dem Feauture erlaubt von RDMO verwendet zu werden. Jeder Anbieter hat eine separate App, die du zu ``INSTALLED_APPS`` hinzufügen kannst. Eine Lister aller von Django-allauth unterstützen Anbieter findest du `hier <http://django-allauth.readthedocs.io/en/latest/providers.html>`_.
 
-Once the installation is complete, the credentials of your OAUTH provider need to be entered in the admin interface. This is covered in the :doc:`administration chapter </administration/allauth>` of this documentation.
+Sobald die Installation abgeshclossen ist, müssen die Zugangsdaten deines OAUTH-Anbieters in dem Admin-Interface eingegeben werden. Dies wird im :doc:`Administration-Kapitel </administration/allauth>` dieser Dokuemntation erklärt.
