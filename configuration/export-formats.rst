@@ -1,7 +1,7 @@
-Export formats
---------------
+Formate exportieren
+-------------------
 
-RDMO supports exports to certain formats using the excellent `pandoc <https://pandoc.org/>`_ converter. The list of formats to select can be customized by changinng the ``EXPORT_FORMATS`` setting in your ``config/settings/local.py``.
+RDMO unterstützt das Exportieren zu bestimmten Formaten mit Hilfe vom großartigen `pandoc <https://pandoc.org/>`_ Konvertierer. Die Liste der zur Auswahl stehenden Liste can angepasst werden indem die ``EXPORT_FORMATS``-Einstellung in deinem ``config/settings/local.py`` konfiguriert wird.
 
 .. code:: python
 
@@ -16,4 +16,4 @@ RDMO supports exports to certain formats using the excellent `pandoc <https://pa
         ('tex', _('LaTeX'))
     )
 
-The different formats supported by pando can be found `on the pandoc homepage <https://pandoc.org/>`_.
+Die verschienden Formate, die von pandoc unterstützt werden, findet man `auf der pandoc Homepage <https://pandoc.org/>`_.
