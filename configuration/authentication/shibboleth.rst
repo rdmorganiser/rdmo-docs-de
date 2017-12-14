@@ -1,30 +1,28 @@
 Shibboleth
 ~~~~~~~~~~
 
-In order to use Shibboleth with RDMO it needs to be deployed in a production environment using Apache2. The Setup is documented :doc:`here </deployment/apache>`.
+Um Shibboleth mit RMDO zu verwenden, ist es notwendig in einer Betriebsumgebung mit Apache2 zu sein. Das Setup ist :doc:`hier </deployment/apache>` dokumentiert.
 
-Next, install the Shibboleth Apache module for service providers from your distribution repository, e.g. for Debian/Ubuntu:
+Als nächstes installiere das Shibboleth Apache Modul für die Service-Anbieter von deinem Distributionsrepository, z.B: für Debian/Ubuntu:
 
 .. code:: bash
 
     sudo apt-get install libapache2-mod-shib2
 
-
-In addition, `django-shibboleth-remoteuser <https://github.com/Brown-University-Library/django-shibboleth-remoteuser>`_ needs to be installed in your RDMO virtual environment:
+Zusätzlich muss der `Django-shibboleth-remoteuser <https://github.com/Brown-University-Library/django-shibboleth-remoteuser>`_ in der virtuellen RDMO-Umgebung installiert werden: 
 
 .. code:: bash
 
     pip install -r requirements/shibboleth.txt
 
+Konfiguriere deinen Shibboleth Service-Anbieter mit den Datein in ``/etc/shibboleth/``. Dies kann zwischen den Identidäts-Anbietern varieieren. Für RDMo muss der ``REMOTE_SERVER`` gesetzt sein und vier weitere Attribute von deinem Identitäts-Anbieter:
 
-Configure your Shibboleth service provider using the files in ``/etc/shibboleth/``. This may vary depending on your Identity Provider. RDMO needs the ``REMOTE_SERVER`` to be set and 4 attributes from your identity provider:
+* ein Username(meistens ``eppn``)
+* eine E-Mail-Addresse (meistens ``mail`` oder ``email``)
+* ein Vorname (meistens ``givenName``)
+* ein Familienname (meistens ``sn``)
 
-* a username (usually ``eppn``)
-* an email address (usually ``mail`` or ``email``)
-* a first name (usually ``givenName``)
-* a last name (usually ``sn``)
-
-In our test environent this is accomplished by editing ``/etc/shibboleth/shibboleth2.xml``:
+In unserer Testumgebung, kann dies durch das Verändern von ``/etc/shibboleth/shibboleth2.xml`` erreicht werden:
 
 .. code:: xml
 
@@ -32,7 +30,7 @@ In our test environent this is accomplished by editing ``/etc/shibboleth/shibbol
                          REMOTE_USER="uid eppn persistent-id targeted-id">
 
 
-and '/etc/shibboleth/attribute-map.xml':
+und '/etc/shibboleth/attribute-map.xml':
 
 .. code:: xml
 
@@ -41,15 +39,13 @@ and '/etc/shibboleth/attribute-map.xml':
     <Attribute name="urn:oid:2.5.4.42" id="givenName"/>
     <Attribute name="urn:oid:0.9.2342.19200300.100.1.3" id="mail"/>
 
-
-Restart the Shibboleth service provider demon.
+Starte den Shibboleth Service-Anbieter Demon neu:
 
 .. code:: bash
 
     service shibd restart
 
-
-In your Apache2 virtual host configuration, add:
+In deiner Apache2 virtuellen Host-Konfiguration füge folgendes hinzu:
 
 ::
 
@@ -63,8 +59,7 @@ In your Apache2 virtual host configuration, add:
         ShibUseHeaders On
     </LocationMatch>
 
-
-In your ``config/settings/local.py`` add or uncomment:
+In deiner ``config/settings/local.py`` füge folgendes hinzu oder entferne die Kommentarsymbole:
 
 .. code:: python
 
@@ -91,10 +86,9 @@ In your ``config/settings/local.py`` add or uncomment:
     LOGIN_URL = '/Shibboleth.sso/Login?target=/projects'
     LOGOUT_URL = '/Shibboleth.sso/Logout'
 
+wobei die Schlüssel von ``SHIBBOLETH_ATTRIBUTE_MAP``, ``LOGIN_URL``, und ``LOGOUT_URL`` entsprechend deinem Setup geändert werden müssen. Die Einstellung ``SHIBBOLETH = True`` deaktiviert das reguläre Login-Formular von RDMO und sagt RDMO das Udpateformular für das Benutzerprofil zu deaktivieren, so dass der BEnutzer seine Zugangsdaten nciht mehr ändern kann.  Die ``INSTALLED_APPS``, ``AUTHENTICATION_BACKENDS``, und ``MIDDLEWARE_CLASSES`` Einstlelungen erlauben es den django-shibboleth-remoteuser mit RDMO zu verwenden. 
 
-where the keys of ``SHIBBOLETH_ATTRIBUTE_MAP``, ``LOGIN_URL``, and ``LOGOUT_URL`` need to be modified according to your setup. The setting ``SHIBBOLETH = True`` disables the regular login form in RDMO, and tells RDMO to disable the update form for the user profile so that users cannot update their credentials anymore. The ``INSTALLED_APPS``, ``AUTHENTICATION_BACKENDS``, and ``MIDDLEWARE_CLASSES`` settings enable django-shibboleth-remoteuser to be used with RDMO.
-
-Restart the webserver.
+Starte den Webserver neu.
 
 .. code:: bash
 
