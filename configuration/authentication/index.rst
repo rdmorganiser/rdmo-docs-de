@@ -11,8 +11,6 @@ RDMO hat drei Hauptmethoden für die Authentifikation:
 
 Falls keine der Methoden aktiviert ist, ist nur ein einfacher Login verfügbar und Benutzer müssen über das Djange Admin-Interface erstellt werden.
 
-**Important:** These modes are only tested individually and may be treated **mutually exclusive** (unless proven otherwise).
-
 
 .. toctree::
    :hidden:
