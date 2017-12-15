@@ -1,47 +1,48 @@
-Users and Groups
-----------------
+Benutzer und Gruppen
+--------------------
 
-The users and groups of your RDMO instance can be managed under **AUTHENTICATION AND AUTHORIZATION**. You can create and update users and set their password directly, but most of the time this will be done by the users themselves using the account menu.
+Die Benutzer und Gruppen ihrer RDMO-Instanz könen unter **Authentifizierung und Autorisierung** verwaltet werden. Sie können Benutzer erstellen und verändern und deren Passworter direkt setzen, wobei dies meistens von den Benutzern selbst über das Account-Menü getan wird. 
 
-The user created in the installation process can access all features of RDMO. In order to allow other users to access the management or the admin interface, they need to have the needed permissions assigned to them. This can be done in two ways: through groups or using the superuser flag.
+Der in der Installation erstellte Benutzer hat zu allen Feautres von RDMO Zugang. Um anderen BEnutzern den Zugang zum Management oder dem Admin-Interface zu gewähren, mussihnen die notwendigen Rechte zuegwiesen werden. Dies kann auf zwei Wege erfolgen: durch die Gruppen oder durch das Superuser-Flag.
 
-Groups
-""""""
+Gruppen
+"""""""
 
-During the installation, the ``./manage create-groups`` command created 3 groups:
+Während der Installtion erstellte das``./manage create-groups`` Kommando drei Gruppen:
 
-editor
-  Users of the group editor can access the :doc:`management interface </management/index>` and can edit all elements of the data model, except the user data entered through the structured inteview.
+Editor
+  Benutzer der Editorgruppe haben Zugang zum :doc:`Management Interface </management/index>` und können alle Elemente des Datenmodels editieren isauf die Benutzerdaten, die über das strukturierte Interview eingegeben wurden. 
 
-reviewer
-  Users of the group reviewer can access the :doc:`management interface </management/index>`, like editors, but are not allowed to change them (Save will not work). This group can be used to demonstrate the management backend of RDMO to certain users.
+Reviewer
+  Benutzer der Reviwergruppe haben Zugang zum :doc:`Management Interface </management/index>` genauso wie die Editoren, aber ihnen ist es nicht gestatt dort Veränderungen vorzunehmen (Speichern wird nciht funktionieren.) diese Gruppe kann verwendet werden, um das Management-Backend ausgewählten Benutzern zu zeigen.
 
 api
-  Users of the group api can use the programmable API to access all elements of the data model. They will need a :doc:`token <tokens>` to use an api client.
+  Benutzer der API-Gruppe können programmierbares API verwenden, um auf alle Elemente des Datenmodels zuzgreifen. Sie benötigen einen  :doc:`Token <tokens>`, um einen API-Klienten nutzen zu können.
+  
+Bereits existierende Benutzer können diesen Gruppen zugeordnet werden, um Zugang zu diesen Funktionen zu erhalten:
 
-Existing users can be assigned to these groups to gain access to these functions:
+1. Klicken Sie auf **Benutzer** unter **Authentifizierung und Autorisierung** im Admin-Interface.
 
-1. Click **Users** under **AUTHENTICATION AND AUTHORIZATION** in the admin interface.
+2. Klicken Sie auf den zu bearbeitenen Benutzer.
 
-2. Click on the user to be changed.
+3. Klicken Sie auf die Gruppe zu dem der Benutzer hinzugefügt werden soll in dem **Verfügbare Gruppen**-Feld.
 
-3. Click on the group to be added to the user in the **Available groups** field.
+4. Klicken Sie auf den kleinen Pfeil, um die Gruppe zu dem **Gewählte Gruppen**-Feld zu bewegen.
 
-4. Click on the little arrow to move the group to the **Chosen groups** field.
+5. Spichern Sie den Benutzer.
 
-5. Save the user.
 
 Superuser
 """""""""
 
-Superusers have all permissions available and all permission checks will return positive fo them. This does not only allow them to access the management and admin interfaces, but also **access all data from other user** (including the project pages).
+Superusers haben alle verfügbaren Rechte und alle Rechteüberprüfungen werden für sie positiv sein. Dies ermöglicht ihnen nicht nur den Zugang zu den Management- und Admin-Interfaces , sondern auch den **Zugang zu den Daten von allen anderen Benutzern** (einschließlich der Projektseite).
+Um einen Benutzer zum Superuser zu erheben, gehen Sie wie folgt vor:
 
-To make a user superuser:
+1. Klicken Sie auf **Benutzer** unter **Authentifizierung und Autorisierung** im Admin-Interface.
 
-1. Click **Users** under **AUTHENTICATION AND AUTHORIZATION** in the admin interface.
+2. Klicken Sie auf den gewünschten Benutzer.
 
-2. Click on the user to be changed.
+3. Kreuze die Box **Superuser-Status** an.
 
-3. Tick the box **Superuser status**.
+4. Speichern Sie den Benutzer.
 
-4. Save the user.
