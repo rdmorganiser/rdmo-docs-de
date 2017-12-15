@@ -1,7 +1,7 @@
 Administration
 ==============
 
-Das Django-Framework bietet ein reichhaliges Administrationsinterface (kurz Admin), was Ihnen erlaubt die meisten der Einträge in der Datenbank direkt zu verändern. Offensichtlich können nur Benutzer mit den richtigen Rechten dieses Interface benutzen. Der Benutzer, der während der Installation mit Hilfe von ``./manage.py createsuperuser`` erstellt wurde hat diesen *Superuser*-Status.
+Das Django-Framework bietet ein reichhaliges Administrationsinterface (kurz Admin), was Ihnen erlaubt die meisten der Einträge in der Datenbank direkt zu verändern. Offensichtlich können nur Benutzer mit den richtigen Rechten dieses Interface benutzen. Der Benutzer, der während der Installation mit Hilfe von ``./manage.py createsuperuser`` erstellt wurde, hat diesen *Superuser*-Status.
 
 Das Admin-Interface ist unter dem Link *Admin* in der Navigationsleiste verfügbar. Es wird nur in seltenen Fällen bentuzt, da die meisten Konfigurationen des Fragebogens und andere Funktionen von RDMO können über das benutzerfreundliche Management-Interface geändert werden wie 
 :doc:`in dem folgenden Kapitel der Dokumentation </management/index>` beschrieben.
