@@ -13,13 +13,13 @@ Auf Python aus verwenden wir `django-auth-ldap <http://pythonhosted.org/django-a
 
     pip install -r requirements/ldap.txt
 
-LDAP-Installationen können sehr verschiedenartig sein und wir beschreiben nur ein bestimmten Fall. Wir nehmen an, dass der LDAP-Service auf  ``ldap.example.com`` läuft. RDMO benötigt einen *System Account*. Starte:
+LDAP-Installationen können sehr verschiedenartig sein und wir beschreiben nur ein bestimmten Fall. Wir nehmen an, dass der LDAP-Service auf  ``ldap.example.com`` läuft. RDMO benötigt einen *System Account*. Starten Sie:
 
 .. code:: bash
 
     ldapmodify -x -D 'cn=Directory Manager' -W
 
-auf der Machine mit dem LDAP-Service und gib ein:
+auf der Machine mit dem LDAP-Service und geben Sie ein:
 
 ::
 
@@ -32,9 +32,9 @@ auf der Machine mit dem LDAP-Service und gib ein:
     passwordExpirationTime: 20380119031407Z
     nsIdleTimeout: 0
 
-und end emit einer Leerzeile gefolgt von  ``ctrl-d``.
+und enden Sie die Datei mit einer Leerzeile gefolgt von  ``ctrl-d``.
 
-Danach füge folgende Zeilen hinzu oder entferne die Kommtarzeichen in ``config/settings/local.py``:
+Danach fügen Sie folgende Zeilen hinzu oder entfernen die Kommentarzeichen in ``config/settings/local.py``:
 
 .. code:: python
 
