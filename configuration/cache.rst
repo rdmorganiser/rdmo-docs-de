@@ -1,19 +1,19 @@
 Cache
 -----
 
-RDMO benutzt einen Cache für einige seiner Seiten. Im Entwicklungsmodus ist dies mit einem local-memory Caching gmeacht. Im Betrieb empfehlen wir `memcached <https://memcached.org>`_ zu nutzen. Memcached kann auf Debian/Ubuntu installiert werden:
+RDMO benutzt einen Cache für einige seiner Seiten. Im Entwicklungsmodus ist dies mit einem local-memory Caching gemacht. Im Betrieb empfehlen wir `memcached <https://memcached.org>`_ zu nutzen. Memcached kann auf Debian/Ubuntu installiert werden:
 
 .. code:: bash
 
     sudo apt install memcached
 
-Auf  RHEL/CentOS sind weitere Schritte notwendig. Installiere zunächst die Pakete:
+Auf  RHEL/CentOS sind weitere Schritte notwendig. Installieren Sie zunächst die Pakete:
 
 .. code:: bash
 
     sudo yum install memcached
 
-Danach verändere die Einstellungen, um externe Verbindungen zu verhindern:
+Danach veränderen Sie die Einstellungen, um externe Verbindungen zu verhindern:
 
 .. code:: bash
 
@@ -24,20 +24,20 @@ Danach verändere die Einstellungen, um externe Verbindungen zu verhindern:
     CACHESIZE="64"
     OPTIONS="-l 127.0.0.1"
 
-Dann starte den Service:
+Dann starten Sie den Service:
 
 .. code:: bash
 
     systemctl start memcached
     systemctl enable memcached
 
-Zurück in deiner virtuellen Umgebung musst du Python-memcached installieren:
+Zurück in ihrer virtuellen Umgebung müssen Sie Python-memcached installieren:
 
 .. code:: bash
 
     pip install -r requirements/memcached.txt
 
-und füge zu ``config/settings/local.py`` folgende Zeiten hinzu:
+und fügen Sie zu ``config/settings/local.py`` folgende Zeiten hinzu:
 
 .. code:: python
 
