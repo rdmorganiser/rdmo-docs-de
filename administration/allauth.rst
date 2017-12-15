@@ -1,52 +1,52 @@
 Social Accounts
 ---------------
 
-Falls du Allauth für die Authetifizierung verwendest und RDMO konfiguriert hast, um ein oder mehrere OAUTH-Anbieter zu verwenden (wie im  :doc:`Konfiguration Kapitel </configuration/authentication/allauth>`) beschrieben, musst du deine RDMO-Seite mit diesen Services registrieren. Die Vorgehensweise ist jeweils verschieden. Meistens musst du einige Informationen zu deiner Seite angeben. Es wird immer eine Umleitungs- oder Rückruf-URL verlangt. Im folgenden werden wir als Beispiel http://127.0.0.1:8000 verwenden (welche auf dem Entwicklungsserver funktioniert) und die du mit der richtigen URL deiner RDMO-Anwendung dann im Betrieb ersetzen musst.
+Falls Sie Allauth für die Authetifizierung verwenden und RDMO konfiguriert haben, um ein oder mehrere OAuth-Anbieter zu verwenden (wie im  :doc:`Konfiguration Kapitel </configuration/authentication/allauth>`) beschrieben, mussen Sie ihre RDMO-Seite mit diesen Services registrieren. Die Vorgehensweise ist jeweils verschieden. Meistens mussen Sie einige Informationen zu ihrer Seite angeben. Es wird immer eine Umleitungs- oder Rückruf-URI verlangt. Im folgenden werden wir als Beispiel http://127.0.0.1:8000 verwenden (welche auf dem Entwicklungsserver funktioniert) und die Sie mit der richtigen URL ihrer RDMO-Anwendung dann im Betrieb ersetzen müssen.
 
 ORCID
-    Log dich bei https://orcid.org ein und gehe auf die Seite mit den Entwicklungstools: https://orcid.org/developer-tools. Erstelle eine App mit der Umleitungs-URL.
+    Loggen Sie sich bei https://orcid.org ein und gehen Sie auf die Seite mit den Entwicklungstools: https://orcid.org/developer-tools. Erstellen Sie eine App mit der Umleitungs-URL.
 
     ::
 
         http://127.0.0.1:8000/account/orcid/login/callback/
 
-Github
-    Log dich bei Github ein und gehe auf https://github.com/settings/applications/new, um eine neue App zu erstellen. Verwende: 
+GitHub
+    Loggen Sie sich bei GitHub ein und gehen Sie auf https://github.com/settings/applications/new, um eine neue App zu erstellen. Verwenden Sie: 
 
     ::
 
         http://127.0.0.1:8000/account/github/login/callback/
 
 Facebook
-    Log dich bei Facebook ein und gehe auf https://developers.facebook.com/. Klicke oben rechts im Menü auf *Meine Apps* und wähle *Neue App hinzufügen*. Erstelle eine neue App. In dem darauffolgenden Fenster wähle Facebook login -> Starten und wähle *Web* als Plattform. Füge eine URL ein unter der deine Anwendung zugänglich ist (Beachte:  127.0.0.1 wird nicht funktionieren.). Zurück auf dem Dashboard, gehe zu Einstellungen -> Grundeinstellungen und kopiere `App ID`und das `App Geheimnis`.
-
+    Loggen Sie sich bei Facebook ein und gehen Sie auf https://developers.facebook.com/. Klicken Sie oben rechts im Menü auf *Meine Apps* und wählen Sie *Neue App hinzufügen*. Erstellen Sie eine neue App. In dem darauffolgenden Fenster wählen Sie Facebook login -> Starten und wählen *Web* als Plattform. Fügen Sie eine URI ein unter der ihre Anwendung zugänglich ist (Beachten Sie: 127.0.0.1 wird nicht funktionieren.). Zurück auf dem Dashboard, gehen Sie zu Einstellungen -> Grundeinstellungen und kopieren `App ID` und das `App Secret`.
 
 Twitter
-    Log dich bei Twitter ein und gehe auf https://apps.twitter.com/app/ne, um and create a new app. Use
+    Log Sie sich bei Twitter ein und gehen Sie auf https://apps.twitter.com/app/ne, um eine neue App zu erstellen. 
 
     ::
 
         http://127.0.0.1:8000/account/facebook/login/callback/
 
-    as the Authorized redirect URI. Copy the Client-ID and the Client key.
+    als die atuorisierte Umleitungs-URI. Kopieren Sie die Client-ID und den Client-Schlüssel.
 
 Google
-    Login into google and go to https://console.developers.google.com. Create a new project. After the project is created go to Credentials on the left side and configure the OAuth Authorization screen (second tab). Then create the credentials (first tab), more precisely a OAuth Client-ID. Use
+    Loggen Sie sich bei Google ein und gehen Sie auf https://console.developers.google.com. Erstellen Sie ein neues Projekt. Gehen Sie danach zu den Zugangsdaten auf der linken Seite und richtigen Sie das OAuth Athentifizierungsfesnter (zweiter Tab) ein. Dann erstellen sie die Zugangsdaten (erster Tab), genauer gesagt die OAuth-ID. Verwende: 
 
     ::
 
         http://127.0.0.1:8000/account/google/login/callback/
 
-    as the Authorized redirect URI. Copy the Client-ID and the Client key.
+    als die authentifizierte Umleitungs-URI. Kopieren Sie die Client-ID und den Client-Schlüssel.
 
-Once the credentials are obtained you need to enter them in the admin interface. To this purpose, go to **Social applications** under **SOCIAL ACCOUNTS** and click on **Add social application**. Then:
+Sobald die Zugangsdaten gelten, können Sie sie in dem Admin-Interface eingeben, Dafür gehen Sie auf **Sozialle Anwendungen* unter **Soziale Accounts** und klicken auf **Sozialen Account hinzufügen**. Dann:
 
-1. Select the corresponding **provider**
+1.  Wählen Sie den entsprechenden **Anbieter
 
-2. Enter a **Name** of your choice
+2. Geben Sie einen **Namen** ihrer Wahl ein
 
-3. Enter the **Client id** (or App ID) and the **Secret key** (or Client secret, Client key, App Secret)
+3. Geben Sie die **Client-ID* (oder App-ID) und den **Geheimschlüssel** (oder Client secret, Client-Schlüssel, App Secret)
 
-4. Add your site to the chosen sites.
+3. Fügen Sie  ihre Seite zu den ausgewählten Seiten hinzu.
 
-5. Click save.
+4. Klicken Sie auf speichern.
+
