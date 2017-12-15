@@ -1,16 +1,17 @@
-Auth Tokens
------------
+Authentifizierungs-Token
+------------------------
 
-In order to access the data entered into RDMO through the programmable API, a user needs to have a token associated with it. This is done under **AUTH TOKEN / Tokens**. To create a token, click **Add token** on the button at the right and:
+Um Daten in RDMO mit Hilfe einer programmierbarn API eingeben zu können, muss ein Benuztzer mit einem Token assoziiert sein. Dies kann man unter **AUTH TOKEN / Tokens**. Um einen Token zu erstellen, klicken Sie auf **token hinzufügen** auf den Button rechts und:
 
-1. Select the **user** for the new token.
+1. Wählen Sie den **Benutzer** für den token.
 
-2. Save the token.
+2. Speichern Sie den Token.
 
-This token can now be used instead of the username and the password when making HTTP requests from a non-browser client. To this purpose, a HTTP-Header of the form
+Dieser Token kann nun anstatt des Benutzernamens und des Passwortes genutzt werden, wenn HTTP-Anfragen von einem Nicht-Browser Klienten kommen. Dafür muss ein HTTP-Header in der Form:
+
 
 .. code-block:: none
 
     Authorization: Token 9944b09199c62bcf9418ad846dd0e4bbdfc6ee4b
 
-needs to be provided.
+zur Verfügung gestellt werden.
