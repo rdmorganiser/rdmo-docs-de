@@ -1,11 +1,12 @@
 Administration
 ==============
 
-The Django framework offers a rich administration (or short admin) interface, which allows you to directly manipulate most of the entries in the database directly. Obviously, only users with the correct permissions are allowed to use this interface. The user created during the installation process using ``./manage.py createsuperuser`` has this *superuser* status.
+Das Django-Framework bietet ein reichhaliges Administrationsinterface (kurz Admin), was Ihnen erlaubt die meisten der Einträge in der Datenbank direkt zu verändern. Offensichtlich können nur Benutzer mit den richtigen Rechten dieses Interface benutzen. Der Benutzer, der während der Installation mit Hilfe von ``./manage.py createsuperuser`` erstellt wurde hat diesen *Superuser*-Status.
 
-The admin interface is avalable under the link *Admin* in the navigation bar. It will only be needed on rare ocasion, since most the configuration of the questionaire and the other functions of RDMO can be done using the more user-friendly Management interface described :doc:`in the following chapter of this documantation </management/index>`.
+Das Admin-Interface ist unter dem Link *Admin* in der Navigationsleiste verfügbar. Es wird nur in seltenen Fällen bentuzt, da die meisten Konfigurationen des Fragebogens und andere Funktionen von RDMO können über das benutzerfreundliche Management-Interface geändert werden wie 
+:doc:`in dem folgenden Kapitel der Dokumentation </management/index>` beschrieben.
 
-That being said, the admin interface is needed, especially after installation, to set the title and URL of the :doc:`site <site>`, to configure :doc:`users and groups <users>`, to configure the connection to :doc:`OAUTH providers <allauth>`, and to create :doc:`tokens <tokens>` to be used with the API.
+Demnach wird das Admin-Interface nach der Installation benötigt, um den Titel und die URL auf der :doc:`Seite <site>` zu ändern, um :doc:`uBenutzer und Gruppe <users>` zu konfigurieren, um die Verbindung zu :doc:`OAuth Anbietern <allauth>` zu konfigurieren und um die mit der API genutzen :doc:`Tokens <tokens>` zu ändern.
 
 .. toctree::
    :caption: Index
