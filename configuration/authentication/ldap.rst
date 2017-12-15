@@ -1,7 +1,7 @@
 LDAP
 ~~~~
 
-Um ein LDAP-Backend mit RDMO nutzen zu können, müssen zuänachst einige Voraussetzungen installiert wwerden. Bei Debian/Ubuntu können diese wie folgt installiert werden:
+Um ein LDAP-Backend mit RDMO nutzen zu können, müssen zuänachst einige Voraussetzungen installiert werden. Bei Debian/Ubuntu können diese wie folgt installiert werden:
 
 .. code:: bash
 
