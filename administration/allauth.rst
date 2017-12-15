@@ -4,25 +4,25 @@ Social Accounts
 Falls du Allauth für die Authetifizierung verwendest und RDMO konfiguriert hast, um ein oder mehrere OAUTH-Anbieter zu verwenden (wie im  :doc:`Konfiguration Kapitel </configuration/authentication/allauth>`) beschrieben, musst du deine RDMO-Seite mit diesen Services registrieren. Die Vorgehensweise ist jeweils verschieden. Meistens musst du einige Informationen zu deiner Seite angeben. Es wird immer eine Umleitungs- oder Rückruf-URL verlangt. Im folgenden werden wir als Beispiel http://127.0.0.1:8000 verwenden (welche auf dem Entwicklungsserver funktioniert) und die du mit der richtigen URL deiner RDMO-Anwendung dann im Betrieb ersetzen musst.
 
 ORCID
-    Log dich bei https://orcid.org ein und gehe auf die Seit emit den Entwicklungstools: https://orcid.org/developer-tools. Erstelle eine App mit der Umleitungs-URL.
+    Log dich bei https://orcid.org ein und gehe auf die Seite mit den Entwicklungstools: https://orcid.org/developer-tools. Erstelle eine App mit der Umleitungs-URL.
 
     ::
 
         http://127.0.0.1:8000/account/orcid/login/callback/
 
-github
-    Log dich bei github ein und gehe auf https://github.com/settings/applications/new, um eine neue App zu erstellen. Verwende: 
+Github
+    Log dich bei Github ein und gehe auf https://github.com/settings/applications/new, um eine neue App zu erstellen. Verwende: 
 
     ::
 
         http://127.0.0.1:8000/account/github/login/callback/
 
-facebook
-    Log dich bei Facebook ein und gehe auf https://developers.facebook.com/. Klicke oben rechts im Menü auf *Meine Apps* und wähle *Neue App hinzufügen*. Erstelle eine neue App. In dem darauffolgenden Fenster wähle Facebook login -> Starten und wähle *Web* als Plattform. Füge eine URL ein unter der deine Anwendung zugänglich ist (Beachte:  127.0.0.1 wird nicht funktionieren.). Zurück auf dem Dashboard, gehe zu Einstellungen -> Grundeinstellungen und kopiere Àpp ID`und das App Geheimnis`.
+Facebook
+    Log dich bei Facebook ein und gehe auf https://developers.facebook.com/. Klicke oben rechts im Menü auf *Meine Apps* und wähle *Neue App hinzufügen*. Erstelle eine neue App. In dem darauffolgenden Fenster wähle Facebook login -> Starten und wähle *Web* als Plattform. Füge eine URL ein unter der deine Anwendung zugänglich ist (Beachte:  127.0.0.1 wird nicht funktionieren.). Zurück auf dem Dashboard, gehe zu Einstellungen -> Grundeinstellungen und kopiere `App ID`und das `App Geheimnis`.
 
 
-twitter
-    Login into twitter and go to https://apps.twitter.com/app/new and create a new app. Use
+Twitter
+    Log dich bei Twitter ein und gehe auf https://apps.twitter.com/app/ne, um and create a new app. Use
 
     ::
 
