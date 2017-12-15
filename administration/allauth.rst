@@ -1,24 +1,24 @@
-Social accounts
+Social Accounts
 ---------------
 
-If you use allauth as you mode of authentication and configured RDMO to use one or more OAUTH provider (as described in the :doc:`Configuration chapter </configuration/authentication/allauth>`), you need to register your RDMO site with theses services. This process is different from provider to provider. Usually, you need to provide a set of information about your site. Always included is a redirect or callback url. In the following we will use http://127.0.0.1:8000 as an example (which will work on the development server) and you will need to replace that with the correct url of your RDMO application in production.
+Falls du Allauth für die Authetifizierung verwendest und RDMO konfiguriert hast, um ein oder mehrere OAUTH-Anbieter zu verwenden (wie im  :doc:`Konfiguration Kapitel </configuration/authentication/allauth>`) beschrieben, musst du deine RDMO-Seite mit diesen Services registrieren. Die Vorgehensweise ist jeweils verschieden. Meistens musst du einige Informationen zu deiner Seite angeben. Es wird immer eine Umleitungs- oder Rückruf-URL verlangt. Im folgenden werden wir als Beispiel http://127.0.0.1:8000 verwenden (welche auf dem Entwicklungsserver funktioniert) und die du mit der richtigen URL deiner RDMO-Anwendung dann im Betrieb ersetzen musst.
 
 ORCID
-    Login into https://orcid.org and go to the developer tools page at https://orcid.org/developer-tools. Create an app with the Redirect URI
+    Log dich bei https://orcid.org ein und gehe auf die Seit emit den Entwicklungstools: https://orcid.org/developer-tools. Erstelle eine App mit der Umleitungs-URL.
 
     ::
 
         http://127.0.0.1:8000/account/orcid/login/callback/
 
 github
-    Login into github and go to https://github.com/settings/applications/new and create a new app. Use
+    Log dich bei github ein und gehe auf https://github.com/settings/applications/new, um eine neue App zu erstellen. Verwende: 
 
     ::
 
         http://127.0.0.1:8000/account/github/login/callback/
 
 facebook
-    Login into facebook and go to https://developers.facebook.com/. Click on the top right menu *My Apps* and choose *Add a new app*. Create a new app. In the following screen choose Facebook login -> Getting started and choose *Web* as the platform. Put in a URL under which your application is accessible (Note: 127.0.0.1 will not work here.). Back on the dashboard, go to Settings -> Basic and copy the `App ID` and the `App Secret`.
+    Log dich bei Facebook ein und gehe auf https://developers.facebook.com/. Klicke oben rechts im Menü auf *Meine Apps* und wähle *Neue App hinzufügen*. Erstelle eine neue App. In dem darauffolgenden Fenster wähle Facebook login -> Starten und wähle *Web* als Plattform. Füge eine URL ein unter der deine Anwendung zugänglich ist (Beachte:  127.0.0.1 wird nicht funktionieren.). Zurück auf dem Dashboard, gehe zu Einstellungen -> Grundeinstellungen und kopiere Àpp ID`und das App Geheimnis`.
 
 
 twitter
