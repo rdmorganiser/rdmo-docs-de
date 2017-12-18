@@ -1,9 +1,9 @@
 Python Pakete installieren
 --------------------------
 
-Nach dem du dir den ``rdmo-app``-Ordner angesehen hast, musst du die ``rdmo``-Pakete installieren und andere Python-Abhängigkeiten.
+Nach dem Sie sich den ``rdmo-app``-Ordner angesehen haben, mussen Sie die ``rdmo``-Pakete installieren und andere Python-Abhängigkeiten.
 
-Wechsle in den ``rdmo-app``-Ordner und erstelle eine  `virtualenv <https://virtualenv.readthedocs.org>`_ (mit deinem Benutzer oder deinem erstellen ``rdmo``-Benutzer, nicht als ``root``):
+Wechslen Sie dazu in den ``rdmo-app``-Ordner und erstellen Sie eine  `virtualenv <https://virtualenv.readthedocs.org>`_ (mit ihrem Benutzer oder ihrem erstellen ``rdmo``-Benutzer, nicht als ``root``):
 
 .. code:: bash
 
@@ -17,7 +17,7 @@ Wechsle in den ``rdmo-app``-Ordner und erstelle eine  `virtualenv <https://virtu
 
     pip install --upgrade pip setuptools                       # update pip and setuptools
 
-Nachdem die virtuelle Umgebung aktiviert wurde, kann da ``rdmo``-Paket mit Hilfe von ``pip`` installiert werden:
+Nachdem die virtuelle Umgebung aktiviert wurde, kann dort das ``rdmo``-Paket mit Hilfe von ``pip`` installiert werden:
 
 .. code:: bash
 
