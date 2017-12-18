@@ -6,7 +6,7 @@ Das Installieren der Voraussetzungen für RDMO unterscheidet sich auf den versch
 Linux
 ~~~~~
 
-Wir empfehlen für die Installtion der Voraussetzungen das Paket-System der Distribution zu verwenden. Bei Debian/Ubunutu verwende:
+Wir empfehlen für die Installtion der Voraussetzungen das Paket-System der Distribution zu verwenden. Bei Debian/Ubunutu verwenden Sie:
 
 .. code:: bash
 
@@ -17,7 +17,7 @@ Wir empfehlen für die Installtion der Voraussetzungen das Paket-System der Dist
     # optional, for pdf output
     sudo apt install texlive texlive-xetex
 
-Bei RHEL/CentOS verwende:
+Bei RHEL/CentOS verwenden Sie:
 
 .. code:: bash
 
@@ -29,11 +29,11 @@ Bei RHEL/CentOS verwende:
     sudo yum install texlive texlive-xetex texlive-mathspec texlive-euenc \
         texlive-xetex-def texlive-xltxtra
 
-Bei Ubuntu 14.04, ist `python3-venv` nicht verfügbar. Bitte verwende stattdessen `python3.5-venv`.
+Bei Ubuntu 14.04, ist `python3-venv` nicht verfügbar. Bitte verwenden Sie stattdessen `python3.5-venv`.
 
 Bei RHEL/CentOS ``selinux`` ist standardmäßig aktiviert. Dies führt zu unerwarteten Fehlern abhängig davon wo der RDMO-Sourcecode auf dem System isntalliert ist. Auch wenn die bevorzugte Lösung die richtige Konfiguration ist (was im Rahmen dieser Dokumentation zu weit führen würde), kann ``selinux`` auf ``permissive`` oder ``disabled`` unter ``/etc/selinux/config`` gesetzt werden (erfordert einen Neustart).
 
-Wenn du Python 2.7 anstatt Python 3 benutzen möchtest, verwende folgende entsprechende Pakete:
+Wenn Sie Python 2.7 anstatt Python 3 benutzen möchten, verwenden Sie folgende entsprechende Pakete:
 
 .. code:: bash
 
@@ -60,13 +60,13 @@ Wir empfehlen die Voraussetzungen mit  `brew <http://brew.sh>`_ zu installieren:
 Windows
 ~~~~~~~
 
-Bei WIndows müsen die Software-Voraussetzungen von den einzelnen Internetseiten heruntergeladen und isntalliert werden.
+Bei Windows müssen die Software-Voraussetzungen von den einzelnen Internetseiten heruntergeladen und isntalliert werden.
 
 Für Python:
 
 * herunterladen von https://www.python.org/downloads/windows/
 * wir empfehlen eine Version >= 3.4
-* vergiss nicht zu überprüfen, dass `Python zu den Umgenungsvariabeln hinzufügen` gesetzt ist während des Setups
+* vergessen Sie nicht zu überprüfen, dass währende Des Setups `Python zu den Umgenungsvariabeln hinzufügen` gesetzt ist
 
 Für git:
 
