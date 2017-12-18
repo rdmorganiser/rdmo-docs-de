@@ -1,7 +1,7 @@
 Allgemeine Einstellungen
 ------------------------
 
-Einige generelle Einstellungen sollten in deiner ``config/settings/local.py`` enthalten sein. Die erste und wahrscheinlich wichtigste, wenn du RDMO im `Debug-Modus<https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-DEBUG>`_ ausführst:
+Einige generelle Einstellungen sollten in ihrer ``config/settings/local.py`` enthalten sein. Die erste und wahrscheinlich wichtigste Einstlelung, wenn Sie RDMO im `Debug-Modus<https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-DEBUG>`_ ausführen:
 
 .. code:: python
 
