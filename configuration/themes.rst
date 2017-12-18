@@ -1,7 +1,7 @@
-Themes
+Themen
 ------
 
-RDMO allows for a high level of customization by modifiing the Django *templates* as well as the static assets (CSS file, images, etc.). Django which RDMO is base on offers a powerful method for this. Inside your ``rdmo-app`` directory you can create a ``theme`` folder with a ``static`` and a ``templates`` directory inside:
+RDMO erlaubt es Hochlevel-Anpassungen mit Hilfe von Django *templates* (Vorlagen) sowie mit statischen Inhalten (CSS Datei, Bilder, etc.) vorzunehmen. Django, worauf RDMo basiert, bietet eine mächtige Methode dafür. Innerhalb ihres ``rdmo-app``-Verzeichnisses können Sie einen ``Themen``-Ordner mit einem ``static``- und einem ``templates``-Ordner anlegen:
 
 .. code:: python
 
@@ -9,25 +9,23 @@ RDMO allows for a high level of customization by modifiing the Django *templates
     mkdir theme/static
     mkdir theme/templates
 
-Then add:
+Dann fügen Sie folgendes ihrer ``config/settings/local.py`` hinzu:
 
 .. code:: python
 
     THEME_DIR = os.path.join(BASE_DIR, 'theme')
 
-to your ``config/settings/local.py``.
+Templates und statische Datein in ihrem ``theme``-Ordner können Dateien von RDMO überschreiben solange sie einen relativen Pfad besitzen, z.B. die Datei ``theme/templates/core/base_navigation.html`` überschreibt ``rdmo/core/templates/core/base_navigation.html``.
 
-Templates and static files in the ``theme`` directory override files from RDMO as long as they have the same relative path, e.g. the file ``theme/templates/core/base_navigation.html`` overrides ``rdmo/core/templates/core/base_navigation.html``.
+Einige Dateien, die Sie vielleicht überschreiben möchten, sind:
 
-Some files you might want to override are:
+SASS Variabeln:
+    ``rdmo/core/static/core/css/variables.scss`` kann zu ``theme/static/css/variables.scss`` kopiert werden und genutzt werden, um Farben anzupassen.
 
-SASS variables
-    ``rdmo/core/static/core/css/variables.scss`` can be copied to ``theme/static/css/variables.scss`` and be used to customize colors.
+Navigationsleiste
+    ``rdmo/core/templates/core/base_navigation.html`` kann zu ``theme/templates/core/base_navigation.html`` kopiert werden und genutzt werden, um die Navigationsleiste anzupassen. 
 
-Navigation bar
-    ``rdmo/core/templates/core/base_navigation.html`` can be copied to ``theme/templates/core/base_navigation.html`` and be used to customize the navbar.
-
-Home page text
-    ``rdmo/core/templates/core/home_text_en.html`` and ``rdmo/core/templates/core/home_text_de.html`` can be copied to ``theme/templates/core/home_text_en.html`` and ``theme/templates/core/home_text_de.html`` and be used to customize text on the home page.
-
-Note that updates to the RDMO package might render your theme incompatible to the RDMO code and cause errors. In this case the files in ``theme`` need to be adjusted to match their RDMO counterparts in functionality.
+Homepage-Text
+    ``rdmo/core/templates/core/home_text_en.html`` und ``rdmo/core/templates/core/home_text_de.html`` können nach ``theme/templates/core/home_text_en.html`` und ``theme/templates/core/home_text_de.html`` kopiert werden und können genutzt werden, um den Text auf der Homepage nazupassen. 
+    
+Beachten Sie, dass Updates für das RDMO-Paket die Themen inkompatiblel werden lassen können und Fehler verursachen können. In diesem Fall müssen die Dateien in ``theme`` so angepasst werden, dass deren RDMO-Gegenstücke auf deren Funktionalität abgestimmt werden.
