@@ -1,7 +1,7 @@
 Bedingungen
 -----------
 
-Bedingungen können erstellt und bearbeitet werden unter *Bedinungen* im Mangamentmenü der Navigationsleiste. Später werden sie mit Entitäten, Attributen, Optionensets oder Aufgaben verbunden.
+Bedingungen können erstellt und bearbeitet werden unter *Bedingungen* im Mangamentmenü der Navigationsleiste. Später werden sie mit Entitäten, Attributen, Optionensets oder Aufgaben verbunden.
 
 
 .. figure:: ../_static/img/screens/Bedingungen.PNG
@@ -9,7 +9,7 @@ Bedingungen können erstellt und bearbeitet werden unter *Bedinungen* im Mangame
 
    Screenshot des Bedinungen-Managment Interfaces.
    
-Auf der linken Seite sind alle Bedingungen der RDMO-Instalaltion verfügbar. Bedinungen zeigen ihren Schlüssel und eine textuelle Darstellung was sie auswerten. Auf der rechten Seite von jedem Bedinungsfeld zeigen Symbole an wie mit dem jewieligen Element interagiert werden kann. Die folgenden Optionen stehen zur Auswahl:
+Auf der linken Seite sind alle Bedingungen der RDMO-Installation verfügbar. Bedingungen zeigen ihren Schlüssel und eine textuelle Darstellung. Auf der rechten Seite von jedem Bedingungsfeld zeigen Symbole an wie mit dem jeweiligen Element interagiert werden kann. Die folgenden Optionen stehen zur Auswahl:
 
 
 * **Bearbeiten** (|update|) der Eigenschaften einer Bedingung.
@@ -27,7 +27,7 @@ In der rechten Sidebar gibt es weitere Interface-Optionen:
   
   * **Export** exportiert die Bedigungen in eins der angezeigten Formate. Während die Textformate hauptschächlich für die Darstellung sind, können XML Ausgaben für den Transfer von Bedingungen zu anderen RDMO Installationen genutzt werden.
 
-Bedingungen haben unterschiedliche Eigenschaften, um ihr Verhalten zu kontrollieren. Wie in :doc:`in der Einleitung <index>` beschrieben,  haben alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von den anderen Managern der RDMo Installation gesehen werden können. Ferner können folgende Parameter verändert werden: 
+Bedingungen haben unterschiedliche Eigenschaften, um ihr Verhalten zu kontrollieren. Wie in :doc:`in der Einleitung <index>` beschrieben,  haben alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von den anderen Managern der RDMO Installation gesehen werden können. Ferner können folgende Parameter verändert werden: 
 
 Bedingung
 """""""""
