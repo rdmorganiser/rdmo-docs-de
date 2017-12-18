@@ -1,16 +1,14 @@
 Fragen
 ---------
 
-Das Fragenmangament ist unter *Fragen* in dem Mangamentmenü in der Navigationsleiste verfügbar. De Link in der Navigationsleiste öffnet den ersten Katalog. Weitere Kataloge können in der Sidebar darunter ausgewählt werden.
-
-The questions management is available under *Questions* in the management menu in the navigation bar. The link in the navbar opens the first catalog. Other catalogs can be selected in the sidebar afterwards.
+Das Fragenmangament ist unter *Fragen* in dem Mangamentmenü in der Navigationsleiste verfügbar. Der Link in der Navigationsleiste öffnet den ersten Katalog. Weitere Kataloge können in der Sidebar darunter ausgewählt werden.
 
 .. figure:: ../_static/img/screens/Fragen.PNG
    :target: ../_static/img/screens/Fragen.PNG
    
    Screenshot des Fragenmangements-Interfaces.
 
-Auf der linken Seite werden die Abschnitte, Teilabschnitte und Fragen des aktuellen Katalogs angezeigt. Für Abshcnitte und Teilabschnitte wird der Titel und Schlüssel angezeigt. Für Fragen und Fragensets wird der Schlüssel und der Schlüssel des verknüpften Attributes oder Entität angezeigt. Die Reihenfolge der verschiedenen Elemente ist die Gleiche wie im struktiriertem Interview, welches dem Benutzer angezeigt wird. Auf der rechten Seite eines jeden Elementfeldes zeigen Symbolde die Interaktionsmöglichkeiten an. Folgende Optionen sind verfügbar:
+Auf der linken Seite werden die Abschnitte, Teilabschnitte und Fragen des aktuellen Katalogs angezeigt. Für Abschnitte und Teilabschnitte wird der Titel und Schlüssel angezeigt. Für Fragen und Fragensets wird der Schlüssel und der Schlüssel des verknüpften Attributes oder Entität angezeigt. Die Reihenfolge der verschiedenen Elemente ist die Gleiche wie im struktiriertem Interview, welches dem Benutzer angezeigt wird. Auf der rechten Seite eines jeden Elementfeldes zeigen Symbolde die Interaktionsmöglichkeiten an. Folgende Optionen sind verfügbar:
 
 * **Hinzufügen** (|add|) eines neuen Abschnittes, einer neuen Frage oder eines Fragensets zu einem Teilabschnitt oder eine neue Frage zu einem Frgenset.
 * **Bearbeiten** (|update|) eines Elements, um seine Eigenschaften zu ändern. 
@@ -38,12 +36,12 @@ Die Sidebar rechts enthält weitere Interface-Objekte:
 
 * **Export** exportiert den aktuellen Katalog zu einem der angegeben Formate. Während Textformate hauptächlich für Präsentationszwecke sind, können XML-Exporte für den Transfer des Kataloges zu einer anderen RDMO-Installation verwendet werden.
 
-Die verschiedenen Elemente des Fragebogens haben verschiedenen Eigenschaften, um ihr Verhalten zu beschreiben. Wie in :doc:`der Einleitung <index>` beschrieben, haben alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Komemntar,all elements have an URI Prefix, a key, and an internal comment only to be seen by other managers of the RDMO installation. In addition, you can edit the parameters below:
+Die verschiedenen Elemente des Fragebogens haben verschiedenen Eigenschaften, um ihr Verhalten zu beschreiben. Wie in :doc:`der Einleitung <index>` beschrieben, haben alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von dem Manager der RDMO-Isntallation gesehen werden können. Außerdem können folgende Paramter geändert werden:
 
 .. figure:: ../_static/img/screens/FragenBearbeiten.PNG
    :target: ../_static/img/screens/FragenBearbeiten.PNG
    
-   Screenshot des Fensters, um die Parameter eines elements zu bearbeiten.
+   Screenshot des Fensters, um die Parameter eines Elements zu bearbeiten.
    
 Katalog
 """""""
