@@ -1,7 +1,7 @@
 Optionen
 -------
 
-Optionen und Optionensets können unter *Optionen* im Managementmenü inder Navigationsleiste bearbeitet werden.
+Optionen und Optionensets können unter *Optionen* im Managementmenü in der Navigationsleiste bearbeitet werden.
 
 .. figure:: ../_static/img/screens/Optionen.PNG
    :target: ../_static/img/screens/Optionem.PNG
@@ -12,7 +12,7 @@ Auf der linken Seite sind alle Optionen und Optionsets der RDMO-Installation dar
 
 * **Hinzufügen** (|add|) einer neuen Option oder eines Optionensets.
 * **Bearbeiten** (|update|) der Eigenschaften einer Option oder eines Optionensets.
-* **Bedingungen bearbeiten** (|conditions|) eines Optionsets. Eine Frage, di emit einem Attribut verknüpft ist, die wiederum selbst mit einem Optionenset verknüpft ist, wird die Optionen des Sets im Fragekatalog nicht anzeigen, wenn die Bedingung als falsch ausgerwertet wird. Die Bedingungen selbst sind im :doc:`Bedingungsmangement <conditions>` konfiguriert.
+* **Bedingungen bearbeiten** (|conditions|) eines Optionsets. Eine Frage, die mit einem Attribut verknüpft ist, die wiederum selbst mit einem Optionenset verknüpft ist, wird die Optionen des Sets im Fragekatalog nicht anzeigen, wenn die Bedingung als falsch ausgerwertet wird. Die Bedingungen selbst sind im :doc:`Bedingungsmangement <conditions>` konfiguriert.
 * **Löschen** (|delete|) einer Option oder eines Optionensets und im Falle ines Optionensets all seiner Optionen. **Diese Handlung kann nicht rückgägnig gemacht werden!** 
 
 .. |add| image:: ../_static/img/icons/add.png
