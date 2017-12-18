@@ -15,17 +15,17 @@ RDMO muss E-Mails an seine Benutzer schicken können. Die Vebrindung zu dem SMPT
 
     DEFAULT_FROM_EMAIL = ''
 
-Hier ist ``EMAIL_HOST`` die URL oder IP des SMTP-Servers, ``EMAIL_PORT`` ist der zugehörige Port (meistenss 25, 465, oder 587) und  ``EMAIL_HOST_USER`` und ``EMAIL_HOST_PASSWORD`` sind die Zugangsdaten, falls der SMTP-Server eine Authenfizierung verlangt.
+Hier ist ``EMAIL_HOST`` die URL oder IP des SMTP-Servers, ``EMAIL_PORT`` ist der zugehörige Port (meistens 25, 465, oder 587) und  ``EMAIL_HOST_USER`` und ``EMAIL_HOST_PASSWORD`` sind die Zugangsdaten, falls der SMTP-Server eine Authenfizierung verlangt.
 
 Für eine``STARTTLS``-Verbindung (meistens auf Port 587) muss ``EMAIL_USE_TLS`` auf ``True`` gesetzt werden, während ``EMAIL_USE_SSL`` auf ``True`` gesetzt sein für ein implizite TLS/SSL Verbindung (meistens auf dem Port 465).
 
-``DEFAULT_FROM_EMAIL`` setzt das FROM-Feld für die E-Mails, die dem BEnutzer geschickt werden. 
+``DEFAULT_FROM_EMAIL`` setzt das FROM-Feld für die E-Mails, die dem Benutzer geschickt werden. 
 
-Für ein Entwicklungs-/Test-Setupkann ein einfaches E-Mail-Backend verwendet werden, dass nur die E-Mail auf dem Temrinal anzeigt:
+Für ein Entwicklungs-/Test-Setup kann ein einfaches E-Mail-Backend verwendet werden, dass nur die E-Mail auf dem Temrinal anzeigt:
 
 .. code:: python
 
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     EMAIL_FROM = 'info@example.com'
 
-Dies ist auch das standard-Backend, falls keine E-Mail-Einstellungen in``config/settings/local.py`` hinzugefügt wurden.
+Dies ist auch das Standard-Backend, falls keine E-Mail-Einstellungen in``config/settings/local.py`` hinzugefügt wurden.
