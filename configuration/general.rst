@@ -1,7 +1,7 @@
 Allgemeine Einstellungen
 ------------------------
 
-Einige genrelle Einstellungen sollten in deiner ``config/settings/local.py`` enthalten sein. Die erste und wahrscheinlich wichtigste, wenn du RDMO im `Debug-Modus<https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-DEBUG>`_ ausführst:
+Einige generelle Einstellungen sollten in deiner ``config/settings/local.py`` enthalten sein. Die erste und wahrscheinlich wichtigste, wenn du RDMO im `Debug-Modus<https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-DEBUG>`_ ausführst:
 
 .. code:: python
 
@@ -15,7 +15,7 @@ Django braucht einen `Geheimschlüssel <https://docs.djangoproject.com/en/1.10/r
 
     SECRET_KEY = 'this is not a very secret key'
 
-Dieser Schlüssel muss geheim gelaten werden, da ansosnten viele von Djangos Sicherheitsmaßnahmen versagen.
+Dieser Schlüssel muss geheim gehalten werden, da ansonsten viele von Djangos Sicherheitsmaßnahmen versagen.
 
 Im Betrieb, erlaubt Django nur `Anfragen zu bestimmten URLs <https://docs.djangoproject.com/en/1.10/ref/settings/#allowed-hosts>`_, welche festgelegt werden müssen:
 
@@ -23,12 +23,12 @@ Im Betrieb, erlaubt Django nur `Anfragen zu bestimmten URLs <https://docs.django
 
     ALLOWED_HOSTS = ['localhost', 'rdmo.example.com']
 
-Wenn du RDMO unter einem Alias wie http://example.com/rdmo laufen lassen möchtest, musst du die Basis-URL festlegen: 
+Wenn Sie RDMO unter einem Alias wie http://example.com/rdmo laufen lassen möchten, mussen Sie die Basis-URL festlegen: 
 .. code:: python
 
     BASE_URL = '/rdmo'
 
-Ferner, möchtest du vielleicht eine Hauptsprache für dein RDMO und die Zeitzone festlegen:
+Ferner, möchten Sie vielleicht eine Hauptsprache für ihr RDMO und die Zeitzone festlegen:
 
 .. code:: python
 
