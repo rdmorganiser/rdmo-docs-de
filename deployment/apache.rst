@@ -1,9 +1,9 @@
 Apache und mod_wsgi
 -------------------
 
-Im Betrieb kannst du einen dedizierten Benutzer für RDMO erstellen. Alle Schritte für die Installation für die du ekine Root-Rechte benötigst, sollten mit diesem Benuter ausgeführt werden. Wie vorher auch gehen wir davon aus, dass der Benutzer ``rdmo`` genannt wurde und sein Home-Verzeichnis ``/srv/rdmo`` ist. Demnach ist dein ``rdmo-app`` unter ``/srv/rdmo/rdmo-app`` zu finden.
+Im Betrieb können Sie einen dedizierten Benutzer für RDMO erstellen. Alle Schritte für die Installation für die Sie kine Root-Rechte benötigen, sollten mit diesem Benutzer ausgeführt werden. Wie vorher auch gehen wir davon aus, dass der Benutzer ``rdmo`` genannt wurde und sein Home-Verzeichnis ``/srv/rdmo`` ist. Demnach ist ihre ``rdmo-app`` unter ``/srv/rdmo/rdmo-app`` zu finden.
 
-Installiere den Apache Server und ``mod_wsgi``:
+Installieren Sie den Apache Server und ``mod_wsgi``:
 
 .. code:: bash
 
@@ -14,7 +14,7 @@ Installiere den Apache Server und ``mod_wsgi``:
     # CentOS
     sudo yum install httpd mod_wsgi                   # only for python2.7
 
-Als nächstes erstelle eine virtuelle Host-Konfiguration. Leider werden verschiedene Versionen von apache und mod-wsgi bei den verschiedenen Distributionen verwenden und daher ist jeweils ein leicht unterschiedliches Setup notwendig:
+Als nächstes erstellen Sie eine virtuelle Host-Konfiguration. Leider werden verschiedene Versionen von apache und mod-wsgi bei den verschiedenen Distributionen verwendet und daher ist jeweils ein leicht unterschiedliches Setup notwendig:
 
 Für Debian/Ubuntu:
 
@@ -72,17 +72,17 @@ Für CentOS 7:
             </Directory>
     </VirtualHost>
 
-Starte den Apache-Server neu. RDMO sollte nun unter ``YOURDOMAIN`` verfügbar sein. Beachte, dass der Apache-Benutzer Zugang zu ``/srv/rdmo/rdmo-app/static_root/`` haben muss.
+Starten Sie den Apache-Server neu. RDMO sollte nun unter ``YOURDOMAIN`` verfügbar sein. Beachten Sie, dass der Apache-Benutzer Zugang zu ``/srv/rdmo/rdmo-app/static_root/`` haben muss.
 
-Wie du der virtuellen Host-Konfigurationen entnehmen kannst werden die statischen Inhalte wie CSS und JavaScript unabhängig vom WSGI-Python-Skript bedient. Um dies zu erreichen, müssen sie in dem ``static_root``-Ordner erfasst werden:
+Wie Sie der virtuellen Host-Konfigurationen entnehmen können, werden die statischen Inhalte wie CSS und JavaScript unabhängig vom WSGI-Python-Skript bedient. Um dies zu erreichen, müssen diese in dem ``static_root``-Ordner erfasst werden:
 
 .. code:: bash
 
     python manage.py collectstatic
 
-in der virtuelle Umgebung:
+in der virtuelle Umgebung.
 
-Um Veränderungen am RDMo code vorzunehmen (z.B: nach dem :doc:`Upgrade </upgrade/index>`) muss der Webserver neu geladen werden oder die Datei``config/wsgi.py`` muss (scheinbar) verändert worden sein indem der ``touch``-Befehl verwendet wird: 
+Um Veränderungen am RDMO code vorzunehmen (z.B: nach dem :doc:`Upgrade </upgrade/index>`), muss der Webserver neu geladen werden oder die Datei``config/wsgi.py`` muss (scheinbar) verändert worden sein indem der ``touch``-Befehl verwendet wird: 
 .. code:: bash
 
     touch config/wsgi.py
