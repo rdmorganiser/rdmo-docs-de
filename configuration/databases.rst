@@ -6,7 +6,7 @@ RDMO kann mit allen Datenbanken, die vom Django-Framework unterstützt werden, v
 PostgreSQL
 ``````````
 
-PostgreSQL kannw ie folgt installiert werden:
+PostgreSQL kann wie folgt installiert werden:
 
 .. code:: bash
 
@@ -19,13 +19,13 @@ PostgreSQL kannw ie folgt installiert werden:
     sudo systemctl start postgresql
     sudo systemctl enable postgresql
 
-Um PostgreSQL als deine Datenbank-Backend nutzen zu können, installiere ``psycopg2`` in deiner virtuellen Umgebung:
+Um PostgreSQL als ihre Datenbank-Backend nutzen zu können, installieren Sie ``psycopg2`` in ihrer virtuellen Umgebung:
 
 .. code:: bash
 
     pip install -r requirements/postgres.txt
 
-Dann füge folgende Zeilen zu ``config/settings/local.py`` hinzu:
+Dann fügen Sie folgende Zeilen zu ``config/settings/local.py`` hinzu:
 
 .. code:: python
 
@@ -40,7 +40,7 @@ Dann füge folgende Zeilen zu ``config/settings/local.py`` hinzu:
         }
     }
 
-wobei ``Name`` der Name der Datenbank ist, ``USER`` der PostgreSQL Benutzer, ``PASSWORD`` dessen Passwort, ``HOST`` der Datenbankhost und ``PORT`` der Port von PostgreSQL. Beachte, dass abhängig von deinem Setup nicht alle Einstlelungen benötigt werden. Falls du Peer-Authenfizierungsmethoden verwendest, brauchst du nur ``NAME`` und ``ENGINE``-Einstellungen. Der Benutzer und die Datenbank werden wie folgt gesetzt:
+wobei ``Name`` der Name der Datenbank ist, ``USER`` der PostgreSQL Benutzer, ``PASSWORD`` dessen Passwort, ``HOST`` der Datenbankhost und ``PORT`` der Port von PostgreSQL. Beachten Sie, dass abhängig von ihrem Setup nicht alle Einstellungen benötigt werden. Falls Sie Peer-Authenfizierungsmethoden verwendeen, brauchen Sie nur die ``NAME`` und ``ENGINE``-Einstellungen. Der Benutzer und die Datenbank werden wie folgt gesetzt:
 
 .. code-block:: bash
 
@@ -62,7 +62,7 @@ sollte nun die RDMO Datenbank-Tabellen in PostegreSQL erstellen.
 MySQL
 `````
 
-MySQL (oder den Community-entwickleten Abzweig MariaDB) kannw ie folgt installiert werden: 
+MySQL (oder den Community-entwickleten Abzweig MariaDB) kann wie folgt installiert werden: 
 
 .. code:: bash
 
@@ -77,13 +77,13 @@ MySQL (oder den Community-entwickleten Abzweig MariaDB) kannw ie folgt installie
     sudo systemctl start mariadb
     sudo mysql_secure_installation
 
-Um MYSQL als deinen Datenbank-Backend zu nutzen, installiere ``mysqlclient´´ in deiner virtuellen Umgebung:
+Um MYSQL als ihren Datenbank-Backend zu nutzen, installieren Sie ``mysqlclient´´ in ihrer virtuellen Umgebung:
 
 .. code:: bash
 
     pip install -r requirements/mysql.txt
 
-Danach, füge folgendes deiner ``config/settings/local.py`` hinzu:
+Danach, fügen Sie folgendes ihrer ``config/settings/local.py`` hinzu:
 
 .. code:: python
 
@@ -101,7 +101,7 @@ Danach, füge folgendes deiner ``config/settings/local.py`` hinzu:
         }
     }
 
-Hier ist ``Name`` der Name der Datenbank, ``USER`` der MySQL-Benutzer, ``PASSWORD`` das selbstgwählte Passwort, ``HOST`` der Datenbank-Host und ``PORT`` der zugehörige Port. Falls du ``/tmp/mysql.sock`` nicht benutzt, kannst du ``unix-socket`` verwenden, um seinen Pfad zu setzen. Der Benutzer und die Datenbank werden wie folgt erstellt:
+Hier ist ``Name`` der Name der Datenbank, ``USER`` der MySQL-Benutzer, ``PASSWORD`` das selbstgwählte Passwort, ``HOST`` der Datenbank-Host und ``PORT`` der zugehörige Port. Falls Sie``/tmp/mysql.sock`` nicht benutzen, können Sie ``unix-socket`` verwenden, um den Pfad zu setzen. Der Benutzer und die Datenbank werden wie folgt erstellt:
 
 .. code-block:: mysql
 
@@ -142,4 +142,4 @@ Das Kommando
 
     python manage.py migrate
 
-sollte nun die RDMo Datenbank-Tabellen in der angegeben Datenbankdatei erstellen.
+sollte nun die RDMO Datenbank-Tabellen in der angegeben Datenbankdatei erstellen.
