@@ -7,7 +7,7 @@ Ansichten können unter *Ansichten* im Mangementmenü in der Navigationsleiste k
 
    Screenshot des Ansichtenmangement-Interfaces.
    
-   Auf der linken Seite werden alle Ansichten der RDMO-Installation angezeigt. Ansichten zeigen ihren Schlüssel, ihren Tiel und eine Beschreibung. Auf der rechten Seite von jedem Ansichtenfeld zeigen Symbole di eInteraktionsmöglichkeiten an. Folgende Otptionen stehen zur Verfügung:
+   Auf der linken Seite werden alle Ansichten der RDMO-Installation angezeigt. Ansichten zeigen ihren Schlüssel, ihren Titel und eine Beschreibung. Auf der rechten Seite von jedem Ansichtenfeld zeigen Symbole die Interaktionsmöglichkeiten an. Folgende Otptionen stehen zur Verfügung:
 
 * **Bearbeiten** (|update|) einer Ansciht, um dessen Eigenschaften zu ändern.
 * **Template bearbeiten** (|template|) eines Ansicht.
@@ -19,14 +19,14 @@ Ansichten können unter *Ansichten* im Mangementmenü in der Navigationsleiste k
 
 Die Sidebar auf der rechten Seite enthält weitere Interface-Objekte:
 
-* **Filter** filtert die Ansicht anhand eines vom Benutzer gegeben Stirngs. Nur ANsichten, die diesen string in ihrem Pfad haben, weren angezeigt.
+* **Filter** filtert die Ansicht anhand eines vom Benutzer gegeben Strings. Nur Ansichten, die diesen String in ihrem Pfad haben, werden angezeigt.
 * **Optioen** ermöglichen weitere Operationen: 
 
   * Neue Ansicht erstellen
 
 * **Export** exportiert die Ansichten zu eine der angegeben Formate. Während TextFormate hauptsächlich für die Präsentation sind, können XML-Ausgaben für den Transfer der Ansichten zu einer anderen RDMO-Installation verwendet werden.
 
-Ansichten haben unterschiedlicher Eigenschaften, um ihr Verhalten zu bestimmen. Wie in :doc:`der Einleitung <index>` beschrieben haben alles Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur bei den Managern der RDMO-Installation gesehen werden können.. Ferner können folgende Parameter geändert werden:
+Ansichten haben unterschiedliche Eigenschaften, um ihr Verhalten zu bestimmen. Wie in :doc:`der Einleitung <index>` beschrieben haben alles Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von den Managern der RDMO-Installation gesehen werden können. Ferner können folgende Parameter geändert werden:
 
 Ansicht
 """""""
@@ -52,9 +52,9 @@ Vorlage
 
    Screenshot des Vorlagen-Fensters.
    
-Jede Ansicht hat eine Vorlage, die bestimmt wie die vom Benutzer gegeben ANtworten auf ein Textdokument gemappt wird. Die Vorlage benutzt aus `Django template <https://docs.djangoproject.com/en/1.11/ref/templates/language/>`_ syntax, welche in Kombination mit fegulärem HTML, Variabeln, dessen Werte  bei der TVorlageauswertung ersetzt werden (``{{ a_variable }}``), und Tags, welche die Logik der Vorlage kontrolliert (``{% a_tag %}``).
+Jede Ansicht hat eine Vorlage, die bestimmt wie die vom Benutzer gegeben Antworten auf ein Textdokument gemappt wird. Die Vorlage benutzt aus `Django template <https://docs.djangoproject.com/en/1.11/ref/templates/language/>`_ syntax, welche in Kombination mit regulärem HTML, Variabeln, dessen Werte  bei der Vorlageauswertung ersetzt werden (``{{ a_variable }}``), und Tags, welche die Logik der Vorlage kontrolliert (``{% a_tag %}``).
 
-Zwei Variabeln können in RDMo VOrlagen verwendet werden:
+Zwei Variabeln können in RDMO Vorlagen verwendet werden:
 
 * ``values``, welche ein verschachteltes Wörterbuch von den Antworten des Benutzers auf deren Attribute mappt. 
 * ``conditions``, welche ein Wörterbuch auf die Schlüssel von den Bedingungen mappt, um die Bedingungen anhand des aktuellen Projekts auszuwerten (z.B. ``wahr`` or ``falsch``).
