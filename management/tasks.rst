@@ -8,12 +8,11 @@ Aufgaben sind unter *Aufgaben* im Managementmenü in der Navigatorleiste konfigu
    
    Screenshot des Aufgabenmangement-Interfaces.
 
-
- Auf der linekn Seite werden alle aufgaben der RDMO-Installation angezeigt. Aufgaben ezeigen ihren Schlüssel, Titel und Aufgabenbeschreibung an. Auf der rechten Seite des Aufgabenfeldes zeigen Symbole Interaktionsmöglichkeiten an. Folgende Optionen sind verfügbar:
+Auf der linekn Seite werden alle aufgaben der RDMO-Installation angezeigt. Aufgaben zeigen ihren Schlüssel, Titel und Aufgabenbeschreibung an. Auf der rechten Seite des Aufgabenfeldes zeigen Symbole Interaktionsmöglichkeiten an. Folgende Optionen sind verfügbar:
 
 
 * **Bearbeiten** (|update|) einer Aufgabe, um dessen Eigenschaften zu ändern. 
-* **Bedingung bearbeiten** (|conditions|) einer Aufgabe. eine Aufgabe wird dem Benutzer nur angezeigt, wenn al ihre Bedingungen als ``wahr`´ ausgewertet werden. Die BEdingungen selbst sind unter  :doc:`dem Konditionsmangement <conditions>` konfiguriert.
+* **Bedingung bearbeiten** (|conditions|) einer Aufgabe. eine Aufgabe wird dem Benutzer nur angezeigt, wenn all ihre Bedingungen als ``wahr`´ ausgewertet werden. Die BEdingungen selbst sind unter  :doc:`dem Konditionsmangement <conditions>` konfiguriert.
 * **Zeitrahmen bearbeiten** (|timeframe|) einer Aufgabe. Der Zeitrahmen wird erstellt aus einem oder zwei Daten von den Antworten des Benutzers. Dies erlaubt Aufgaben mit einer bestimmten Deadline oder einer bestimmten Dauer festzulegen. 
 * **Entfernen** (|delete|) einer Aufgabe. **Diese Handlung kann nicht rückgängig gemacht werden!** 
 
@@ -32,7 +31,7 @@ Die Sidebar auf der rechten Seite enthält weitere Interface-Objekte:
 
 * **Export** exportiert in eine der angebenen Formate. Während Textformate hauptsächlich für die Präsentation sind, können XML-Formate für den Transfer der Aufgaeb zu einer anderen RDMO-Installation verwendet werden.
 
-Aufgaben haben unterschiedliche Eigenschafte, um ihr Verhalten zu konfigurieren. Wie in :doc:`der Einleitung <index>` beschrieben besitzen alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur bei den Managern der RDMO-Instalaltion gesehen werden können. Ferner können folgende Parameter verändert werden: 
+Aufgaben haben unterschiedliche Eigenschaften, um ihr Verhalten zu konfigurieren. Wie in :doc:`der Einleitung <index>` beschrieben besitzen alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von den Managern der RDMO-Installation gesehen werden können. Ferner können folgende Parameter verändert werden: 
 
 Aufgabe
 """"
