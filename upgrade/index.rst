@@ -1,65 +1,65 @@
 Upgrade
 =======
 
-The ``rdmo`` package can be conveniently upgraded using the ``pip`` command. However, before you perform any changes to your installation, please backup the important components to a save location.
+Das ``rdmo`` Paket kann ganz bequem mit dem `pip`-Kommando akualisiert werden. Allerdings, bevor Sie irgendwelche Änderungen an ihrer Installation vornehmen, erstellen Sie bitte ein Backup der wichtigsten Bestandteile an einem sicheren Ort.
 
-A PostgreSQL or MySQL database can be database can be dumped into a file using:
+Eine PostgreSQL oder MySQL-Datenbank kann in eine Datei geschrieben werden:
 
 .. code:: bash
 
     pg_dump [DBNAME] > rdmo.sql  # PostgreSQL
     mysqldump -uroot -p [DBNAME] > rdmo.sql
 
-Your ``rdmo-app`` directory (including any sqlite3 database) can be copied using the usual commands. Note that your virtual environment will not work after being moved to a different path.
+Ihr ``rdmo-app``-Ordner (einschließlich jeglicher sqlite3-Datenbank) kann mit folgendem Kommando kopiert werden. Beachten Sie, dass ihre virtuelle Umgebung nicht funktionieren wird, nachdem sie an einen anderen Ort (Pfad) kopiert wurde.
 
-In order to upgrade your RDMO installation go to your ``rdmo-app`` directory, activate your virtual environment, and upgrade the ``rdmo`` package using ``pip``:
+Um ihre RDMO-Instalaltion zu aktualisieren, gehen Sie in ihren ``rdmo-app``-Ordner, aktivieren Sie ihre virtuelle Umgebung und aktualisieren Sie das ``rdmo`` mit Hilfe von ``pip``:
 
 .. code:: bash
 
     pip install --upgrade rdmo
 
-In order to install a specific version (e.g. 0.9.0) of RDMO use:
+Um eine bestimmte Version von RDMO (z.B. 0.9.0) zu installieren, verwenden Sie:
 
 .. code:: bash
 
     pip install --upgrade rdmo==0.9.0
 
-After the upgrade a database migration might be necessary:
+Nach der Aktualisierung, kann eine Datenbank-Migration notwendig sein:
 
 .. code:: bash
 
     python manage.py migrate
 
-Please check the release notes if this, or other, steps are necessary.
+Bitte beachten Sie die Release-Hinweise, ob dieser oder weitere Schritte notwendig sind.
 
 
 Upgrade to version 0.9.0
 ------------------------
 
-With version 0.9.0 we introduced the split into the ``rdmo-app`` and the centrally maintained ``rdmo`` package. Therefore a few additional steps are needed to upgrade any earlier version to 0.9.0 or beyond:
+Mit der Version 0.9.0 haben wir eine Separation von der -´-´rdmo-app`` und dem zentral verwalteten ``rdmo``-Paket vorgenommen. Daher sind einige zusätzliche Schritte für die Aktualisierung zur Version 0.9.0 und höher notwendig:
 
-1)  In any case perform a backup of your ``rdmo`` directory and your database as described above.
+1) Erstellen Sie immer ein Backup ihres ``rdmo``-Ordners und ihrer Datenbank wie oben beschrieben.
 
-2)  Perform the steps :doc:`/installation/clone` and :doc:`/installation/packages` as if you would install a new instance of RDMO.
+2) Führen Sie die Schritte wie unter :doc:`/installation/clone` und :doc:`/installation/packages` beschrieben durch, so wiesie eine neue RDMO-Instanz installieren würden.
 
-3)  Copy your old configuration from ``/path/to/old/rdmo/rdmo/settings/local.py`` to ``/path/to/new/rdmo-app/config/settings/local.py``. The new ``config`` directory replaces the old ``rdmo`` directory.
+3) Kopieren Sie ihre alte Einstellungen von ``/path/to/old/rdmo/rdmo/settings/local.py`` zu ``/path/to/new/rdmo-app/config/settings/local.py``. Der neue ``config``-Ordner ersetzt den alten ``rdmo``-Ordner. 
 
-4)  If you already have a ``theme`` directory, copy it into the new ``rdmo-app`` folder.
+4) Falls sie einen ``theme``-Ordner besitzen, kopieren Sie diesen bitte in den neuen ``rdmo-app``-Ordner.
 
-5)  Run a database migration (Unless you skipped several versions, the output should be ``No migrations to apply.``):
+5) Führen Sie eine Datenbank-Migration durch (Es sei denn Sie haben einige Versionen übersprungen, dann kann der Output ``Keine Migration notwendig.`` sein.):
 
     .. code:: bash
 
         python manage.py migrate
 
-6)  Download the front-end files from the CDN. We don't use bower and npm anymore.
+6) Downloaden Sie die Front-En-Dateien vom CDN. Wir verwenden Bower und npm nicht mehr.
 
     .. code:: bash
 
         python manage.py download_vendor_files
 
-7)  Update the path to the ``wsgi.py`` script in your Apache or nginx configuration. It is now under ``/path/to/new/rdmo-app/config/wsgi.py``.
+7) Aktualisieren Sie den Pfad im ``wsgi.py`` Skript in ihren Apache oder nginx Einstellungen. Dies befindet sich nun unter ``/path/to/new/rdmo-app/config/wsgi.py``.
 
-8)  Redeploy RDMO as described under :doc:`/deployment/redeploy`.
+8) Setzen Sie RDMO neu auf wie unter :doc:`/deployment/redeploy` beschrieben.
 
-If you have trouble with the upgrade process, don't hesitate to contact the RDMO team for support.
+Falls irgendwelche Probleme während des Aktualisierungsprozesses auftreten, zögern Sie nicht das RDMO-Team um Hilfe zu fragen.
