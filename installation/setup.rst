@@ -1,18 +1,18 @@
 Einrichten der Anwendung
 ---------------------
 
-Um die Anwendung einzurichten erstelle eine neue Datei ``config/settings/local.py`` in deinem geklonten``rdmo-app``-Ordner. Für unseren Beispielbenutzer mit dem Homeverzeichnis ``/srv/rdmo`` wäre dies ``/srv/rdmo/rdmo-app/config/settings/local.py``.
+Um die Anwendung einzurichten erstellen Sie eine neue Datei ``config/settings/local.py`` in ihrem geklonten``rdmo-app``-Ordner. Für unseren Beispielbenutzer mit dem Homeverzeichnis ``/srv/rdmo`` wäre dies ``/srv/rdmo/rdmo-app/config/settings/local.py``.
 
-Du kannst  ``config/settings/sample.local.py`` als Vorlage verwenden, d.h.:
+Sie können ``config/settings/sample.local.py`` als Vorlage verwenden, d.h.:
 
 .. code:: bash
 
     cp config/settings/sample.local.py config/settings/local.py    # on Linux or macOS
     copy config\settings\sample.local.py config\settings\local.py  # on Windows
 
-Die meisten Einstellungen deiner RDMO-Instanz sind in dieser Datei festgelegt. Die unterschiedlichen Einstlluungen sind im Detail :doc:`später in der Dokumentation </configuration/index>` erklärt. Für eine Minimal-Kofniguration musst du ``DEBUG = True`` setzen, um ausführliche Fehlermeldungen zu erhalten und statische Dateien zu nutzen. Setze außerdem ``SECRET_KEY`` zu einem langen, zufälligen String, den du geheim hälst. Deine Datenbank-Verbindung wird mit Hilfe der  ``DATABASES`` Variablen gesetzt. Die Konfiguration der Datenbank wird  :doc:`später in der Dokumentation </configuration/databases>` erklärt. Wenn keine ``DATABASE`` gesetzt ist, dann wird ``sqlite2`` verwendet.
+Die meisten Einstellungen ihrer RDMO-Instanz sind in dieser Datei festgelegt. Die unterschiedlichen Einstellungen sind im Detail :doc:`später in der Dokumentation </configuration/index>` erklärt. Für eine Minimal-Kofniguration müssen Sie ``DEBUG = True`` setzen, um ausführliche Fehlermeldungen zu erhalten und statische Dateien zu nutzen. Setzen Sie außerdem ``SECRET_KEY`` zu einem langen, zufälligen String, den Sie geheim halten. Ihre Datenbank-Verbindung wird mit Hilfe der  ``DATABASES`` Variablen gesetzt. Die Konfiguration der Datenbank wird  :doc:`später in der Dokumentation </configuration/databases>` erklärt. Wenn keine ``DATABASE`` gesetzt ist, wird ``sqlite2`` verwendet.
 
-Dann starte die Datenbank der Anwendung:
+Dann starten Sie die Datenbank der Anwendung:
 
 .. code:: bash
 
@@ -27,4 +27,4 @@ Nach diesen Schritten kann RDMO mit Djangos integriertem Entwicklungsserver betr
 
     python manage.py runserver
 
-Anschließend ist RDMO unter http://127.0.0.1:8000 in deinem (lokalen) Browser verfügbar. Die unterschiedlichen Wege wie RDMO eingesetzte werden kann, werden im nächsten Kapitel behandelt. 
+Anschließend ist RDMO unter http://127.0.0.1:8000 in ihrem (lokalen) Browser verfügbar. Die unterschiedlichen Wege wie RDMO eingesetzt werden kann, werden im nächsten Kapitel behandelt. 
