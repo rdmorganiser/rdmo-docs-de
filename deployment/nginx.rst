@@ -1,23 +1,23 @@
 nginx und gunicorn
 ------------------
 
-Wie bereits mehrfach erwähnt sollte eine dezidierter Benutzer für RDMo verwendet werden. Alle Schritte in der Anleitung, welche keine Root-Rechte benötigen, sollten mit diesem dezidierten Benutzer ausgeführt werden. Hier gehen wir davon aus, dass der Benutzer ``rdmo`´ genannt wurde und sein Home-Verzeichnis ``/srv/rdmo`` ist und demnach deine ``rdmo-app`` unter ``/srv/rdmo/rdmo-app`` zu finden ist.
+Wie bereits mehrfach erwähnt sollte eine dezidierter Benutzer für RDMO verwendet werden. Alle Schritte in der Anleitung, welche keine Root-Rechte benötigen, sollten mit diesem dezidierten Benutzer ausgeführt werden. Hier gehen wir davon aus, dass der Benutzer ``rdmo`´ genannt wurde und sein Home-Verzeichnis ``/srv/rdmo`` ist und demnach deine ``rdmo-app`` unter ``/srv/rdmo/rdmo-app`` zu finden ist.
 
-Als erstes installiere gunicorn in deiner virtuellen Umgebung:
+Als erstes installieren Sie gunicorn in ihrer virtuellen Umgebung:
 
 .. code:: bash
 
     pip install -r requirements/gunicorn.txt
 
-Dann, teste ``gunicorn``:
+Dann, testen Sie ``gunicorn``:
 
 .. code:: bash
 
     gunicorn --bind 0.0.0.0:8000 config.wsgi:application
 
-dies sollte die Anwendung laufen lassen genauso wie ``runserver``, abe rohne statische Inhalte wie CSS-Dateien oder Bilder. Nach dem Test beendet den ``gunicorn``-Prozess wieder.
+dies sollte die Anwendung genauso wie ``runserver`` laufen lassen, aber ohne statische Inhalte wie CSS-Dateien oder Bilder. Nach dem Test beenden Sie den ``gunicorn``-Prozess wieder.
 
-Jetzt erstelle eine systemd service Datei für RDMO. Systemd wird den gunicorn-Prozess launchen bei der Intriebnahme und es am Laufen halten. Erstelle eine neue Datei unter `/etc/systemd/system/rdmo.service`  und gib ein (you benötigst Root/sudo-Rechte dafür): 
+Jetzt erstellen Sie eine systemd service Datei für RDMO. Systemd wird den gunicorn-Prozess launchen bei der Intriebnahme und es am Laufen halten. Erstellen Sie eine neue Datei unter `/etc/systemd/system/rdmo.service`  und geben Sie ein (Sie benötigen Root/sudo-Rechte dafür): 
 ::
 
     [Unit]
@@ -40,14 +40,14 @@ Dieser Service muss gestartet und aktiviert werden wie jeder andere Service auch
     sudo systemctl start rdmo
     sudo systemctl enable rdmo
 
-Danach installiere nginx:
+Danach installieren Sie nginx:
 
 .. code:: bash
 
     sudo apt install nginx  # on Debian/Ubuntu
     sudo yum install nginx  # on RHEL/CentOS
 
-Verändere die nginx-Konfiguration wie folgt (mit root/sudo-Rechten):
+Veränderen Sie die nginx-Konfiguration wie folgt (mit root/sudo-Rechten):
 
 .. code:: bash
 
@@ -65,15 +65,15 @@ Verändere die nginx-Konfiguration wie folgt (mit root/sudo-Rechten):
         }
     }
 
-Starte nginx neu. RDMO sollte nun unter ``YOURDOMAIN`` verfügbar sein. Beachte, dass der Unix-Socket ``/srv/rdmo/rdmo.sock`` für nginx zugänglich sein muss.
+Starten Sie nginx neu. RDMO sollte nun unter ``YOURDOMAIN`` verfügbar sein. Beachten Sie, dass der Unix-Socket ``/srv/rdmo/rdmo.sock`` für nginx zugänglich sein muss.
 
-Wie du der virtuellen Host-Konfirguration entnehmen kannst, werden statische Inhalte wie CSS und JavaScript-Dateien unabhängig von dem entgegengesetzten Proxy zu dem gunicorn-Prozess bedient. Um dies zu erreichen müssen sie in dem ``static_root``-Ordner erfasst werden. Dies kann durch folgendes:
+Wie Sie der virtuellen Host-Konfirguration entnehmen können, werden statische Inhalte wie CSS und JavaScript-Dateien unabhängig von dem entgegengesetzten Proxy zu dem gunicorn-Prozess bedient. Um dies zu erreichen müssen diese in dem ``static_root``-Ordner erfasst werden. Dies kann durch folgendes:
 
 .. code:: bash
 
     python manage.py collectstatic
 
-in deiner virtuellen Umgebung erreicht werden.
+in ihrer virtuellen Umgebung erreicht werden.
 
 Um Veränderungen im RDMO-Code (z.B. nach einem :doc:`Upgrade </upgrade/index>`) umzusetzen, muss der gunicorn-Prozess neu gestartet werden: 
 
