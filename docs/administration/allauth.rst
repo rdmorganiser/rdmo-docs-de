@@ -40,7 +40,7 @@ Google
 
 Sobald die Zugangsdaten gelten, können Sie sie in dem Admin-Interface eingeben, Dafür gehen Sie auf **Sozialle Anwendungen* unter **Soziale Accounts** und klicken auf **Sozialen Account hinzufügen**. Dann:
 
-1.  Wählen Sie den entsprechenden **Anbieter
+1. Wählen Sie den entsprechenden **Anbieter**
 
 2. Geben Sie einen **Namen** ihrer Wahl ein
 

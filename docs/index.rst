@@ -30,4 +30,3 @@ Warnung: Diese Software ist noch in der Entwicklungsphase.
    administration/index
    management/index
    upgrade/index
-   development/index

@@ -1,19 +1,19 @@
 Fragen
----------
+------
 
 Das Fragenmangament ist unter *Fragen* in dem Mangamentmenü in der Navigationsleiste verfügbar. Der Link in der Navigationsleiste öffnet den ersten Katalog. Weitere Kataloge können in der Sidebar darunter ausgewählt werden.
 
 .. figure:: ../_static/img/screens/Fragen.PNG
    :target: ../_static/img/screens/Fragen.PNG
-   
+
    Screenshot des Fragenmangements-Interfaces.
 
 Auf der linken Seite werden die Abschnitte, Teilabschnitte und Fragen des aktuellen Katalogs angezeigt. Für Abschnitte und Teilabschnitte wird der Titel und Schlüssel angezeigt. Für Fragen und Fragensets wird der Schlüssel und der Schlüssel des verknüpften Attributes oder Entität angezeigt. Die Reihenfolge der verschiedenen Elemente ist die Gleiche wie im struktiriertem Interview, welches dem Benutzer angezeigt wird. Auf der rechten Seite eines jeden Elementfeldes zeigen Symbolde die Interaktionsmöglichkeiten an. Folgende Optionen sind verfügbar:
 
 * **Hinzufügen** (|add|) eines neuen Abschnittes, einer neuen Frage oder eines Fragensets zu einem Teilabschnitt oder eine neue Frage zu einem Frgenset.
-* **Bearbeiten** (|update|) eines Elements, um seine Eigenschaften zu ändern. 
+* **Bearbeiten** (|update|) eines Elements, um seine Eigenschaften zu ändern.
 * **Kopieren** (|copy|) einer Frage oder eines Fragekatalogs. Dies wird das gleiche Fenster öffnen wir beim Bearbeiten. Es können einige der Eigenschaften verändert werden und das Element wird als ein neues Element gespeichert. Dies kann Zeit sparen wenn mehrere ähnliche Fragen erstellt werden.
-* **Löschen** (|delete|) eines Elements und all seiner Abkömmlinge (z.B. Unterabschnitte und all dessen Fragen und Fragensets). **Diese Handlung kann nicht rückgängig gemacht werden!** 
+* **Löschen** (|delete|) eines Elements und all seiner Abkömmlinge (z.B. Unterabschnitte und all dessen Fragen und Fragensets). **Diese Handlung kann nicht rückgängig gemacht werden!**
 
 .. |add| image:: ../_static/img/icons/add.png
 .. |update| image:: ../_static/img/icons/update.png
@@ -40,9 +40,9 @@ Die verschiedenen Elemente des Fragebogens haben verschiedenen Eigenschaften, um
 
 .. figure:: ../_static/img/screens/FragenBearbeiten.PNG
    :target: ../_static/img/screens/FragenBearbeiten.PNG
-   
+
    Screenshot des Fensters, um die Parameter eines Elements zu bearbeiten.
-   
+
 Katalog
 """""""
 
@@ -56,7 +56,7 @@ Titel (de)
   Der deutsche Titel für den Katalog, der dem Nutzer angezeigt wird.
 
 Abschnitt
-"""""""
+"""""""""
 
 Katalog
   Der Katalog zu dem der Abschnitt gehört. Ändern des Katalogs wird den Abschnitt zu einem anderen Katalog verschieben. Daher wird er dann nicht mehr in der aktuellen Ansicht sichtbar sein.
@@ -71,48 +71,48 @@ Titel (de)
   Der deutsche Titel des Abschnittes, der dem Benutzer angezeigt wird.
 
 
-Teilabschnitt
-""""""""""
+Unterabschnitt
+""""""""""""""
 
 Katalog
-  Der Katalog zu dem der Teilabschnitt gehört. Ändern des Katalogs wird den Teilabschnitt zu einem anderen Katalog verschieben. Daher wird er dann nicht mehr in der aktuellen Ansicht sichtbar sein.
+  Der Katalog zu dem der Unterabschnitt gehört. Ändern des Katalogs wird den Unterabschnitt zu einem anderen Katalog verschieben. Daher wird er dann nicht mehr in der aktuellen Ansicht sichtbar sein.
 
 Reihenfolge
-  Bestimmt die Reihenfolge des Teilabschnittes in der Liste oder in dem Interview.
+  Bestimmt die Reihenfolge des Unterabschnittes in der Liste oder in dem Interview.
 
 Titel (en)
-  Der englische Titel des Teilabschnittes, der dem Benutzer angezeigt wird.
+  Der englische Titel des Unterabschnittes, der dem Benutzer angezeigt wird.
 
 Titel (de)
-  Der deutsche Titel des Teilabschnittes, der dem Benutzer angezeigt wird.
+  Der deutsche Titel des Unterabschnittes, der dem Benutzer angezeigt wird.
 
 Fragenset
-"""""""""""""
+"""""""""
 
 Teilabschnitt
-  Der Teilabschnitt zu dem das Frageset gehört. Ändern des Teilabschnittes verschiebt die Frage zu einem anderen Abschnitt.
+  Der Teilabschnitt zu dem das Frageset gehört. Ändern des Unterabschnittes verschiebt die Frage zu einem anderen Abschnitt.
 
 Reihenfolge
   Bestimmt die Position des Fragesets in der Liste oder im Interview.
 
 Entität
   Die Entität vom Dömänenmodel mit dem das Fragenset verknüft ist. Beachte, dass die Art wie das Fragenset dem Benutzer gezeigt wird teilweise bei der Entität festgelegt ist. Eine Frage, die mit einer Kollektionsentität verknüpft ist, erlaubt Antworten für verschiedene Sets.
-  
+
 Titel (en)
-  Der englische Titel des Teilabschnittes, der dem Benutzer angezeigt wird.
+  Der englische Titel des Unterabschnittes, der dem Benutzer angezeigt wird.
 
 Titel (de)
-  Der deutsche Titel des Teilabschnittes, der dem Benutzer angezeigt wird.
+  Der deutsche Titel des Unterabschnittes, der dem Benutzer angezeigt wird.
 
 
 Fragen
-"""""""""
+""""""
 
-Teilabschnitt
+Unterabschnitt
   Der Unterabschnitt zu dem die Frage gehört. Ändern des Teilabschnittes verschiebt die Frage zu einem anderen Abschnitt.
 
 Elter
-  Das Fragenset zu demd ie Frage gehört. Dies sollte "- - - " für eine Frage sein, die direkt zu einem Teilabschnitt hinzugefügt wird und nicht zu einem Fragenset.
+  Das Fragenset zu demd ie Frage gehört. Dies sollte "- - - " für eine Frage sein, die direkt zu einem Unterabschnitt hinzugefügt wird und nicht zu einem Fragenset.
 
 Reihenfolge
   Bestimmt die Position des Teilabschnittes in der Liste oder in dem Interview.

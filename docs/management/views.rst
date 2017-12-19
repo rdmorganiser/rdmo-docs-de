@@ -1,12 +1,13 @@
 Ansichten
------
+---------
+
 Ansichten können unter *Ansichten* im Mangementmenü in der Navigationsleiste konfiguriert werden.
 
 .. figure:: ../_static/img/screens/Ansichten.PNG
    :target: ../_static/img/screens/Ansichten.PNG
 
    Screenshot des Ansichtenmangement-Interfaces.
-   
+
    Auf der linken Seite werden alle Ansichten der RDMO-Installation angezeigt. Ansichten zeigen ihren Schlüssel, ihren Titel und eine Beschreibung. Auf der rechten Seite von jedem Ansichtenfeld zeigen Symbole die Interaktionsmöglichkeiten an. Folgende Otptionen stehen zur Verfügung:
 
 * **Bearbeiten** (|update|) einer Ansciht, um dessen Eigenschaften zu ändern.
@@ -20,7 +21,7 @@ Ansichten können unter *Ansichten* im Mangementmenü in der Navigationsleiste k
 Die Sidebar auf der rechten Seite enthält weitere Interface-Objekte:
 
 * **Filter** filtert die Ansicht anhand eines vom Benutzer gegeben Strings. Nur Ansichten, die diesen String in ihrem Pfad haben, werden angezeigt.
-* **Optioen** ermöglichen weitere Operationen: 
+* **Optioen** ermöglichen weitere Operationen:
 
   * Neue Ansicht erstellen
 
@@ -51,7 +52,7 @@ Vorlage
    :target: ../_static/img/screens/template.PNG
 
    Screenshot des Vorlagen-Fensters.
-   
+
 Jede Ansicht hat eine Vorlage, die bestimmt wie die vom Benutzer gegeben Antworten auf ein Textdokument gemappt wird. Die Vorlage benutzt aus `Django template <https://docs.djangoproject.com/en/1.11/ref/templates/language/>`_ syntax, welche in Kombination mit regulärem HTML, Variabeln, dessen Werte  bei der Vorlageauswertung ersetzt werden (``{{ a_variable }}``), und Tags, welche die Logik der Vorlage kontrolliert (``{% a_tag %}``).
 
 Zwei Variabeln können in RDMO Vorlagen verwendet werden:
@@ -70,7 +71,7 @@ würde dann, wenn ausgewertet im Kontext beim Benutzer seines Projekts, ausgeben
 .. code-block:: django
 
     Die Fragestellung des Projekts ist: Wo noch kein Mensch gewesen ist.
-    
+
 Kollektionen können mit dem ``for`` tag von Django template syntax realisiert werden.
 
 .. code-block:: django

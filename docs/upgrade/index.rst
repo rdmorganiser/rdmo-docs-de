@@ -60,6 +60,6 @@ Mit der Version 0.9.0 haben wir eine Separation von der -´-´rdmo-app`` und dem
 
 7) Aktualisieren Sie den Pfad im ``wsgi.py`` Skript in ihren Apache oder nginx Einstellungen. Dies befindet sich nun unter ``/path/to/new/rdmo-app/config/wsgi.py``.
 
-8) Setzen Sie RDMO neu auf wie unter :doc:`/deployment/redeploy` beschrieben.
+8) Setzen Sie RDMO neu auf wie unter :doc:`/deployment/apache` oder :doc:`/deployment/nginx` beschrieben.
 
 Falls irgendwelche Probleme während des Aktualisierungsprozesses auftreten, zögern Sie nicht das RDMO-Team um Hilfe zu fragen.

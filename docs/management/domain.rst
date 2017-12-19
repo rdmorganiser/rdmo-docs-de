@@ -28,15 +28,15 @@ Auf der Seite können alle Entitäten und Attribute der RDMO-Installation gesehe
 
 Die Sidebar auf der rechten Seite zeigt weitere Interface-Objekte:
 
-* **Filter** filtert die Ansicht anhand des Strings vorgegeben vom Benutzer. Nur Elemente, die diesen String in ihrem Pfad enhtalten, werden gezeigt. 
-* **Optionen** bietet weitere Operationen: 
+* **Filter** filtert die Ansicht anhand des Strings vorgegeben vom Benutzer. Nur Elemente, die diesen String in ihrem Pfad enhtalten, werden gezeigt.
+* **Optionen** bietet weitere Operationen:
 
   * Neue (leere) Entität erstellen
   * Neues (leeres) Attribute erstellen
 
-* **Export** exportiert den aktuelen Katalog zu einem der angezeigten Formate. Während Textformate vor allem für Darstellung gedacht sind, kann der XML Export genutzt werden, um das Domainmodel zu einer anderen RDMO-Installtion zu transferieren. 
+* **Export** exportiert den aktuelen Katalog zu einem der angezeigten Formate. Während Textformate vor allem für Darstellung gedacht sind, kann der XML Export genutzt werden, um das Domainmodel zu einer anderen RDMO-Installtion zu transferieren.
 
-Die verschiedenen Elemente eines Domainmodels haben unterschiedliche Eigenschaften, um ihr Verhalten zu bestimmen. Wie in :doc:`der Einleitung <index>` beschrieben haben alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, welche nur bei dem Manager der RDMO-Installtion gesehen werden kann. Außerdem können folgende Parameter verändert werden: 
+Die verschiedenen Elemente eines Domainmodels haben unterschiedliche Eigenschaften, um ihr Verhalten zu bestimmen. Wie in :doc:`der Einleitung <index>` beschrieben haben alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, welche nur bei dem Manager der RDMO-Installtion gesehen werden kann. Außerdem können folgende Parameter verändert werden:
 
 Entität
 """""""
@@ -47,7 +47,7 @@ Eltern-Entität
 ist Kollektion
   Bestimmt, ob diese Entität mehrere Wertesets haben kann. Eine Frage verknüpft mit dieser Entität wird Interface-Elemente zeigen, um einen neune Fragensatz zu erstellen. Alle Entitäten in dem Baum unterhalb einer Entitätenkollektion übernehmen dessen Verhalten, so dass Fragen über das gleiche Set über mehrere Fragen auf separaten Seiten des Interviews verteilt werden kann.
 
-  Falls eine Attribut ``ID`` mit einem Wertetyp `Text`der Entität hinzugefügt wird, ermöglicht dies dem Benutzer einen Titel zu einzelnen Sets (wie "Datensatz A" oder "Finanzgeber X") zu verleihen, anderenfalls werden die Sets #1, #2, usw. benannt.
+  Falls eine Attribut ``ID`` mit einem Wertetyp `Text` der Entität hinzugefügt wird, ermöglicht dies dem Benutzer einen Titel zu einzelnen Sets (wie "Datensatz A" oder "Finanzgeber X") zu verleihen, anderenfalls werden die Sets #1, #2, usw. benannt.
 
 Attribute
 """""""""
@@ -66,14 +66,13 @@ Wertetyp
   Bisher zeigen nur datetime und options ein anderes Verhalten. Dies wird sich ändern sobald die Validierung des Interviews in RDMo implementiert ist.
 
 Einheit
-  Einheit eines Attributes. Die Einheit wird in den unterschiedlichen Ouput-Features angezeigt werden. 
-  
+  Einheit eines Attributes. Die Einheit wird in den unterschiedlichen Ouput-Features angezeigt werden.
+
 Eltern-Entität
   Eltern-Entität in dem Domänenmodel. Das Ändern der Eltern-Entität versetzt die Entität und seine Abkömmlinge zu einem anderen Branch des Domänen-Baummodels.
 
-ist Kollektion
+ist Sammlung
   Bestimmt, ob diese Entität mehrere Wertesets haben kann. Eine Frage verknüpft mit diesem Attribut erlaubt dem Benutzer mehrere Antworten für die verknüpfte Frage zu geben. Die Frage wird einen Button zeigen, um ein neues Objekt in einer neuen Zeile hinzufügen zu können. Ein Beispiel wären mehrere Stichwörter für ein Projekt. Fragen mit Check box widgets benötigen ebenfalls Kollektions-Attributte.
-is collection
 
 Bereich
 """""""

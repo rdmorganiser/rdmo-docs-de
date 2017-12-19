@@ -1,11 +1,11 @@
 Optionen
--------
+--------
 
 Optionen und Optionensets können unter *Optionen* im Managementmenü in der Navigationsleiste bearbeitet werden.
 
 .. figure:: ../_static/img/screens/Optionen.PNG
    :target: ../_static/img/screens/Optionem.PNG
-   
+
    Screenshot des Optionenmanagement-Interfaces.
 
 Auf der linken Seite sind alle Optionen und Optionsets der RDMO-Installation dargestellt. Optionensets zeigen ihren Schlüssel, während Optionen ihren Pfad und ihen Text zeigen. Auf der rechten Seite von jedem Optionenfeld befinden sich Symbole zum Interagieren mit den Elementen. Folgende OPtionen sind verfügbar:
@@ -13,7 +13,7 @@ Auf der linken Seite sind alle Optionen und Optionsets der RDMO-Installation dar
 * **Hinzufügen** (|add|) einer neuen Option oder eines Optionensets.
 * **Bearbeiten** (|update|) der Eigenschaften einer Option oder eines Optionensets.
 * **Bedingungen bearbeiten** (|conditions|) eines Optionsets. Eine Frage, die mit einem Attribut verknüpft ist, die wiederum selbst mit einem Optionenset verknüpft ist, wird die Optionen des Sets im Fragekatalog nicht anzeigen, wenn die Bedingung als falsch ausgerwertet wird. Die Bedingungen selbst sind im :doc:`Bedingungsmangement <conditions>` konfiguriert.
-* **Löschen** (|delete|) einer Option oder eines Optionensets und im Falle ines Optionensets all seiner Optionen. **Diese Handlung kann nicht rückgägnig gemacht werden!** 
+* **Löschen** (|delete|) einer Option oder eines Optionensets und im Falle ines Optionensets all seiner Optionen. **Diese Handlung kann nicht rückgägnig gemacht werden!**
 
 .. |add| image:: ../_static/img/icons/add.png
 .. |update| image:: ../_static/img/icons/update.png
@@ -34,11 +34,11 @@ Optionensets und das Optionenmodel haben unterschiedliche Eigenschaften, um ihr 
 
 .. figure:: ../_static/img/screens/Bearbeiten.PNG
    :target: ../_static/img/screens/Bearbeiten.PNG
-   
+
    Screenshot des Interfaces für die Parameter.
 
 Optionensets
-""""""""""
+""""""""""""
 
 Reihenfolge
   Bestimmt die Postion des Optionensets in der Liste im Fragenkatalog (falls ein Attribut mehr als ein Optionenset besitzt).
@@ -57,6 +57,6 @@ Text (en)
 
 Text (de)
   Der deutsche Text, der dem Benutzer angezigt wird.
-  
+
 Zusätzliche Eingabe
   Legt fest, on eine weitere Eingabe für diese Option möglich ist. Im Falle einer Textbox wird ein Dario button oder eine Checkbox angezeigt. Für gewöhnlich wird es für die Option "Sonstige" genutzt.

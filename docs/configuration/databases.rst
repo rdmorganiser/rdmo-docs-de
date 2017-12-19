@@ -77,7 +77,7 @@ MySQL (oder den Community-entwickleten Abzweig MariaDB) kann wie folgt installie
     sudo systemctl start mariadb
     sudo mysql_secure_installation
 
-Um MYSQL als ihren Datenbank-Backend zu nutzen, installieren Sie ``mysqlclient´´ in ihrer virtuellen Umgebung:
+Um MYSQL als ihren Datenbank-Backend zu nutzen, installieren Sie ``mysqlclient`` in ihrer virtuellen Umgebung:
 
 .. code:: bash
 

@@ -9,7 +9,7 @@ Einige generelle Einstellungen sollten in ihrer ``config/settings/local.py`` ent
 
 Im Debug-Modus werden ausführliche Fehlerseiten angezeigt, falls etwas schief läuft und statische Inhalte wie CSS und JavaScript-Dateien werden vom Entwicklungsserver automatisch gefunden. Der Debug-Modus *darf nicht* aktiviert sein, wenn RDMO im normalen Betrieb mit dem Internet verbunden ist.
 
-Django braucht einen `Geheimschlüssel <https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-SECRET_KEY>`_, der auf einen `` einzigartigen, unvorsagbaren Wert gesetzt wird ``:
+Django braucht einen `Geheimschlüssel <https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-SECRET_KEY>`_, der auf einen einzigartigen, unvorsagbaren Wert gesetzt wird:
 
 .. code:: python
 
@@ -23,7 +23,7 @@ Im Betrieb, erlaubt Django nur `Anfragen zu bestimmten URLs <https://docs.django
 
     ALLOWED_HOSTS = ['localhost', 'rdmo.example.com']
 
-Wenn Sie RDMO unter einem Alias wie http://example.com/rdmo laufen lassen möchten, mussen Sie die Basis-URL festlegen: 
+Wenn Sie RDMO unter einem Alias wie http://example.com/rdmo laufen lassen möchten, mussen Sie die Basis-URL festlegen:
 .. code:: python
 
     BASE_URL = '/rdmo'
