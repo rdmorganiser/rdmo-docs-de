@@ -15,6 +15,6 @@ Falls Sie den Entwicklungsserver für andere Machinen zugänglich machen wollen,
 
     python manage.py runserver 0.0.0.0:8000
 
-wobei ``8000`` der Port ist und für ihre Bedürfnisse angepasst werden kann. Bitte benutzten Sie dieses Setup ausschließlich für Tests und Entwicklung, da es nciht sicher ist.
+wobei ``8000`` der Port ist und für ihre Bedürfnisse angepasst werden kann. Bitte benutzten Sie dieses Setup ausschließlich für Tests und Entwicklung, da dieser nicht sicher ist.
 
 Weitere Informationen über den Entwicklungsserver kann unter `Django Dokumentation <https://docs.djangoproject.com/en/1.10/intro/tutorial01/#the-development-server>`_ gefunden werden.

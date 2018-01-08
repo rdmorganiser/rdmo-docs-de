@@ -8,7 +8,7 @@ Optionen und Optionensets können unter *Optionen* im Managementmenü in der Nav
 
    Screenshot des Optionenmanagement-Interfaces.
 
-Auf der linken Seite sind alle Optionen und Optionsets der RDMO-Installation dargestellt. Optionensets zeigen ihren Schlüssel, während Optionen ihren Pfad und ihen Text zeigen. Auf der rechten Seite von jedem Optionenfeld befinden sich Symbole zum Interagieren mit den Elementen. Folgende OPtionen sind verfügbar:
+Auf der linken Seite sind alle Optionen und Optionsets der RDMO-Installation dargestellt. Optionensets zeigen ihren Schlüssel, während Optionen ihren Pfad und ihen Text zeigen. Auf der rechten Seite von jedem Optionenfeld befinden sich Symbole zum Interagieren mit den Elementen. Folgende Optionen sind verfügbar:
 
 * **Hinzufügen** (|add|) einer neuen Option oder eines Optionensets.
 * **Bearbeiten** (|update|) der Eigenschaften einer Option oder eines Optionensets.
@@ -28,7 +28,7 @@ Die Sidebar auf der rechten Seite zeigt weitere Interface-Objekte:
    * Neues (leeres) Optionenset erstellen
    * Neue (leere) Option erstellen
 
-* **Exports** exportiert die Optionensets in eins der angezeigten Formate. Während die Textformate hautpsächlich für die Darstellung sind, können XML-Exporte für den Transfer der Optionen zu einer anderen RDMO-Installtion verwendet werden.
+* **Exports** exportiert die Optionensets in eins der angezeigten Formate. Während die Textformate hautpsächlich für die Darstellung sind, können XML-Exporte für den Transfer der Optionen zu einer anderen RDMO-Installation verwendet werden.
 
 Optionensets und das Optionenmodel haben unterschiedliche Eigenschaften, um ihr Verhalten zu verändern. Wie in :doc:`der Einleitung <index>` erklärt, besitzen alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von den anderen Managers der RDMO-Installation gesehen werden können. Ferner können folgende Parameter verändert werden:
 
@@ -41,7 +41,7 @@ Optionensets
 """"""""""""
 
 Reihenfolge
-  Bestimmt die Postion des Optionensets in der Liste im Fragenkatalog (falls ein Attribut mehr als ein Optionenset besitzt).
+  Bestimmt die Position des Optionensets in der Liste im Fragenkatalog (falls ein Attribut mehr als ein Optionenset besitzt).
 
 Option
 """"""
@@ -56,7 +56,7 @@ Text (en)
   Der englische Text für die Option, der dem Benutzer angezeigt wird.
 
 Text (de)
-  Der deutsche Text, der dem Benutzer angezigt wird.
+  Der deutsche Text, der dem Benutzer angezeigt wird.
 
 Zusätzliche Eingabe
-  Legt fest, on eine weitere Eingabe für diese Option möglich ist. Im Falle einer Textbox wird ein Dario button oder eine Checkbox angezeigt. Für gewöhnlich wird es für die Option "Sonstige" genutzt.
+  Legt fest, ob eine weitere Eingabe für diese Option möglich ist. Im Falle einer Textbox wird ein Radio button oder eine Checkbox angezeigt. Für gewöhnlich wird es für die Option "Sonstige" genutzt.

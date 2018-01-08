@@ -4,7 +4,7 @@
 RDMO - Research Data Management Organiser
 =========================================
 
-RDMO ist ein Werkzeug zur Unterstützung  der systematischen Planung, Organisation und Implementierung von Datenmanagement während eines wissenschaftlichen Projekts.  RDMO wird durch die Deutsche Forschungsgemeinschaft (DFG) gefördert.
+RDMO ist ein Werkzeug zur Unterstützung  der systematischen Planung, Organisation und Implementierung des Datenmanagements während eines wissenschaftlichen Projekts.  RDMO wird durch die Deutsche Forschungsgemeinschaft (DFG) gefördert.
 
 Webseite
   https://rdmorganiser.github.io

@@ -13,7 +13,7 @@ Auf der linken Seite sind alle Bedingungen der RDMO-Installation verfügbar. Bed
 
 
 * **Bearbeiten** (|update|) der Eigenschaften einer Bedingung.
-* **Löschen** (|delete|) einer BEdingung. **Diese Handlung kann nicht rückgängig gemacht werden!**
+* **Löschen** (|delete|) einer Bedingung. **Diese Handlung kann nicht rückgängig gemacht werden!**
 
 .. |update| image:: ../_static/img/icons/update.png
 .. |delete| image:: ../_static/img/icons/delete.png

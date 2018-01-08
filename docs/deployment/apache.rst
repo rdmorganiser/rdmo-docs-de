@@ -1,7 +1,7 @@
 Apache und mod_wsgi
 -------------------
 
-Im Betrieb können Sie einen dedizierten Benutzer für RDMO erstellen. Alle Schritte für die Installation für die Sie kine Root-Rechte benötigen, sollten mit diesem Benutzer ausgeführt werden. Wie vorher auch gehen wir davon aus, dass der Benutzer ``rdmo`` genannt wurde und sein Home-Verzeichnis ``/srv/rdmo`` ist. Demnach ist ihre ``rdmo-app`` unter ``/srv/rdmo/rdmo-app`` zu finden.
+Im Betrieb können Sie einen dedizierten Benutzer für RDMO erstellen. Alle Schritte für die Installation für die Sie keine Root-Rechte benötigen, sollten mit diesem Benutzer ausgeführt werden. Wie vorher auch gehen wir davon aus, dass der Benutzer ``rdmo`` genannt wurde und sein Home-Verzeichnis ``/srv/rdmo`` ist. Demnach ist ihre ``rdmo-app`` unter ``/srv/rdmo/rdmo-app`` zu finden.
 
 Installieren Sie den Apache Server und ``mod_wsgi``:
 
@@ -82,7 +82,7 @@ Wie Sie der virtuellen Host-Konfigurationen entnehmen können, werden die statis
 
 in der virtuelle Umgebung.
 
-Um Veränderungen am RDMO code vorzunehmen (z.B: nach dem :doc:`Upgrade </upgrade/index>`), muss der Webserver neu geladen werden oder die Datei``config/wsgi.py`` muss (scheinbar) verändert worden sein indem der ``touch``-Befehl verwendet wird: 
+Um Veränderungen am RDMO -Code vorzunehmen (z.B: nach dem :doc:`Upgrade </upgrade/index>`), muss der Webserver neu geladen werden oder die Datei``config/wsgi.py`` muss (scheinbar) verändert worden sein indem der ``touch``-Befehl verwendet wird: 
 .. code:: bash
 
     touch config/wsgi.py

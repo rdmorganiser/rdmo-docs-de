@@ -23,7 +23,7 @@ Auf der linken Seite werden die Abschnitte, Teilabschnitte und Fragen des aktuel
 Die Sidebar rechts enthält weitere Interface-Objekte:
 
 * **Katalog** wechselt zu der Ansicht eines anderen Katalogs.
-* **Filter** filtert eine Anssicht anhand eines vom Benutzer eingegeben Strings. Alle Elemente, die diesen String in ihrem Pfad enthalten,w erden angezeigt.
+* **Filter** filtert eine Anssicht anhand eines vom Benutzer eingegeben Strings. Alle Elemente, die diesen String in ihrem Pfad enthalten, werden angezeigt.
 * **Optionen** enthält weitere Operationen:
 
   * Katalogeigenschaften bearbeiten
@@ -96,7 +96,7 @@ Reihenfolge
   Bestimmt die Position des Fragesets in der Liste oder im Interview.
 
 Entität
-  Die Entität vom Dömänenmodel mit dem das Fragenset verknüft ist. Beachte, dass die Art wie das Fragenset dem Benutzer gezeigt wird teilweise bei der Entität festgelegt ist. Eine Frage, die mit einer Kollektionsentität verknüpft ist, erlaubt Antworten für verschiedene Sets.
+  Die Entität vom Dömänenmodel mit dem das Fragenset verknüipft ist. Beachte, dass die Art wie das Fragenset dem Benutzer gezeigt wird teilweise bei der Entität festgelegt ist. Eine Frage, die mit einer Kollektionsentität verknüpft ist, erlaubt Antworten für verschiedene Sets.
 
 Titel (en)
   Der englische Titel des Unterabschnittes, der dem Benutzer angezeigt wird.
@@ -111,14 +111,14 @@ Fragen
 Unterabschnitt
   Der Unterabschnitt zu dem die Frage gehört. Ändern des Teilabschnittes verschiebt die Frage zu einem anderen Abschnitt.
 
-Elter
-  Das Fragenset zu demd ie Frage gehört. Dies sollte "- - - " für eine Frage sein, die direkt zu einem Unterabschnitt hinzugefügt wird und nicht zu einem Fragenset.
+Übergeordnete Entität
+  Das Fragenset zu dem die Frage gehört. Dies sollte "- - - " für eine Frage sein, die direkt zu einem Unterabschnitt hinzugefügt wird und nicht zu einem Fragenset.
 
 Reihenfolge
   Bestimmt die Position des Teilabschnittes in der Liste oder in dem Interview.
 
 Attribute
-  Das Attribut von dem Domainmodel zu dem die Frage zugeordnet ist. Beachte, dass die Art wir die Frage dem Benutzer angezeigt wird teilweise von der Entität festgelegt wird. Eine Frage, die mit einer Kollektiventität verknüpft ist, erlaubt mehrere Antworten und zeigt ein "Hinzufügen"-Symbol..
+  Das Attribut von dem Domänenmodel zu dem die Frage zugeordnet ist. Beachte, dass die Art wie die Frage dem Benutzer angezeigt wird teilweise von der Entität festgelegt wird. Eine Frage, die mit einer Sammlungsentität verknüpft ist, erlaubt mehrere Antworten und zeigt ein "Hinzufügen"-Symbol.
 
 Widget type
   Die Art des Widgets für die Frage.  Folgende Widgets können gewählt werden:

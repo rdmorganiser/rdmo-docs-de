@@ -13,4 +13,4 @@ Beachten Sie, dass dies nicht das Haupt-``rdmo``-Repository ist, sondern nur die
 * ein ``requirements``-Order, der Schnellverfahren zur Installierung von verschiedenen obligatoritschen und optionalen Abhängigkeiten enthält, und
 * ein ``manage.py``-Skript, dass den Hauptweg darstellt, um mit ihrer RDMO-Installation über die Kommandozeile zu interagieren. Die meisten dieser Schritte werden in diesem Skript verwendet.
 
-Der ``rdmo-app``-Ordner entspricht einem `project <https://docs.djangoproject.com/en/1.11/intro/tutorial01>`_ in Django-Bezeichnungen.
+Der ``rdmo-app``-Ordner entspricht einem `project <https://docs.djangoproject.com/en/1.11/intro/tutorial01>`_ in Django-Termen.

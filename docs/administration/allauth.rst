@@ -1,10 +1,10 @@
 Social Accounts
 ---------------
 
-Falls Sie Allauth für die Authetifizierung verwenden und RDMO konfiguriert haben, um ein oder mehrere OAuth-Anbieter zu verwenden (wie im  :doc:`Konfiguration Kapitel </configuration/authentication/allauth>`) beschrieben, mussen Sie ihre RDMO-Seite mit diesen Services registrieren. Die Vorgehensweise ist jeweils verschieden. Meistens mussen Sie einige Informationen zu ihrer Seite angeben. Es wird immer eine Umleitungs- oder Rückruf-URI verlangt. Im folgenden werden wir als Beispiel http://127.0.0.1:8000 verwenden (welche auf dem Entwicklungsserver funktioniert) und die Sie mit der richtigen URL ihrer RDMO-Anwendung dann im Betrieb ersetzen müssen.
+Falls Sie Allauth für die Authentifizierung verwenden und RDMO konfiguriert haben, um ein oder mehrere OAuth-Anbieter zu verwenden (wie im  :doc:`Konfiguration Kapitel </configuration/authentication/allauth>`) beschrieben, mussen Sie ihre RDMO-Seite mit diesen Services registrieren. Die Vorgehensweise ist jeweils verschieden. Meistens müssen Sie einige Informationen zu ihrer Seite angeben. Es wird immer eine Umleitungs- oder Rückruf-URI verlangt. Im folgenden werden wir als Beispiel http://127.0.0.1:8000 verwenden (welche auf dem Entwicklungsserver funktioniert) und die Sie mit der richtigen URI ihrer RDMO-Anwendung dann im Betrieb ersetzen müssen.
 
 ORCID
-    Loggen Sie sich bei https://orcid.org ein und gehen Sie auf die Seite mit den Entwicklungstools: https://orcid.org/developer-tools. Erstellen Sie eine App mit der Umleitungs-URL.
+    Loggen Sie sich bei https://orcid.org ein und gehen Sie auf die Seite mit den Entwicklungstools: https://orcid.org/developer-tools. Erstellen Sie eine App mit der Umleitungs-URI.
 
     ::
 
@@ -18,7 +18,7 @@ GitHub
         http://127.0.0.1:8000/account/github/login/callback/
 
 Facebook
-    Loggen Sie sich bei Facebook ein und gehen Sie auf https://developers.facebook.com/. Klicken Sie oben rechts im Menü auf *Meine Apps* und wählen Sie *Neue App hinzufügen*. Erstellen Sie eine neue App. In dem darauffolgenden Fenster wählen Sie Facebook login -> Starten und wählen *Web* als Plattform. Fügen Sie eine URI ein unter der ihre Anwendung zugänglich ist (Beachten Sie: 127.0.0.1 wird nicht funktionieren.). Zurück auf dem Dashboard, gehen Sie zu Einstellungen -> Grundeinstellungen und kopieren `App ID` und das `App Secret`.
+    Loggen Sie sich bei Facebook ein und gehen Sie auf https://developers.facebook.com/. Klicken Sie oben rechts im Menü auf *Meine Apps* und wählen Sie *Neue App hinzufügen*. Erstellen Sie eine neue App. In dem darauffolgenden Fenster wählen Sie Facebook Login -> Starten und wählen *Web* als Plattform. Fügen Sie eine URI ein unter der ihre Anwendung zugänglich ist (Beachten Sie: 127.0.0.1 wird nicht funktionieren.). Zurück auf dem Dashboard, gehen Sie zu Einstellungen -> Grundeinstellungen und kopieren `App ID` und das `App Secret`.
 
 Twitter
     Log Sie sich bei Twitter ein und gehen Sie auf https://apps.twitter.com/app/ne, um eine neue App zu erstellen. 
@@ -27,10 +27,10 @@ Twitter
 
         http://127.0.0.1:8000/account/facebook/login/callback/
 
-    als die atuorisierte Umleitungs-URI. Kopieren Sie die Client-ID und den Client-Schlüssel.
+    als die autorisierte Umleitungs-URI. Kopieren Sie die Client-ID und den Client-Schlüssel.
 
 Google
-    Loggen Sie sich bei Google ein und gehen Sie auf https://console.developers.google.com. Erstellen Sie ein neues Projekt. Gehen Sie danach zu den Zugangsdaten auf der linken Seite und richtigen Sie das OAuth Athentifizierungsfesnter (zweiter Tab) ein. Dann erstellen sie die Zugangsdaten (erster Tab), genauer gesagt die OAuth-ID. Verwende: 
+    Loggen Sie sich bei Google ein und gehen Sie auf https://console.developers.google.com. Erstellen Sie ein neues Projekt. Gehen Sie danach zu den Zugangsdaten auf der linken Seite und richtigen Sie das OAuth Athentifizierungsfenster (zweiter Tab) ein. Dann erstellen sie die Zugangsdaten (erster Tab), genauer gesagt die OAuth-ID. Verwende: 
 
     ::
 

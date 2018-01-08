@@ -6,11 +6,11 @@ Seite einrichten
 
    Screenshot vom Admin-Interface.
    
-RDMO benutzt das `sites framework <https://docs.djangoproject.com/en/1.11/ref/contrib/sites>`_ von Django. Es ist daher notwendig den **Domänenamen** and den **Anzeigename** ihrer RDMO-Installation einrzurichten. Dies kann in dem Admin-Interface unter *Seite* getan werden. Die Seite richten s´Sie wie folgt ein:
+RDMO benutzt das `sites framework <https://docs.djangoproject.com/en/1.11/ref/contrib/sites>`_ von Django. Es ist daher notwendig den **Domänenamen** and den **Anzeigename** ihrer RDMO-Installation einzurichten. Dies kann in dem Admin-Interface unter *Seite* getan werden. Die Seite richten Sie wie folgt ein:
 
 1. Klicken Sie auf den bereits eingerichten Damainnamen *example.com*.
 
-2. Geben Sie dir URL ihrer RDMO-Instalaltion als **Domänenamen** ein (z.B. rdmo.aip.de).
+2. Geben Sie die URI ihrer RDMO-Installation als **Domänenamen** ein (z.B. rdmo.aip.de).
 
 3. Geben Sie den Titel ihrer RDMO-Installation als **Anzeigenamen** an (z.B. RDMO Dmeo).
 

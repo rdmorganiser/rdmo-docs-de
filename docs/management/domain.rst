@@ -8,13 +8,13 @@ Das Domänenmodel kann unter *Domäne* im Managementmenü in der Navigationsleis
 
    Screenshot vom Domain-Management Interface.
 
-Auf der Seite können alle Entitäten und Attribute der RDMO-Installation gesehen werden. Die Attribute und Entitäten zeigen ihren Pfad und ob sie als Kollektion angelegt worden sind. Auf der rechten Seite eines jeden Elementfeldes gibt es Icons mit folgender Bedeutung:
+Auf der Seite können alle Entitäten und Attribute der RDMO-Installation gesehen werden. Die Attribute und Entitäten zeigen ihren Pfad an und ob sie als Sammlung (collection)  angelegt worden sind. Auf der rechten Seite eines jeden Elementfeldes gibt es Icons mit folgender Bedeutung:
 
 * **Hinzufügen** (|add|) eines neuen Attributes oder einer Entität zu dieser Entität.
-* **Update** (|update|) eines Attributes oder einer Entität, um ihre Eigenschaften zu ändern.an entity or attribute to change its properties.
+* **Entität bearbeiten** (|update|) eines Attributes oder einer Entität, um ihre Eigenschaften zu ändern.
 * **Bereich bearbeiten** (|range|) eines Attributes. Der Wertebereich wird nur benötigt, wenn das Attribut mit einer Frage verknüpft ist, die eine Auswahl, Radio Button oder Check box widget verwendet. 
 * **Optionenset bearbeiten** (|optionsets|) eines Attributes. Optionensets bestimmen die Auswahl, wenn das Attribut mit einer Frage verknüpft ist, die eine Auswahl, Radio Button oder Check box widget verwendet. Die Optionensets selbst können unter :doc:` Optionenmangament <options>` konfiguriert werden.
-* **Anzeigename bearbeiten** (|verbosename|) eines Attributes oder einer Entität. Für eine Entität wird der Anzeigenahme für den Benutzer sichtbar, wenn Sets einer Frage hinzugefügt werden (anstatt "Set hinzufügen", z.B. "Datensatz hinzufügen"), während für Attribute der Anzeigenahme für den Benutzer sichtbar wird, wenn ein Item der Frage mit mehreren Antworten hinzugefügt wird (anstatt "Item hinzufügen", z.B. "Stichwort hinzufügen").
+* **Anzeigename bearbeiten** (|verbosename|) eines Attributes oder einer Entität. Für eine Entität wird der Anzeigenahme für den Benutzer sichtbar, wenn Sets einer Frage hinzugefügt werden (anstatt "Set hinzufügen", z.B. "Datensatz hinzufügen"), während für Attribute der Anzeigename für den Benutzer sichtbar wird, wenn ein Item der Frage mit mehreren Antworten hinzugefügt wird (anstatt "Item hinzufügen", z.B. "Stichwort hinzufügen").
 * **Bedingung hinzufügen** (|conditions|) eines Attributes oder einer Entität. Eine Frage, die mit einem Attribut mit einer oder mehreren Bedingungen verknüpft ist, wird automatisch im Fragenkatalog übersprungen, wenn die Bedingung als falsch ausgewertet wurde. Das Gleiche gilt für Fragesets, die mit Entitäten mit einer Bedingung verknüpft sind. Die Bedingungen selbst werden unter :doc:`Bedingungsmangement <conditions>` konfiguriert.
 * **Entfernen** (|delete|) eines Attributes oder einer Entität und all ihrer Abkömmlinge (z.B. eine Entität und all ihre Entitäten und Attribute unterhalb im Domänen-Modelbauman). **Diese Handlung kann nicht rückgängig gemacht werden!**
 
@@ -41,13 +41,13 @@ Die verschiedenen Elemente eines Domainmodels haben unterschiedliche Eigenschaft
 Entität
 """""""
 
-Eltern-Entität
-  Eltern-Entität in dem Domänenmodel. Das Ändern der Eltern-Entität versetzt die Entität und seine Abkömmlinge zu einem anderen Branch des Domänen-Baummodels.
+Übergeordnete Entität
+  Übergeordnete Entität in dem Domänenmodel. Das Ändern der übergeordneten Entität versetzt die Entität und seine Abkömmlinge zu einem anderen Zweig des Domänen-Baummodels.
 
-ist Kollektion
-  Bestimmt, ob diese Entität mehrere Wertesets haben kann. Eine Frage verknüpft mit dieser Entität wird Interface-Elemente zeigen, um einen neune Fragensatz zu erstellen. Alle Entitäten in dem Baum unterhalb einer Entitätenkollektion übernehmen dessen Verhalten, so dass Fragen über das gleiche Set über mehrere Fragen auf separaten Seiten des Interviews verteilt werden kann.
+ist eine Sammlung
+  Bestimmt, ob diese Entität mehrere Wertesets haben kann. Eine Frage verknüpft mit dieser Entität wird Interface-Elemente zeigen, um einen neune Fragensatz zu erstellen. Alle Entitäten in dem Baum unterhalb einer Entitätensammlung übernehmen dessen Verhalten, so dass Fragen über das gleiche Set über mehrere Fragen auf separaten Seiten des Interviews verteilt werden können.
 
-  Falls eine Attribut ``ID`` mit einem Wertetyp `Text` der Entität hinzugefügt wird, ermöglicht dies dem Benutzer einen Titel zu einzelnen Sets (wie "Datensatz A" oder "Finanzgeber X") zu verleihen, anderenfalls werden die Sets #1, #2, usw. benannt.
+  Falls eine Attribut ``ID`` mit einem Wertetyp `Text` der Entität hinzugefügt wird, ermöglicht dies dem Benutzer einen Titel zu einzelnen Sets (wie "Datensatz A" oder "Finanzgeber X") zu verleihen, anderenfalls werden die Sets #1, #2, usw. genannt.
 
 Attribute
 """""""""
@@ -63,15 +63,15 @@ Wertetyp
   * **Datetime**
   * **Options**
 
-  Bisher zeigen nur datetime und options ein anderes Verhalten. Dies wird sich ändern sobald die Validierung des Interviews in RDMo implementiert ist.
+  Bisher zeigen nur datetime und options ein anderes Verhalten. Dies wird sich ändern sobald die Validierung des Interviews in RDMO implementiert ist.
 
 Einheit
   Einheit eines Attributes. Die Einheit wird in den unterschiedlichen Ouput-Features angezeigt werden.
 
-Eltern-Entität
-  Eltern-Entität in dem Domänenmodel. Das Ändern der Eltern-Entität versetzt die Entität und seine Abkömmlinge zu einem anderen Branch des Domänen-Baummodels.
+Übergeordnete Entität
+  Übergeordnete Entität in dem Domänenmodel. Das Ändern der Eltern-Entität versetzt die Entität und seine Abkömmlinge zu einem anderen Zweig des Domänen-Baummodels.
 
-ist Sammlung
+ist eine Sammlung
   Bestimmt, ob diese Entität mehrere Wertesets haben kann. Eine Frage verknüpft mit diesem Attribut erlaubt dem Benutzer mehrere Antworten für die verknüpfte Frage zu geben. Die Frage wird einen Button zeigen, um ein neues Objekt in einer neuen Zeile hinzufügen zu können. Ein Beispiel wären mehrere Stichwörter für ein Projekt. Fragen mit Check box widgets benötigen ebenfalls Kollektions-Attributte.
 
 Bereich

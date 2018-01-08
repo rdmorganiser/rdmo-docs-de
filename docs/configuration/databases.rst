@@ -1,7 +1,7 @@
 Datenbanken
 -----------
 
-RDMO kann mit allen Datenbanken, die vom Django-Framework unterstützt werden, verwendet werden. Die jeweilige Datenbankverbindung wird mit der Einstllung ``DATABASE`` definiert. Eine Übersicht über die Django Datenbaneinstlelungen findest du `hier <https://docs.djangoproject.com/en/1.10/ref/settings/#databases>`_. Im folgenden zeigen wir die Einstellungen für PostgreSQL, MySQL und SQLite.
+RDMO kann mit allen Datenbanken, die vom Django-Framework unterstützt werden, verwendet werden. Die jeweilige Datenbankverbindung wird mit der Einstellung ``DATABASE`` definiert. Eine Übersicht über die Django Datenbankeinstellungen finden Sie `hier <https://docs.djangoproject.com/en/1.10/ref/settings/#databases>`_. Im folgenden zeigen wir die Einstellungen für PostgreSQL, MySQL und SQLite.
 
 PostgreSQL
 ``````````
@@ -77,7 +77,7 @@ MySQL (oder den Community-entwickleten Abzweig MariaDB) kann wie folgt installie
     sudo systemctl start mariadb
     sudo mysql_secure_installation
 
-Um MYSQL als ihren Datenbank-Backend zu nutzen, installieren Sie ``mysqlclient`` in ihrer virtuellen Umgebung:
+Um MYySQL als ihren Datenbank-Backend zu nutzen, installieren Sie ``mysqlclient`` in ihrer virtuellen Umgebung:
 
 .. code:: bash
 

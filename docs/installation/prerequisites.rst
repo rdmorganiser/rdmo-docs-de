@@ -1,12 +1,12 @@
 Voraussetzungen installieren
 ----------------------------
 
-Das Installieren der Voraussetzungen für RDMO unterscheidet sich auf den verschiedenen Betriebssystemen und ist daher in einzelnen Abschnitten enthalten.
+Das Installieren der Voraussetzungen für RDMO unterscheidet sich zwischen den verschiedenen Betriebssystemen und ist daher in einzelnen Abschnitten enthalten.
 
 Linux
 ~~~~~
 
-Wir empfehlen für die Installtion der Voraussetzungen das Paket-System der Distribution zu verwenden. Bei Debian/Ubunutu verwenden Sie:
+Wir empfehlen für die Installation der Voraussetzungen das Paket-System der Distribution zu verwenden. Bei Debian/Ubunutu verwenden Sie:
 
 .. code:: bash
 
@@ -31,7 +31,7 @@ Bei RHEL/CentOS verwenden Sie:
 
 Bei Ubuntu 14.04, ist `python3-venv` nicht verfügbar. Bitte verwenden Sie stattdessen `python3.5-venv`.
 
-Bei RHEL/CentOS ``selinux`` ist standardmäßig aktiviert. Dies führt zu unerwarteten Fehlern abhängig davon wo der RDMO-Sourcecode auf dem System isntalliert ist. Auch wenn die bevorzugte Lösung die richtige Konfiguration ist (was im Rahmen dieser Dokumentation zu weit führen würde), kann ``selinux`` auf ``permissive`` oder ``disabled`` unter ``/etc/selinux/config`` gesetzt werden (erfordert einen Neustart).
+Bei RHEL/CentOS ist ``selinux`` standardmäßig aktiviert. Dies führt zu unerwarteten Fehlern abhängig davon wo der RDMO-Sourcecode auf dem System isntalliert ist. Auch wenn die bevorzugte Lösung die richtige Konfiguration von ``selinux`` wäre (was im Rahmen dieser Dokumentation zu weit führen würde), kann ``selinux`` auf ``permissive`` oder ``disabled`` unter ``/etc/selinux/config`` gesetzt werden (erfordert einen Neustart).
 
 Wenn Sie Python 2.7 anstatt Python 3 benutzen möchten, verwenden Sie folgende entsprechende Pakete:
 
@@ -66,7 +66,7 @@ Für Python:
 
 * herunterladen von https://www.python.org/downloads/windows/
 * wir empfehlen eine Version >= 3.4
-* vergessen Sie nicht zu überprüfen, dass währende Des Setups `Python zu den Umgenungsvariabeln hinzufügen` gesetzt ist
+* vergessen Sie nicht zu überprüfen, dass währended des Setups `Python zu den Umgenungsvariabeln hinzufügen` gesetzt ist
 
 Für git:
 
@@ -80,4 +80,4 @@ Für pdflatex (optional, für pdf-Export):
 
 * herunterladen http://miktex.org/
 
-Alle weiteren Schritte müssen in der Windowsshell ``cmd.exe`` ausgeführt werden. Du kannst diese vom Start-Menü aus öffnen.
+Alle weiteren Schritte müssen in der Windowsshell ``cmd.exe`` ausgeführt werden. Sie können diese vom Start-Menü aus öffnen.

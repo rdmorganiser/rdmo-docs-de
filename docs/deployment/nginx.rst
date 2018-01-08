@@ -1,7 +1,7 @@
 nginx und gunicorn
 ------------------
 
-Wie bereits mehrfach erwähnt sollte eine dezidierter Benutzer für RDMO verwendet werden. Alle Schritte in der Anleitung, welche keine Root-Rechte benötigen, sollten mit diesem dezidierten Benutzer ausgeführt werden. Hier gehen wir davon aus, dass der Benutzer ``rdmo`´ genannt wurde und sein Home-Verzeichnis ``/srv/rdmo`` ist und demnach deine ``rdmo-app`` unter ``/srv/rdmo/rdmo-app`` zu finden ist.
+Wie bereits mehrfach erwähnt sollte eine dezidierter Benutzer für RDMO verwendet werden. Alle Schritte in der Anleitung, welche keine Root-Rechte benötigen, sollten mit diesem dezidierten Benutzer ausgeführt werden. Hier gehen wir davon aus, dass der Benutzer ``rdmo`´ genannt wurde und sein Home-Verzeichnis ``/srv/rdmo`` ist und demnach ihre ``rdmo-app`` unter ``/srv/rdmo/rdmo-app`` zu finden ist.
 
 Als erstes installieren Sie gunicorn in ihrer virtuellen Umgebung:
 
@@ -9,15 +9,15 @@ Als erstes installieren Sie gunicorn in ihrer virtuellen Umgebung:
 
     pip install -r requirements/gunicorn.txt
 
-Dann, testen Sie ``gunicorn``:
+Dann testen Sie ``gunicorn``:
 
 .. code:: bash
 
     gunicorn --bind 0.0.0.0:8000 config.wsgi:application
 
-dies sollte die Anwendung genauso wie ``runserver`` laufen lassen, aber ohne statische Inhalte wie CSS-Dateien oder Bilder. Nach dem Test beenden Sie den ``gunicorn``-Prozess wieder.
+Dies sollte die Anwendung genauso wie ``runserver`` laufen lassen, aber ohne statische Inhalte wie CSS-Dateien oder Bilder. Nach dem Test beenden Sie den ``gunicorn``-Prozess wieder.
 
-Jetzt erstellen Sie eine systemd service Datei für RDMO. Systemd wird den gunicorn-Prozess launchen bei der Intriebnahme und es am Laufen halten. Erstellen Sie eine neue Datei unter `/etc/systemd/system/rdmo.service`  und geben Sie ein (Sie benötigen Root/sudo-Rechte dafür): 
+Jetzt erstellen Sie eine systemd service Datei für RDMO. Systemd wird den gunicorn-Prozess bei der Intriebnahme launchen und es am Laufen halten. Erstellen Sie eine neue Datei unter `/etc/systemd/system/rdmo.service`  und geben Sie ein (Sie benötigen Root/sudo-Rechte dafür): 
 ::
 
     [Unit]

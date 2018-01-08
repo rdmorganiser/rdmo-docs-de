@@ -1,7 +1,7 @@
 Einrichten der Anwendung
 ------------------------
 
-Um die Anwendung einzurichten erstellen Sie eine neue Datei ``config/settings/local.py`` in ihrem geklonten``rdmo-app``-Ordner. Für unseren Beispielbenutzer mit dem Homeverzeichnis ``/srv/rdmo`` wäre dies ``/srv/rdmo/rdmo-app/config/settings/local.py``.
+Um die Anwendung einzurichten, erstellen Sie eine neue Datei ``config/settings/local.py`` in ihrem geklonten``rdmo-app``-Ordner. Für unseren Beispielbenutzer mit dem Homeverzeichnis ``/srv/rdmo`` wäre dies ``/srv/rdmo/rdmo-app/config/settings/local.py``.
 
 Sie können ``config/settings/sample.local.py`` als Vorlage verwenden, d.h.:
 

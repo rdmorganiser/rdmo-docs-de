@@ -8,11 +8,11 @@ Aufgaben sind unter *Aufgaben* im Managementmenü in der Navigatorleiste konfigu
 
    Screenshot des Aufgabenmangement-Interfaces.
 
-Auf der linekn Seite werden alle aufgaben der RDMO-Installation angezeigt. Aufgaben zeigen ihren Schlüssel, Titel und Aufgabenbeschreibung an. Auf der rechten Seite des Aufgabenfeldes zeigen Symbole Interaktionsmöglichkeiten an. Folgende Optionen sind verfügbar:
+Auf der linken Seite werden alle Aufgaben der RDMO-Installation angezeigt. Aufgaben zeigen ihren Schlüssel, Titel und ihre Aufgabenbeschreibung an. Auf der rechten Seite des Aufgabenfeldes zeigen Symbole Interaktionsmöglichkeiten an. Folgende Optionen sind verfügbar:
 
 
 * **Bearbeiten** (|update|) einer Aufgabe, um dessen Eigenschaften zu ändern.
-* **Bedingung bearbeiten** (|conditions|) einer Aufgabe. eine Aufgabe wird dem Benutzer nur angezeigt, wenn all ihre Bedingungen als ``true``ausgewertet werden. Die Bedingungen selbst sind unter :doc:`dem Bedingungsmangement <conditions>` konfiguriert.
+* **Bedingung bearbeiten** (|conditions|) einer Aufgabe. eine Aufgabe wird dem Benutzer nur angezeigt, wenn all ihre Bedingungen als ``true`` ausgewertet werden. Die Bedingungen selbst sind unter :doc:`dem Bedingungsmangement <conditions>` konfiguriert.
 * **Zeitrahmen bearbeiten** (|timeframe|) einer Aufgabe. Der Zeitrahmen wird erstellt aus einem oder zwei Daten von den Antworten des Benutzers. Dies erlaubt Aufgaben mit einer bestimmten Deadline oder einer bestimmten Dauer festzulegen.
 * **Entfernen** (|delete|) einer Aufgabe. **Diese Handlung kann nicht rückgängig gemacht werden!**
 
@@ -28,7 +28,7 @@ Die Sidebar auf der rechten Seite enthält weitere Interface-Objekte:
 
 * Neue Aufgabe erstellen
 
-* **Export** exportiert in eine der angebenen Formate. Während Textformate hauptsächlich für die Präsentation sind, können XML-Formate für den Transfer der Aufgaeb zu einer anderen RDMO-Installation verwendet werden.
+* **Export** exportiert in eine der angegebenen Formate. Während Textformate hauptsächlich für die Präsentation sind, können XML-Formate für den Transfer der Aufgabe zu einer anderen RDMO-Installation verwendet werden.
 
 Aufgaben haben unterschiedliche Eigenschaften, um ihr Verhalten zu konfigurieren. Wie in :doc:`der Einleitung <index>` beschrieben besitzen alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von den Managern der RDMO-Installation gesehen werden können. Ferner können folgende Parameter verändert werden:
 
@@ -53,10 +53,10 @@ Startdatum-Attribut
   Das Startdatum-Attribut legt das Startdatum für die Aufgabe fest. Das Attribut benötigt einen Wertetyp *datetime*.
 
 Enddatum-Attribut
-  Das Enddatum-Attribut legt das Enddatum der Aufgabe fest (optional, falls kein Enddatum gegeben ist, setzt das startdatum-Attribut auch das Enddatum-Attribut). Das Attribut braucht den Wertetyp *datetime*.
+  Das Enddatum-Attribut legt das Enddatum der Aufgabe fest (optional, falls kein Enddatum gegeben ist, setzt das Startdatum-Attribut auch das Enddatum-Attribut). Das Attribut braucht den Wertetyp *datetime*.
 
 Tage vorher
-  Vorrangehende Tage bis zum Starttemrin.
+  Vorrangehende Tage bis zum Starttermin.
 
 Tage danach
   Anschließende Tage nach dem Enddatum.

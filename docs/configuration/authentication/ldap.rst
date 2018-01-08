@@ -1,19 +1,19 @@
 LDAP
 ~~~~
 
-Um ein LDAP-Backend mit RDMO nutzen zu können, müssen zuänachst einige Voraussetzungen installiert werden. Bei Debian/Ubuntu können diese wie folgt installiert werden:
+Um ein LDAP-Backend mit RDMO nutzen zu können, müssen zunächst einige Voraussetzungen installiert werden. Bei Debian/Ubuntu können diese wie folgt installiert werden:
 
 .. code:: bash
 
     sudo apt-get install libsasl2-dev python-dev libldap2-dev libssl-dev
 
-Auf Python aus verwenden wir `django-auth-ldap <http://pythonhosted.org/django-auth-ldap>`_ , um uns mit dem LDAP-Server zu verbinden. Wie schon zuvor sollte dies in einer für RDMO erstellten virtuellen Umgebung installiert werden: 
+Auf Python basierend verwenden wir `django-auth-ldap <http://pythonhosted.org/django-auth-ldap>`_ , um uns mit dem LDAP-Server zu verbinden. Wie schon zuvor sollte dies in einer für RDMO erstellten virtuellen Umgebung installiert werden: 
 
 .. code:: bash
 
     pip install -r requirements/ldap.txt
 
-LDAP-Installationen können sehr verschiedenartig sein und wir beschreiben nur ein bestimmten Fall. Wir nehmen an, dass der LDAP-Service auf  ``ldap.example.com`` läuft. RDMO benötigt einen *System Account*. Starten Sie:
+LDAP-Installationen können sehr verschiedenartig sein und wir beschreiben nur einen bestimmten Fall. Wir nehmen an, dass der LDAP-Service auf  ``ldap.example.com`` läuft. RDMO benötigt einen *System Account*. Starten Sie:
 
 .. code:: bash
 
