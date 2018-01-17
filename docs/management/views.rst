@@ -41,7 +41,7 @@ Title (de)
 Hilfe (en)
   Der englische Hilfetext der Ansicht. Der Hilfetext wird in der Projektübersicht angezeigt.
 
-Help (de)
+Hilfe (de)
   Der deutsche Hilfetext der Ansicht. Der Hilfetext wird in der Projektübersicht angezeigt.
 
 
