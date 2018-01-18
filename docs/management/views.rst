@@ -11,7 +11,7 @@ Ansichten können unter *Ansichten* im Mangementmenü in der Navigationsleiste k
 Auf der linken Seite werden alle Ansichten der RDMO-Installation angezeigt. Ansichten zeigen ihren Schlüssel, ihren Titel und eine Beschreibung. Auf der rechten Seite von jedem Ansichtenfeld zeigen Symbole die Interaktionsmöglichkeiten an. Folgende Otptionen stehen zur Verfügung:
 
 * **Bearbeiten** (|update|) einer Ansicht, um dessen Eigenschaften zu ändern.
-* **Template bearbeiten** (|template|) eines Ansicht.
+* **Template bearbeiten** (|template|) einer Ansicht.
 * **Entfernen** (|delete|) einer Ansicht. **Diese Handlung kann nicht rückgängig gemacht werden!**
 
 .. |update| image:: ../_static/img/icons/update.png
@@ -57,8 +57,8 @@ Jede Ansicht hat eine Vorlage, die bestimmt wie die vom Benutzer gegeben Antwort
 
 Zwei Variabeln können in RDMO Vorlagen verwendet werden:
 
-* ``values``, welche ein verschachteltes Wörterbuch von den Antworten des Benutzers auf deren Attribute mappt. 
-* ``conditions``, welche ein Wörterbuch auf die Schlüssel von den Bedingungen mappt, um die Bedingungen anhand des aktuellen Projekts auszuwerten (z.B. ``wahr`` oder ``falsch``).
+* ``Werte``, welche ein verschachteltes Wörterbuch von den Antworten des Benutzers auf deren Attribute mappt. 
+* ``Bedingungen``, welche ein Wörterbuch auf die Schlüssel von den Bedingungen mappt, um die Bedingungen anhand des aktuellen Projekts auszuwerten (z.B. ``wahr`` oder ``falsch``).
 
 Ein Attribut wie  ``project/research_question/title`` (spezifischer eine Attribut ``titel`` in der Entität ``fragestellung`` in der Entität ``project``) und eine Benutzer, der die Frage zu dem Attribut mit "Wo noch kein Mensch gewesen ist" beantwortet. Das Attribut wäre dann in der Vorlage als ``values.project.fragestellung.title`` (beachte den ``.`` anstatt des ``/``). In der Vorlage wird die Syntax für eine Variable verwendet: 
 
