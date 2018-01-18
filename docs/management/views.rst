@@ -57,8 +57,8 @@ Jede Ansicht hat eine Vorlage, die bestimmt wie die vom Benutzer gegeben Antwort
 
 Zwei Variabeln können in RDMO Vorlagen verwendet werden:
 
-* ``Werte``, welche ein verschachteltes Wörterbuch von den Antworten des Benutzers auf deren Attribute mappt. 
-* ``Bedingungen``, welche ein Wörterbuch auf die Schlüssel von den Bedingungen mappt, um die Bedingungen anhand des aktuellen Projekts auszuwerten (z.B. ``wahr`` oder ``falsch``).
+* ``values``, welche ein verschachteltes Wörterbuch von den Antworten des Benutzers auf deren Attribute mappt. 
+* ``conditions``, welche ein Wörterbuch auf die Schlüssel von den Bedingungen mappt, um die Bedingungen anhand des aktuellen Projekts auszuwerten (z.B. ``wahr`` oder ``falsch``).
 
 Ein Attribut wie  ``project/research_question/title`` (spezifischer eine Attribut ``titel`` in der Entität ``fragestellung`` in der Entität ``project``) und eine Benutzer, der die Frage zu dem Attribut mit "Wo noch kein Mensch gewesen ist" beantwortet. Das Attribut wäre dann in der Vorlage als ``values.project.fragestellung.title`` (beachte den ``.`` anstatt des ``/``). In der Vorlage wird die Syntax für eine Variable verwendet: 
 
