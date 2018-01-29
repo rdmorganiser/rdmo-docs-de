@@ -3,12 +3,12 @@ Benutzer und Gruppen
 
 Die Benutzer und Gruppen ihrer RDMO-Instanz könen unter **Authentifizierung und Autorisierung** verwaltet werden. Sie können Benutzer erstellen und verändern und deren Passworter direkt setzen, wobei dies meistens von den Benutzern selbst über das Account-Menü getan wird. 
 
-Der in der Installation erstellte Benutzer hat zu allen Features von RDMO Zugang. Um anderen Benutzern den Zugang zum Management oder dem Admin-Interface zu gewähren, muss ihnen die notwendigen Rechte zuegwiesen werden. Dies kann auf zwei Wege erfolgen: durch die Gruppen oder durch das Superuser-Flag.
+Der in der Installation erstellte Benutzer hat zu allen Features von RDMO Zugang. Um anderen Benutzern den Zugang zum Management oder dem Admin-Interface zu gewähren, muss ihm die notwendigen Rechte zugewiesen werden. Dies kann auf zwei Arten erfolgen: durch die Gruppen oder durch das Superuser-Flag.
 
 Gruppen
 """""""
 
-Während der Installtion erstellte das``./manage create-groups`` Kommando drei Gruppen:
+Während der Installation erstellte das``./manage create-groups`` Kommando drei Gruppen:
 
 Editor
   Benutzer der Editorgruppe haben Zugang zum :doc:`Management Interface </management/index>` und können alle Elemente des Datenmodels editieren bisauf die Benutzerdaten, die über das strukturierte Interview eingegeben wurden. 
@@ -35,7 +35,7 @@ Bereits existierende Benutzer können diesen Gruppen zugeordnet werden, um Zugan
 Superuser
 """""""""
 
-Superusers haben alle verfügbaren Rechte und alle Rechteüberprüfungen werden für sie positiv sein. Dies ermöglicht ihnen nicht nur den Zugang zu den Management- und Admin-Interfaces, sondern auch den **Zugang zu den Daten von allen anderen Benutzern** (einschließlich der Projektseite).
+Superusers verfügen alle Rechte und alle Rechteüberprüfungen werden für sie positiv sein. Dies ermöglicht ihnen nicht nur den Zugang zu den Management- und Admin-Interfaces, sondern auch den **Zugang zu den Daten von allen anderen Benutzern** (einschließlich der Projektseite).
 Um einen Benutzer zum Superuser zu erheben, gehen Sie wie folgt vor:
 
 1. Klicken Sie auf **Benutzer** unter **Authentifizierung und Autorisierung** im Admin-Interface.
