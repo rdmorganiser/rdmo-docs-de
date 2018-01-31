@@ -46,3 +46,4 @@ Der Schlüssel ist eine Pflichtangabe und dient als interne Bezeichnung. Zusamme
    views
    tasks
    export
+   roles
