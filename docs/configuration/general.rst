@@ -7,7 +7,7 @@ Einige allgemeine Einstellungen sollten in ihrer ``config/settings/local.py`` en
 
     DEBUG = True
 
-Im Debug-Modus werden ausführliche Fehlerseiten angezeigt, falls etwas schief läuft, werde statische Inhalte wie CSS und JavaScript-Dateien vom Entwicklungsserver automatisch gefunden. Der Debug-Modus *darf nicht* aktiviert sein, wenn RDMO im normalen Betrieb mit dem Internet verbunden ist.
+Im Debug-Modus werden ausführliche Fehlerseiten angezeigt, falls etwas schief läuft, werden statische Inhalte wie CSS und JavaScript-Dateien vom Entwicklungsserver automatisch gefunden. Der Debug-Modus *darf nicht* aktiviert sein, wenn RDMO im normalen Betrieb mit dem Internet verbunden ist.
 
 Django braucht einen `Geheimschlüssel <https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-SECRET_KEY>`_, der auf einen einzigartigen, unvorhersehbaren Wert gesetzt wird:
 
@@ -15,9 +15,9 @@ Django braucht einen `Geheimschlüssel <https://docs.djangoproject.com/en/1.10/r
 
     SECRET_KEY = 'this is not a very secret key'
 
-Dieser Schlüssel muss geheim gehalten werden, da ansonsten viele von Djangos Sicherheitsmaßnahmen versagen.
+Dieser Schlüssel muss geheim bleiben, da ansonsten viele der eingebauten Sicherheitsmaßnahmen von Django versagen.
 
-Im Betrieb erlaubt Django nur `Anfragen zu bestimmten URLs <https://docs.djangoproject.com/en/1.10/ref/settings/#allowed-hosts>`_, welche festgelegt werden müssen:
+Im Betrieb erlaubt Django nur `Anfragen an bestimmte URLs <https://docs.djangoproject.com/en/1.10/ref/settings/#allowed-hosts>`_, welche festgelegt werden müssen:
 
 .. code:: python
 
