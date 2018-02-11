@@ -1,7 +1,7 @@
 Social Accounts
 ---------------
 
-Falls Sie Allauth für die Authentifizierung verwenden und RDMO konfiguriert haben, um ein oder mehrere OAuth-Anbieter zu verwenden (wie im  :doc:`Konfiguration Kapitel </configuration/authentication/allauth>`) beschrieben, müssen Sie ihre RDMO-Website bei diesen Services registrieren. Die Vorgehensweise ist jeweils verschieden. Meistens müssen Sie einige Informationen zu ihrer Website angeben. Es wird immer eine Umleitungs- oder Rückruf-URI verlangt. Im folgenden werden wir als Beispiel http://127.0.0.1:8000 verwenden (welche auf dem Entwicklungsserver funktioniert). Diese muss durch die richtige URI ihrer RDMO-Anwendung dann im Betrieb ersetzt werden.
+Falls Sie django-allauth für die Authentifizierung verwenden und RDMO konfiguriert haben, um ein oder mehrere OAuth-Anbieter zu verwenden (wie im  :doc:`Konfiguration Kapitel </configuration/authentication/allauth>`) beschrieben, müssen Sie ihre RDMO-Website bei diesen Services registrieren. Die Vorgehensweise ist jeweils verschieden. Meistens müssen Sie einige Informationen zu ihrer Website angeben. Es wird immer eine Umleitungs- oder Rückruf-URI verlangt. Im folgenden werden wir als Beispiel http://127.0.0.1:8000 verwenden (welche auf dem Entwicklungsserver funktioniert). Diese muss durch die richtige URI ihrer RDMO-Anwendung dann im Betrieb ersetzt werden.
 
 ORCID
     Loggen Sie sich bei https://orcid.org ein und gehen Sie auf die Seite mit den Entwicklungstools: https://orcid.org/developer-tools. Erstellen Sie eine App mit der Umleitungs-URI.
