@@ -21,13 +21,13 @@ Auf der linken Seite werden alle Ansichten der RDMO-Installation angezeigt. Ansi
 Die Sidebar auf der rechten Seite enthält weitere Interface-Objekte:
 
 * **Filter** filtert die Ansicht anhand eines vom Benutzer gegeben Strings. Nur Ansichten, die diesen String in ihrem Pfad haben, werden angezeigt.
-* **Optioen** ermöglichen weitere Operationen:
+* **Optionen** ermöglichen weitere Operationen:
 
   * Neue Ansicht erstellen
 
 * **Export** exportiert die Ansichten zu eine der angegebenen Formate. Während Textformate hauptsächlich für die Präsentation sind, können XML-Ausgaben für den Transfer der Ansichten zu einer anderen RDMO-Installation verwendet werden.
 
-Ansichten haben unterschiedliche Eigenschaften, um ihr Verhalten zu bestimmen. Wie in :doc:`der Einleitung <index>` beschrieben haben alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von den Managern der RDMO-Installation gesehen werden können. Ferner können folgende Parameter geändert werden:
+Ansichten haben unterschiedliche Eigenschaften, die ihr Verhalten zu bestimmen. Wie in :doc:`der Einleitung <index>` beschrieben haben alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von den Managern der RDMO-Installation gesehen werden können. Ferner können folgende Parameter geändert werden:
 
 Ansicht
 """""""
@@ -53,14 +53,14 @@ Vorlage
 
    Screenshot des Vorlagen-Fensters.
 
-Jede Ansicht hat eine Vorlage, die bestimmt wie die vom Benutzer gegeben Antworten auf ein Textdokument gemappt wird. Die Vorlage benutzt aus `Django template <https://docs.djangoproject.com/en/1.11/ref/templates/language/>`_ syntax, welche in Kombination mit regulärem HTML, Variabeln, dessen Werte bei der Vorlageauswertung ersetzt werden (``{{ a_variable }}``), und Tags, welche die Logik der Vorlage kontrolliert (``{% a_tag %}``).
+Jede Ansicht hat eine Vorlage (Template), die bestimmt, wie vom Benutzer gegeben Antworten in einem Textdokument dargestellt wird. Die Vorlage benutzt die `Django template <https://docs.djangoproject.com/en/1.11/ref/templates/language/>`_ syntax, welche in Kombination mit regulärem HTML, Variablen, deren Werte bei der Vorlageauswertung eingefüllt werden (``{{ a_variable }}``), und Tags, welche die Logik der Vorlage kontrollieren (``{% a_tag %}``).
 
-Zwei Variabeln können in RDMO Vorlagen verwendet werden:
+Zwei Variablen können in RDMO Vorlagen verwendet werden:
 
-* ``values``, welche ein verschachteltes Wörterbuch von den Antworten des Benutzers auf deren Attribute mappt. 
-* ``conditions``, welche ein Wörterbuch auf die Schlüssel von den Bedingungen mappt, um die Bedingungen anhand des aktuellen Projekts auszuwerten (z.B. ``wahr`` oder ``falsch``).
+* ``values``, welche mittels einer verschachtelten Python-Datenstruktur (dictionary) die Antworten des Benutzers unter Verwendung der Attribute abbildet. 
+* ``conditions``, welche mittels einer Python-Datenstruktur (dictionary) die Schlüssel der Bedingungen nutzt, um die Werte der eingegebenen Antworten zur Verfuegung zu stellen (z.B. ``wahr`` oder ``falsch``).
 
-Ein Attribut wie  ``project/research_question/title`` (spezifischer eine Attribut ``titel`` in der Entität ``fragestellung`` in der Entität ``project``) und eine Benutzer, der die Frage zu dem Attribut mit "Wo noch kein Mensch gewesen ist" beantwortet. Das Attribut wäre dann in der Vorlage als ``values.project.fragestellung.title`` (beachte den ``.`` anstatt des ``/``). In der Vorlage wird die Syntax für eine Variable verwendet: 
+Ein Beispiel: das Attribut sei  ``project/research_question/title`` (spezifischer: das Attribut ``titel`` in der Entität ``fragestellung`` in der Entität ``project``). Ein Benutzer beantwortet die zum Attribut gehörige Frage mit: "Kühn dorthin gehen, wohin noch kein Mensch sich gewagt hat". Der Attributwert ist dann in der Vorlage als ``values.project.fragestellung.title`` (beachte den ``.`` anstatt des ``/``) abzurufen. In der Vorlage wird die Syntax für eine Variable verwendet: 
 
 .. code-block:: django
 
@@ -70,7 +70,7 @@ würde dann, wenn ausgewertet im Kontext beim Benutzer seines Projekts, ausgeben
 
 .. code-block:: django
 
-    Die Fragestellung des Projekts ist: Wo noch kein Mensch gewesen ist.
+    Die Fragestellung des Projekts ist: "Kühn dorthin gehen, wohin noch kein Mensch sich gewagt hat".
 
 Kollektionen können mit dem ``for``-Tag von Django template syntax realisiert werden.
 
