@@ -10,7 +10,7 @@ Sie können ``config/settings/sample.local.py`` als Vorlage verwenden, d.h.:
     cp config/settings/sample.local.py config/settings/local.py    # on Linux or macOS
     copy config\settings\sample.local.py config\settings\local.py  # on Windows
 
-Die meisten Einstellungen ihrer RDMO-Instanz sind in dieser Datei festgelegt. Die unterschiedlichen Einstellungen sind im Detail :doc:`später in der Dokumentation </configuration/index>` erklärt. Für eine Minimal-Kofniguration müssen Sie ``DEBUG = True`` setzen, um ausführliche Fehlermeldungen zu erhalten und statische Dateien zu nutzen. Setzen Sie außerdem ``SECRET_KEY`` zu einem langen, zufälligen String, den Sie geheim halten. Ihre Datenbank-Verbindung wird mit Hilfe der  ``DATABASES`` Variablen gesetzt. Die Konfiguration der Datenbank wird  :doc:`später in der Dokumentation </configuration/databases>` erklärt. Wenn keine ``DATABASE`` gesetzt ist, wird ``sqlite2`` verwendet.
+Die meisten Einstellungen ihrer RDMO-Instanz sind in dieser Datei festgelegt. Die unterschiedlichen Einträge sind im Detail in  :doc:`später in der Dokumentation </configuration/index>` erklärt. Für eine Minimal-Kofniguration müssen Sie ``DEBUG = True`` setzen, um ausführliche Fehlermeldungen zu erhalten und statische Dateien zu nutzen. Setzen Sie außerdem ``SECRET_KEY`` zu einem langen, zufälligen String, den Sie geheim halten. Ihre Datenbank-Verbindung wird mit Hilfe der  ``DATABASES`` Variablen gesetzt. Die Konfiguration der Datenbank wird  :doc:`später in der Dokumentation </configuration/databases>` erklärt. Wenn keine ``DATABASE`` gesetzt ist, wird ``sqlite2`` verwendet.
 
 Dann starten Sie die Datenbank der Anwendung:
 
@@ -21,10 +21,10 @@ Dann starten Sie die Datenbank der Anwendung:
     python manage.py createsuperuser        # creates the admin user
     python manage.py download_vendor_files  # dowloads front-end files from the CDN
 
-Nach diesen Schritten kann RDMO mit Djangos integriertem Entwicklungsserver betrieben werden:
+Nach diesen Schritten kann RDMO mit dem integriertem Entwicklungsserver von Django betrieben werden:
 
 .. code:: bash
 
     python manage.py runserver
 
-Anschließend ist RDMO unter http://127.0.0.1:8000 in ihrem (lokalen) Browser verfügbar. Die unterschiedlichen Wege wie RDMO eingesetzt werden kann, werden im nächsten Kapitel behandelt. 
+Anschließend ist RDMO unter http://127.0.0.1:8000 in ihrem (lokalen) Browser verfügbar. Die unterschiedlichen Wege, wie RDMO betrieben werden kann, werden im nächsten Kapitel behandelt. 
