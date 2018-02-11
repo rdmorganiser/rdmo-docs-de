@@ -1,19 +1,19 @@
 Aufgaben
 --------
 
-Aufgaben sind unter *Aufgaben* im Managementmenü in der Navigatorleiste konfiguriert.
+Aufgaben sind unter *Aufgaben* im Managementmenü in der Navigatorleiste konfigurierbar.
 
 .. figure:: ../_static/img/screens/Aufgaben.PNG
    :target: ../_static/img/screens/Aufgaben.PNG
 
    Screenshot des Aufgabenmangement-Interfaces.
 
-Auf der linken Seite werden alle Aufgaben der RDMO-Installation angezeigt. Aufgaben zeigen ihren Schlüssel, Titel und ihre Aufgabenbeschreibung an. Auf der rechten Seite des Aufgabenfeldes zeigen Symbole Interaktionsmöglichkeiten an. Folgende Optionen sind verfügbar:
+Auf der linken Seite werden alle Aufgaben der RDMO-Installation mit Schlüssel, Titel und ihre Aufgabenbeschreibung angezeigt. Auf der rechten Seite des Aufgabenfeldes zeigen Symbole Interaktionsmöglichkeiten an. Folgende Optionen sind verfügbar:
 
 
 * **Bearbeiten** (|update|) einer Aufgabe, um dessen Eigenschaften zu ändern.
 * **Bedingung bearbeiten** (|conditions|) einer Aufgabe. eine Aufgabe wird dem Benutzer nur angezeigt, wenn all ihre Bedingungen als ``true`` ausgewertet werden. Die Bedingungen selbst sind unter :doc:`dem Bedingungsmangement <conditions>` konfiguriert.
-* **Zeitrahmen bearbeiten** (|timeframe|) einer Aufgabe. Der Zeitrahmen wird erstellt aus einem oder zwei Daten von den Antworten des Benutzers. Dies erlaubt Aufgaben mit einer bestimmten Deadline oder einer bestimmten Dauer festzulegen.
+* **Zeitrahmen bearbeiten** (|timeframe|) einer Aufgabe. Der Zeitrahmen wird erstellt aus Daten von den Antworten des Benutzers. Dies erlaubt es, Aufgaben mit einer bestimmten Deadline oder einer bestimmten Dauer festzulegen.
 * **Entfernen** (|delete|) einer Aufgabe. **Diese Handlung kann nicht rückgängig gemacht werden!**
 
 .. |update| image:: ../_static/img/icons/update.png
@@ -21,14 +21,14 @@ Auf der linken Seite werden alle Aufgaben der RDMO-Installation angezeigt. Aufga
 .. |timeframe| image:: ../_static/img/icons/timeframe.png
 .. |delete| image:: ../_static/img/icons/delete.png
 
-Die Sidebar auf der rechten Seite enthält weitere Interface-Objekte:
+Der Sidebar auf der rechten Seite enthält weitere Interface-Objekte:
 
 * **Filter**  filtert eine Ansicht anhand eines vom Benutzer eingegeben Strings. Nur Aufgaben, die diesen String in ihrem Pfad enthalten, werden angezeigt.
 * **Optionen** bietet weitere Optionen:
 
 * Neue Aufgabe erstellen
 
-* **Export** exportiert in eine der angegebenen Formate. Während Textformate hauptsächlich für die Präsentation sind, können XML-Formate für den Transfer der Aufgabe zu einer anderen RDMO-Installation verwendet werden.
+* **Export** exportiert in eines der angegebenen Formate. Während Textformate hauptsächlich für die Präsentation sind, können XML-Formate für den Transfer der Aufgabe zu einer anderen RDMO-Installation verwendet werden.
 
 Aufgaben haben unterschiedliche Eigenschaften, um ihr Verhalten zu konfigurieren. Wie in :doc:`der Einleitung <index>` beschrieben besitzen alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von den Managern der RDMO-Installation gesehen werden können. Ferner können folgende Parameter verändert werden:
 
