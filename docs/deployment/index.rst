@@ -2,7 +2,7 @@ Einsatz
 ========
 
 
-Wie bereits erwähnt kann RDMO in zwei verschiedenen Setups ausgeführt werden:
+Wie bereits erwähnt kann RDMO in zwei verschiedenen Setups genutzt werden:
 
 * für :doc:`Entwicklung oder Testen <development>` benutzte Sie den eingebauten Django-Entwicklungsserver.
 
