@@ -21,6 +21,7 @@ Auf der linken Seite sind alle Bedingungen der RDMO-Installation verfügbar. Fü
 In der rechten Sidebar gibt es weitere Interface-Optionen:
 
 **Filter** erlaubt eine Suche nach einem vom Benutzer gegebenen Strings. Nur Bedingungen, die diesen String enthalten, werden angezeigt.
+
 **Optionen** bietet weitere Optionen:
 
   * Neue Bedingung erstellen
