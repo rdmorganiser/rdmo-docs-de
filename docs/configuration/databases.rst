@@ -40,7 +40,7 @@ Dann fügen Sie folgende Zeilen zu ``config/settings/local.py`` hinzu:
         }
     }
 
-wobei ``Name`` der Name der Datenbank ist, ``USER`` der PostgreSQL Benutzer, ``PASSWORD`` dessen Passwort, ``HOST`` der Datenbankhost und ``PORT`` der Port von PostgreSQL. Beachten Sie, dass abhängig von ihrem Setup nicht alle Einstellungen benötigt werden. Falls Sie Peer-Authenfizierungsmethoden verwendeen, brauchen Sie nur die ``NAME`` und ``ENGINE``-Einstellungen. Der Benutzer und die Datenbank werden wie folgt gesetzt:
+wobei ``Name`` der Name der Datenbank ist, ``USER`` der PostgreSQL Benutzer, ``PASSWORD`` dessen Passwort, ``HOST`` der Datenbankhost und ``PORT`` der Port von PostgreSQL. Beachten Sie, dass abhängig von ihrem Setup nicht alle Einstellungen benötigt werden. Falls Sie Peer-Authenfizierungsmethoden verwenden, brauchen Sie nur die ``NAME`` und ``ENGINE``-Einstellungen. Der Benutzer und die Datenbank werden wie folgt gesetzt:
 
 .. code-block:: bash
 
@@ -56,13 +56,13 @@ Das Kommando
 
     python manage.py migrate
 
-sollte nun die RDMO Datenbank-Tabellen in PostegreSQL erstellen.
+sollte nun die RDMO Datenbank-Tabellen in der PostgreSQL-Instanz erstellen.
 
 
 MySQL
 `````
 
-MySQL (oder den Community-entwickleten Abzweig MariaDB) kann wie folgt installiert werden: 
+MySQL (oder die Community-basierte Variante MariaDB) kann wie folgt installiert werden: 
 
 .. code:: bash
 
@@ -73,11 +73,12 @@ MySQL (oder den Community-entwickleten Abzweig MariaDB) kann wie folgt installie
     # CentOS
     sudo yum install -y mysql mysql-server mysql-devel                            # for MySQL
     sudo yum install -y mariadb mariadb-server mariadb-devel                      # for MariaDB
-    sudo systemctl enable mariadb
+                                                                                  # set mariadb -> mysql if MySQL installed
+    sudo systemctl enable mariadb                                                 
     sudo systemctl start mariadb
     sudo mysql_secure_installation
 
-Um MYySQL als ihren Datenbank-Backend zu nutzen, installieren Sie ``mysqlclient`` in ihrer virtuellen Umgebung:
+Um MySQL/MariaDB als ihr Datenbank-Backend zu nutzen, installieren Sie ``mysqlclient`` in ihrer virtuellen Umgebung:
 
 .. code:: bash
 
@@ -123,7 +124,7 @@ sollte jetzt die RDMO Datenbank-Tabellen in MySQL angelegen.
 SQLite
 ``````
 
-SQLite ist die Standardoption in RDMO und unter ``config/settings/base.py`` konfiguriert. Wir empfehlen dies nur für das Entwicklungs-/Test-Setup zu verwenden. Es kann unter ``config/settings/local.py`` konfiguriert werden, indem folgendes hinzugefügt wird:
+SQLite ist die Standardoption in RDMO und unter ``config/settings/base.py`` konfiguriert. Wir empfehlen, dies nur für das Entwicklungs-/Test-Setup zu verwenden. Es kann unter ``config/settings/local.py`` konfiguriert werden, indem folgendes hinzugefügt wird:
 
 .. code:: python
 
