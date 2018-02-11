@@ -1,7 +1,7 @@
 E-Mail
 ------
 
-RDMO muss E-Mails an seine Benutzer schicken können. Die Vebrindung zu dem SMPT-Server wird über mehrere Einstellungen in ihrer ``config/settings/local.py`` konfiguriert:
+RDMO muss E-Mails an seine Benutzer schicken können. Die Vebindung zu dem SMPT-Server wird über folgende Einstellungen in ihrer ``config/settings/local.py`` konfiguriert:
 
 .. code:: python
 
