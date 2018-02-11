@@ -1,4 +1,4 @@
-Seite einrichten
+Website einrichten
 -----------------
 
 .. figure:: ../_static/img/screens/site.png
@@ -6,7 +6,7 @@ Seite einrichten
 
    Screenshot vom Admin-Interface.
    
-RDMO benutzt das `sites framework <https://docs.djangoproject.com/en/1.11/ref/contrib/sites>`_ von Django. Es ist daher notwendig den **Domänenamen** and den **Anzeigename** ihrer RDMO-Installation einzurichten. Dies kann in dem Admin-Interface unter *Seite* getan werden. Die Seite richten Sie wie folgt ein:
+RDMO benutzt das `sites framework <https://docs.djangoproject.com/en/1.11/ref/contrib/sites>`_ von Django. Es ist daher notwendig den **Domänenamen** and den **Anzeigename** ihrer RDMO-Installation einzurichten. Dies kann in dem Admin-Interface unter *Site* getan werden. Die Seite richten Sie wie folgt ein:
 
 1. Klicken Sie auf den bereits eingerichten Damainnamen *example.com*.
 
