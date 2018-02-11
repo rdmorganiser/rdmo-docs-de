@@ -8,7 +8,7 @@ Eine PostgreSQL oder MySQL-Datenbank kann in eine Datei geschrieben werden:
 .. code:: bash
 
     pg_dump [DBNAME] > rdmo.sql  # PostgreSQL
-    mysqldump -uroot -p [DBNAME] > rdmo.sql
+    mysqldump -uroot -p [DBNAME] > rdmo.sql # MySQL, MariaDB
 
 Ihr ``rdmo-app``-Ordner (einschließlich jeglicher sqlite3-Datenbank) kann mit üblichen Befehlen kopiert werden. Beachten Sie, dass ihre virtuelle Umgebung nicht funktionieren wird, nachdem sie an einen anderen Ort (Pfad) kopiert wurde.
 
@@ -40,19 +40,19 @@ Mit der Version 0.9.0 haben wir eine Separation von der ``rdmo-app`` und dem zen
 
 1) Erstellen Sie immer ein Backup ihres ``rdmo``-Ordners und ihrer Datenbank wie oben beschrieben.
 
-2) Führen Sie die Schritte wie unter :doc:`/installation/clone` und :doc:`/installation/packages` beschrieben durch, so wiesie eine neue RDMO-Instanz installieren würden.
+2) Führen Sie die Schritte wie unter :doc:`/installation/clone` und :doc:`/installation/packages` beschrieben durch, wie sie eine neue RDMO-Instanz installieren würden.
 
 3) Kopieren Sie ihre alte Einstellungen von ``/path/to/old/rdmo/rdmo/settings/local.py`` zu ``/path/to/new/rdmo-app/config/settings/local.py``. Der neue ``config``-Ordner ersetzt den alten ``rdmo``-Ordner. 
 
 4) Falls sie einen ``theme``-Ordner besitzen, kopieren Sie diesen bitte in den neuen ``rdmo-app``-Ordner.
 
-5) Führen Sie eine Datenbank-Migration durch (Es sei denn Sie haben einige Versionen übersprungen, dann könnte der Output sein: ``Keine Migration notwendig.``):
+5) Führen Sie eine Datenbank-Migration durch (Falls Sie haben einige Versionen übersprungen, könnte der Output auch sein: ``Keine Migration notwendig.``):
 
     .. code:: bash
 
         python manage.py migrate
 
-6) Downloaden Sie die Front-En-Dateien vom CDN. Wir verwenden Bower und npm nicht mehr.
+6) Downloaden Sie die Front-End-Dateien vom CDN. Wir verwenden Bower und npm nicht mehr.
 
     .. code:: bash
 
