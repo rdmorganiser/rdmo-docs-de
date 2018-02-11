@@ -1,7 +1,7 @@
 Protokollieren
 --------------
 
-Das Protokollieren (Schreiben von Logs) kann in Django sehr kompliziert werden und ist ausführlich in der `Django Dokumentation <https://docs.djangoproject.com/en/1.11/topics/logging/>`_ erklärt. Für eine passendes Protokollieren von RDMO können Sie folgende Zeilen in ihrer ``config/settings/local.py`` ergänzen:
+Das Protokollieren (Schreiben von Logs) kann in Django sehr kompliziert werden und ist ausführlich in der `Django Dokumentation <https://docs.djangoproject.com/en/1.11/topics/logging/>`_ erklärt. Für ein zu RDMO passendes Protokollieren können Sie folgende Zeilen in ihrer ``config/settings/local.py`` ergänzen:
 
 .. code:: python
 
@@ -76,5 +76,5 @@ Das Protokollieren (Schreiben von Logs) kann in Django sehr kompliziert werden u
 
 Dies produziert zwei Log-Dateien:
 
-* ``/var/log/rdmo/error.log`` wird Ausnahme-Nachrichten von Anwendungsfehlern enthalten (Statuscode: 500). Diese Nachrichten sind die gleichen wie wenn ``DEBUG = True`` gesetzt ist, was nicht der Fall sein sollte im normalen Betrieb. Hinzukommt eine E-Mail an alle Admins, die in der ``ADMINS``-Einstellung angegeben sind.
+* ``/var/log/rdmo/error.log`` wird Ausnahme-Nachrichten von Anwendungsfehlern enthalten (Statuscode: 500). Diese Nachrichten entsprechen denen, die ``DEBUG = True`` erzeugt. Im normalen Betrieb sollen solche Meldungen nicht vorkommen. Hinzukommt eine E-Mail an alle Admins, die in der ``ADMINS``-Einstellung konfiguriert sind.
 * ``/var/log/rdmo/rdmo.log`` wird weitere Log-Informationen vom RDMO-Code enthalten.
