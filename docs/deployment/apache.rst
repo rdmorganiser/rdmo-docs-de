@@ -1,7 +1,7 @@
 Apache und mod_wsgi
 -------------------
 
-Im Betrieb können Sie einen dedizierten Benutzer für RDMO erstellen. Alle Schritte für die Installation für die Sie keine Root-Rechte benötigen, sollten mit diesem Benutzer ausgeführt werden. Wie vorher auch gehen wir davon aus, dass der Benutzer ``rdmo`` genannt wurde und sein Home-Verzeichnis ``/srv/rdmo`` ist. Demnach ist ihre ``rdmo-app`` unter ``/srv/rdmo/rdmo-app`` zu finden.
+Im Betrieb sollten Sie einen dedizierten Benutzer-Account für RDMO erstellen. Alle Schritte der Installation, für die Sie keine Root-Rechte benötigen, sollten mit diesem Benutzer ausgeführt werden. Wie überall gehen wir davon aus, dass der Benutzer ``rdmo`` genannt wurde und sein Home-Verzeichnis ``/srv/rdmo`` ist. Demnach ist ihre ``rdmo-app`` unter ``/srv/rdmo/rdmo-app`` zu finden.
 
 Installieren Sie den Apache Server und ``mod_wsgi``:
 
@@ -93,4 +93,4 @@ Außerdem muss das ``collectstatic``-Kommando neu ausgeführt werden:
 
     python manage.py deploy
 
-in deiner virtuellen Umgebung.
+in der virtuellen Umgebung.
