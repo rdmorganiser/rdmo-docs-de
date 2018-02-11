@@ -1,30 +1,30 @@
 RDMO - Research Data Management Organiser
 =========================================
 
-RDMO is a tool to support the systematic planning, organisation and implementation of the data management throughout the course of a research project. RDMO is funded by the Deutsche Forschungsgemeinschaft (DFG).
+RDMO unterestuetzt die systematische Planung, Organisation und Durchfuehrung des Datenmanagements waehrend des ganzen Forschungsprozesses. Das Projekt wird gefoerdert von der Deutschen Forschungsgemeinschaft (DFG).
 
-German documention
+Dokumentation (Deutsch)
 ------------------
 
 Setup
 ~~~~~
 
-First install `sphinx`, `sphinx-autobuild`, and `sphinx_rtd_theme`:
+Zunaechst sind die Python Module `sphinx`, `sphinx-autobuild` und `sphinx_rtd_theme` zu installieren:
 
 .. code:: bash
 
     pip install -r requirements.txt
 
-Then, the HTML files can be created using:
+Dann koennen die HTML-Seiten erzeugt werden mit:
 
 .. code:: bash
 
     make html
 
-A live server, which auto-updates itself after a file is saved, can be started using:
+Ein Live-Server, der automatisch geaenderte Dateien anzeigt, sobald die HTML-Seite gesichert wurde, wird gestartet mit:
 
 .. code:: bash
 
     make live
 
-The documentation is then available on http://localhost:8000.
+Die Documentation ist dann unter der URL http://localhost:8000 abzurufen.
