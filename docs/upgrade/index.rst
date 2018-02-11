@@ -58,7 +58,7 @@ Mit der Version 0.9.0 haben wir eine Separation von der ``rdmo-app`` und dem zen
 
         python manage.py download_vendor_files
 
-7) Aktualisieren Sie den Pfad im ``wsgi.py`` Skript in ihren Apache- oder nginx-Einstellungen. Dies befindet sich nun unter ``/path/to/new/rdmo-app/config/wsgi.py``.
+7) Aktualisieren Sie den Pfad zum ``wsgi.py`` Skript in ihren Apache- oder nginx-Einstellungen. Es befindet sich nun unter ``/path/to/new/rdmo-app/config/wsgi.py``.
 
 8) Setzen Sie RDMO neu auf wie unter :doc:`/deployment/apache` oder :doc:`/deployment/nginx` beschrieben.
 
