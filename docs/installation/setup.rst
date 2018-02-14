@@ -10,7 +10,7 @@ Sie können ``config/settings/sample.local.py`` als Vorlage verwenden, d.h.:
     cp config/settings/sample.local.py config/settings/local.py    # on Linux or macOS
     copy config\settings\sample.local.py config\settings\local.py  # on Windows
 
-Die meisten Einstellungen ihrer RDMO-Instanz sind in dieser Datei festgelegt. Die unterschiedlichen Einträge sind im Detail in  :doc:`später in der Dokumentation </configuration/index>` erklärt. Für eine Minimal-Kofniguration müssen Sie ``DEBUG = True`` setzen, um ausführliche Fehlermeldungen zu erhalten und statische Dateien zu nutzen. Setzen Sie außerdem ``SECRET_KEY`` zu einem langen, zufälligen String, den Sie geheim halten. Ihre Datenbank-Verbindung wird mit Hilfe der  ``DATABASES`` Variablen gesetzt. Die Konfiguration der Datenbank wird  :doc:`später in der Dokumentation </configuration/databases>` erklärt. Wenn keine ``DATABASE`` gesetzt ist, wird ``sqlite2`` verwendet.
+Die meisten Einstellungen ihrer RDMO-Instanz sind in dieser Datei festgelegt. Die unterschiedlichen Einträge sind im Detail in  :doc:`später in der Dokumentation </configuration/index>` erklärt. Für eine Minimal-Konfiguration müssen Sie ``DEBUG = True`` setzen, um ausführliche Fehlermeldungen zu erhalten und statische Dateien zu nutzen. Setzen Sie außerdem ``SECRET_KEY`` zu einem langen, zufälligen String, den Sie geheim halten. Ihre Datenbank-Verbindung wird mit Hilfe der  ``DATABASES`` Variablen gesetzt. Die Konfiguration der Datenbank wird  :doc:`später in der Dokumentation </configuration/databases>` erklärt. Wenn keine ``DATABASE`` gesetzt ist, wird ``sqlite2`` verwendet.
 
 Dann starten Sie die Datenbank der Anwendung:
 
