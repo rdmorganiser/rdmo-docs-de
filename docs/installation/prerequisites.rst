@@ -66,7 +66,7 @@ Für Python:
 
 * herunterladen von https://www.python.org/downloads/windows/
 * wir empfehlen eine Version >= 3.4
-* vergessen Sie nicht zu überprüfen, dass währended des Setups `Python zu den Umgenungsvariablen hinzufügen` gesetzt ist
+* vergessen Sie nicht zu überprüfen, dass währended des Setups `Python zu den Umgebungsvariablen hinzufügen` gesetzt ist
 
 Für git:
 
