@@ -17,7 +17,7 @@ Dann testen Sie ``gunicorn``:
 
 Dies sollte die Anwendung genauso wie ``runserver`` laufen lassen, aber ohne statische Inhalte wie CSS-Dateien oder Bilder. Nach dem Test beenden Sie den ``gunicorn``-Prozess wieder.
 
-Dann erstellen Sie für den systemd service eine Datei für RDMO. Systemd wird den gunicorn-Prozess bei der Intriebnahme starten und überwachen. Erstellen Sie eine neue Datei unter `/etc/systemd/system/rdmo.service`  und geben Sie ein (Sie benötigen root/sudo-Rechte dafür): 
+Dann erstellen Sie für den systemd service eine Datei für RDMO. Systemd wird den gunicorn-Prozess bei der Intriebnahme starten und überwachen. Erstellen Sie eine neue Datei unter ``/etc/systemd/system/rdmo.service``  und geben Sie ein (Sie benötigen root/sudo-Rechte dafür): 
 ::
 
     [Unit]
@@ -67,7 +67,7 @@ Veränderen Sie die nginx-Konfiguration wie folgt (mit root/sudo-Rechten):
 
 Starten Sie nginx neu. RDMO sollte nun unter ``YOURDOMAIN`` verfügbar sein. Beachten Sie, dass der Unix-Socket ``/srv/rdmo/rdmo.sock`` für nginx zugänglich sein muss.
 
-Wie Sie der virtuellen Host-Konfiguration entnehmen können, werden statische Inhalte wie CSS und JavaScript-Dateien unabhängig über den Revserse-Proxy dem gunicorn-Prozess zur Verfügung gestellt. Um dies zu erreichen, werden diese in dem ``static_root``-Ordner erfasst. Hierzu wird das Kommando 
+Wie Sie der virtuellen Host-Konfiguration entnehmen können, werden statische Inhalte wie CSS und JavaScript-Dateien unabhängig über den Reverse-Proxy dem gunicorn-Prozess zur Verfügung gestellt. Um dies zu erreichen, werden diese in dem ``static_root``-Ordner erfasst. Hierzu wird das Kommando 
 
 .. code:: bash
 
