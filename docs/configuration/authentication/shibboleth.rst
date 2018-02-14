@@ -30,7 +30,7 @@ In unserer Testumgebung kann dies durch das Verändern von ``/etc/shibboleth/shi
                          REMOTE_USER="uid eppn persistent-id targeted-id">
 
 
-und '/etc/shibboleth/attribute-map.xml':
+und `/etc/shibboleth/attribute-map.xml`:
 
 .. code:: xml
 
