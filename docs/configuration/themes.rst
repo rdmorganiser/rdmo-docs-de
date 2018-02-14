@@ -13,7 +13,7 @@ Dann fügen Sie folgendes Ihrer ``config/settings/local.py`` hinzu:
 
     THEME_DIR = os.path.join(BASE_DIR, 'theme')
 
-Templates und statische Dateien in ihrem ``theme``-Ordner überschreiben dann die entsprechenden originalen Dateien, solange sie den gleichen relativen Pfad besitzen, z.B. die Datei ``theme/templates/core/base_navigation.html`` überschreibt ``rdmo/core/templates/core/base_navigation.html``.
+Templates und statische Dateien in ihrem ``theme``-Ordner überschreiben dann die entsprechenden Oraginaldateien, solange sie den gleichen relativen Pfad besitzen, z.B. die Datei ``theme/templates/core/base_navigation.html`` überschreibt ``rdmo/core/templates/core/base_navigation.html``.
 
 Normalerweise befinden sich die Templates in Ihrer virtuellen Umgebung, z.B. ``/srv/rdmo/rdmo-app/env/lib/python2.7/site-packages/rdmo/core/static/core/css/variables.scss``. Der konkrete Pfad ist abhängig von Ihrer Python Version und der verwendeten Plattform. Wir empfehlen daher, die Originaldatei aus dem `rdmo repository <https://github.com/rdmorganiser/rdmo>`_ herunterzuladen. Für das Beispiel oben ist dies https://github.com/rdmorganiser/rdmo/blob/master/rdmo/core/static/core/css/variables.scss.
 
