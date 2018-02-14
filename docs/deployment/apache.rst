@@ -74,23 +74,20 @@ Für CentOS 7:
 
 Starten Sie den Apache-Server neu. RDMO sollte nun unter ``YOURDOMAIN`` verfügbar sein. Beachten Sie, dass der Apache-Benutzer Zugang zu ``/srv/rdmo/rdmo-app/static_root/`` haben muss.
 
-Wie Sie der virtuellen Host-Konfigurationen entnehmen können, werden die statischen Inhalte wie CSS und JavaScript unabhängig vom WSGI-Python-Skript bedient. Um dies zu erreichen, müssen diese in dem ``static_root``-Ordner erfasst werden:
+Wie Sie der virtuellen Host-Konfigurationen entnehmen können, werden die statischen Inhalte wie CSS und JavaScript unabhängig vom WSGI-Python-Skript bedient. Um dies zu erreichen, müssen diese in dem ``static_root``-Ordner innerhalb der virtuellen Umgebung erfasst werden:
 
 .. code:: bash
 
     python manage.py collectstatic
 
-in der virtuelle Umgebung.
 
 Um Veränderungen am RDMO -Code vorzunehmen (z.B: nach dem :doc:`Upgrade </upgrade/index>`), muss der Webserver neu geladen werden oder die Datei``config/wsgi.py`` muss (scheinbar) verändert worden sein indem der ``touch``-Befehl verwendet wird: 
 .. code:: bash
 
     touch config/wsgi.py
 
-Außerdem muss das ``collectstatic``-Kommando neu ausgeführt werden:
+Außerdem muss das ``collectstatic``-Kommando innerhalb der virtuellen Umgebung neu ausgeführt werden:
 
 .. code:: bash
 
     python manage.py deploy
-
-in der virtuellen Umgebung.
