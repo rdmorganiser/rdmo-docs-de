@@ -28,4 +28,4 @@ Für ein Entwicklungs-/Test-Setup kann ein einfaches E-Mail-Backend verwendet we
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     EMAIL_FROM = 'info@example.com'
 
-Dies ist auch das Standard-Backend, falls keine E-Mail-Einstellungen in``config/settings/local.py`` hinzugefügt wurden.
+Dies ist auch das Standard-Backend, falls keine E-Mail-Einstellungen in ``config/settings/local.py`` hinzugefügt wurden.
