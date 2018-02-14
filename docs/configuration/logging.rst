@@ -1,7 +1,7 @@
 Protokollieren
 --------------
 
-Das Protokollieren (Schreiben von Logs) kann in Django sehr komplex werden und ist ausführlich in der `Django Dokumentation <https://docs.djangoproject.com/en/1.11/topics/logging/>`_ erklärt. Für ein zu RDMO passendes Protokollieren ergänzen Sie folgende Zeilen in ihrer ``config/settings/local.py``:
+Das Protokollieren (Schreiben von Logs) kann in Django sehr komplex werden und ist ausführlich in der `Django Dokumentation <https://docs.djangoproject.com/en/1.11/topics/logging/>`_ erklärt. Für ein zu RDMO passendes Protokollieren ergänzen Sie folgende Zeilen in ihrer `config/settings/local.py`:
 
 .. code:: python
 
