@@ -40,11 +40,11 @@ Google
 
 Sobald die Zugangsdaten gültig sind, können Sie diese in dem Admin-Interface eingeben. Dafür gehen Sie auf **Soziale Anwendungen* unter **Soziale Accounts** und klicken auf **Sozialen Account hinzufügen**. Dann:
 
-1. Wählen Sie den entsprechenden **Anbieter**
+1. Wählen Sie den entsprechenden **Anbieter**.
 
-2. Geben Sie einen **Namen** ihrer Wahl ein
+2. Geben Sie einen **Namen** ihrer Wahl ein.
 
-3. Geben Sie die **Client-ID** (oder App-ID) und den **Geheimschlüssel** (oder Client secret, Client-Schlüssel, App Secret) ein
+3. Geben Sie die **Client-ID** (oder App-ID) und den **Geheimschlüssel** (oder Client secret, Client-Schlüssel, App Secret) ein.
 
 4. Fügen Sie ihre Seite zu den ausgewählten Seiten hinzu.
 
