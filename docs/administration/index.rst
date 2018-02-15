@@ -6,7 +6,7 @@ Das Django-Framework bietet ein reichhaltiges Administrationsinterface (kurz Adm
 Das Admin-Interface ist unter dem Link *Admin* in der Navigationsleiste verfügbar. Es wird nur in seltenen Fällen benutzt, da die meisten Konfigurationen des Fragebogens und andere Funktionen von RDMO über das benutzerfreundliche Management-Interface geändert werden können wie 
 :doc:`in dem folgenden Kapitel der Dokumentation </management/index>` beschrieben.
 
-Das wird Admin-Interface nach der Installation benötigt, um den Titel und die URI auf der :doc:`Website <site>` zu ändern, um die :doc:`Benutzer und Gruppe <users>` zu konfigurieren, um die Verbindung zu :doc:`OAuth Anbietern <allauth>` zu konfigurieren und um die mit der API genutzen :doc:`Tokens <tokens>` zu ändern.
+Das Admin-Interface wird nach der Installation benötigt, um den Titel und die URI auf der :doc:`Website <site>` zu ändern, um die :doc:`Benutzer und Gruppe <users>` zu konfigurieren, um die Verbindung zu :doc:`OAuth Anbietern <allauth>` zu konfigurieren und um die mit der API genutzen :doc:`Tokens <tokens>` zu ändern.
 
 .. toctree::
    :caption: Index
