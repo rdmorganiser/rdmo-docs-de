@@ -44,7 +44,7 @@ Sobald die Zugangsdaten gültig sind, können Sie diese in dem Admin-Interface e
 
 2. Geben Sie einen **Namen** ihrer Wahl ein
 
-3. Geben Sie die **Client-ID* (oder App-ID) und den **Geheimschlüssel** (oder Client secret, Client-Schlüssel, App Secret) ein
+3. Geben Sie die **Client-ID** (oder App-ID) und den **Geheimschlüssel** (oder Client secret, Client-Schlüssel, App Secret) ein
 
 3. Fügen Sie ihre Seite zu den ausgewählten Seiten hinzu.
 
