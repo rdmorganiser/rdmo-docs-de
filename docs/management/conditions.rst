@@ -1,7 +1,7 @@
 Bedingungen
 -----------
 
-Bedingungen können erstellt und bearbeitet werden. Wählen Sie *Bedingungen* im Mangamentmenü der Navigationsleiste. Die Bedingungen werden in einem anderen Schriit mit Entitäten, Attributen, Optionensets oder Aufgaben verbunden.
+Bedingungen können erstellt und bearbeitet werden. Wählen Sie *Bedingungen* im Mangamentmenü der Navigationsleiste. Die Bedingungen werden in einem anderen Schritt mit Entitäten, Attributen, Optionensets oder Aufgaben verbunden.
 
 
 .. figure:: ../_static/img/screens/Bedingungen.PNG
@@ -9,7 +9,7 @@ Bedingungen können erstellt und bearbeitet werden. Wählen Sie *Bedingungen* im
 
    Screenshot des Bedinungen-Managment Interfaces.
    
-Auf der linken Seite sind alle Bedingungen der RDMO-Installation verfügbar. Für jede Bedingung wird ihr Schlüssel und eine textuelle Darstellung angezeigt. Auf der rechten Seite von jedem Bedingungsfeld zeigen Symbole, an wie mit dem jeweiligen Element interagiert werden kann. Die folgenden Optionen stehen zur Auswahl:
+Auf der linken Seite sind alle Bedingungen der RDMO-Installation verfügbar. Für jede Bedingung wird ihr Schlüssel und eine textuelle Darstellung angezeigt. Auf der rechten Seite von jedem Bedingungsfeld zeigen Symbole an wie mit dem jeweiligen Element interagiert werden kann. Die folgenden Optionen stehen zur Auswahl:
 
 
 * **Bearbeiten** (|update|) der Eigenschaften einer Bedingung.
@@ -24,7 +24,7 @@ In der rechten Sidebar gibt es weitere Interface-Optionen:
 
 **Optionen** bietet weitere Optionen:
 
-  * Neue Bedingung erstellen
+  * **Neue Bedingung erstellen**
   
   * **Export** exportiert die Bedigungen in eines der angezeigten Formate. Während die Textformate hauptschächlich für die Darstellung sind, können XML Ausgaben für den Transfer von Bedingungen zu anderen RDMO Installationen genutzt werden.
 
