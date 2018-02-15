@@ -38,15 +38,15 @@ Google
 
     als die authentifizierte Umleitungs-URI. Kopieren Sie die Client-ID und den Client-Schlüssel.
 
-Sobald die Zugangsdaten gueltig sind, können Sie diese in dem Admin-Interface eingeben, Dafür gehen Sie auf **Soziale Anwendungen* unter **Soziale Accounts** und klicken auf **Sozialen Account hinzufügen**. Dann:
+Sobald die Zugangsdaten gültig sind, können Sie diese in dem Admin-Interface eingeben. Dafür gehen Sie auf **Soziale Anwendungen* unter **Soziale Accounts** und klicken auf **Sozialen Account hinzufügen**. Dann:
 
 1. Wählen Sie den entsprechenden **Anbieter**
 
 2. Geben Sie einen **Namen** ihrer Wahl ein
 
-3. Geben Sie die **Client-ID* (oder App-ID) und den **Geheimschlüssel** (oder Client secret, Client-Schlüssel, App Secret)
+3. Geben Sie die **Client-ID* (oder App-ID) und den **Geheimschlüssel** (oder Client secret, Client-Schlüssel, App Secret) ein
 
-3. Fügen Sie  ihre Seite zu den ausgewählten Seiten hinzu.
+3. Fügen Sie ihre Seite zu den ausgewählten Seiten hinzu.
 
 4. Klicken Sie auf speichern.
 
