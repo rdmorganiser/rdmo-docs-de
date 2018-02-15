@@ -12,6 +12,6 @@ RDMO benutzt das `sites framework <https://docs.djangoproject.com/en/1.11/ref/co
 
 2. Geben Sie die URI ihrer RDMO-Installation als **Domänenamen** ein (z.B. rdmo.aip.de).
 
-3. Geben Sie den Titel ihrer RDMO-Installation als **Anzeigenamen** an (z.B. RDMO Dmeo).
+3. Geben Sie den Titel ihrer RDMO-Installation als **Anzeigenamen** an (z.B. RDMO Demo).
 
 4. Klicken sie auf **Speichern**.
