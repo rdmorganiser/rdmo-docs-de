@@ -13,7 +13,7 @@ Eine RDMO-Installation hat drei Komponenten:
 
 Dieses Kapitel zeigt wie diese Komponenten installiert werden. Optionale Komponenten können danach installiert werden, sie sind unter :doc:`Konfiguration </configuration/index>` dokumentiert.
 
-Für Test- und Entwicklungszwecke kann RDMO mit ihrem regulären Benutzer-Account betrieben werden. Im Produktionsbetrieb sollte ein dedizierter Benutzer verwendet werden. Wir empfehlen einen Benutzer namens ``rdmo`` mit der Gruppe ``rdmo`` und dem Homeverzeichnis ``/srv/rdmo`` zu erstellen. Wir werden diesen Benutzer mit dem genannten Profil in der gesamten Dokumentation verwenden.
+Für Test- und Entwicklungszwecke kann RDMO mit ihrem regulären Benutzer-Account betrieben werden. Im Produktionsbetrieb sollte ein dedizierter Benutzer verwendet werden. Wir empfehlen einen Benutzer namens ``rdmo`` mit der Gruppe ``rdmo`` und dem Homeverzeichnis ``/srv/rdmo`` zu erstellen: ``sudo adduser rdmo --home /srv/rdmo`` . Wir werden diesen Benutzer mit dem genannten Profil in der gesamten Dokumentation verwenden.
 
 Verwenden Sie nicht den ``root`` Benutzer, um RDMO auszuführen! Es ist generell eine schlechte Idee und viele Installationsschritte  funktionieren nicht. ``sudo`` wird während der Installation verwendet, wenn root-Rechte nötig sind, um Pakete zu installieren.
 
