@@ -1,7 +1,7 @@
 Erstellung des App-Verzeichnis
 ----------------------------------
 
-Im nächsten Schritt ist ein ``rdmo-app``-Verzeichnis durch Klonen des entsprechenden Repositories zu erstellen:
+Im nächsten Schritt ist ein ``rdmo-app``-Verzeichnis durch Klonen des entsprechenden Repositories in dem Home-Verzeichnisses ihres ``rdmo``-Benutzerzu zu erstellen:
 
 .. code:: bash
 
