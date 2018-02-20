@@ -24,6 +24,7 @@ Im Betrieb erlaubt Django nur `Anfragen an bestimmte URLs <https://docs.djangopr
     ALLOWED_HOSTS = ['localhost', 'rdmo.example.com']
 
 Wenn Sie RDMO unter einem Alias wie http://example.com/rdmo laufen lassen möchten, mussen Sie die Basis-URL festlegen:
+
 .. code:: python
 
     BASE_URL = '/rdmo'
