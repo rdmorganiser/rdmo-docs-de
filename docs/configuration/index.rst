@@ -1,7 +1,7 @@
 Konfiguration
 =============
 
-Die RDMO-Anwendung benutzt das `Django Einstellungsmodul <https://docs.djangoproject.com/en/1.10/topics/settings>`_ für seine Konfiguration. Um die Basiskonfiguration und ihre lokalen Anpassungen und geheime Informationen (z.B.: Datenbankverbindungen) von einander zu trennen, sind die RDMO-Einstelluungen in zwei Dateien aufgeteilt:
+Die RDMO-Anwendung benutzt das `Django Einstellungsmodul <https://docs.djangoproject.com/en/1.10/topics/settings>`_ für seine Konfiguration. Um die Basiskonfiguration und ihre lokalen Anpassungen und geheime Informationen (z.B.: Datenbankverbindungen) von einander zu trennen, sind die RDMO-Einstellungen in zwei Dateien aufgeteilt:
 
 * ``config/settings/base.py``, als Teil des Git-Repositoriums, die vom RDMO-Entwicklungsteam verwaltet wird.
 * ``config/settings/local.py``, die von Git ignoriert wird und von Ihnen verändert werden muss.
