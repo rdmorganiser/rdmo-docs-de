@@ -1,9 +1,9 @@
 Python Pakete installieren
 --------------------------
 
-Nach dem Sie den ``rdmo-app``-Ordner installiert haben, müssen Sie weitere ``rdmo``-Pakete sowie andere Python-Abhängigkeiten installieren.
+Nach dem Sie sich den ``rdmo-app``-Ordner angesehen haben, mussen Sie die ``rdmo``-Pakete installieren und andere Python-Abhängigkeiten.
 
-Wechslen Sie dazu in den ``rdmo-app``-Ordner und erstellen Sie eine  `virtualenv <https://virtualenv.readthedocs.org>`_ (mit ihrem Benutzer oder ihrem erstellten ``rdmo``-Benutzer, nicht als ``root``):
+Wechslen Sie dazu in den ``rdmo-app``-Ordner und erstellen Sie eine  `virtualenv <https://virtualenv.readthedocs.org>`_ (mit ihrem Benutzer oder ihrem erstellen ``rdmo``-Benutzer, nicht als ``root``):
 
 .. code:: bash
 
@@ -17,19 +17,12 @@ Wechslen Sie dazu in den ``rdmo-app``-Ordner und erstellen Sie eine  `virtualenv
 
     pip install --upgrade pip setuptools                       # update pip and setuptools
 
-Nachdem die virtuelle Umgebung aktiviert ist, kann dort das ``rdmo``-Paket mit Hilfe von ``pip`` installiert werden:
+Nachdem die virtuelle Umgebung aktiviert wurde, kann dort das ``rdmo``-Paket mit Hilfe von ``pip`` installiert werden:
 
 .. code:: bash
 
     pip install rdmo
 
-Auf Windows wird für die Installation pandoc benötigt:
+Die virtuelle Umgebung schottet die RDMO-Installation vom Rest des Systems ab. Dies ermöglicht es mehrere Anwendungen mit verschiedenen Python-Abhängigkeiten auf einer Machine laufen zu lassen und die Abhängigkeiten ohne Root-Rechte zu installieren.
 
-.. code:: bash
-
-    # only on Windows
-    python -c "import pypandoc; pypandoc.download_pandoc()"
-
-Die virtuelle Umgebung schottet die RDMO-Installation vom Rest des Systems ab. Dies erlaubt das Betreiben mehrerer Anwendungen mit verschiedenen Python-Abhängigkeiten auf einer Machine laufen zu lassen, und diese Abhängigkeiten ohne Root-Rechte zu installieren.
-
-**Wichtig:** Die virtuelle Umgebung muss jedes Mal mit Hilfe von``source env/bin/activate`` oder ``call env\Scripts\activate.bat`` aktiviert werden, wenn ein neues Terminal benutzt wird.
+**Wichtig:** Die virtuelle Umgebung muss jedes Mal mit Hilfe von``source env/bin/activate`` oder ``call env\Scripts\activate.bat`` aktiviert werden , wenn ein neues Terminal benutzt wird mit Hilfe.

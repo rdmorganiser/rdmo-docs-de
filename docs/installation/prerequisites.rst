@@ -33,7 +33,7 @@ Bei Ubuntu 14.04, ist `python3-venv` nicht verfügbar. Bitte verwenden Sie statt
 
 Bei RHEL/CentOS ist ``selinux`` standardmäßig aktiviert. Dies führt zu unerwarteten Fehlern, abhängig davon, wo der RDMO-Sourcecode auf dem System isntalliert ist. Auch wenn die bevorzugte Lösung die richtige Konfiguration von ``selinux`` wäre (was im Rahmen dieser Dokumentation zu weit führen würde), kann ``selinux`` auf ``permissive`` oder ``disabled`` unter ``/etc/selinux/config`` gesetzt werden (erfordert einen Neustart).
 
-Wenn Sie Python 2.7 anstatt Python 3 benutzen möchten, verwenden Sie folgende entsprechende Pakete:
+Wenn Sie Python 2.7 anstatt Python 3 benutzen möchten, verwenden Sie die entsprechenden Pakete:
 
 .. code:: bash
 
@@ -75,6 +75,10 @@ Für git:
 Für die Microsoft C++ Build Tools:
 
 * herunterladen von http://landinghub.visualstudio.com/visual-cpp-build-tools
+
+Für Pandoc:
+
+* herunterladen von https://github.com/jgm/pandoc/releases
 
 Für pdflatex (optional, für pdf-Export):
 
