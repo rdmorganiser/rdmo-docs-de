@@ -72,7 +72,7 @@ Für CentOS 7:
             </Directory>
     </VirtualHost>
 
-Starten Sie den Apache-Server neu: ``sudo /etc/init.d/apache2 restart```oder ``sudo service apache2 restart`` . RDMO sollte nun unter ``YOURDOMAIN`` verfügbar sein. Beachten Sie, dass der Apache-Benutzer Zugang zu ``/srv/rdmo/rdmo-app/static_root/`` haben muss.
+Starten Sie den Apache-Server neu: ``sudo /etc/init.d/apache2 restart`` oder ``sudo service apache2 restart`` . RDMO sollte nun unter ``YOURDOMAIN`` verfügbar sein. Beachten Sie, dass der Apache-Benutzer Zugang zu ``/srv/rdmo/rdmo-app/static_root/`` haben muss.
 
 Wie Sie der virtuellen Host-Konfigurationen entnehmen können, werden die statischen Inhalte wie CSS und JavaScript unabhängig vom WSGI-Python-Skript bedient. Um dies zu erreichen, müssen diese in dem ``static_root``-Ordner innerhalb der virtuellen Umgebung erfasst werden:
 
