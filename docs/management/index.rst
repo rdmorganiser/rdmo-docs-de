@@ -4,8 +4,8 @@ Management
 RDMO benutzt einen strukturierten Fragebogen. Die Antworten werden gespeichert und in verschiedenen Formen ausgegeben. Es stehen hierzu verschiedene Templates (wie z.B. DMP-Vorlagen) zur Verfügung.
 Die Hauptidee von RDMO ist die Anpassbarkeit einer jeden Frage und eines jeden Outputs. RDMO benutzt dabei ein Datenmodell, welches entlang der Django-Apps und den Django-Modellen organisiert ist. Eine graphische Übersicht ist folgend zu sehen:
 
-.. figure:: ../_static/img/datamodel.svg
-   :target: ../_static/img/datamodel.svg
+.. figure:: ../_static/img/datamodel_de.svg
+   :target: ../_static/img/datamodel_de.svg
 
    Übersicht über das RDMO-Datenmodel.
 
