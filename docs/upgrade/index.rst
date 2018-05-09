@@ -30,6 +30,12 @@ Nach der Aktualisierung, kann eine Datenbank-Migration notwendig sein:
 
     python manage.py migrate
 
+In jedem Fall ist es notwendig folgendes Kommando auszuführen, damit das Upgrade auch umgesetzt wird:
+
+.. code:: bash
+
+    python manage.py deploy
+    
 Bitte beachten Sie die Release-Hinweise, ob dieser oder weitere Schritte notwendig sind.
 
 
