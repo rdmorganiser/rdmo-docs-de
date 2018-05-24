@@ -1,7 +1,7 @@
 Django-allauth
 ~~~~~~~~~~~~~~
 
-RDMO verwendet das großartige `django-allauth <http://www.intenct.nl/projects/django-allauth>`_ als  Haupt-Athentifizierungs-Modul. Es ermöglicht Workflows für Benutzerregistration und Passwortabfrage, genauso wie Authentifizierung durch Drittanbieter-Webseiten mit Hilfe von OAUTH2.
+RDMO verwendet das großartige `django-allauth <http://www.intenct.nl/projects/django-allauth>`_ als  Haupt-Authentifizierungs-Modul. Es ermöglicht Workflows für Benutzerregistration und Passwortabfrage, genauso wie Authentifizierung durch Drittanbieter-Webseiten mit Hilfe von OAUTH2.
 
 Accounts
 ````````
@@ -54,4 +54,4 @@ Um Accounts von Webseiten dritter Anbieter (Facebook, Github, etc.) mit RDMO zu 
 
 Die Einstellung ``SOCIALACCOUNT = True`` wird von RDMO verwendet, um bestimmte Teile der Benutzeroberfläche mit den Accounts dritter Anbieter anzuzeigen, während wie zuvor die Zeilen nach ``INSTALLED_APPS`` es dem Feature erlaubt von RDMO verwendet zu werden. Jeder Anbieter hat eine separate App, die du zu ``INSTALLED_APPS`` hinzufügen kannst. Eine Liste aller von Django-allauth unterstützen Anbieter finden Sie `hier <http://django-allauth.readthedocs.io/en/latest/providers.html>`_.
 
-Sobald die Installation abgeschlossen ist, müssen die Zugangsdaten ihres OAuth-Anbieters in dem Admin-Interface eingegeben werden. Dies wird im :doc:`Administration-Kapitel </administration/allauth>` dieser Dokuemntation erklärt.
+Sobald die Installation abgeschlossen ist, müssen die Zugangsdaten ihres OAuth-Anbieters in dem Admin-Interface eingegeben werden. Dies wird im :doc:`Administration-Kapitel </administration/allauth>` dieser Dokumentation erklärt.
