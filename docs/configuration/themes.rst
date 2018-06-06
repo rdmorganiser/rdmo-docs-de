@@ -28,4 +28,7 @@ Navigationsleiste
 Homepage-Text
     https://github.com/rdmorganiser/rdmo/blob/master/rdmo/core/templates/core/home_text_en.html und https://github.com/rdmorganiser/rdmo/blob/master/rdmo/core/templates/core/home_text_de.html können nach ``theme/templates/core/home_text_en.html`` und ``theme/templates/core/home_text_de.html`` kopiert werden und genutzt werden, um den Text der Homepage anzupassen.
 
+Nutzerbedingungen
+ Der Inhalt, der in dem Nutzerbedingungen-Fenster erscheint, können durch Templates an der richtigen Stelle gesetzt werden. Für die verschiedenen Sprachen wird jeweils eine Datei benötigt, die sich wie folgt plaziert werden müssen: ``theme/templates/account/terms_of_use_de.html`` und  ``theme/templates/account/terms_of_use_en.html``. Setzen Sie die Variable ACCOUNT_TERMS_OF_USE auf True in Ihrer config/settings/local.py, um die das Erscheinen der Nutzerbedingungen zu aktivieren.
+ 
 Beachten Sie: Updates für das RDMO-Paket können die Veränderung des `Theme` inkompatibel werden lassen und Fehler verursachen. In diesem Fall müssen die Dateien in ``theme`` so angepasst werden, dass die veränderten Funktionalitäten von RDMO-Gegenstücken in ihren Dateien ebenfalls bereitgestellt werden.
