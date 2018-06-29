@@ -1,7 +1,9 @@
 Fragen
 ------
 
-Das Fragenmanagement ist unter *Fragen* in dem Managementmenü in der Navigationsleiste verfügbar. Der Link in der Navigationsleiste öffnet den ersten Katalog. Weitere Kataloge können in dem Sidebar darunter ausgewählt werden.
+Das Fragenmanagement ist unter *Fragen* in dem Managementmenü in der Navigationsleiste verfügbar. Direkt nach einer RDMo-Instalaltion ist dieser Bereich zunächst leer. Wir bitten Sie daher zunächst unsere Domain und ggf. auch unseren generischen Fragenkatalog zu importieren. Die entsprechenden XML-Dateien finden Sie unter https://github.com/rdmorganiser/rdmo-catalog .
+
+Falls bereits mindestens ein Fragenkatalog vorhanden ist, so wird dieser autoamtisch angezeigt. Weitere Kataloge können in dem Sidebar darunter ausgewählt werden.
 
 .. figure:: ../_static/img/screens/Fragen.PNG
    :target: ../_static/img/screens/Fragen.PNG
