@@ -8,6 +8,8 @@ Das Domänenmodel kann unter *Domäne* im Managementmenü in der Navigationsleis
 
    Screenshot vom Domain-Management Interface.
 
+Nach der Instalaltion von RDMO ist die Domäne zunächst leer. Wir bitten Sie unsere Domäne zu importieren. Die entsprechende XML-Datei ist unter  https://github.com/rdmorganiser/rdmo-catalog verfügbar. Sie können die Domäne gerne nach Ihren Wünschen erweitern, aber sie ist die Gundlage für die Interoperabilität und Kooperativität verschiedener RDMO-Instanzen und daher immer der Startpunkt für das Erstellen von Fragenkatalogen.
+
 Es werden alle Entitäten und Attribute der RDMO-Installation gezeigt, wozu der Pfad gehört und es eine Sammlung (collection) ist. Auf der rechten Seite eines jeden Elementfeldes gibt es Icons mit folgender Bedeutung:
 
 * **Hinzufügen** (|add|) eines neuen Attributes oder einer Entität zu der gewählten Entität.
