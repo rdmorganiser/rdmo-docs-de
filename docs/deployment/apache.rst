@@ -82,6 +82,7 @@ Wie Sie der virtuellen Host-Konfigurationen entnehmen können, werden die statis
 
 
 Um Veränderungen am RDMO -Code vorzunehmen (z.B: nach dem :doc:`Upgrade </upgrade/index>`), muss der Webserver neu geladen werden oder die Datei``config/wsgi.py`` muss (scheinbar) verändert worden sein indem der ``touch``-Befehl verwendet wird: 
+
 .. code:: bash
 
     touch config/wsgi.py
