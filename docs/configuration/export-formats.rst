@@ -1,7 +1,7 @@
 Formate exportieren
 -------------------
 
-RDMO unterstützt das Exportieren zu bestimmten Formaten mit Hilfe vom großartigen `pandoc <https://pandoc.org/>`_ Konvertierer. Die Liste der zur Auswahl stehenden Formate kann angepasst werden indem die ``EXPORT_FORMATS``-Einstellung in ihrem ``config/settings/local.py`` konfiguriert wird.
+RDMO unterstützt das Exportieren zu bestimmten Formaten mit Hilfe vom großartigen `Pandoc <https://pandoc.org/>`_ Konvertierer. Die Liste der zur Auswahl stehenden Formate kann angepasst werden indem die ``EXPORT_FORMATS``-Einstellung in ihrem ``config/settings/local.py`` konfiguriert wird.
 
 .. code:: python
 
@@ -16,4 +16,11 @@ RDMO unterstützt das Exportieren zu bestimmten Formaten mit Hilfe vom großarti
         ('tex', _('LaTeX'))
     )
 
-Die verschienden Formate, die von pandoc unterstützt werden, finden Sie `auf der pandoc Homepage <https://pandoc.org/>`_.
+Die verschienden Formate, die von pandoc unterstützt werden, finden Sie `auf der Pandoc-Homepage <https://pandoc.org/>`_.
+
+Das Seiten-Format und verschiedene andere Dinge, die Formatierung und Aussehen von Textdokumenten betreffen, können mit Hilfe von Referenzdokumenten angepasst werden. Die `Pandoc-Dokumentation <https://pandoc.org/MANUAL.html>`_ hält eine ausführliche Liste der unterstützten Einstellungen bereit, die unterhalb des Paragraphen '--reference-doc' eingesehen werden kann. Referenzdokumente können für die Formate ``.docx`` und ``.odt`` verwendet werden. Welche Datei als Referenzdokument dient, wird in der ``config/settings/local.py`` definiert. Wenn diese Einträge nicht in Ihrer Konfiguration sind, werden die Standard-Referenzdokumente aus der RDMO-Installation verwendet.
+
+.. code:: python
+
+    EXPORT_REFERENCE_DOCX='FULL PATH OF YOUR REFERENCE DOCX'
+    EXPORT_REFERENCE_ODT='FULL PATH OF YOUR REFERENCE ODT'
