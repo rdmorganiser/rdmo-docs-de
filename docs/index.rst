@@ -15,6 +15,12 @@ Source code
 Dokumentation
   http://rdmo.readthedocs.io
 
+Mailing list
+  https://www.listserv.dfn.de/sympa/subscribe/rdmo
+
+Slack
+  https://rdmo.slack.com
+
 Demo
   https://rdmo.aip.de
 
