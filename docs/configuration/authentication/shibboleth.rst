@@ -3,13 +3,13 @@ Shibboleth
 
 Um Shibboleth mit RMDO zu verwenden, ist es notwendig in der Betriebsumgebung einen Apache2-Service bereitzustellen. Das Setup ist :doc:`hier </deployment/apache>` dokumentiert.
 
-Als nächstes installieren Sie das Shibboleth Apache Modul für die Service-Anbieter aus ihrem Distributionsrepository, z.B. für Debian/Ubuntu:
+Als nächstes installieren Sie das Shibboleth Apache Modul für die Service-Anbieter aus ihrem Distributionsrepositorium, z.B. für Debian/Ubuntu:
 
 .. code:: bash
 
     sudo apt-get install libapache2-mod-shib2
 
-Zusätzlich muss der `Django-shibboleth-remoteuser <https://github.com/Brown-University-Library/django-shibboleth-remoteuser>`_ in der virtuellen RDMO-Umgebung installiert werden: 
+Zusätzlich muss der `Django-shibboleth-remoteuser <https://github.com/Brown-University-Library/django-shibboleth-remoteuser>`_ in der virtuellen RDMO-Umgebung installiert werden:
 
 .. code:: bash
 
@@ -86,7 +86,7 @@ In ihrer ``config/settings/local.py`` fügen Sie Folgendes hinzu oder entfernen 
     LOGIN_URL = '/Shibboleth.sso/Login?target=/projects'
     LOGOUT_URL = '/Shibboleth.sso/Logout'
 
-wobei die Werte von ``SHIBBOLETH_ATTRIBUTE_MAP``, ``LOGIN_URL``, und ``LOGOUT_URL`` entsprechend ihrem Setup geändert werden müssen. Die Einstellung ``SHIBBOLETH = True`` deaktiviert das reguläre Login-Formular von RDMO und deaktiviert das Udpateformular für das Benutzerprofil, so dass der Benutzer seine Zugangsdaten nicht mehr ändern kann.  Die ``INSTALLED_APPS``, ``AUTHENTICATION_BACKENDS``, und ``MIDDLEWARE_CLASSES`` Einstellungen erlauben es, den Django-Shibboleth-Remoteuser mit RDMO zu verwenden. 
+wobei die Werte von ``SHIBBOLETH_ATTRIBUTE_MAP``, ``LOGIN_URL``, und ``LOGOUT_URL`` entsprechend ihrem Setup geändert werden müssen. Die Einstellung ``SHIBBOLETH = True`` deaktiviert das reguläre Login-Formular von RDMO und deaktiviert das Udpateformular für das Benutzerprofil, so dass der Benutzer seine Zugangsdaten nicht mehr ändern kann.  Die ``INSTALLED_APPS``, ``AUTHENTICATION_BACKENDS``, und ``MIDDLEWARE_CLASSES`` Einstellungen erlauben es, den Django-Shibboleth-Remoteuser mit RDMO zu verwenden.
 
 Starten Sie den Webserver neu.
 

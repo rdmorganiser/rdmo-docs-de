@@ -15,11 +15,11 @@ RDMO muss E-Mails an seine Benutzer schicken können. Die Vebindung zu dem SMPT-
 
     DEFAULT_FROM_EMAIL = ''
 
-Hier ist ``EMAIL_HOST`` die URL oder IP des SMTP-Servers, ``EMAIL_PORT`` ist der zugehörige Port (meistens 25, 465, oder 587) und  ``EMAIL_HOST_USER`` und ``EMAIL_HOST_PASSWORD`` sind die Zugangsdaten, falls der SMTP-Server eine Authenfizierung verlangt.
+Hier ist ``EMAIL_HOST`` die URL oder IP des SMTP-Servers, ``EMAIL_PORT`` ist der zugehörige Port (meistens 25, 465, oder 587), ``EMAIL_HOST_USER`` und ``EMAIL_HOST_PASSWORD`` sind die Zugangsdaten, falls der SMTP-Server eine Authenfizierung verlangt.
 
 Für eine``STARTTLS``-Verbindung (meistens auf Port 587) muss ``EMAIL_USE_TLS`` auf ``True`` gesetzt werden, während ``EMAIL_USE_SSL`` auf ``True`` gesetzt sein muss, um  eine implizite TLS/SSL Verbindung (meistens auf dem Port 465) zu ermöglichen.
 
-``DEFAULT_FROM_EMAIL`` setzt das FROM-Feld für die E-Mails, die dem Benutzer geschickt werden. 
+``DEFAULT_FROM_EMAIL`` setzt das Absender-Feld für die E-Mails, die dem Benutzer geschickt werden.
 
 Für ein Entwicklungs-/Test-Setup kann ein einfaches E-Mail-Backend verwendet werden, dass nur die E-Mail auf dem Terminal anzeigt:
 

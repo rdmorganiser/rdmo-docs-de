@@ -1,7 +1,7 @@
 Allgemeine Einstellungen
 ------------------------
 
-Einige allgemeine Einstellungen sollten in ihrer ``config/settings/local.py`` enthalten sein. Die erste und wahrscheinlich wichtigste Einstellung ist, wenn Sie RDMO im `Debug-Modus <https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-DEBUG>`_ ausführen:
+Einige allgemeine Einstellungen sollten in ihrer ``config/settings/local.py`` enthalten sein. Die erste und wahrscheinlich wichtigste Einstellung ist, ob Sie RDMO im `Debug-Modus <https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-DEBUG>`_ ausführen:
 
 .. code:: python
 
@@ -23,7 +23,7 @@ Im Betrieb erlaubt Django nur `Anfragen an bestimmte URLs <https://docs.djangopr
 
     ALLOWED_HOSTS = ['localhost', 'rdmo.example.com']
 
-Wenn Sie RDMO unter einem Alias wie http://example.com/rdmo laufen lassen möchten, mussen Sie die Basis-URL festlegen:
+Wenn Sie RDMO unter einem Alias wie http://example.com/rdmo laufen lassen möchten, müssen Sie die Basis-URL festlegen:
 
 .. code:: python
 

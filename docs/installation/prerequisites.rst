@@ -1,7 +1,7 @@
 Erforderliche Pakete installieren
 ----------------------------
 
-Das Installieren der erforderlichen Software-Pakete  für RDMO unterscheidet sich für verschiedene Betriebssysteme und ist daher in einzelnen Abschnitten dargelegt. Hier müssen Sie den Superuser verwenden.
+Das Installieren der erforderlichen Software-Pakete für RDMO unterscheidet sich für verschiedene Betriebssysteme und ist daher in einzelnen Abschnitten dargelegt. Hier müssen Sie den Superuser verwenden.
 
 Linux
 ~~~~~

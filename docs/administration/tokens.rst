@@ -1,7 +1,7 @@
 Authentifizierungs-Token
 ------------------------
 
-Um Daten in RDMO mit Hilfe einer programmierbaren API eingeben zu können, muss ein Benutzer mit einem Token assoziiert sein. Dies kann unter **AUTH TOKEN / Tokens** eingerichtet werden. Um einen Token zu erstellen, klicken Sie auf **token hinzufügen**, auf den Button rechts und:
+Um Daten in RDMO mit Hilfe einer programmierbaren API eingeben zu können, muss ein Benutzer mit einem Token assoziiert sein. Dies kann unter **AUTH TOKEN / Tokens** eingerichtet werden. Um einen Token zu erstellen, klicken Sie auf **token hinzufügen**, (der Button rechts) und:
 
 1. Wählen Sie den **Benutzer** für den Token.
 

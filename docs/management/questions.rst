@@ -1,16 +1,16 @@
 Fragen
 ------
 
-Das Fragenmanagement ist unter *Fragen* in dem Managementmenü in der Navigationsleiste verfügbar. Direkt nach einer RDMo-Instalaltion ist dieser Bereich zunächst leer. Wir bitten Sie daher zunächst unsere Domain und ggf. auch unseren generischen Fragenkatalog zu importieren. Die entsprechenden XML-Dateien finden Sie unter https://github.com/rdmorganiser/rdmo-catalog .
+Das Fragenmanagement ist unter *Fragen* im Managementmenü in der Navigationsleiste verfügbar. Direkt nach einer RDMO-Instalaltion ist dieser Bereich zunächst leer. Daher wird empfohlen erst unsere Domain und ggf. auch unseren generischen Fragenkatalog zu importieren. Die entsprechenden XML-Dateien finden Sie unter https://github.com/rdmorganiser/rdmo-catalog .
 
-Falls bereits mindestens ein Fragenkatalog vorhanden ist, so wird dieser autoamtisch angezeigt. Weitere Kataloge können in dem Sidebar darunter ausgewählt werden.
+Falls bereits mindestens ein Fragenkatalog vorhanden ist, so wird dieser automatisch angezeigt. Weitere Kataloge können in der Seitenleiste darunter ausgewählt werden.
 
 .. figure:: ../_static/img/screens/Fragen.PNG
    :target: ../_static/img/screens/Fragen.PNG
 
    Screenshot des Fragenmangements-Interfaces.
 
-Auf der linken Seite werden die Abschnitte, Teilabschnitte und Fragen des aktuellen Katalogs angezeigt. Für Abschnitte und Teilabschnitte wird der Titel und Schlüssel angezeigt. Für Fragen und Fragensets wird der Schlüssel und der Schlüssel des verknüpften Attributes oder Entität angezeigt. Die Reihenfolge der verschiedenen Elemente ist die Gleiche wie im strukturiertem Interview, welches dem Benutzer angezeigt wird. Auf der rechten Seite eines jeden Elementfeldes zeigen Symbole die Interaktionsmöglichkeiten an. Folgende Optionen sind verfügbar:
+Auf der linken Seite werden die Abschnitte, Teilabschnitte und Fragen des aktuellen Katalogs angezeigt. Für Abschnitte und Teilabschnitte wird der Titel und Schlüssel angezeigt. Für Fragen und Fragensets wird der Schlüssel und der Schlüssel des verknüpften Attributes angezeigt. Die Reihenfolge der verschiedenen Elemente ist die Gleiche wie im strukturierten Interview, welches dem Benutzer angezeigt wird. Auf der rechten Seite eines jeden Elementfeldes zeigen Symbole die Interaktionsmöglichkeiten an. Folgende Optionen sind verfügbar:
 
 * **Hinzufügen** (|add|) eines neuen Abschnittes, einer neuen Frage oder eines Fragensets zu einem Teilabschnitt oder eine neue Frage zu einem Fragenset.
 * **Bearbeiten** (|update|) eines Elements, um seine Eigenschaften zu ändern.
@@ -25,7 +25,7 @@ Auf der linken Seite werden die Abschnitte, Teilabschnitte und Fragen des aktuel
 Der Sidebar rechts enthält weitere Interface-Objekte:
 
 * **Katalog** wechselt zu der Ansicht eines anderen Katalogs.
-* **Filter** filtert eine Anssicht anhand eines vom Benutzer eingegebenen Strings. Alle Elemente, die diesen String in ihrem Pfad enthalten, werden angezeigt.
+* **Filter** filtert eine Ansicht anhand eines vom Benutzer eingegebenen Strings. Alle Elemente, die diesen String in ihrem Pfad enthalten, werden angezeigt.
 * **Optionen** enthält weitere Operationen:
 
   * Katalogeigenschaften bearbeiten
@@ -38,7 +38,7 @@ Der Sidebar rechts enthält weitere Interface-Objekte:
 
 * **Export** exportiert den aktuellen Katalog in eines der angebotenen Formate. Während Textformate hauptächlich für Präsentationszwecke sind, können XML-Exporte für den Transfer des Kataloges zu einer anderen RDMO-Installation verwendet werden.
 
-Die verschiedenen Elemente des Fragebogens haben verschiedenen Eigenschaften, um ihr Verhalten zu beschreiben. Wie in :doc:`der Einleitung <index>` beschrieben, haben alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur  dem Manager der RDMO-Installation zugänglich sind. Außerdem können folgende Parameter geändert werden:
+Die verschiedenen Elemente des Fragebogens haben verschiedenen Eigenschaften, um ihr Verhalten zu beschreiben. Wie in :doc:`der Einleitung <index>` erwähnt, haben alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur dem Manager der RDMO-Installation zugänglich sind. Außerdem können folgende Parameter geändert werden:
 
 .. figure:: ../_static/img/screens/FragenBearbeiten.PNG
    :target: ../_static/img/screens/FragenBearbeiten.PNG
@@ -98,7 +98,7 @@ Reihenfolge
   Bestimmt die Position des Fragesets in der Liste oder der Interview-Ansicht.
 
 Entität
-  Die Entität vom Dömänenmodel mit dem das Fragenset verknüipft ist. Beachte, dass die Art wie das Fragenset dem Benutzer gezeigt wird teilweise bei der Entität festgelegt ist. Eine Frage, die mit einer Kollektionsentität verknüpft ist, erlaubt Antworten für verschiedene Sets.
+  Die Entität vom Dömänenmodel mit dem das Fragenset verknüpft ist. Beachte, dass die Art wie das Fragenset dem Benutzer gezeigt wird teilweise bei der Entität festgelegt ist. Eine Frage, die mit einer Kollektionsentität verknüpft ist, erlaubt Antworten für verschiedene Sets.
 
 Titel (en)
   Der englische Titel des Unterabschnittes, der dem Benutzer angezeigt wird.
@@ -130,8 +130,8 @@ Widget type
   * **Yes/No** (Ein Set aus Radio Buttons für "Ja" und "Nein")
   * **Checkboxes** (Ein Set aus Checkboxen, das verknüpfte Attribut muss eine Kollektion sein)
   * **Radio Buttons** (Ein Set aus Radio buttons, das verknüpfte Attribut muss ein Optionenset sein)
-  * **Select drop down** (Ein Dropdown-Menu, das verknüpfte Attribut muss ein Optionenset haben) 
-  * **Range slider** (Ein horizontaler Schieber, das verknüpfte Attribut muss einen Wertebereich haben) 
+  * **Select drop down** (Ein Dropdown-Menu, das verknüpfte Attribut muss ein Optionenset haben)
+  * **Range slider** (Ein horizontaler Schieber, das verknüpfte Attribut muss einen Wertebereich haben)
   * **Date picker** (Ein Dropdown-Element mit einem Kalender, um ein Datum zu wählen. Das verknüpfte Attribut muss vom Datentyp Datetime sein)
 
 Text (en)
