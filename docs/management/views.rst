@@ -1,24 +1,24 @@
 Ansichten
 ---------
 
-Ansichten können unter *Ansichten* im Mangementmenü in der Navigationsleiste konfiguriert werden.
+Ansichten können unter *Ansichten* im Managementmenü in der Navigationsleiste konfiguriert werden.
 
-.. figure:: ../_static/img/screens/Ansichten.PNG
-   :target: ../_static/img/screens/Ansichten.PNG
+.. figure:: ../_static/img/screens/ansichten.png
+   :target: ../_static/img/screens/ansichten.png
 
    Screenshot des Ansichtenmangement-Interfaces.
 
-Auf der linken Seite werden alle Ansichten der RDMO-Installation angezeigt. Ansichten zeigen ihren Schlüssel, ihren Titel und eine Beschreibung. Auf der rechten Seite von jedem Ansichtenfeld zeigen Symbole die Interaktionsmöglichkeiten an. Folgende Otptionen stehen zur Verfügung:
+Auf der linken Seite werden alle Ansichten der RDMO-Installation angezeigt. Ansichten zeigen ihren Schlüssel, ihren Titel und eine Beschreibung. Auf der rechten Seite von jedem Ansichtenfeld zeigen Symbole die Interaktionsmöglichkeiten an. Folgende Optionen stehen zur Verfügung:
 
 * **Bearbeiten** (|update|) einer Ansicht, um dessen Eigenschaften zu ändern.
 * **Template bearbeiten** (|template|) einer Ansicht.
-* **Entfernen** (|delete|) einer Ansicht. **Diese Handlung kann nicht rückgängig gemacht werden!**
+* **Entfernen** (|delete|) einer Ansicht. **Diese Aktion kann nicht rückgängig gemacht werden!**
 
 .. |update| image:: ../_static/img/icons/update.png
 .. |template| image:: ../_static/img/icons/template.png
 .. |delete| image:: ../_static/img/icons/delete.png
 
-Die Sidebar auf der rechten Seite enthält weitere Interface-Objekte:
+Die Sidebar auf der rechten Seite enthält weitere Bedienelemente:
 
 * **Filter** filtert die Ansicht anhand eines vom Benutzer gegeben Strings. Nur Ansichten, die diesen String in ihrem Pfad haben, werden angezeigt.
 * **Optionen** ermöglichen weitere Operationen:
@@ -48,23 +48,32 @@ Hilfe (de)
 Vorlage
 """""""
 
-.. figure:: ../_static/img/screens/Template.PNG
-   :target: ../_static/img/screens/template.PNG
+.. figure:: ../_static/img/screens/vorlage.png
+   :target: ../_static/img/screens/vorlage.png
 
    Screenshot des Vorlagen-Fensters.
 
-Jede Ansicht hat eine Vorlage (Template), die bestimmt, wie vom Benutzer gegeben Antworten in einem Textdokument dargestellt wird. Die Vorlage benutzt die `Django template <https://docs.djangoproject.com/en/1.11/ref/templates/language/>`_ syntax, welche in Kombination mit regulärem HTML, Variablen, deren Werte bei der Vorlageauswertung eingefüllt werden (``{{ a_variable }}``), und Tags, welche die Logik der Vorlage kontrollieren (``{% a_tag %}``).
+Jede Ansicht hat eine Vorlage (Template), die bestimmt wie Fragen mitsamt ihrer Antworten in einem Textdokument dargestellt werden. Die Vorlage benutzt die `Django template <https://docs.djangoproject.com/en/1.11/ref/templates/language/>`_ syntax, welche sich aus einer Kombination aus regulärem HTML, Variablen und Tags zusammensetzt. Variablen (``{{ a_variable }}``) werden bei der Vorlageauswertung durch ihre entsprechenden Werte ersetzt. Tags (``{% a_tag %}``) kontrollieren die Logik der Vorlage.
 
-Zwei Variablen können in RDMO Vorlagen verwendet werden:
+In der ersten Zeile einer ``Vorlage`` befindet sich der Befehl, der dafür sorgt, dass die verfügbaren Tags geladen werden. Auf diese Weise können sie im vorliegenden Template genutzt werden.
 
-* ``values``, welche mittels einer verschachtelten Python-Datenstruktur (dictionary) die Antworten des Benutzers unter Verwendung der Attribute abbildet. 
-* ``conditions``, welche mittels einer Python-Datenstruktur (dictionary) die Schlüssel der Bedingungen nutzt, um die Werte der eingegebenen Antworten zur Verfuegung zu stellen (z.B. ``wahr`` oder ``falsch``).
+.. code:: django
 
-Ein Beispiel: das Attribut sei  ``project/research_question/title`` (spezifischer: das Attribut ``titel`` in der Entität ``fragestellung`` in der Entität ``project``). Ein Benutzer beantwortet die zum Attribut gehörige Frage mit: "Kühn dorthin gehen, wohin noch kein Mensch sich gewagt hat". Der Attributwert ist dann in der Vorlage als ``values.project.fragestellung.title`` (beachte den ``.`` anstatt des ``/``) abzurufen. In der Vorlage wird die Syntax für eine Variable verwendet: 
+    {% load view_tags %}
+
+Unmittelbar danach befindet sich in der Regel die Variablen-Deklaration der genutzten Datensätze. Auf diese Weise können Platzhalter definiert werden, die im gesamten Template zu Verfügung stehen. Diese können beispielsweise für Schleifen genutzt werden, wie wir später sehen werden.
+
+.. code:: django
+
+    {% get_set 'project/partner' as partners %}
+    {% get_set 'project/dataset' as datasets %}
+
+
+Nehmen wir an es gäbe ein Attribut ``project/research_question/title`` und einen Benutzer, der die zum Attribut gehörige Frage mit: "Kühn dorthin gehen, wohin noch kein Mensch sich gewagt hat" beantwortet hat. Der Attributwert ist dann in der Vorlage als ``values/project/fragestellung/title`` abrugbar. In der Vorlage wird die Syntax für eine Variable verwendet:
 
 .. code-block:: django
 
-    Die Fragestellung des Projekts ist: {{ values.project.research_question.title }}
+    Die Fragestellung des Projekts ist: {% render_value 'project/research_question/title' %}
 
 würde dann, wenn ausgewertet im Kontext beim Benutzer seines Projekts, ausgeben:
 
@@ -72,40 +81,52 @@ würde dann, wenn ausgewertet im Kontext beim Benutzer seines Projekts, ausgeben
 
     Die Fragestellung des Projekts ist: "Kühn dorthin gehen, wohin noch kein Mensch sich gewagt hat".
 
-Kollektionen können mit dem ``for``-Tag von Django template syntax realisiert werden.
+Sammlungen können mit dem ``for``-Tag von Django template syntax realisiert werden.
 
 .. code-block:: django
 
     <ul>
-    {% for keyword in project.research_question.keywords %}
-        <li>{{ keyword }}</li>
-    {% endfor %}
+        {% for keyword in 'project/research_question/keywords' %}
+            <li>{% render_value keyword %}</li>
+        {% endfor %}
     </ul>
 
-Die üblichen Filter für die Django-Syntax können auch verwendet werden, z.B.:
+
+Listen von mehreren Werten können auf diese Weise erzeugt werden.
 
 .. code-block:: django
 
     <p>
-        {{ values.project.research_question.keywords | join:', ' }}
+        {% render_value_inline_list 'project/research_question/keywords' %}
     </p>
 
 Für Sammlungsentitäten:
 
 .. code-block:: django
 
-    {% for dataset in values.project.dataset %}
-    <p>
-        <i>Dataset {{ dataset.id }}:</i> {{ dataset.usage_description }}
-    </p>
+    {% for dataset in 'project/dataset' %}
+        <p>
+            <i>Dataset {% render_set_value dataset 'project/dataset/id' %}:</i> {% 'project/dataset/usage_description' %}
+        </p>
     {% endfor %}
 
-Bedingungen können mit Hilfe des ``if`` tag verwendet werden.
+Wenn sie die eingangs erwähnten Platzhalter variables nutzen möchten, dann sieht ihr Code womöglich so aus:
 
 .. code-block:: django
 
-    {% if conditions.personal_data %}
-    Dies wird nur ausgeführt, wenn personal_data als wahr ausgewertet wird.
+    {% for dataset in datasets %}
+        <p>
+            {% render_set_value dataset 'project/dataset/id' %}
+        </p>
+    {% endfor %}
+
+Ob Werte bestimmte Bedingungen erfüllen, kann ebenfalls ausgewertet werden. Wenn Sie beispielsweise etwas anzeigen möchten, nur dann wenn ein bestimmter Wert **true** ist, können sie das auf folgende Weise tun. Beachten Sie, dass analog zu **.is_true** auch eine genau so funktionierende **.is_false** Funktion existiert.
+
+.. code-block:: django
+
+    {% get_value 'conditions.personal_data' as val %}
+    {% if val.is_true %}
+        This will be only rendered if personal_data resolves to be true.
     {% endif %}
 
 Bitte lesen Sie die Dokumentation von Django template syntax für alle verfügbaren Tags und Filter: https://docs.djangoproject.com/en/1.11/ref/templates/language.
