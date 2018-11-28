@@ -9,7 +9,7 @@ Als nächstes installieren Sie das Shibboleth Apache Modul für die Service-Anbi
 
     sudo apt-get install libapache2-mod-shib2
 
-Zusätzlich muss der `Django-shibboleth-remoteuser <https://github.com/Brown-University-Library/django-shibboleth-remoteuser>`_ in der virtuellen RDMO-Umgebung installiert werden:
+Zusätzlich muss der `django-shibboleth-remoteuser <https://github.com/Brown-University-Library/django-shibboleth-remoteuser>`_ in der virtuellen RDMO-Umgebung installiert werden:
 
 .. code:: bash
 
@@ -45,7 +45,7 @@ Starten Sie den Shibboleth Service neu:
 
     service shibd restart
 
-In ihrer virtuellen Host-Konfiguration (Apache2) fügen Sie folgendes hinzu:
+In ihrer Virtual-Host-Konfiguration (Apache2) fügen Sie folgendes hinzu:
 
 ::
 

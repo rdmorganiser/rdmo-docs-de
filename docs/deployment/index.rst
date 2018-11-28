@@ -1,12 +1,12 @@
-Einsatz
-========
-
+Deployment
+==========
 
 Wie bereits erwähnt kann RDMO in zwei verschiedenen Setups genutzt werden:
 
-* für :doc:`Entwicklung oder Testen <development>` benutzte Sie den eingebauten Django-Entwicklungsserver.
+* für :doc:`Entwicklung oder zum Test <development>` wird der eingebaute Django-Entwicklungsservers genutzt.
 
-* für den Betrieb wird ein Webserver und das `wsgi <https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/>`_ Protokoll verwendet. Wir empfehlen eine der folgenden zwei Setups zu verwenden: 
+* für den Betrieb wird ein Webserver und das `wsgi <https://docs.djangoproject.com/en/1.11/howto/deployment/wsgi/>`_ Protokoll verwendet. Wir empfehlen eines der folgenden Setups zu verwenden:
+
     * :doc:`Apache2 und mod_wsgi <apache>` (Nur hier kann Shibboleth verwendet werden.)
     * :doc:`nginx, gunicorn und systemd <nginx>`
 

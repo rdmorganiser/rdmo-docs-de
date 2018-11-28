@@ -60,4 +60,4 @@ Danach fügen Sie folgende Zeilen hinzu oder entfernen die Kommentarzeichen in `
         'django_auth_ldap.backend.LDAPBackend'
     )
 
-Die Einstellung ``PROFILE_UPDATE = False`` deaktiviert das Updateformular des Benutzerprofils in RDMO, so dass der Benutzer seine Zugangsdaten nicht mehr verändern kann. Die anderen Einstellungen werden von ``Django-auth-ldap`` benötigt und sind in der `django-auth-ldap Dokumentation <http://pythonhosted.org/django-auth-ldap>`_ beschrieben.
+Die Einstellung ``PROFILE_UPDATE = False`` deaktiviert das Updateformular des Benutzerprofils in RDMO, so dass der Benutzer seine Zugangsdaten nicht mehr verändern kann. Die anderen Einstellungen werden von ``django-auth-ldap`` benötigt und sind in der `django-auth-ldap Dokumentation <http://pythonhosted.org/django-auth-ldap>`_ beschrieben.

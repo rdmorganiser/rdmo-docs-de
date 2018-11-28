@@ -1,7 +1,7 @@
 Installation
 ============
 
-Für Demonstrations-, Entwicklungs- oder Testzwecke kann RDMO auf Linux, Windows und macOS installiert werden. Falls Sie jedoch eine Produktionsumgebung aufsetzen möchten, RDMO über ein Netzwerk oder das Internet anbieten möchten, empfehlen wir sehr eine aktuelle Linux-Version, namentlich CentOS7, Debian 8 oder 9, oder Ubuntu 16.04.3 LTS (Xenial Xerus) zu verwenden.
+Für Demonstrations-, Entwicklungs- oder Testzwecke kann RDMO auf Linux, Windows und macOS installiert werden. Falls Sie jedoch eine Produktionsumgebung aufsetzen möchten, RDMO über ein Netzwerk oder das Internet anbieten möchten, empfehlen wir die Verwendung einer aktuellen Linux-Distribution, insbesondere CentOS7, Debian 8 oder 9, oder Ubuntu 16.04.3 LTS (Xenial Xerus).
 
 Der Code ist hauptsächlich in Python geschrieben und sollte mit Python höher als Version 3.4 laufen. RDMO funktioniert auch mit Python 2.7. Beachten Sie, dass für ein CentOS7/Apache-Setup nur Python 2.7 verwendet werden kann.
 

@@ -3,18 +3,18 @@ Domäne
 
 Das Domänenmodel kann unter *Domäne* im Managementmenü in der Navigationsleiste verändert werden.
 
+Nach der Installation von RDMO ist die Domäne zunächst leer. **Wir empfehlen allen Betreibern von RDMO initial die vom Projekt erarbeitete Domäne zu importieren.**. Die Nutzung einer einheitlichen Domäne über alle RDMO Instanzen ermöglicht den Austausch von Fragenkatalogen, Ansichten und anderem Inhalt und kann perspektivisch zu einem einheitlichen Metadata Application Profile für die Planung des Datenmanagements führen. Die entsprechende XML-Datei ist unter https://github.com/rdmorganiser/rdmo-catalog verfügbar. Sie können die Domäne gerne nach Ihren Wünschen erweitern. Bedenken Sie aber, dass sie der Startpunkt für das Erstellen von Fragenkatalogen sein sollte und die Grundlage der Interoperabilität und Kooperativität verschiedener RDMO-Instanzen ist.
+
 .. figure:: ../_static/img/screens/domaene.png
    :target: ../_static/img/screens/domaene.png
 
    Screenshot vom Domain-Management Interface.
 
-Nach der Installation von RDMO ist die Domäne zunächst leer. Wir bitten Sie unsere Domäne zu importieren. Die entsprechende XML-Datei ist unter https://github.com/rdmorganiser/rdmo-catalog verfügbar. Sie können die Domäne gerne nach Ihren Wünschen erweitern. Bedenken Sie aber, dass sie immer der Startpunkt für das Erstellen von Fragenkatalogen und daher nicht weniger als die Grundlage der Interoperabilität und Kooperativität verschiedener RDMO-Instanzen ist.
+Es werden alle Attribute der RDMO-Installation gezeigt. Auf der rechten Seite eines jeden Elementfeldes gibt es Icons mit folgender Bedeutung:
 
-Es werden alle Attribute der RDMO-Installation gezeigt. Außerdem wird ist der Pfad erkennbar und ob Attribute eine ``Sammlung`` (collection) sind. Auf der rechten Seite eines jeden Elementfeldes gibt es Icons mit folgender Bedeutung:
-
-* **Hinzufügen** (|add|) eines neuen Attributes zur gewählten Entität.
+* **Hinzufügen** (|add|) eines neuen Attributes zum gewählten Attribut.
 * **Bearbeiten** (|update|) eines Attributes, um seine Eigenschaften zu ändern.
-* **Entfernen** (|delete|) eines Attributes oder einer Entität und all ihrer abhängigen Elemente (z.B. eine Entität und all ihre abhängigen Entitäten und Attribute im Domänen-Modelbaum). **Diese Aktion kann nicht rückgängig gemacht werden!**
+* **Entfernen** (|delete|) eines Attributes und all ihrer abhängigen Attribute **Diese Aktion kann nicht rückgängig gemacht werden!**
 
 .. |add| image:: ../_static/img/icons/add.png
 .. |update| image:: ../_static/img/icons/update.png
@@ -39,4 +39,4 @@ Attribute
 """""""""
 
 Übergeordnetes Attribut
-  Gibt an welches Attribut im Domänenmodell über dem vorliegenden steht. Wird das Eltern-Attribut verändert, verschiebt es sich mitsamt seiner Abkömmlinge an einen anderen Zweig des Domänen-Baummodells.
+  Gibt an welches Attribut im Domänenmodell über dem vorliegenden steht.

@@ -1,7 +1,7 @@
 Bedingungen
 -----------
 
-Bedingungen können erstellt und bearbeitet werden. Wählen Sie *Bedingungen* im Managementmenü der Navigationsleiste. Die Bedingungen werden in einem anderen Schritt mit Attributen, Optionensets oder Aufgaben verbunden.
+Bedingungen können erstellt und bearbeitet werden. Wählen Sie *Bedingungen* im Managementmenü der Navigationsleiste. Die Bedingungen kömmen dann später mit Fragen sets, Optionensets oder Aufgaben verbunden.
 
 
 .. figure:: ../_static/img/screens/bedingungen.png
@@ -42,7 +42,7 @@ Beziehung
   Die Beziehung dieser Begingung
 
 Ziel (Text)
-  Falls ein reguläres Attribut verwendet wird, wird der Textwert dieses Attributes geprüft.
+  Falls ein normaler Wert verwendet wird: Der Text gegen den diese Bedingung ausgewertet wird.
 
 Ziel (Option)
-  Falls ein Optionsattribut verwendet wird, wird die Option der Bedingung geprüft.
+  Falls ein Optionen-Wert verwendet wird, die Option gegen die diese Bedingung ausgewertet wird.

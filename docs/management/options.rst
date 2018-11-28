@@ -12,7 +12,7 @@ Auf der linken Seite sind alle Optionen und Optionsets der RDMO-Installation dar
 
 * **Hinzufügen** (|add|) einer neuen Option oder eines Optionensets.
 * **Bearbeiten** (|update|) der Eigenschaften einer Option oder eines Optionensets.
-* **Bedingungen bearbeiten** (|conditions|) eines Optionsets. Eine Frage, die mit einem Attribut verknüpft ist, die wiederum selbst mit einem Optionenset verknüpft ist, wird die Optionen des Sets im Fragekatalog nicht anzeigen, wenn die Bedingung als falsch ausgerwertet wird. Die Bedingungen selbst sind im :doc:`Bedingungsmangement <conditions>` konfiguriert.
+* **Bedingungen bearbeiten** (|conditions|) (eines Optionsets). Eine Frage, die mit einem Optionenset verknüpft ist, wird die Optionen des Sets im Fragekatalog nicht anzeigen, wenn die Bedingung negativ evaluiert wird. Die Bedingungen selbst sind im :doc:`Bedingungsmangement <conditions>` konfiguriert.
 * **Löschen** (|delete|) einer Option oder eines Optionensets und im Falle ines Optionensets all seiner Optionen. **Diese Aktion kann nicht rückgägnig gemacht werden!**
 
 .. |add| image:: ../_static/img/icons/add.png
@@ -32,16 +32,13 @@ Die Sidebar auf der rechten Seite zeigt weitere Bedienelemente:
 
 Optionensets und das Optionenmodel haben unterschiedliche Eigenschaften, um ihr Verhalten zu verändern. Wie in :doc:`der Einleitung <index>` erklärt, besitzen alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von den anderen Managers der RDMO-Installation gesehen werden können. Ferner können folgende Parameter verändert werden:
 
-.. figure:: ../_static/img/screens/Bearbeiten.PNG
-   :target: ../_static/img/screens/Bearbeiten.PNG
-
-   Screenshot des Interfaces für die Parameter.
 
 Optionensets
 """"""""""""
 
 Reihenfolge
   Bestimmt die Position des Optionensets in der Liste im Fragenkatalog (falls ein Attribut mehr als ein Optionenset besitzt).
+
 
 Option
 """"""

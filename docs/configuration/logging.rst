@@ -76,5 +76,5 @@ Das Protokollieren (Schreiben von Logs) kann in Django sehr komplex werden und i
 
 Dies produziert zwei Log-Dateien:
 
-* ``/var/log/rdmo/error.log`` wird Ausnahme-Nachrichten von Anwendungsfehlern enthalten (Statuscode: 500). Diese Nachrichten entsprechen denen, die ``DEBUG = True`` erzeugt. Im normalen Betrieb sollen solche Meldungen nicht vorkommen. Hinzukommt eine E-Mail an alle Admins, die in der ``ADMINS``-Einstellung konfiguriert sind.
+* ``/var/log/rdmo/error.log`` wird Exception-Messages von Anwendungsfehlern enthalten (Statuscode: 500). Diese Nachrichten entsprechen denen, die ``DEBUG = True`` erzeugt, die aber im normalen Betrieb nicht erscheinen. Zusätzlich wird eine E-Mail an alle Admins, die in der ``ADMINS``-Einstellung konfiguriert sind, versendet.
 * ``/var/log/rdmo/rdmo.log`` sind weitere Log-Informationen vom RDMO-Code enthalten.
