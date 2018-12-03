@@ -3,45 +3,42 @@ Optionen
 
 Optionen und Optionensets können unter *Optionen* im Managementmenü in der Navigationsleiste bearbeitet werden.
 
-.. figure:: ../_static/img/screens/Optionen.PNG
-   :target: ../_static/img/screens/Optionem.PNG
+.. figure:: ../_static/img/screens/optionen.png
+   :target: ../_static/img/screens/optionen.png
 
    Screenshot des Optionenmanagement-Interfaces.
 
-Auf der linken Seite sind alle Optionen und Optionsets der RDMO-Installation dargestellt. Optionensets zeigen ihren Schlüssel, während Optionen ihren Pfad und ihen Text zeigen. Auf der rechten Seite von jedem Optionenfeld befinden sich Symbole zum Bearbeiten der Elemente. Folgende Optionen sind verfügbar:
+Auf der linken Seite sind alle Optionen und Optionsets der RDMO-Installation dargestellt. Optionensets zeigen ihren Schlüssel, während bei Optionen ihr Pfad und ihr Text dargestellt wird. Auf der rechten Seite von jedem Optionenfeld befinden sich Symbole zum Bearbeiten der Elemente. Folgende Optionen sind verfügbar:
 
 * **Hinzufügen** (|add|) einer neuen Option oder eines Optionensets.
 * **Bearbeiten** (|update|) der Eigenschaften einer Option oder eines Optionensets.
-* **Bedingungen bearbeiten** (|conditions|) eines Optionsets. Eine Frage, die mit einem Attribut verknüpft ist, die wiederum selbst mit einem Optionenset verknüpft ist, wird die Optionen des Sets im Fragekatalog nicht anzeigen, wenn die Bedingung als falsch ausgerwertet wird. Die Bedingungen selbst sind im :doc:`Bedingungsmangement <conditions>` konfiguriert.
-* **Löschen** (|delete|) einer Option oder eines Optionensets und im Falle ines Optionensets all seiner Optionen. **Diese Handlung kann nicht rückgägnig gemacht werden!**
+* **Bedingungen bearbeiten** (|conditions|) (eines Optionsets). Eine Frage, die mit einem Optionenset verknüpft ist, wird die Optionen des Sets im Fragekatalog nicht anzeigen, wenn die Bedingung negativ evaluiert wird. Die Bedingungen selbst sind im :doc:`Bedingungsmangement <conditions>` konfiguriert.
+* **Löschen** (|delete|) einer Option oder eines Optionensets und im Falle ines Optionensets all seiner Optionen. **Diese Aktion kann nicht rückgägnig gemacht werden!**
 
 .. |add| image:: ../_static/img/icons/add.png
 .. |update| image:: ../_static/img/icons/update.png
 .. |conditions| image:: ../_static/img/icons/conditions.png
 .. |delete| image:: ../_static/img/icons/delete.png
 
-Die Sidebar auf der rechten Seite zeigt weitere Interface-Objekte:
+Die Sidebar auf der rechten Seite zeigt weitere Bedienelemente:
 
-* **Filter** erlaubt Suche nach einem vom Benutzer gegeben String. Nur Elemente, die diesen String in ihrem Pfad enthalten, werden angezeigt.
+* **Filter** filtert die Ansicht anhand eines vom Benutzer eingegebenen Strings. Nur Elemente, die diese Zeichenkette in ihrem Pfad enthalten, werden gezeigt.
 * **Options** hält weitere Operationen bereit:
 
    * Neues (leeres) Optionenset erstellen
    * Neue (leere) Option erstellen
 
-* **Exports** exportiert die Optionensets in eines der angezeigten Formate. Während die Textformate hautpsächlich für die Darstellung sind, können XML-Exporte für den Transfer der Optionen zu einer anderen RDMO-Installation verwendet werden.
+* **Exports** exportiert die Optionensets in eines der angezeigten Formate. Während die Textformate hauptsächlich für die Darstellung sind, können XML-Exporte für den Transfer der Optionen zu einer anderen RDMO-Installation verwendet werden.
 
 Optionensets und das Optionenmodel haben unterschiedliche Eigenschaften, um ihr Verhalten zu verändern. Wie in :doc:`der Einleitung <index>` erklärt, besitzen alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von den anderen Managers der RDMO-Installation gesehen werden können. Ferner können folgende Parameter verändert werden:
 
-.. figure:: ../_static/img/screens/Bearbeiten.PNG
-   :target: ../_static/img/screens/Bearbeiten.PNG
-
-   Screenshot des Interfaces für die Parameter.
 
 Optionensets
 """"""""""""
 
 Reihenfolge
   Bestimmt die Position des Optionensets in der Liste im Fragenkatalog (falls ein Attribut mehr als ein Optionenset besitzt).
+
 
 Option
 """"""

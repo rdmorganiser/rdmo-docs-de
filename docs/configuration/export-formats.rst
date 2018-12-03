@@ -1,7 +1,7 @@
-Formate exportieren
--------------------
+Export formate
+--------------
 
-RDMO unterstützt das Exportieren zu bestimmten Formaten mit Hilfe vom großartigen `Pandoc <https://pandoc.org/>`_ Konvertierer. Die Liste der zur Auswahl stehenden Formate kann angepasst werden indem die ``EXPORT_FORMATS``-Einstellung in ihrem ``config/settings/local.py`` konfiguriert wird.
+RDMO unterstützt das Exportieren in bestimmten Formaten mit Hilfe des ausgezeichneten `Pandoc <https://pandoc.org/>`_ Konvertierers. Die Liste der zur Auswahl stehenden Formate kann über die ``EXPORT_FORMATS``-Einstellung in der ``config/settings/local.py`` angepasst werden.
 
 .. code:: python
 
@@ -18,7 +18,7 @@ RDMO unterstützt das Exportieren zu bestimmten Formaten mit Hilfe vom großarti
 
 Die verschienden Formate, die von pandoc unterstützt werden, finden Sie `auf der Pandoc-Homepage <https://pandoc.org/>`_.
 
-Das Seiten-Format und verschiedene andere Dinge, die Formatierung und Aussehen von Textdokumenten betreffen, können mit Hilfe von Referenzdokumenten angepasst werden. Die `Pandoc-Dokumentation <https://pandoc.org/MANUAL.html>`_ hält eine ausführliche Liste der unterstützten Einstellungen bereit, die unterhalb des Paragraphen '--reference-doc' eingesehen werden kann. Referenzdokumente können für die Formate ``.docx`` und ``.odt`` verwendet werden. Welche Datei als Referenzdokument dient, wird in der ``config/settings/local.py`` definiert. Wenn diese Einträge nicht in Ihrer Konfiguration sind, werden die Standard-Referenzdokumente aus der RDMO-Installation verwendet.
+Das Seitenformat und verschiedene andere Dinge, die Formatierung und Aussehen von Textdokumenten betreffen, können mit Hilfe von Referenzdokumenten angepasst werden. Die `Pandoc-Dokumentation <https://pandoc.org/MANUAL.html>`_ hält eine ausführliche Liste der unterstützten Einstellungen bereit, die unterhalb des Paragraphen '--reference-doc' eingesehen werden kann. Referenzdokumente können für die Formate ``.docx`` und ``.odt`` verwendet werden. Welche Datei als Referenzdokument dient, wird in der ``config/settings/local.py`` definiert. Wenn diese Einträge nicht in Ihrer Konfiguration sind, werden die Standard-Referenzdokumente aus dem RDMO Paket verwendet.
 
 .. code:: python
 

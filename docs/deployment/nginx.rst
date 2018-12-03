@@ -1,7 +1,7 @@
 nginx und gunicorn
 ------------------
 
-Für RDMO sollte ein dezidierter Benutzer verwendet werden. Alle Schritte in der Anleitung, welche keine Root-Rechte benötigen, sollten mit diesem dezidierten Benutzer ausgeführt werden. Hier gehen wir davon aus, dass der Benutzer ``rdmo`´ genannt wurde, sein Home-Verzeichnis ``/srv/rdmo`` ist und demnach ihre ``rdmo-app`` unter ``/srv/rdmo/rdmo-app`` zu finden ist.
+Wie schon mehrmals angesprochen, sollte für RDMO ein dezidierter Benutzer verwendet werden. Alle Schritte in der Anleitung, welche keine Root-Rechte benötigen, sollten mit diesem dezidierten Benutzer ausgeführt werden. Hier gehen wir davon aus, dass der Benutzer ``rdmo`` genannt wurde, sein Home-Verzeichnis ``/srv/rdmo`` ist und demnach ihre ``rdmo-app`` unter ``/srv/rdmo/rdmo-app`` zu finden ist.
 
 Als erstes installieren Sie  ``gunicorn`` in ihrer virtuellen Umgebung:
 
@@ -9,7 +9,7 @@ Als erstes installieren Sie  ``gunicorn`` in ihrer virtuellen Umgebung:
 
     pip install -r requirements/gunicorn.txt
 
-Dann testen Sie ``gunicorn``:
+Dann kann ``gunicorn`` getestet werde:
 
 .. code:: bash
 
@@ -17,7 +17,7 @@ Dann testen Sie ``gunicorn``:
 
 Dies sollte die Anwendung genauso wie ``runserver`` laufen lassen, aber ohne statische Inhalte wie CSS-Dateien oder Bilder. Nach dem Test beenden Sie den ``gunicorn``-Prozess wieder.
 
-Dann erstellen Sie für den systemd service eine Datei für RDMO. Systemd wird den gunicorn-Prozess bei der Intriebnahme starten und überwachen. Erstellen Sie eine neue Datei unter ``/etc/systemd/system/rdmo.service``  und geben Sie ein (Sie benötigen root/sudo-Rechte dafür): 
+Systemd wird den gunicorn-Prozess bei der Intriebnahme starten und überwachen. Erstellen Sie eine neue systemd-Service-Datei unter ``/etc/systemd/system/rdmo.service``  mit dem folgenden Inhalt (Sie benötigen root/sudo-Rechte dafür):
 ::
 
     [Unit]
@@ -28,12 +28,13 @@ Dann erstellen Sie für den systemd service eine Datei für RDMO. Systemd wird d
     User=rdmo
     Group=rdmo
     WorkingDirectory=/srv/rdmo/rdmo-app
-    ExecStart=/srv/rdmo/rdmo-app/env/bin/gunicorn --bind unix:/srv/rdmo/rdmo.sock config.wsgi:application
+    ExecStart=/srv/rdmo/rdmo-app/env/bin/gunicorn \
+        --bind unix:/srv/rdmo/rdmo.sock config.wsgi:application
 
     [Install]
     WantedBy=multi-user.target
 
-Dieser Service muss gestartet und aktiviert werden wie jeder andere Service auch:
+Dieser Service muss wie üblich gestartet und aktiviert werden:
 
 .. code:: bash
 
@@ -47,7 +48,7 @@ Danach installieren Sie nginx:
     sudo apt install nginx  # on Debian/Ubuntu
     sudo yum install nginx  # on RHEL/CentOS
 
-Veränderen Sie die nginx-Konfiguration wie folgt (mit root/sudo-Rechten):
+Editieren Sie die nginx-Konfiguration wie folgt (mit root/sudo-Rechten):
 
 .. code:: bash
 
