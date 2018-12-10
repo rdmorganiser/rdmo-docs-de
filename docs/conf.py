@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-RDMO_VERSION = '0.9.4'
+RDMO_VERSION = '0.11'
 
 # RDMO Documentation documentation build configuration file, created by
 # sphinx-quickstart on Fri Mar  3 11:25:56 2017.
@@ -21,6 +21,24 @@ RDMO_VERSION = '0.9.4'
 
 import sphinx_rtd_theme
 
+# -- Markdown dependencies and config -------------------------------------
+from recommonmark.parser import CommonMarkParser
+from recommonmark.transform import AutoStructify
+
+source_parsers = {
+    '.md': CommonMarkParser,
+}
+
+
+def setup(app):
+    app.add_config_value('recommonmark_config', {
+        # 'auto_toc_tree_section': 'Contents',
+        'enable_auto_toc_tree': False,
+        'enable_eval_rst': True,
+    }, True)
+    app.add_transform(AutoStructify)
+
+
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -30,7 +48,11 @@ import sphinx_rtd_theme
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode']
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.viewcode',
+    'sphinx_markdown_tables'
+]
 
 # Add any pathes that contain templates here, relative to this directory.
 templates_path = ['_templates']
