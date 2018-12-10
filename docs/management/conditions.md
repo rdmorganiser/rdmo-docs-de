@@ -2,14 +2,14 @@
 
 Bedingungen können erstellt und bearbeitet werden. Wählen Sie *Bedingungen* im Mangamentmenü der Navigationsleiste. Die Bedingungen werden in einem anderen Schritt mit Entitäten, Attributen, Optionensets oder Aufgaben verbunden.
 
-![](../../_static/img/screens/bedingungen.png)
+![](../_static/img/screens/bedingungen.png)
 > *Screenshot des Bedinungen-Managment Interfaces.*
 
 Auf der linken Seite sind alle Bedingungen der RDMO-Installation verfügbar. Für jede Bedingung wird ihr Schlüssel und eine textuelle Darstellung angezeigt. Auf der rechten Seite von jedem Bedingungsfeld zeigen Symbole an wie mit dem jeweiligen Element interagiert werden kann. Die folgenden Optionen stehen zur Auswahl:
 
 
-* **Bearbeiten** (![](../../_static/img/icons/update.png)) der Eigenschaften einer Bedingung.
-* **Löschen** (![](../../_static/img/icons/delete.png)) einer Bedingung. **Diese Handlung kann nicht rückgängig gemacht werden!**
+* **Bearbeiten** (![](../_static/img/icons/update.png)) der Eigenschaften einer Bedingung.
+* **Löschen** (![](../_static/img/icons/delete.png)) einer Bedingung. **Diese Handlung kann nicht rückgängig gemacht werden!**
 
 In der rechten Sidebar gibt es weitere Interface-Optionen:
 

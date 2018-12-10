@@ -4,15 +4,15 @@ Das Fragenmanagement ist unter *Fragen* im Managementmenü in der Navigationslei
 
 Falls bereits mindestens ein Fragenkatalog vorhanden ist, so wird dieser automatisch angezeigt. Weitere Kataloge können in der Seitenleiste darunter ausgewählt werden.
 
-![](../../_static/img/screens/fragen.png)
+![](../_static/img/screens/fragen.png)
 > *Screenshot des Fragenmangements-Interfaces*
 
 Auf der linken Seite werden die Abschnitte, Fragensets und Fragen des aktuellen Katalogs angezeigt. Für Abschnitte und Fragensets wird der Titel und Schlüssel angezeigt. Für Fragen und Fragensets wird der Schlüssel und der Schlüssel des verknüpften Attributes angezeigt. Die Reihenfolge der verschiedenen Elemente ist die Gleiche wie im strukturierten Interview, welches den Nutzenden angezeigt wird. Auf der rechten Seite eines jeden Elementfeldes zeigen Symbole die Interaktionsmöglichkeiten an. Folgende Optionen sind verfügbar:
 
-* **Hinzufügen** (![](../../_static/img/icons/add.png)) eines neuen Abschnittes, eines Fragensets oder einer Frage.
-* **Bearbeiten** (![](../../_static/img/icons/update.png)) eines Elements, um seine Eigenschaften zu ändern.
-* **Kopieren** (![](../../_static/img/icons/copy.png)) einer Frage oder eines Fragekatalogs. Dies wird das gleiche Fenster öffnen wie das Bearbeiten. Es können einige der Eigenschaften verändert werden und das Element wird als ein neues Element gespeichert. Dies kann Zeit sparen wenn mehrere ähnliche Fragen erstellt werden.
-* **Löschen** (![](../../_static/img/icons/delete.png)) eines Elements und all seiner Abkömmlinge (z.B. Fragensets und all dessen Fragen). **Diese Aktion kann nicht rückgängig gemacht werden!**
+* **Hinzufügen** (![](../_static/img/icons/add.png)) eines neuen Abschnittes, eines Fragensets oder einer Frage.
+* **Bearbeiten** (![](../_static/img/icons/update.png)) eines Elements, um seine Eigenschaften zu ändern.
+* **Kopieren** (![](../_static/img/icons/copy.png)) einer Frage oder eines Fragekatalogs. Dies wird das gleiche Fenster öffnen wie das Bearbeiten. Es können einige der Eigenschaften verändert werden und das Element wird als ein neues Element gespeichert. Dies kann Zeit sparen wenn mehrere ähnliche Fragen erstellt werden.
+* **Löschen** (![](../_static/img/icons/delete.png)) eines Elements und all seiner Abkömmlinge (z.B. Fragensets und all dessen Fragen). **Diese Aktion kann nicht rückgängig gemacht werden!**
 
 Der Sidebar rechts enthält weitere Bedienelemente:
 

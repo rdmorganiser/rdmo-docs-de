@@ -2,15 +2,15 @@
 
 Optionen und Optionensets können unter *Optionen* im Managementmenü in der Navigationsleiste bearbeitet werden.
 
-![](../../_static/img/screens/optionen.png)
+![](../_static/img/screens/optionen.png)
 > *Screenshot des Optionenmanagement-Interfaces*
 
 Auf der linken Seite sind alle Optionen und Optionsets der RDMO-Installation dargestellt. Optionensets zeigen ihren Schlüssel, während bei Optionen ihr Pfad und ihr Text dargestellt wird. Auf der rechten Seite von jedem Optionenfeld befinden sich Symbole zum Bearbeiten der Elemente. Folgende Optionen sind verfügbar:
 
-* **Hinzufügen** (![](../../_static/img/icons/add.png)) einer neuen Option oder eines Optionensets.
-* **Bearbeiten** (![](../../_static/img/icons/update.png)) der Eigenschaften einer Option oder eines Optionensets.
-* **Bedingungen bearbeiten** (![](../../_static/img/icons/conditions.png)) (eines Optionsets). Eine Frage, die mit einem Optionenset verknüpft ist, wird die Optionen des Sets im Fragekatalog nicht anzeigen, wenn die Bedingung negativ evaluiert wird. Die Bedingungen selbst sind im [Bedingungsmangement](../conditions.html) konfiguriert.
-* **Löschen** (![](../../_static/img/icons/delete.png)) einer Option oder eines Optionensets und im Falle ines Optionensets all seiner Optionen. **Diese Aktion kann nicht rückgägnig gemacht werden!**
+* **Hinzufügen** (![](../_static/img/icons/add.png)) einer neuen Option oder eines Optionensets.
+* **Bearbeiten** (![](../_static/img/icons/update.png)) der Eigenschaften einer Option oder eines Optionensets.
+* **Bedingungen bearbeiten** (![](../_static/img/icons/conditions.png)) (eines Optionsets). Eine Frage, die mit einem Optionenset verknüpft ist, wird die Optionen des Sets im Fragekatalog nicht anzeigen, wenn die Bedingung negativ evaluiert wird. Die Bedingungen selbst sind im [Bedingungsmangement](../conditions.html) konfiguriert.
+* **Löschen** (![](../_static/img/icons/delete.png)) einer Option oder eines Optionensets und im Falle ines Optionensets all seiner Optionen. **Diese Aktion kann nicht rückgägnig gemacht werden!**
 
 Die Sidebar auf der rechten Seite zeigt weitere Bedienelemente:
 

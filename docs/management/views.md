@@ -2,14 +2,14 @@
 
 Ansichten können unter *Ansichten* im Managementmenü in der Navigationsleiste konfiguriert werden.
 
-![](../../_static/img/screens/ansichten.png)
+![](../_static/img/screens/ansichten.png)
 > *Screenshot des Ansichtenmangement-Interfaces*
 
 Auf der linken Seite werden alle Ansichten der RDMO-Installation angezeigt. Ansichten zeigen ihren Schlüssel, ihren Titel und eine Beschreibung. Auf der rechten Seite von jedem Ansichtenfeld zeigen Symbole die Interaktionsmöglichkeiten an. Folgende Optionen stehen zur Verfügung:
 
-* **Bearbeiten** (![](../../_static/img/icons/update.png)) einer Ansicht, um dessen Eigenschaften zu ändern.
-* **Template bearbeiten** (![](../../_static/img/icons/template.png)) einer Ansicht.
-* **Entfernen** (![](../../_static/img/icons/delete.png)) einer Ansicht. **Diese Aktion kann nicht rückgängig gemacht werden!**
+* **Bearbeiten** (![](../_static/img/icons/update.png)) einer Ansicht, um dessen Eigenschaften zu ändern.
+* **Template bearbeiten** (![](../_static/img/icons/template.png)) einer Ansicht.
+* **Entfernen** (![](../_static/img/icons/delete.png)) einer Ansicht. **Diese Aktion kann nicht rückgängig gemacht werden!**
 
 Die Sidebar auf der rechten Seite enthält weitere Bedienelemente:
 
@@ -37,7 +37,7 @@ Ansichten haben unterschiedliche Eigenschaften, die ihr Verhalten zu bestimmen. 
 
 ### Vorlage
 
-![](../../_static/img/screens/vorlage.png)
+![](../_static/img/screens/vorlage.png)
 > *Screenshot der Vorlagen-Ansicht*
 
 Jede Ansicht hat eine Vorlage (Template), die bestimmt wie Fragen mitsamt ihrer Antworten in einem Textdokument dargestellt werden. Die Vorlage benutzt die [Django template](https://docs.djangoproject.com/en/1.11/ref/templates/language/) syntax, welche sich aus einer Kombination aus regulärem HTML, Variablen und Tags zusammensetzt. Variablen (`{{ a_variable }}`) werden bei der Vorlageauswertung durch ihre entsprechenden Werte ersetzt. Tags (`{% a_tag %}`) kontrollieren die Logik der Vorlage.

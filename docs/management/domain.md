@@ -4,14 +4,14 @@ Das Domänenmodel kann unter *Domäne* im Managementmenü in der Navigationsleis
 
 Nach der Installation von RDMO ist die Domäne zunächst leer. **Wir empfehlen allen Betreibern von RDMO initial die vom Projekt erarbeitete Domäne zu importieren.**. Die Nutzung einer einheitlichen Domäne über alle RDMO Instanzen ermöglicht den Austausch von Fragenkatalogen, Ansichten und anderem Inhalt und kann perspektivisch zu einem einheitlichen Metadata Application Profile für die Planung des Datenmanagements führen. Die entsprechende XML-Datei ist unter https://github.com/rdmorganiser/rdmo-catalog verfügbar. Sie können die Domäne gerne nach Ihren Wünschen erweitern. Bedenken Sie aber, dass sie der Startpunkt für das Erstellen von Fragenkatalogen sein sollte und die Grundlage der Interoperabilität und Kooperativität verschiedener RDMO-Instanzen ist.
 
-![](../../_static/img/screens/domaene.png)
+![](../_static/img/screens/domaene.png)
 > *Screenshot vom Domain-Management Interface*
 
 Es werden alle Attribute der RDMO-Installation gezeigt. Auf der rechten Seite eines jeden Elementfeldes gibt es Icons mit folgender Bedeutung:
 
-* **Hinzufügen** (![](../../_static/img/icons/add.png)) eines neuen Attributes zum gewählten Attribut.
-* **Bearbeiten** (![](../../_static/img/icons/update.png)) eines Attributes, um seine Eigenschaften zu ändern.
-* **Entfernen** (![](../../_static/img/icons/delete.png)) eines Attributes und all ihrer abhängigen Attribute **Diese Aktion kann nicht rückgängig gemacht werden!**
+* **Hinzufügen** (![](../_static/img/icons/add.png)) eines neuen Attributes zum gewählten Attribut.
+* **Bearbeiten** (![](../_static/img/icons/update.png)) eines Attributes, um seine Eigenschaften zu ändern.
+* **Entfernen** (![](../_static/img/icons/delete.png)) eines Attributes und all ihrer abhängigen Attribute **Diese Aktion kann nicht rückgängig gemacht werden!**
 
 Die Sidebar auf der rechten Seite zeigt weitere Bedienelemente:
 
