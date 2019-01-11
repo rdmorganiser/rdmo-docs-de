@@ -20,9 +20,21 @@ Nach dem Ausfüllen des Interviews, können dem Benutzer anstehende **Aufgaben**
 
 Die verschiedenen Elemente des RDMO Datenmodells haben diverse Parameter, die unter den unterschiedlichen Managementseiten konfiguriert werden können. Alle Elemente besitzen die folgenden Parameter:
 
--	Ein URI-Präfix, um die Institution zu identifizieren, die das Element erstellt hat.
--	Einen Schlüssel, der als eine interne Bezeichnung für das Element dient.
--	Einen internen Kommentar um Informationen mit den Benutzern zu teilen, die Zugang zum Managementbereich besitzen.
+__* URI Prefix__
+
+Das URI Prefix ist der erste Teil der URI. Jedes Element hat eine URI und demzufolge auch ein URI Prefix. Das Präfix ist semantisch nur relevant, wenn Daten zwischen verschiedenen RDMO-Instanzen ausgetauscht werden. In diesem Fall dient das URI Prefix dazu, die Instanz zu identifizieren.
+
+Importiert man einen Fragenkatalog, Optionen oder eine andere Art von Elementen einer fremden RDMO-Instanz importiert wird, dann haben die importierten Elemente das URI Prefix der jeweiligen Dritt-Instanz. Wenn nun Anpassungen an den Elementen gemacht werden, sollte in jedem Fall immer das URI Prefix der eigenen Instanz hinterlegt werden, um die Änderungen persistent zu machen. Das ist notwendig, da sonst ein erneuter Import der Inhalte alle Änderungen überschreiben würde, weil bei Importen die URI als Identifizierungsmerkmal dient. Daten in der Datenbank werden überschrieben, wenn die zu importierenden Elemente die gleiche URI haben wie bereits vorhandene. Mehr Information zum Importverhalten [hier](../../management/export.html).
+
+Per Konvention ist die Struktur des URI Prefix vorgegeben und muss der einer URL entsprechen. Die URL muss nicht auflösbar sein. Im Prinzip kann jeder beliebige String genutzt werden, solange er der Vorgabe entspricht. Wir empfehlen dennoch die URL ihrer RDMO-Instanz als URI Prefix zu nutzen. Ein URI Prefix muss mit `http://` oder `https://` beginnen und anschließend einen Hostnamen aufweisen. Alles weitere wie Pfade sind optional. Valide URI Prefixe sind zum Beispiel: `https://rdmorganiser.github.io/terms` oder `https://rdmo.aip.de`.
+
+__* Schlüssel__
+
+Einen Schlüssel, der als eine interne Bezeichnung für das Element dient.
+
+__* Interner Kommentar__
+
+Einen internen Kommentar um Informationen mit den Benutzern zu teilen, die Zugang zum Managementbereich besitzen.
 
 Der Schlüssel ist eine Pflichtangabe und dient als interne Bezeichnung. Zusammen mit dem URI Präfix bestimmt der Schlüssel die eigentliche URI des Elements. Diese URI wird als globaler Bezeichner für den Export und Import verwendet.
 
