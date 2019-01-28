@@ -108,7 +108,7 @@ Wenn sie die eingangs erwähnten Platzhalter variables nutzen möchten, dann sie
 Ob Werte bestimmte Bedingungen erfüllen, kann ebenfalls ausgewertet werden. Wenn Sie beispielsweise etwas anzeigen möchten, nur dann wenn ein bestimmter Wert **true** ist, können sie das auf folgende Weise tun. Beachten Sie, dass analog zu **.is_true** auch eine genau so funktionierende **.is_false** Funktion existiert.
 
 ```django
-{% get_value 'conditions.personal_data' as val %}
+{% get_value 'project/dataset/sharing/yesno' as val %}
 {% if val.is_true %}
     This will be only rendered if personal_data resolves to be true.
 {% endif %}
