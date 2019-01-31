@@ -67,16 +67,6 @@ würde dann, wenn ausgewertet im Kontext beim Benutzer seines Projekts, ausgeben
 Die Fragestellung des Projekts ist: "Kühn dorthin gehen, wohin noch kein Mensch sich gewagt hat".
 ```
 
-Sammlungen können mit dem `for`-Tag von Django template syntax realisiert werden.
-
-```django
-<ul>
-    {% for keyword in 'project/research_question/keywords' %}
-        <li>{% render_value keyword %}</li>
-    {% endfor %}
-</ul>
-```
-
 Listen von mehreren Werten können auf diese Weise erzeugt werden.
 
 ```django
@@ -85,17 +75,7 @@ Listen von mehreren Werten können auf diese Weise erzeugt werden.
 </p>
 ```
 
-Für Sammlungsentitäten:
-
-```django
-{% for dataset in 'project/dataset' %}
-    <p>
-        <i>Dataset {% render_set_value dataset 'project/dataset/id' %}:</i> {% 'project/dataset/usage_description' %}
-    </p>
-{% endfor %}
-```
-
-Wenn sie die eingangs erwähnten Platzhalter variables nutzen möchten, dann sieht ihr Code womöglich so aus:
+Für Sammlungsentitäten können eingangs erwähnten Platzhalter genutzt werden. Der Code sieht dann aus wie folgt:
 
 ```django
 {% for dataset in datasets %}
