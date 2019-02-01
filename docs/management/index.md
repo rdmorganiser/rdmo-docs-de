@@ -28,6 +28,12 @@ Importiert man einen Fragenkatalog, Optionen oder eine andere Art von Elementen 
 
 Per Konvention ist die Struktur des URI Prefix vorgegeben und muss der einer URL entsprechen. Die URL muss nicht auflösbar sein. Im Prinzip kann jeder beliebige String genutzt werden, solange er der Vorgabe entspricht. Wir empfehlen dennoch die URL ihrer RDMO-Instanz als URI Prefix zu nutzen. Ein URI Prefix muss mit `http://` oder `https://` beginnen und anschließend einen Hostnamen aufweisen. Alles weitere wie Pfade sind optional. Valide URI Prefixe sind zum Beispiel: `https://rdmorganiser.github.io/terms` oder `https://rdmo.aip.de`.
 
+In den Eingabeformularen gibt es eine Schaltfläche die aussieht wie folgt <img src="../_static/img/icons/magic-solid.svg" width="18px">. Sie kann genutzt werden, um das Standard URI Prefix der RDMO Installation in das Formular zu schreiben. Das ist sehr nützlich, wenn man das URI Prefix nicht kennt. Der Wert der ausgelesen wird, wenn die Schaltfläche betätigt wird, ist in der `local.py` definiert. Sollte er nicht gesetzt sein, hat der Knopf keinen Effekt und ist somit nutzlos. Es ist daher dringend zu empfehlen, einen Eintrag wie den folgenden in der `local.py` zu machen. Natürlich mit dem Standard URI Prefix der eigenen RDMO Instanz.
+
+```
+DEFAULT_URI_PREFIX = 'https://rdmo.uni-xyz.de/terms/'
+```
+
 __* Schlüssel__
 
 Einen Schlüssel, der als eine interne Bezeichnung für das Element dient.
