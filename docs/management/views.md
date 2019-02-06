@@ -75,6 +75,16 @@ Listen von mehreren Werten können auf diese Weise erzeugt werden.
 </p>
 ```
 
+Als Äquivalent des oben genannten Beispiels kann das folgende genutzt werden. Der Vorteil besteht darin, dass das Layout der Liste mit diesem Snippet frei steuerbar ist.
+```django
+<ul>
+{% get_values 'project/research_question/keywords' set_index=0 as text %}
+    {% for value in text %}
+        <li>{{ value.value }}</li>
+    {% endfor %}
+</ul>
+```
+
 Für Sammlungsentitäten können eingangs erwähnten Platzhalter genutzt werden. Der Code sieht dann aus wie folgt:
 
 ```django
