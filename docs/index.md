@@ -2,23 +2,28 @@
 
 RDMO ist ein Werkzeug zur Unterstützung  der systematischen Planung, Organisation und Implementierung des Datenmanagements während eines wissenschaftlichen Projekts.  RDMO wird durch die Deutsche Forschungsgemeinschaft (DFG) gefördert.
 
-**Webseite**
-> <https://rdmorganiser.github.io>
+```eval rst
+Webseite
+    https://rdmorganiser.github.io
 
-**Source code**
-> <https://github.com/rdmorganiser/rdmo>
+Quelltext
+    https://github.com/rdmorganiser/rdmo
 
-**Dokumentation**
-> <http://rdmo.readthedocs.io>
+Dokumentation
+    http://rdmo.readthedocs.io
 
-**Mailing list**
-> <https://www.listserv.dfn.de/sympa/subscribe/rdmo>
+FAQ
+    http://www.forschungsdaten.org/index.php/FAQs
 
-**Slack**
-> <https://rdmo.slack.com>
+Mailing list
+    https://www.listserv.dfn.de/sympa/subscribe/rdmo
 
-**Demo**
-> <https://rdmo.aip.de>
+Slack
+    https://rdmo.slack.com
+
+Demo
+    https://rdmo.aip.de
+```
 
 *Warnung: Diese Software ist noch in der Entwicklungsphase.*
 
