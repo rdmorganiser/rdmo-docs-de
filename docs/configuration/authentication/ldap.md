@@ -3,7 +3,7 @@
 Um ein LDAP-Backend mit RDMO nutzen zu können, muss zunächst die nötige Software installiert werden. Bei Debian/Ubuntu kann dies wie folgt geschehen:
 
 ```bash
-sudo apt-get install libsasl2-dev python-dev libldap2-dev libssl-dev
+sudo apt-get install libsasl2-dev libldap2-dev libssl-dev
 ```
 
 Auf Python basierend verwenden wir [django-auth-ldap](https://pypi.org/project/django-auth-ldap), um uns mit dem LDAP-Server zu verbinden. Wie schon zuvor sollte dies in einer für RDMO erstellten virtuellen Umgebung installiert werden:
@@ -21,14 +21,12 @@ ldapmodify -x -D 'cn=Directory Manager' -W
 auf der Machine mit dem LDAP-Service und geben Sie ein:
 
 ```
-dn: uid=system,cn=sysaccounts,cn=etc,dc=example,dc=com
+dn: uid=rdmo,dc=ldap,dc=example,dc=com
 changetype: add
 objectclass: account
 objectclass: simplesecurityobject
 uid: rdmo
 userPassword: YOURPASSWORD
-passwordExpirationTime: 20380119031407Z
-nsIdleTimeout: 0
 ```
 
 und enden Sie die Datei mit einer Leerzeile gefolgt von  `ctrl-d`.
