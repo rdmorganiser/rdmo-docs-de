@@ -83,7 +83,7 @@ Die RDMO-Api hat folgende Endpunkte:
 
 Die API-Struktur ist grob bestimmt durch die Art von Daten, die verarbeitet werden können. Der '{id}'-Platzhalter gibt an, dass eine ID eingefügt werden kann, so dass Daten eines bestimmten Elementes gezogen werden. Im Wesentlichen gibt es zwei Arten von API-Endpunkten. Entweder werden Listen von Datensätzen ausgegeben oder einzelne Datensätze. Viele Endpunkte bieten Filter-Funktionen, die durch Anfrage-Parameter genutzt werden können.
 
-Aus praktischen Gründen werden im Folgenden nicht alle Filter-Optionen genann. Ein Blick auf die mit Swagger generierte [JSON-Spezifikation](../../_static/others/api_description.json) der API gibt einen detaillierten Einblick. Diese JSON-Datei kann in den [Swagger Editor](https://editor.swagger.io) geladen werden, um ein leichter lesbares Dokument zu erhalten. Doch nun zu ein paar Anfrage-Beispielen.
+Aus praktischen Gründen werden im Folgenden nicht alle Filter-Optionen genann. Ein Blick auf die mit Swagger generierte [JSON-Spezifikation](../_static/others/api_description.json) der API gibt einen detaillierten Einblick. Diese JSON-Datei kann in den [Swagger Editor](https://editor.swagger.io) geladen werden, um ein leichter lesbares Dokument zu erhalten. Doch nun zu ein paar Anfrage-Beispielen.
 
 ## Curl Anfragen
 
