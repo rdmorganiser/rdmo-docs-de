@@ -18,16 +18,35 @@ Authorization: Token 9944b09199c62bcf9418ad846dd0e4bbdfc6ee4b
 Nur `Superuser` können auf die API zugreifen. Ob ein bestimmter User die nötigen Zugriffsrechte hat, kann in den User Details überprüft werden. Anfragen von Usern ohne Superuser-Rechte scheitern unter Angabge des Status Codes 403.
 
 
-## API-Layout
+## API-Layout / Swagger
 
+Eine klarere Vorstellung vom Layout vermittelt `Swagger`, das in der Lage ist eine detaillierte Beschreibung aller Endpunkte zu geben.
+
+### Was ist Swagger?
+Swagger ist ein Werkzeug zur Dokumentation von REST-APIs, das die OpenAPI-Spezifikationen berücksichtigt. Es ist in RDMO implementiert. RDMOs Swagger-Seite wird von einer Bibliothek namens [Django REST Swagger](https://github.com/marcgibbons/django-rest-swagger) bereit gestellt.
+
+Die interaktive Swagger-Seite bietet die Möglichkeit API-Anfragen zu designen und diese mitsamt ihrer Anfrage-Parameter auszuprobieren.
+
+### Swagger nutzen
+
+Swagger ist von Hause aus aktiviert. Der entsprechende Eintrag befindet sich in der 'urls.py' der RDMO-App.
+
+```python
+path('api/v1/', include('rdmo.core.urls.swagger')),
+```
+
+Er kann bei Bedarf gelöscht, auskommentiert oder modifiziert werden, ohne dass etwas anderes dadurch beeinträchtigt wird. Die Standard-URL der Swagger-Seite lautet: `http://$YOUR_RDMO/api/v1/`.
+
+Wenn man die Anfrage zu `http://$YOUR_RDMO/api/v1/?format=openapi` modifiziert, bekommt man eine maschinenlesbare Beschreibung der RDMO-API im Json-Format.
+
+### API-Struktur
 Die RDMO-Api hat folgende Endpunkte:
 
 ```
-/api/v1/accounts/users
-/api/v1/accounts/users/{id}
-
 /api/v1/conditions/conditions
 /api/v1/conditions/conditions/{id}
+
+/api/v1/core
 
 /api/v1/domain/attributes
 /api/v1/domain/attributes/{id}
@@ -62,77 +81,51 @@ Die RDMO-Api hat folgende Endpunkte:
 /api/v1/views/views/{id}
 ```
 
-As you can see roughly the structure is determined by the element types of which data can be fetched. The `{id}` placeholder at the end of the URLs is indicating that an element ID can be provided to fetch data of a distinct single element. So basically we have to types of requests. The first returning lists of elements and the second returning single elements. Many of the endpoints provide multiple filter functions that are accessible using request parameters. If you for example would like to retrieve information about the admin user you could use `?username=admin` as filter parameter at the end of the url.
+Die API-Struktur ist grob bestimmt durch die Art von Daten, die verarbeitet werden können. Der '{id}'-Platzhalter gibt an, dass eine ID eingefügt werden kann, so dass Daten eines bestimmten Elementes gezogen werden. Im Wesentlichen gibt es zwei Arten von API-Endpunkten. Entweder werden Listen von Datensätzen ausgegeben oder einzelne Datensätze. Viele Endpunkte bieten Filter-Funktionen, die durch Anfrage-Parameter genutzt werden können.
 
-For practical reasons all the different filters will not be named here. But you can have a look into the [JSON description](/_static/others/api_description.json) of the API generated using Swagger. It covers every piece of information regarding all the endpoints and their available filters. As JSON can be a hard read sometimes you could also copy and paste the content of file into the [Swagger Editor](https://editor.swagger.io) to get a more consumable version of the description. If you would like to use Swagger to interact with your RDMO's API in a web  browser you could set it up for your RDMO installation. Information about how to do that are provided below in the [Swagger paragraph](#swagger-openapi). But let's have a look at some request examples first.
+Aus praktischen Gründen werden im Folgenden nicht alle Filter-Optionen genann. Ein Blick auf die mit Swagger generierte [JSON-Spezifikation](../../_static/others/api_description.json) der API gibt einen detaillierten Einblick. Diese JSON-Datei kann in den [Swagger Editor](https://editor.swagger.io) geladen werden, um ein leichter lesbares Dokument zu erhalten. Doch nun zu ein paar Anfrage-Beispielen.
 
+## Curl Anfragen
 
-## Curl Request Examples
+Die unten genannten Anfragen nutzen den `-L`-Parameter, der dafür sorgt, dass Curl Umleitungen folgt. Er ist nötig, da die Authentifizierung sonst nicht funktionieren würde, weil diese einen Redirect macht. Ohne Umleitungen zu verarbeiten produziert eine Anfrage eine leere Antwort und den Status Code 301.
 
-Note that the examples below use the `-L` parameter. It tells curl to follow redirects and is necessary because the token authentication process involves a redirect. If you do not follow it you will get an empty-bodied response having status code 301.
+Einige Beispiele...
 
-You could for example request...
-
-1. The project having the id 1
+1. Das Projekt mit der ID 1
 
 ```bash
 curl -LH "Authorization: Token $YOUR_TOKEN" \
     "https://$YOUR_RDMO/api/v1/project/projects/1"
 ```
 
-2. A list of all projects
+2. Eine Liste aller Projekte
 
 ```bash
 curl -LH "Authorization: Token $YOUR_TOKEN" \
     "https://$YOUR_RDMO/api/v1/project/projects"
 ```
 
-3. A list of users in a certain project
+3. Eine Liste von Usern eines bestimmten Projekts
 
 ```bash
 curl -LH "Authorization: Token $YOUR_TOKEN" \
     "http://$YOUR_RDMO/api/v1/accounts/users/?project=1"
 ```
 
-4. A list of options belonging to optionset 1
+4. Eine Liste von Optionen, die zu Optionenset 1 gehören
 
 ```bash
 curl -LH "Authorization: Token $YOUR_TOKEN" \
     "http://$YOUR_RDMO/api/v1/options/options/?optionset=1"
 ```
 
-5. A list of options having uri `https://rdmorganiser.github.io/terms/options/research_fields/216`
-Note that strings of course need to be url encoded.
+5. Eine Liste von Optionen mit der uri `https://rdmorganiser.github.io/terms/options/research_fields/216`
+Achtung: Strings sollten URL-encodiert seint.
 
 ```bash
     curl -LH "Authorization: Token $YOUR_TOKEN" \
         "http://localhost/api/v1/options/options/?uri=https%3A%2F%2Frdmorganiser.github.io%2Fterms%2Foptions%2Fresearch_fields%2F216"
 ```
 
-
-## Swagger / OpenAPI
-
-### What is Swagger?
-
-Swagger is a set of tools built around the OpenAPI Specification. These tools help to design, build and document REST APIs. OpenAPI is already implemented in RDMO but usually disabled. The Swagger page in RDMO is provided by a python library called [Django REST Swagger](https://github.com/marcgibbons/django-rest-swagger).
-
-The Swagger page can help you to design API queries because it gives a well-arranged interactive overview of all the available endpoints and query parameters. If you need help to get an idea about the possibilities of the RDMO API you should have a look.
-
-
-### Enable Swagger Tools
-
-If you want to have a look at a detailed description of all the API interfaces that RDMO provides you need to add the necessary import and setup a url scheme to access the view.
-
-All this can be achieved by adding two lines to the `config/urls.py` in your RDMO-App. Please note that `urlpatterns` is an array. Do not simply copy the snippet from below but add the array entry into your already existing one.
-
-```bash
-from rdmo.core.swagger import swagger_schema_view
-
-urlpatterns = [
-    url(r'^swagger$', swagger_schema_view.as_view()),
-]
-```
-
-The Swagger page can now be accessed at the defined URL scheme. In the case of the example above at `swagger/`. Of course you are free to change this to fit your needs.
-
-Apppend request parameter `?format=openapi` to the url to get a detailed API description in JSON format. It is the exact same description that we mentioned at the end of the [API Layout](#api-layout) paragraph above.
+## RDMO Client
+Es gibt einen RDMO Client, der die Nutzung der API vereinfachen soll. Außerdem kann er gut für den Einstieg in das Thema verwendet werden. Er ist in Python geschrieben und kann auf [GitHub](https://github.com/rdmorganiser/rdmo-client) gefunden werden.
