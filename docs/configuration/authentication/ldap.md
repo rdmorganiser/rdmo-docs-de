@@ -15,7 +15,7 @@ pip install -r requirements/ldap.txt
 LDAP-Installationen können sehr verschiedenartig sein und wir beschreiben nur einen bestimmten Fall. Wir nehmen an, dass der LDAP-Service auf  `ldap.example.com` läuft. RDMO benötigt einen *System Account*. Starten Sie:
 
 ```bash
-ldapmodify -x -D 'cn=Directory Manager' -W
+ldapmodify -x -D "cn=admin,dc=ldap,dc=example,dc=com" -W
 ```
 
 auf der Machine mit dem LDAP-Service und geben Sie ein:
@@ -59,3 +59,20 @@ AUTHENTICATION_BACKENDS.insert(
 ```
 
 Die Einstellungen `PROFILE_UPDATE = False` und `PROFILE_DELETE = False` deaktivieren das Updateformular des Benutzerprofils und die Seite, auf der der Nutzer sein eigenes Profil löschen kann. Der Benutzer kann daraufhin sein seine Zugangsdaten nicht mehr ändern oder das eigene Profil löschen. Die anderen Einstellungen werden von `Django-auth-ldap` benötigt und sind in der [django-auth-ldap Dokumentation](https://pypi.org/project/django-auth-ldap) beschrieben.
+
+```eval_rst
+.. warning::
+    Das folgende Feature is noch nicht Teil der veröffentlichten Version von RDMO. Es wird Teil eines späteren Releases.
+```
+
+Sie können auch Gruppen aus dem LDAP auf Django Gruppen abbilden, insbesondere um den Zugang zu Katalogen und Ansichten zu kontrollieren. Hierfür werden die folgenden Einstellunge benötigt:
+
+```
+AUTH_LDAP_GROUP_SEARCH = LDAPSearch(
+    "dc=ldap,dc=test,dc=rdmo,dc=org", ldap.SCOPE_SUBTREE, "(objectClass=groupOfNames)"
+)
+AUTH_LDAP_GROUP_TYPE = GroupOfNamesType(name_attr="cn")
+AUTH_LDAP_MIRROR_GROUPS = ['special']
+```
+
+Hierbei ist `cn` der Name der Gruppe im LDAP und `AUTH_LDAP_MIRROR_GROUPS` enthält die Gruppen die aus dem LDAP nach RDMO gespiegelt werden sollen.

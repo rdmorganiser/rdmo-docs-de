@@ -2,11 +2,13 @@
 
 Um Shibboleth mit RMDO zu verwenden, ist es notwendig in der Betriebsumgebung einen Apache2-Service bereitzustellen. Das Setup ist [hier](../../../../deployment/apache.html) dokumentiert.
 
-Als nächstes installieren Sie das Shibboleth Apache Modul für die Service-Anbieter aus ihrem Distributionsrepositorium, z.B. für Debian/Ubuntu:
+Als nächstes installieren Sie das Shibboleth Apache Modul für den Service-Provider (SP) aus ihrem Distributionsrepositorium, z.B. für Debian/Ubuntu:
 
 ```bash
 sudo apt-get install libapache2-mod-shib2
 ```
+
+Unter Ubuntu 18.04 LTS ist leider das `libapache2-mod-shib2` Paket defekt. Eine funktionierende Anleitung findet sich unter https://www.switch.ch/aai/guides/sp/installation/?os=ubuntu.
 
 Zusätzlich muss der [Django-shibboleth-remoteuser](https://github.com/Brown-University-Library/django-shibboleth-remoteuser) in der virtuellen RDMO-Umgebung installiert werden:
 
@@ -92,3 +94,25 @@ Starten Sie den Webserver neu.
 ```bash
 service apache2 restart
 ```
+
+Certain Attributes from the Shibboleth Identity Provider can be mapped to Django groups, in particular to restrict the access to Catalogs and Views. This can be done by adding the following settings:
+
+```
+SHIBBOLETH_GROUP_ATTRIBUTES = ['eduPersonScopedAffiliation']
+```
+
+In this case, the attribute `eduPersonScopedAffiliation` contains a comma seperated list of groups which will be created in RDMO (if they don't exist yet) and the user will be added into these groups. Due to a limitation by [django-shibboleth-remoteuser](https://github.com/Brown-University-Library/django-shibboleth-remoteuser) the user will also be **removed from all other groups**.
+
+
+```eval_rst
+.. warning::
+    Das folgende Feature is noch nicht Teil der veröffentlichten Version von RDMO. Es wird Teil eines späteren Releases.
+```
+
+Sie können auch Attribute des Shibboleth Identity Provider auf Django Gruppen abbilden, insbesondere um den Zugang zu Katalogen und Ansichten zu kontrollieren. Hierfür werden die folgenden Einstellunge benötigt:
+
+```
+SHIBBOLETH_GROUP_ATTRIBUTES = ['eduPersonScopedAffiliation']
+```
+
+In diesem Fall, enhält das Attribut `eduPersonScopedAffiliation` eine Komma-separierte Liste von Gruppen, die nach RDMO gespiegelt werden. Aufgrund einer Limitierung von [django-shibboleth-remoteuser](https://github.com/Brown-University-Library/django-shibboleth-remoteuser) wird der User **aus allen anderen Gruppen entfernt**.
