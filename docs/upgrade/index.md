@@ -38,7 +38,7 @@ python manage.py deploy
 Bitte beachten Sie die Release-Hinweise, ob dieser oder weitere Schritte notwendig sind.
 
 
-Upgrade to version 0.9.0
+Upgrade zu Version 0.9.0
 ------------------------
 
 Mit der Version 0.9.0 haben wir die Teilung in `rdmo-app` und dem zentral verwalteten `rdmo`-Paket vorgenommen. Daher sind einige zusätzliche Schritte für die Aktualisierung zur Version 0.9.0 und höher notwendig:
@@ -68,3 +68,12 @@ Mit der Version 0.9.0 haben wir die Teilung in `rdmo-app` und dem zentral verwal
 1. Setzen Sie RDMO neu auf wie unter [Apache](../../deployment/apache.html) oder [Nginx](../../deployment/nginx.html) beschrieben.
 
 Falls irgendwelche Probleme während des Aktualisierungsprozesses auftreten, zögern Sie nicht das RDMO-Team um Hilfe zu bitten.
+
+
+Upgrade zu Version 0.14
+-----------------------
+
+Mit Version 0.14 wird die Python2 unterstützung eingestellt und zu Django 2.2 gewechselt. Dies benötige Änderungen an der `rdmo-app`:
+
+* `MIDDLEWARE_CLASSES` in `config/settings/local.py` muss in `MIDDLEWARE` umbenannt werden.
+* `config/urls.py` wird deutlich vereinfacht, die Bezeichner der Funktionen ändert sich jedoch. Eine Vorlage kann [hier](https://github.com/rdmorganiser/rdmo-app/blob/master/config/urls.py) eingesehen werden.
