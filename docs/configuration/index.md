@@ -23,4 +23,5 @@ Dies beinhaltet [allgemeine Einstellungen](../general.html), [Datenbankverbindun
    export-formats
    cache
    logging
+   multisite
 ```
