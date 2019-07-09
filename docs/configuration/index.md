@@ -12,6 +12,8 @@ Da die Einträge in der lokalen Einstellungsdatei `config/settings/local.py` Ein
 Dies beinhaltet [allgemeine Einstellungen](../general.html), [Datenbankverbindungen](../databases.html), wie [E-mails](../email.html) versendet werden, die verschiedenen [Authentifizierungsmethoden](../authentication/index.html), die Verwendung von  [Themen](../themes.html), und [Caches](../cache.html).
 
 ```eval_rst
+----
+
 .. toctree::
    :maxdepth: 2
 

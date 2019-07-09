@@ -9,6 +9,8 @@ Das Admin-Interface wird nach der Installation benötigt, um den Titel und die U
 
 
 ```eval_rst
+----
+
 .. toctree::
    :maxdepth: 2
 
