@@ -1,4 +1,4 @@
-# Einsatz
+# Betrieb
 
 Wie bereits erwähnt kann RDMO in zwei verschiedenen Setups genutzt werden:
 
@@ -9,10 +9,10 @@ Wie bereits erwähnt kann RDMO in zwei verschiedenen Setups genutzt werden:
     * [Nginx, Gunicorn und Systemd](../nginx.html)
 
 ```eval_rst
-    .. toctree::
-       :maxdepth: 2
+.. toctree::
+   :maxdepth: 2
 
-       development
-       apache
-       nginx
+   development
+   apache
+   nginx
 ```
