@@ -17,7 +17,7 @@ sudo apt install texlive texlive-xetex
 
 Bei RHEL/CentOS verwenden Sie:
 
-```
+```bash
 sudo yum install gcc gcc-c++ libxml2-devel libxslt-devel \
     python34-devel python34-pip python34-virtualenv \
     git pandoc
@@ -31,21 +31,13 @@ Bei Ubuntu 14.04, ist `python3-venv` nicht verfügbar. Bitte verwenden Sie statt
 
 Bei RHEL/CentOS ist `selinux` standardmäßig aktiviert. Dies führt zu unerwarteten Fehlern, abhängig davon, wo der RDMO-Sourcecode auf dem System isntalliert ist. Auch wenn die bevorzugte Lösung die richtige Konfiguration von `selinux` wäre (was im Rahmen dieser Dokumentation zu weit führen würde), kann `selinux` auf `permissive` oder `disabled` unter `/etc/selinux/config` gesetzt werden (erfordert einen Neustart).
 
-Wenn Sie Python 2.7 anstatt Python 3 benutzen möchten, verwenden Sie die entsprechenden Pakete:
-
-```bash
-apt install python-dev python-pip python-virtualenv    # Debian/Ubuntu
-yum install python-devel python-pip python-virtualenv  # RHEL/CentOS
-```
-
 
 ## macOS
 
 Wir empfehlen die Voraussetzungen mit [brew](http://brew.sh) zu installieren:
 
 ```bash
-brew install python3             # for python 3
-brew install python              # for python 2
+brew install python3
 brew install git
 brew install pandoc
 
@@ -60,7 +52,6 @@ Bei Windows müssen die Software-Voraussetzungen von den einzelnen Internetseite
 
 Für Python:
 * herunterladen von <https://www.python.org/downloads/windows/>
-* wir empfehlen eine Version >= 3.4
 * vergessen Sie nicht zu überprüfen, dass währended des Setups `Python zu den Umgebungsvariablen hinzufügen` gesetzt ist
 
 Für git:

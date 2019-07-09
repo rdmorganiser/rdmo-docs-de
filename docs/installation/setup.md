@@ -33,7 +33,7 @@ Standardmäßig werden Drittanbieterdateien (wie jQuery oder Bootstrap-Javascrip
 
 2. Stellen Sie sicher, dass Ihre `local.py` die folgende Zeile enthält
 
-    ```
+    ```python
     VENDOR_CDN = False
     ```
 
@@ -45,4 +45,4 @@ Nach diesen Schritten kann RDMO mit dem integriertem Entwicklungsserver von Djan
 python manage.py runserver
 ```
 
-Anschließend ist RDMO unter http://127.0.0.1:8000 in ihrem (lokalen) Browser verfügbar. Die unterschiedlichen Wege, wie RDMO betrieben werden kann, werden im nächsten Kapitel behandelt. Die neu installierte RDMO-Instanz ist noch leer, d.h. es sind keine Fragebögen oder Ansichten verfügbar. Sie müssen[importiert](../../../management/export.html) und/oder wie unter[Management](../../../management/index.html) beschrieben erstellt werden.
+Anschließend ist RDMO unter http://127.0.0.1:8000 in ihrem (lokalen) Browser verfügbar. Die unterschiedlichen Wege, wie RDMO betrieben werden kann, werden im nächsten Kapitel behandelt. Die neu installierte RDMO-Instanz ist noch leer, d.h. es sind keine Fragebögen oder Ansichten verfügbar. Sie müssen [importiert](../../../management/export.html) und/oder wie unter [Management](../../../management/index.html) beschrieben erstellt werden.

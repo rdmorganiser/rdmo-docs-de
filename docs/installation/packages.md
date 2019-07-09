@@ -5,15 +5,14 @@ Nachdem Sie sich den `rdmo-app`-Ordner angesehen haben, müssen Sie die `rdmo`-P
 Wechseln Sie dazu in den `rdmo-app`-Ordner und erstellen Sie eine [virtualenv](https://virtualenv.readthedocs.org) (mit ihrem Benutzer oder ihrem erstellten `rdmo`-Benutzer, nicht als `root`):
 
 ```bash
-    cd rdmo-app
+cd rdmo-app
 
-    python3 -m venv env                         # for python3
-    virtualenv env                              # for python2.7
+python3 -m venv env
 
-    source env/bin/activate                     # on Linux or macOS
-    call env\Scripts\activate.bat               # on Windows
+source env/bin/activate                     # on Linux or macOS
+call env\Scripts\activate.bat               # on Windows
 
-    pip install --upgrade pip setuptools        # update pip and setuptools
+pip install --upgrade pip setuptools        # update pip and setuptools
 ```
 
 Nachdem die virtuelle Umgebung aktiviert wurde, kann dort das `rdmo`-Paket mit Hilfe von `pip` installiert werden:
