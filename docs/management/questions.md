@@ -35,20 +35,28 @@ Die verschiedenen Elemente des Fragebogens haben verschiedenen Eigenschaften, um
 
 ### Katalog
 
-|Name|Beschreibung|
+|Name|Explanation|
 |-|-|
+|**Tab Allgemein**||
 |Reihenfolge|Bestimmt die Reihenfolge des Katalogs in der Liste oder der Interview-Ansicht|
-|Titel (en)|Der englische Titel für den Katalog, der dem Benutzer angezeigt wird|
-|Titel (de)|Der deutsche Titel für den Katalog, der dem Nutzer angezeigt wird|
+|**Tab English**||
+|Titel|Der englische Titel für den Katalog, der dem Benutzer angezeigt wird|
+|**Tab Deutsch**|*enthält die gleichen Informationen wie der der englischen Sprache,<br>jedoch in Übersetzung.*|
+|**Tab Gruppen**|
+|Gruppen|Zeigt die Gruppen für diesen Katalog an. Wenn mindestens eine der Gruppen<br> ausgewählt ist, könne nur Nutzende aus diesen Gruppen den Katalog in einem Projekt nutzen.|
+|**Tab Sites**|
+|Sites| *(Nur in einer Mult-Site-Installation)* Zeigt die Sites für diesen Katalog an.<br> Nur Nutzende dieser Sites können den Katalog in einem Projekt nutzen.|
 
 ### Abschnitt
 
-|Name|Beschreibung|
+|Name|Explanation|
 |-|-|
+|**Tab Allgemein**||
 |Katalog|Der Katalog zu dem der Abschnitt gehört. Ändern des Katalogs wird den<br> Abschnitt zu einem anderen Katalog verschieben. Daher wird er dann nicht<br>mehr in der aktuellen Ansicht sichtbar sein
 |Reihenfolge|Bestimmt die Reihenfolge des Abschnittes in der Liste oder der Interview-Ansicht|
-|Titel (en)|Der englische Titel des Abschnittes, der dem Benutzer angezeigt wird|
-|Titel (de)|Der deutsche Titel des Abschnittes, der dem Benutzer angezeigt wird|
+|**Tab English**||
+|Titel|Der englische Titel des Abschnittes, der dem Benutzer angezeigt wird|
+|**Tab Deutsch**|*enthält die gleichen Informationen wie der der englischen Sprache,<br>jedoch in Übersetzung.*|
 
 ### Fragenset
 

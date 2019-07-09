@@ -27,12 +27,16 @@ Ansichten haben unterschiedliche Eigenschaften, die ihr Verhalten zu bestimmen. 
 
 ### Ansicht
 
-|Name|Beschreibung|
+|Name|Explanation|
 |-|-|
-|Title (en)|Der englische Titel der Ansicht. Der Titel wird in der Projektübersicht angezeigt|
-|Title (de)|Der deutsche Titel der Ansicht. Der Titel wird in der Projektübersicht angezeigt|
-|Hilfe (en)|Der englische Hilfetext der Ansicht. Der Hilfetext wird in der Projektübersicht angezeigt|
-|Hilfe (de)|Der deutsche Hilfetext der Ansicht. Der Hilfetext wird in der Projektübersicht angezeigt|
+|**Tab English**||
+|Titel|Der englische Titel für die Ansicht, der dem Benutzer angezeigt wird.<br> Der Titel wird in der Projektübersicht angezeigt.|
+|Hilfe|Der englische Hilfetext der Ansicht. Der Hilfetext wird in der Projektübersicht angezeigt|
+|**Tab Deutsch**|*enthält die gleichen Informationen wie der der englischen Sprache,<br>jedoch in Übersetzung.*|
+|**Tab Gruppen**|
+|Gruppen|Zeigt die Gruppen für diese Ansicht an. Wenn mindestens eine der Gruppen<br> ausgewählt ist, könne nur Nutzende aus diesen Gruppen den Katalog in<br einem Projekt nutzen.|
+|**Tab Sites**|
+|Sites| *(Nur in einer Mult-Site-Installation)* Zeigt die Sites für diese Ansicht an.<br> Nur Nutzende dieser Sites können den Katalog in einem Projekt nutzen.|
 
 
 ### Vorlage

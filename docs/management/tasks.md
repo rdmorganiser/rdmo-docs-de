@@ -29,12 +29,16 @@ Aufgaben haben unterschiedliche Eigenschaften, um ihr Verhalten zu konfigurieren
 
 ### Aufgabe
 
-|Name|Beschreibung|
+|Name|Explanation|
 |-|-|
-|Title (en)|Der englische Titel für die Ansicht. Der Titel wird in der Projektübersicht angezeigt|
-|Title (de)|Der deutsche Titel für die Ansicht. Der Titel wird in der Projektübersicht angezeigt|
-|Text (en)|Der englische Text für die Ansicht. Der Text wird in der Projektübersicht angezeigt|
-|Text (de)|Der deutsche Text für die Ansicht. Der Text wird in der Projektübersicht angezeigt|
+|**Tab English**||
+|Titel|Der englische Titel für die Aufgabe. Der Titel wird in der Projektübersicht angezeigt.|
+|Text|Der englische Text für die Ansicht. Der Text wird in der Projektübersicht angezeigt.|
+|**Tab Deutsch**|*enthält die gleichen Informationen wie der der englischen Sprache,<br>jedoch in Übersetzung.*|
+|**Tab Gruppen**|
+|Gruppen|Zeigt die Gruppen für diese Aufgabe an. Wenn mindestens eine der Gruppen<br> ausgewählt ist, wird nur Nutzenden aus diesen Gruppen den Aufgabe in<br> einem Projekt angezeigt.|
+|**Tab Sites**|
+|Sites| *(Nur in einer Mult-Site-Installation)* Zeigt die Sites für diese Aufgabe an.<br> Nur Nutzende dieser Sites wird die Aufgabe in einem Projekt angezeigt.|
 
 ### Zeitrahmen
 
