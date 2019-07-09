@@ -44,7 +44,7 @@ Ansichten haben unterschiedliche Eigenschaften, die ihr Verhalten zu bestimmen. 
 ![](../_static/img/screens/vorlage.png)
 > *Screenshot der Vorlagen-Ansicht*
 
-Jede Ansicht hat eine Vorlage (Template), die bestimmt wie Fragen mitsamt ihrer Antworten in einem Textdokument dargestellt werden. Die Vorlage benutzt die [Django template](https://docs.djangoproject.com/en/1.11/ref/templates/language/) syntax, welche sich aus einer Kombination aus regulärem HTML, Variablen und Tags zusammensetzt. Variablen (`{{ a_variable }}`) werden bei der Vorlageauswertung durch ihre entsprechenden Werte ersetzt. Tags (`{% a_tag %}`) kontrollieren die Logik der Vorlage.
+Jede Ansicht hat eine Vorlage (Template), die bestimmt wie Fragen mitsamt ihrer Antworten in einem Textdokument dargestellt werden. Die Vorlage benutzt die [Django template](https://docs.djangoproject.com/en/stable/ref/templates/language/) syntax, welche sich aus einer Kombination aus regulärem HTML, Variablen und Tags zusammensetzt. Variablen (`{{ a_variable }}`) werden bei der Vorlageauswertung durch ihre entsprechenden Werte ersetzt. Tags (`{% a_tag %}`) kontrollieren die Logik der Vorlage.
 
 In der ersten Zeile einer `Vorlage` befindet sich der Befehl, der dafür sorgt, dass die verfügbaren Tags geladen werden. Auf diese Weise können sie im vorliegenden Template genutzt werden.
 
@@ -108,4 +108,4 @@ Ob Werte bestimmte Bedingungen erfüllen, kann ebenfalls ausgewertet werden. Wen
 {% endif %}
 ```
 
-Bitte lesen Sie die Dokumentation von Django template syntax für alle verfügbaren Tags und Filter: <https://docs.djangoproject.com/en/1.11/ref/templates/language>.
+Bitte lesen Sie die Dokumentation von Django template syntax für alle verfügbaren Tags und Filter: <https://docs.djangoproject.com/en/stable/ref/templates/language>.
