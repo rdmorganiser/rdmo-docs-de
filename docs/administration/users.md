@@ -6,7 +6,7 @@ Der mit der Installation erstellte Benutzer hat zu allen Features von RDMO Zugan
 
 ## Gruppen
 
-Während der Installation erstellt das `./manage create-groups` Kommando drei Gruppen:
+Während der Installation erstellt das `./manage setup_groups` Kommando drei Gruppen:
 
 ### Editor
 Benutzer der Editorgruppe haben Zugang zum [Management Interface](../../management/index.html) und können alle Elemente des Datenmodells editieren, mit Ausnahme der Benutzerdaten, die über das strukturierte Interview eingegeben wurden.
