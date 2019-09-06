@@ -34,3 +34,12 @@ Ferner, möchten Sie vielleicht eine Hauptsprache für ihr RDMO und die Zeitzone
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'Europe/Berlin'
 ```
+
+Wenn Sie RDMO hinter einem Reverse Proxy betreiben, der den TLS/SSL Verkehr terminiert, müssen sie folgende Zeilen hinzufügen:
+
+```
+USE_X_FORWARDED_HOST = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+```
+
+damit RDMO die HTTP-Header `X-Forwarded-Host` und `X-Forwarded-Proto` vom Proxy auswertet.
