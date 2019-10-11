@@ -6,7 +6,7 @@ Multisite
     Das folgende Feature is noch nicht Teil der veröffentlichten Version von RDMO. Es wird Teil eines späteren Releases.
 ```
 
-RDMO kann in einem Multi-Site-Setup betrieben werden, das mehrere verschiedene `rdmo-apps` mit unterschiedlichen URLs und Themes auf einem Server mit einer gemeinsamen Datenbank verbindet. Die verschiedenen Seiten teilen ihre Kataloge, Ansichten usw., aber die Verfügbarkeit dieses Inhalts kann zwischen den Seiten eingeschränkt werden. Projekte haben eine Verbindung zu einer bestimmten Website und können nur auf der Webseite aufgerufen werden, auf der sie erstellt wurden.
+RDMO kann in einem Multi-Site-Setup betrieben werden, das mehrere verschiedene `rdmo-apps` mit unterschiedlichen URLs und Themes auf einem Server mit einer gemeinsamen Datenbank verbindet. Die verschiedenen Seiten teilen ihre Kataloge, Ansichten usw., aber die Verfügbarkeit dieses Inhalts kann zwischen den Seiten eingeschränkt werden. Nutzer können sich über alle Sites einloggen (sofern es dir Authentifizierungsschnittstellen zulassen) und Projekte können zwischen den Sites geteilt werden.
 
 Setup
 -----
