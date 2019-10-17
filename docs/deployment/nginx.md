@@ -75,7 +75,7 @@ python manage.py collectstatic
 
 in ihrer virtuellen Umgebung ausgeführt.
 
-Bei Veränderungen im RDMO-Code (z.B. nach einem [Upgrade](../../upgrade/index.html)) muss der gunicorn-Prozess neu gestartet werden:
+Bei Veränderungen im RDMO-Code (z.B. nach einem [Upgrade](../upgrade/index.html)) muss der gunicorn-Prozess neu gestartet werden:
 
 ```bash
 sudo systemctl restart rdmo

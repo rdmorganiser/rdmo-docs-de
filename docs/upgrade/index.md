@@ -45,7 +45,7 @@ Mit der Version 0.9.0 haben wir die Teilung in `rdmo-app` und dem zentral verwal
 
 1. Erstellen Sie immer ein Backup ihres `rdmo`-Ordners und ihrer Datenbank wie oben beschrieben.
 
-1. Führen Sie die Schritte wie unter [klonen](../../installation/clone.html) und [Pakete installieren](../../installation/packages.html) beschrieben durch, wie sie eine neue RDMO-Instanz installieren würden.
+1. Führen Sie die Schritte wie unter [klonen](../installation/clone.html) und [Pakete installieren](../installation/packages.html) beschrieben durch, wie sie eine neue RDMO-Instanz installieren würden.
 
 1. Kopieren Sie ihre alte Einstellungen von `/path/to/old/rdmo/rdmo/settings/local.py` zu `/path/to/new/rdmo-app/config/settings/local.py`. Der neue `config`-Ordner ersetzt den alten `rdmo`-Ordner.
 
@@ -65,7 +65,7 @@ Mit der Version 0.9.0 haben wir die Teilung in `rdmo-app` und dem zentral verwal
 
 1. Aktualisieren Sie den Pfad zum `wsgi.py` Skript in ihren Apache- oder nginx-Einstellungen. Es befindet sich nun unter `/path/to/new/rdmo-app/config/wsgi.py`.
 
-1. Setzen Sie RDMO neu auf wie unter [Apache](../../deployment/apache.html) oder [Nginx](../../deployment/nginx.html) beschrieben.
+1. Setzen Sie RDMO neu auf wie unter [Apache](../deployment/apache.html) oder [Nginx](../deployment/nginx.html) beschrieben.
 
 Falls irgendwelche Probleme während des Aktualisierungsprozesses auftreten, zögern Sie nicht das RDMO-Team um Hilfe zu bitten.
 

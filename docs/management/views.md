@@ -20,7 +20,7 @@ Die Sidebar auf der rechten Seite enthält weitere Bedienelemente:
 
 * **Export** exportiert die Ansichten zu eine der angegebenen Formate. Während Textformate hauptsächlich für die Präsentation sind, können XML-Ausgaben für den Transfer der Ansichten zu einer anderen RDMO-Installation verwendet werden.
 
-Ansichten haben unterschiedliche Eigenschaften, die ihr Verhalten zu bestimmen. Wie in [der Einleitung](../index.html) beschrieben haben alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von den Managern der RDMO-Installation gesehen werden können. Ferner können folgende Parameter geändert werden:
+Ansichten haben unterschiedliche Eigenschaften, die ihr Verhalten zu bestimmen. Wie in [der Einleitung](index.html) beschrieben haben alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von den Managern der RDMO-Installation gesehen werden können. Ferner können folgende Parameter geändert werden:
 
 
 ## Parameter

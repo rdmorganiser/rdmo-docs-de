@@ -17,7 +17,7 @@ Um eine solche Multi-Site-Installation einzurichten, müssen Sie mit einer erste
 
 * Ansonsten befolgen Sie die Anweisungen wie gewohnt, fügen Sie aber `MULTISITE = True` zu `config/settings/local.py` hinzu. Dadurch werden die Multi-Site-spezifischen Funktionen in der Benutzeroberfläche aktiviert.
 
-* Melden Sie sich nach der Installation an der Admin-Oberfläche an und fügen Sie Ihre zusätzlichen Websites im Abschnitt Sites hinzu (wie [hier](../administration/site) beschrieben). Notieren Sie sich die numerische ID der verschiedenen Sites, wie sie in der URL beim Bearbeiten der Site angezeigt wird (z.B. `http://localhost:8000/admin/sites/site/2/change/`).
+* Melden Sie sich nach der Installation an der Admin-Oberfläche an und fügen Sie Ihre zusätzlichen Websites im Abschnitt Sites hinzu (wie [hier](../administration/site.html) beschrieben). Notieren Sie sich die numerische ID der verschiedenen Sites, wie sie in der URL beim Bearbeiten der Site angezeigt wird (z.B. `http://localhost:8000/admin/sites/site/2/change/`).
 
 * Klonen Sie dann eine zweite `rdmo-app` neben der ersten, verwenden Sie aber die gleiche virtuelle Umgebung wie zuvor (daher ist keine `pip install` erforderlich). Richten Sie `rdmo-app2/config/settings/local.py` wie gewohnt ein. Fügen Sie `MULTISITE = True` und `SITE_ID = X` in `rdmo-app2/config/settings/local.py` ein, wobei `X` die ID der Seite aus dem vorherigen Schritt ist. Verwenden Sie für `DATABASE` die **gleichen** Einstellungen wie in `rdmo-app`.
 

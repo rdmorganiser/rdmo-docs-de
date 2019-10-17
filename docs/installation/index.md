@@ -10,7 +10,7 @@ Eine RDMO-Installation hat drei Komponenten:
 1. Das eigentliche `rdmo` Paket, welches zentral vom RDMO-Team gepflegt wird. Dies Paket wird in einer virtuellen Umgebung installiert.
 1. Eine Datenbank, um den vom Benutzer erstellten Inhalt ihrer RDMO-Installation zu speichern. Aktuell untersützen wir PostgreSQL, MySQL und SQLite.
 
-Dieses Kapitel zeigt wie diese Komponenten installiert werden. Optionale Komponenten können danach installiert werden, sie sind unter [Konfiguration](../../../configuration/index.html) dokumentiert.
+Dieses Kapitel zeigt wie diese Komponenten installiert werden. Optionale Komponenten können danach installiert werden, sie sind unter [Konfiguration](../configuration/index.html) dokumentiert.
 
 Für Test- und Entwicklungszwecke kann RDMO mit ihrem regulären Benutzer-Account betrieben werden. Im Produktionsbetrieb sollte ein dedizierter Benutzer verwendet werden. Wir empfehlen einen Benutzer namens `rdmo` mit der Gruppe `rdmo` und dem Homeverzeichnis `/srv/rdmo` zu erstellen: `sudo adduser rdmo --home /srv/rdmo` . Wir werden diesen Benutzer mit dem genannten Profil in der gesamten Dokumentation verwenden.
 

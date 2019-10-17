@@ -21,7 +21,7 @@ In der rechten Sidebar gibt es weitere Interface-Optionen:
 
   * **Export** exportiert die Bedigungen in eines der angezeigten Formate. Während die Textformate hauptschächlich für die Darstellung sind, können XML Ausgaben für den Transfer von Bedingungen zu anderen RDMO Installationen genutzt werden.
 
-Bedingungen haben unterschiedliche Eigenschaften, um ihr Verhalten zu kontrollieren. Wie in [in der Einleitung](../../index.html) beschrieben, haben alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von den anderen Managern der RDMO Installation gesehen werden können. Es können folgende Parameter verändert werden:
+Bedingungen haben unterschiedliche Eigenschaften, um ihr Verhalten zu kontrollieren. Wie in [in der Einleitung](index.html) beschrieben, haben alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von den anderen Managern der RDMO Installation gesehen werden können. Es können folgende Parameter verändert werden:
 
 ## Configuration
 

@@ -22,7 +22,7 @@ Der Sidebar auf der rechten Seite enthält weitere Bedienelemente:
 
 * **Export** exportiert in eines der angegebenen Formate. Während Textformate hauptsächlich für die Präsentation sind, können XML-Formate für den Transfer der Aufgabe zu einer anderen RDMO-Installation verwendet werden.
 
-Aufgaben haben unterschiedliche Eigenschaften, um ihr Verhalten zu konfigurieren. Wie in [der Einleitung](../index.html) beschrieben besitzen alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von den Managern der RDMO-Installation gesehen werden können. Ferner können folgende Parameter verändert werden:
+Aufgaben haben unterschiedliche Eigenschaften, um ihr Verhalten zu konfigurieren. Wie in [der Einleitung](index.html) beschrieben besitzen alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von den Managern der RDMO-Installation gesehen werden können. Ferner können folgende Parameter verändert werden:
 
 
 ## Parameter

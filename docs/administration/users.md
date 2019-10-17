@@ -9,13 +9,13 @@ Der mit der Installation erstellte Benutzer hat zu allen Features von RDMO Zugan
 Während der Installation erstellt das `./manage setup_groups` Kommando drei Gruppen:
 
 ### Editor
-Benutzer der Editorgruppe haben Zugang zum [Management Interface](../../management/index.html) und können alle Elemente des Datenmodells editieren, mit Ausnahme der Benutzerdaten, die über das strukturierte Interview eingegeben wurden.
+Benutzer der Editorgruppe haben Zugang zum [Management Interface](../management/index.html) und können alle Elemente des Datenmodells editieren, mit Ausnahme der Benutzerdaten, die über das strukturierte Interview eingegeben wurden.
 
 ### Reviewer
-Benutzer der Reviewergruppe haben Zugang zum [Management Interface](../../management/index.html) wie die Editoren, jedoch ist es ihnen nicht gestattet, dort Veränderungen vorzunehmen (Speichern von Änderungen nicht erlaubt). Diese Gruppe kann verwendet werden, um ausgewählten Benutzern lesenden Zugriff auf das Management-Backend zu erlauben.
+Benutzer der Reviewergruppe haben Zugang zum [Management Interface](../management/index.html) wie die Editoren, jedoch ist es ihnen nicht gestattet, dort Veränderungen vorzunehmen (Speichern von Änderungen nicht erlaubt). Diese Gruppe kann verwendet werden, um ausgewählten Benutzern lesenden Zugriff auf das Management-Backend zu erlauben.
 
 ### API
-Benutzer der API-Gruppe können eine programmierbare API verwenden, um auf alle Elemente des Datenmodels zuzgreifen. Sie benötigen einen  [Token](../tokens.html), um einen API-Klienten nutzen zu können.
+Benutzer der API-Gruppe können eine programmierbare API verwenden, um auf alle Elemente des Datenmodels zuzgreifen. Sie benötigen einen [Token](api.html), um einen API-Klienten nutzen zu können.
 
 Bereits existierende Benutzer können diesen Gruppen zugeordnet werden, um Zugang zu diesen Funktionen zu erhalten:
 

@@ -22,7 +22,7 @@ Die Sidebar auf der rechten Seite zeigt weitere Bedienelemente:
 
 * **Exports** exportiert die Optionensets in eines der angezeigten Formate. Während die Textformate hauptsächlich für die Darstellung sind, können XML-Exporte für den Transfer der Optionen zu einer anderen RDMO-Installation verwendet werden.
 
-Optionensets und das Optionenmodel haben unterschiedliche Eigenschaften, um ihr Verhalten zu verändern. Wie in [der Einleitung](../index.html) erklärt, besitzen alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von den anderen Managers der RDMO-Installation gesehen werden können. Ferner können folgende Parameter verändert werden:
+Optionensets und das Optionenmodel haben unterschiedliche Eigenschaften, um ihr Verhalten zu verändern. Wie in [der Einleitung](index.html) erklärt, besitzen alle Elemente einen URI-Präfix, einen Schlüssel und einen internen Kommentar, die nur von den anderen Managers der RDMO-Installation gesehen werden können. Ferner können folgende Parameter verändert werden:
 
 
 ## Parameter

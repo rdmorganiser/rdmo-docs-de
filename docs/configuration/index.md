@@ -9,7 +9,7 @@ Als Teil der Installation sollte `config/settings/local.py` anhand der Vorlage `
 
 Da die Einträge in der lokalen Einstellungsdatei `config/settings/local.py` Einträge in den Einstellungen in `config/settings/sample.local.py` überschreiben, sollte dieser Mechanismus verwendet werden, um die Einstellungen, die bereits in `config/settings/sample.local.py` vorhanden sind, anzupassen.
 
-Dies beinhaltet [allgemeine Einstellungen](../general.html), [Datenbankverbindungen](../databases.html), wie [E-mails](../email.html) versendet werden, die verschiedenen [Authentifizierungsmethoden](../authentication/index.html), die Verwendung von  [Themen](../themes.html), und [Caches](../cache.html).
+Dies beinhaltet [allgemeine Einstellungen](general.html), [Datenbankverbindungen](databases.html), wie [E-mails](email.html) versendet werden, die verschiedenen [Authentifizierungsmethoden](authentication/index.html), die Verwendung von  [Themen](themes.html), und [Caches](cache.html).
 
 ```eval_rst
 ----

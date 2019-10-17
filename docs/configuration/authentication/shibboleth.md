@@ -1,6 +1,6 @@
 # Shibboleth
 
-Um Shibboleth mit RMDO zu verwenden, ist es notwendig in der Betriebsumgebung einen Apache2-Service bereitzustellen. Das Setup ist [hier](../../../../deployment/apache.html) dokumentiert.
+Um Shibboleth mit RMDO zu verwenden, ist es notwendig in der Betriebsumgebung einen Apache2-Service bereitzustellen. Das Setup ist [hier](../../deployment/apache.html) dokumentiert.
 
 Als nächstes installieren Sie das Shibboleth Apache Modul für den Service-Provider (SP) aus ihrem Distributionsrepositorium, z.B. für Debian/Ubuntu:
 

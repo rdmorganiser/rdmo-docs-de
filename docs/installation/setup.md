@@ -9,7 +9,7 @@ cp config/settings/sample.local.py config/settings/local.py    # on Linux or mac
 copy config\settings\sample.local.py config\settings\local.py  # on Windows
 ```
 
-Die meisten Einstellungen ihrer RDMO-Instanz sind in dieser Datei festgelegt. Die unterschiedlichen Einträge sind im Detail in  [später in der Dokumentation](../../configuration/index.html) erklärt. Für eine Minimal-Konfiguration müssen Sie `DEBUG = True` setzen, um ausführliche Fehlermeldungen zu erhalten und statische Dateien zu nutzen. Setzen Sie außerdem `SECRET_KEY` zu einem langen, zufälligen String, den Sie geheim halten. Ihre Datenbank-Verbindung wird mit Hilfe der  `DATABASES` Variablen gesetzt. Die Konfiguration der Datenbank wird  [später in der Dokumentation](../../configuration/databases.html) erklärt. Wenn keine `DATABASE` gesetzt ist, wird `sqlite2` verwendet.
+Die meisten Einstellungen ihrer RDMO-Instanz sind in dieser Datei festgelegt. Die unterschiedlichen Einträge sind im Detail in  [später in der Dokumentation](../configuration/index.html) erklärt. Für eine Minimal-Konfiguration müssen Sie `DEBUG = True` setzen, um ausführliche Fehlermeldungen zu erhalten und statische Dateien zu nutzen. Setzen Sie außerdem `SECRET_KEY` zu einem langen, zufälligen String, den Sie geheim halten. Ihre Datenbank-Verbindung wird mit Hilfe der  `DATABASES` Variablen gesetzt. Die Konfiguration der Datenbank wird  [später in der Dokumentation](../configuration/databases.html) erklärt. Wenn keine `DATABASE` gesetzt ist, wird `sqlite2` verwendet.
 
 Dann starten Sie die Datenbank der Anwendung:
 
@@ -45,4 +45,4 @@ Nach diesen Schritten kann RDMO mit dem integriertem Entwicklungsserver von Djan
 python manage.py runserver
 ```
 
-Anschließend ist RDMO unter http://127.0.0.1:8000 in ihrem (lokalen) Browser verfügbar. Die unterschiedlichen Wege, wie RDMO betrieben werden kann, werden im nächsten Kapitel behandelt. Die neu installierte RDMO-Instanz ist noch leer, d.h. es sind keine Fragebögen oder Ansichten verfügbar. Sie müssen [importiert](../../../management/export.html) und/oder wie unter [Management](../../../management/index.html) beschrieben erstellt werden.
+Anschließend ist RDMO unter http://127.0.0.1:8000 in ihrem (lokalen) Browser verfügbar. Die unterschiedlichen Wege, wie RDMO betrieben werden kann, werden im nächsten Kapitel behandelt. Die neu installierte RDMO-Instanz ist noch leer, d.h. es sind keine Fragebögen oder Ansichten verfügbar. Sie müssen [importiert](../management/export.html) und/oder wie unter [Management](../management/index.html) beschrieben erstellt werden.

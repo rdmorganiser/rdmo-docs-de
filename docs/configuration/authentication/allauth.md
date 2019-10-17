@@ -52,4 +52,4 @@ AUTHENTICATION_BACKENDS.append('allauth.account.auth_backends.AuthenticationBack
 
 Die Einstellung `SOCIALACCOUNT = True` wird von RDMO verwendet, um bestimmte Teile der Benutzeroberfläche mit den Accounts dritter Anbieter anzuzeigen, während wie zuvor die Zeilen nach `INSTALLED_APPS` es dem Feature erlaubt von RDMO verwendet zu werden. Jeder Anbieter hat eine separate App, die Sie zu `INSTALLED_APPS` hinzufügen können. Eine Liste aller von Django-allauth unterstützen Anbieter finden Sie [hier](http://django-allauth.readthedocs.io/en/latest/providers.html).
 
-Sobald die Installation abgeschlossen ist, müssen die Zugangsdaten ihres OAuth-Anbieters im Admin-Interface eingegeben werden. Dies wird im [Administration-Kapitel](../../../../administration/allauth.html) dieser Dokumentation erklärt.
+Sobald die Installation abgeschlossen ist, müssen die Zugangsdaten ihres OAuth-Anbieters im Admin-Interface eingegeben werden. Dies wird im [Administration-Kapitel](../../administration/allauth.html) dieser Dokumentation erklärt.

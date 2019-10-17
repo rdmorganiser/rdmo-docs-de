@@ -82,7 +82,7 @@ Wie Sie der virtuellen Host-Konfigurationen entnehmen können, werden die statis
 python manage.py collectstatic
 ```
 
-Um Veränderungen am RDMO -Code vorzunehmen (z.B: nach dem [Upgrade](../../upgrade/index.html)), muss der Webserver neu geladen werden oder die Datei `config/wsgi.py` muss (scheinbar) verändert worden sein indem der `touch`-Befehl verwendet wird:
+Um Veränderungen am RDMO -Code vorzunehmen (z.B: nach dem [Upgrade](../upgrade/index.html)), muss der Webserver neu geladen werden oder die Datei `config/wsgi.py` muss (scheinbar) verändert worden sein indem der `touch`-Befehl verwendet wird:
 
 ```bash
 touch config/wsgi.py
