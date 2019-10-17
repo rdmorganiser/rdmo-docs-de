@@ -11,7 +11,7 @@ RDMO kann in einem Multi-Site-Setup betrieben werden, das mehrere verschiedene `
 Setup
 -----
 
-Um eine solche Multi-Site-Installation einzurichten, müssen Sie mit einer ersten regulären RDMO-Instanz beginnen, wie unter [installation](../installation) beschrieben. Im Prinzip kann auch eine existierende RDMO Instanz auf ein Multi-Site Setup erweitert werden, in dieser Dokumentation gehen wir aber von einer Neuinstallation aus.
+Um eine solche Multi-Site-Installation einzurichten, müssen Sie mit einer ersten regulären RDMO-Instanz beginnen, wie unter [installation](../installation.html) beschrieben. Im Prinzip kann auch eine existierende RDMO Instanz auf ein Multi-Site Setup erweitert werden, in dieser Dokumentation gehen wir aber von einer Neuinstallation aus.
 
 * Erstellen Sie eine neue virtuelle Umgebung außerhalb der `rdmo-app`, z.B. in `/srv/rdmo/env`. Im Multi-Site Setup verwenden *alle* RDMO Sites die gleiche virtuelle Umgebung. RDMO und die anderen Python Abhängigkeiten müssen dann auch immer nur einmal, in dieser Umgebung, aktualisiert werden.
 
