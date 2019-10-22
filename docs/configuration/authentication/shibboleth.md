@@ -62,7 +62,7 @@ In ihrer virtuellen Host-Konfiguration (Apache2) fügen Sie folgendes hinzu:
 In ihrer `config/settings/local.py` fügen Sie Folgendes hinzu oder entfernen die Kommentarsymbole:
 
 ```python
-from rdmo.core.settings import INSTALLED_APPS, AUTHENTICATION_BACKENDS, MIDDLEWARE_CLASSES
+from rdmo.core.settings import INSTALLED_APPS, AUTHENTICATION_BACKENDS, MIDDLEWARE
 
 SHIBBOLETH = True
 PROFILE_UPDATE = False
@@ -71,8 +71,8 @@ PROFILE_DELETE = False
 INSTALLED_APPS += ['shibboleth']
 
 AUTHENTICATION_BACKENDS.append('shibboleth.backends.ShibbolethRemoteUserBackend')
-MIDDLEWARE_CLASSES.insert(
-    MIDDLEWARE_CLASSES.index('django.contrib.auth.middleware.AuthenticationMiddleware') + 1,
+MIDDLEWARE.insert(
+    MIDDLEWARE.index('django.contrib.auth.middleware.AuthenticationMiddleware') + 1,
     'shibboleth.middleware.ShibbolethRemoteUserMiddleware'
 )
 
@@ -87,7 +87,7 @@ LOGIN_URL = '/Shibboleth.sso/Login?target=/projects'
 LOGOUT_URL = '/Shibboleth.sso/Logout'
 ```
 
-wobei die Werte von `SHIBBOLETH_ATTRIBUTE_MAP`, `LOGIN_URL`, und `LOGOUT_URL` entsprechend ihrem Setup geändert werden müssen. Die Einstellung `SHIBBOLETH = True` deaktiviert das reguläre Login-Formular von RDMO und deaktiviert das Udpateformular für das Benutzerprofil, so dass der Benutzer seine Zugangsdaten nicht mehr ändern kann. Durch `PROFILE_DELETE = False` wird die Seite deaktiviert, auf der der Nutzer sein Profil löschen kann. Da es RDMO unmöglich ist auf die Shibboleth Nutzerdatenbank schreibend zuzugreifen, sollten die beiden genannten Seiten auf jeden Fall deaktiviert werden. Alles andere ist aus technischen Gründen nicht ratsam. Die `INSTALLED_APPS`, `AUTHENTICATION_BACKENDS`, und `MIDDLEWARE_CLASSES` Einstellungen erlauben es, den Django-Shibboleth-Remoteuser mit RDMO zu verwenden.
+wobei die Werte von `SHIBBOLETH_ATTRIBUTE_MAP`, `LOGIN_URL`, und `LOGOUT_URL` entsprechend ihrem Setup geändert werden müssen. Die Einstellung `SHIBBOLETH = True` deaktiviert das reguläre Login-Formular von RDMO und deaktiviert das Udpateformular für das Benutzerprofil, so dass der Benutzer seine Zugangsdaten nicht mehr ändern kann. Durch `PROFILE_DELETE = False` wird die Seite deaktiviert, auf der der Nutzer sein Profil löschen kann. Da es RDMO unmöglich ist auf die Shibboleth Nutzerdatenbank schreibend zuzugreifen, sollten die beiden genannten Seiten auf jeden Fall deaktiviert werden. Alles andere ist aus technischen Gründen nicht ratsam. Die `INSTALLED_APPS`, `AUTHENTICATION_BACKENDS`, und `MIDDLEWARE` Einstellungen erlauben es, den Django-Shibboleth-Remoteuser mit RDMO zu verwenden.
 
 Starten Sie den Webserver neu.
 
