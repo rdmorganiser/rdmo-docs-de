@@ -18,6 +18,9 @@ Wenn sie ein Theme von Hand erstellen möchten, sollten sie das Folgende tun.
 1. Dann fügen Sie folgendes Ihrer `config/settings/local.py` hinzu:
 
     ```python
+    import os
+    from . import BASE_DIR
+    
     THEME_DIR = os.path.join(BASE_DIR, 'theme')
     ```
 
