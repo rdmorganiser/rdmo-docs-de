@@ -1,15 +1,9 @@
-RDMO - Research Data Management Organiser
-=========================================
-
-Dokumentation (Deutsch)
------------------------
+RDMO - Dokumentation (Deutsch)
+==============================
 
 .. image:: http://unmaintained.tech/badge.svg
    :alt: No Maintenance Intended
    :target: http://unmaintained.tech/
-
-Dokumentation (Deutsch)
------------------------
 
 **Die deutsche Dokumentation wird seit Januar 2020 nicht mehr weiter gepflegt und sollte auch nicht mehr über https://rdmo.readthedocs.io verfügbar sein.**
 
