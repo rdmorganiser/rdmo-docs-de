@@ -1,11 +1,12 @@
 RDMO - Research Data Management Organiser
 =========================================
 
+Dokumentation (Deutsch)
+-----------------------
+
 .. image:: http://unmaintained.tech/badge.svg
    :alt: No Maintenance Intended
    :target: http://unmaintained.tech/
-
-RDMO unterestuetzt die systematische Planung, Organisation und Durchfuehrung des Datenmanagements waehrend des ganzen Forschungsprozesses. Das Projekt wird gefoerdert von der Deutschen Forschungsgemeinschaft (DFG).
 
 Dokumentation (Deutsch)
 -----------------------
